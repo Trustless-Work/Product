@@ -55,3 +55,5 @@
   * [🌐 Trustless Work Website](https://www.trustlesswork.com)
   * [📣 Telegram Chat](https://t.me/+kmr8tGegxLU0NTA5)
   * [💎 Only Dust Profile](https://app.onlydust.com/p/trustless-work-)
+  * [👩‍💻 Swagger for API](https://api.trustlesswork.com/docs)
+  * [📜 Github ](https://github.com/Tico4Chain-Coders)
