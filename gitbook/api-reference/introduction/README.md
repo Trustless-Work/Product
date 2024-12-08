@@ -6,7 +6,11 @@ description: How to get started in Trustless Work API
 
 ## GitHub Repository
 
-{% embed url="https://github.com/Tico4Chain-Coders/Trustless-Backend" %}
+{% embed url="https://github.com/Tico4Chain-Coders" %}
+
+## API Swagger
+
+{% embed url="https://api.trustlesswork.com/docs" %}
 
 ## <mark style="color:orange;">Warning!</mark>
 
