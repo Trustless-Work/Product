@@ -1,4 +1,8 @@
-# ⚒️ How It Works
+---
+description: 'High-level architecture: Smart contracts, APIs, and escrow workflows.'
+---
+
+# ⚒️ Technology Overview
 
 **Trustless Work** provides an **Escrow-as-a-Service (EaaS)** platform that makes building **Smart Escrows** as simple and accessible as possible. By leveraging **open-source tools** and a **developer-friendly API**, we remove the barriers traditionally associated with escrows—making them **secure, transparent, and easy to integrate**.
 
