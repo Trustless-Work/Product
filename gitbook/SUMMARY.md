@@ -29,6 +29,7 @@
 * [🌍 Use Cases: Unlocking the Potential of Smart Escrows](use-cases-unlocking-the-potential-of-smart-escrows/README.md)
   * [🌎 Spotlight: Kindifi](use-cases-unlocking-the-potential-of-smart-escrows/spotlight-kindifi.md)
 * [Developer Resources](developer-resources/README.md)
+  * [Initiation Phase](developer-resources/initiation-phase.md)
   * [API Reference](developer-resources/api-reference/README.md)
     * [Introduction](developer-resources/api-reference/introduction/README.md)
       * [Flows](developer-resources/api-reference/introduction/flows.md)
