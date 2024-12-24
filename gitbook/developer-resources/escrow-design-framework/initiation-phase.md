@@ -1,6 +1,6 @@
 # Initiation Phase
 
-<div data-full-width="true"><figure><img src="../.gitbook/assets/Initiation_phase_lite.png" alt=""><figcaption></figcaption></figure></div>
+<div data-full-width="true"><figure><img src="../../.gitbook/assets/Initiation_phase_lite.png" alt=""><figcaption></figcaption></figure></div>
 
 ### **nitiation Phase: Setting Up for Success**
 
