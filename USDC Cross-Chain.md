@@ -131,4 +131,4 @@ Currently, circle only works with API endpoints, it provides several key endpoin
 
 ## Next Steps
 Upon acceptance:
-- I will Design architecture diagrams to illustrate blockchain-specific workflows.
+- If required, I will Design architecture diagrams to illustrate blockchain-specific workflows.
