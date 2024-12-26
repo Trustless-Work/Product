@@ -81,19 +81,20 @@ To study more about sending into the soroban smart contract, this is a link to A
 
 
 ## More Resources:
-- 1. [Allbridge Core Stellar guide](https://docs-core.allbridge.io/sdk/guides/stellar/transfer)
-- 2. [Allbridge Core JS-SDK](https://github.com/allbridge-io/allbridge-core-js-sdk/blob/main/examples/src/examples/bridge/srb/srb-send-full-example.ts)
-- 3. [Allbridge Core REST-API](https://github.com/allbridge-io/allbridge-core-rest-api/blob/master/examples/src/usage/bridge/srb/srb-send-full-example.ts)
-- 4. [Allbridge smart contracts addresses](https://docs.allbridge.io/allbridge-overview/bridge-contracts#stellar-bridge-contracts)
-- 5. [Signatures.](https://allbridgeapi.net/sign/%7BtransactionId%7D)
-- 6. [Albridge ABI’s](https://github.com/allbridge-io/allbridge-contract-docs/blob/master/allbridge-multisig-abi.json)
-- 7. [Bridge contract address on stellar](https://stellar.expert/explorer/public/account/GALLBRBQHAPW5FOVXXHYWR6J4ZDAQ35BMSNADYGBW25VOUHUYRZM4XIL)
+-  [Allbridge Core Stellar guide](https://docs-core.allbridge.io/sdk/guides/stellar/transfer)
+-  [Allbridge Core JS-SDK](https://github.com/allbridge-io/allbridge-core-js-sdk/blob/main/examples/src/examples/bridge/srb/srb-send-full-example.ts)
+-  [Allbridge Core REST-API](https://github.com/allbridge-io/allbridge-core-rest-api/blob/master/examples/src/usage/bridge/srb/srb-send-full-example.ts)
+-  [Allbridge smart contracts addresses](https://docs.allbridge.io/allbridge-overview/bridge-contracts#stellar-bridge-contracts)
+-  [Signatures.](https://allbridgeapi.net/sign/%7BtransactionId%7D)
+-  [Albridge ABI’s](https://github.com/allbridge-io/allbridge-contract-docs/blob/master/allbridge-multisig-abi.json)
+-  [Bridge contract address on stellar](https://stellar.expert/explorer/public/account/GALLBRBQHAPW5FOVXXHYWR6J4ZDAQ35BMSNADYGBW25VOUHUYRZM4XIL)
 
 
 
 
 
-**🚀 2. Proposed Solution for USDC Cross-Chain Bridge Using Circle (Stellar’s Anchor).**
+
+# **🚀 2. Proposed Solution for USDC Cross-Chain Bridge Using Circle (Stellar’s Anchor).**
 
 
 ## Overview
@@ -108,9 +109,9 @@ Circle provides cross-chain USDC transfer capabilities through their Cross-Chain
 Source Chain (Burn) -> Circle Attestation -> Destination Chain (Mint)
 ```
 
-- 1. Source Chain: User initiates transfer
-- 2. Message Transmission: Circle's attestation service validates transfer
-- 3. Destination Chain: USDC is minted on target network
+-  Source Chain: User initiates transfer
+-  Message Transmission: Circle's attestation service validates transfer
+-  Destination Chain: USDC is minted on target network
 
 
 ## Technical Limitation
