@@ -1,13 +1,13 @@
-## 📝 Trustless Architecture Cross Chain Bridge
+# 📝 Trustless Architecture Cross Chain Bridge
 
-**🚀 1. Proposed Solution for USDC Cross-Chain Integration Using Albridge (Stellar Asset Bridge).**
+## **🚀 1. Proposed Solution for USDC Cross-Chain Integration Using Albridge (Stellar Asset Bridge).**
 
-## Overview
+### Overview
 
 The proposed solution leverages Allbridge, a decentralized bridging protocol, to enable seamless transfer of USDC between other blockchain networks (e.g., Ethereum, Solana, XRPL, Tezos) and  Stellar’s Soroban smart contracts. Using Allbridge’s lock-mint/burn-release mechanism and validator network, the architecture ensures secure and scalable cross-chain communication while maintaining decentralization.
 
 
-## Alignment with Trustless Work.
+### Alignment with Trustless Work.
 
 Allbridge is a stellar asset bridge that connects Stellar with multiple blockchain networks. It supports various asset types, it is used by projects like Chrysalis for cross-chain functionality and  it has an excellent developer [support system](https://discord.gg/KuN6sFTq). This makes Allbridge an excellent choice to be used with Trustless work.
 
@@ -17,7 +17,7 @@ This solution aligns with Trustless Work’s vision by:
 - Supporting scalability and seamless integration with future blockchain ecosystems.
 
 
-## Core Components.
+### Core Components.
 
 Using Allbridge Classic provides the following options:
 - lock USDC on BNB Chain and unlock abUSDC on Stellar.
@@ -30,7 +30,7 @@ Using Allbridge Classic provides the following options:
 If the interest of a developer is a backward transfer, there will be a need to get abUSDC, acUSD, aeUSDC, apUSDC, and asUSDC on Stellar first, this is in case of working with native USDC on Stellar.
 
 
-### Lock & Mint Mechanism:
+#### Lock & Mint Mechanism:
 
 **🚀 Lock & Mint Contract (Source Blockchain):**
 
@@ -41,7 +41,7 @@ Original Asset (Chain A) -> Locked in Bridge -> Wrapped Asset (Stellar)
 It's a simple transfer to the bridge muxedAccount . Attached is a link to the different bridge address.  [Learn more here](https://docs.allbridge.io/allbridge-overview/bridge-contracts) & [this too](https://github.com/allbridge-io/allbridge-contract-docs?tab=readme-ov-file#lock-tokens-1).
 
 
-#### For other blockchains (EVM ) :
+##### For other blockchains (EVM ) :
 - Call lock method with the [contract address](https://docs.allbridge.io/allbridge-overview/bridge-contracts) and [ABI](https://github.com/allbridge-io/allbridge-contract-docs/blob/master/allbridge-multisig-abi.json)
 
 ```solidity
@@ -50,7 +50,7 @@ function lock(uint128 lockId, address tokenAddress, bytes32 recipient, bytes4 de
 
 
 
-### Burn & Release Mechanism:
+#### Burn & Release Mechanism:
 
 **🚀 Burn & Release Contract (Stellar via Soroban):**
 
@@ -73,14 +73,14 @@ To study more about sending into the soroban smart contract, this is a link to A
 
 
 
-## Security Considerations:
+### Security Considerations:
 
 - Multi-signature validation
 - Oracle-based verification
 
 
 
-## More Resources:
+### More Resources:
 -  [Allbridge Core Stellar guide](https://docs-core.allbridge.io/sdk/guides/stellar/transfer)
 -  [Allbridge Core JS-SDK](https://github.com/allbridge-io/allbridge-core-js-sdk/blob/main/examples/src/examples/bridge/srb/srb-send-full-example.ts)
 -  [Allbridge Core REST-API](https://github.com/allbridge-io/allbridge-core-rest-api/blob/master/examples/src/usage/bridge/srb/srb-send-full-example.ts)
@@ -94,14 +94,14 @@ To study more about sending into the soroban smart contract, this is a link to A
 
 
 
-# **🚀 2. Proposed Solution for USDC Cross-Chain Bridge Using Circle (Stellar’s Anchor).**
+## **🚀 2. Proposed Solution for USDC Cross-Chain Bridge Using Circle (Stellar’s Anchor).**
 
 
-## Overview
+### Overview
 Circle provides cross-chain USDC transfer capabilities through their Cross-Chain Transfer Protocol (CCTP), allowing users to move USDC between supported blockchains.   Circle is a steller's [anchor](https://anchors.stellar.org/?s=circle).
 
 
-## How Circle Cross-Chain Works:
+### How Circle Cross-Chain Works:
 
 **Transfer Process:**
 
@@ -114,7 +114,7 @@ Source Chain (Burn) -> Circle Attestation -> Destination Chain (Mint)
 -  Destination Chain: USDC is minted on target network
 
 
-## Technical Limitation
+### Technical Limitation
 Currently, circle only works with API endpoints, it provides several key endpoints for cross-chain transfers:
 
 - Transfer initiation
@@ -123,7 +123,7 @@ Currently, circle only works with API endpoints, it provides several key endpoin
 - Destination minting
 
 
-## Resource:
+### Resource:
 
 - [Circle's CCTP Documentation](https://developers.circle.com/stablecoins/docs/cctp-getting-started)
 
