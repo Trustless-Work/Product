@@ -10,10 +10,15 @@ The Initiation Phase is the foundation of the escrow process. It ensures that al
 
 In the initiation phase key roles are assigned to specific parties. These roles determine responsibilities and actions throughout the transaction.
 
+{% hint style="info" %}
+We are currently on the process of updating from client to milestone approver and from service provider to milestone marker. \
+Receiver will be added too (For now, it assumes service rpovider will be the receiver)
+{% endhint %}
+
 **The roles are:**
 
-1. **Client:** Approves or disputes milestones.
-2. **Service Provider:** Marks milestones as completed and ready for approval.
+1. **Client/Milestone Approver:** Approves or disputes milestones.
+2. **Service Provider / Milestone Marker:** Marks milestones as completed and ready for approval.
 3. **Release Signer:** Approves the release of funds for completed milestones.
 4. **Dispute Resolver:** Resolves disputes and adjusts milestone statuses if necessary.
 5. **Receiver:** The final recipient of funds once conditions are met.
