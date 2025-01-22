@@ -1,6 +1,7 @@
 ---
-description: Get an escrow through the engagement id.
 icon: circle-l
+description: Get an escrow through the engagement id.
+hidden: true
 ---
 
 # Get Escrow by Engagement ID

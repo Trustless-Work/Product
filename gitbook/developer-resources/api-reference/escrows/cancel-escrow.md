@@ -1,5 +1,6 @@
 ---
 description: The escrow has been successful cancelled.
+hidden: true
 ---
 
 # Cancel Escrow

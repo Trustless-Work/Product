@@ -1,5 +1,6 @@
 ---
 description: Returns funds after cancelling escrow.
+hidden: true
 ---
 
 # Refund Remaining Funds

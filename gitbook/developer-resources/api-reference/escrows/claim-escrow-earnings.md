@@ -1,5 +1,6 @@
 ---
 description: Allows a user to withdraw their locked earnings from an escrow contract.
+hidden: true
 ---
 
 # Claim Escrow Earnings
