@@ -9,53 +9,23 @@ icon: '2'
 
 Allows flexible USDC amounts to be transferred to the escrow contract.
 
-**URL:** `/escrow/fund-escrow`
-
-### Body params:
-
-contractId: ID (address) that identifies the escrow contract
-
-signer: Address of the user signing the contract transaction
-
-amount: Amount to transfer to the escrow contract
-
-#### Example:
-
-```jsx
-{
-	contractId: "GC3DJY4LLQYJHEONXFDLQVVRCFZQCPFX7VD33KP4P7QSVZY3SJHQBZGV",
-	signer: "GBY3PAJY5R3ZIXTYBGFW4URB4RINEXQBC3T4RWDDKJ5TZXQYZUN6A4TP", 
-	amount: "500.00"
-};
-```
-
-
-
-***
-
-<mark style="color:green;background-color:blue;">**`Previous Version:`**</mark>
-
 <mark style="color:green;">**`POST`**</mark> `escrow/fund-escrow`
-
-
 
 **Headers**
 
 | Name         | Value              |
 | ------------ | ------------------ |
 | Content-Type | `application/json` |
+| Authorization  | `Bearer <token>` |
+
 
 **Body**
 
-| Name                                  | Type              | Description                                                                     |
-| ------------------------------------- | ----------------- | ------------------------------------------------------------------------------- |
-| <pre><code>engagementId
-</code></pre> | string            | The unique identifier linking this escrow to a specific project or transaction. |
-| <pre><code>contractId
-</code></pre>   | string            | The unique identifier of the contract.                                          |
-| <pre><code>signer
-</code></pre>       | string \| Address | The address authorized to approve the release of funds.                         |
-
+| Name            | Type         | Description                                                  |
+| --------------- | ------------ | ------------------------------------------------------------ |
+| contractId      | string       | ID (address) that identifies the escrow contract             |
+| signer          | string       | Address of the user signing the contract transaction         |
+| amount          | string       | Amount to transfer to the escrow contract                    |
 
 
 **Example of Request Body:**
@@ -63,13 +33,12 @@ amount: Amount to transfer to the escrow contract
 {% code overflow="wrap" fullWidth="false" %}
 ```json
 {
-  "engagementId": "test",
-  "contractId": "GD2SVFOJ...",
-  "signer": "SCMXDC..."
+	"contractId": "GC3DJY4LLQYJHEONXFDLQVVRCFZQCPFX7VD33KP4P7QSVZY3SJHQBZGV",
+	"signer": "GBY3PAJY5R3ZIXTYBGFW4URB4RINEXQBC3T4RWDDKJ5TZXQYZUN6A4TP", 
+	"amount": "500.00"
 }
 ```
 {% endcode %}
-
 
 
 **Possible Responses**
@@ -138,6 +107,16 @@ amount: Amount to transfer to the escrow contract
     "statusCode": 400
 }
 
+```
+{% endtab %}
+
+{% tab title="401 Unauthorized" %}
+```json
+{
+  "statusCode": 401,
+  "message": "Unauthorized",
+  "error": "Unauthorized"
+}
 ```
 {% endtab %}
 
