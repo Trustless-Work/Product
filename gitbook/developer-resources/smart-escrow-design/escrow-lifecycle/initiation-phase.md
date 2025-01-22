@@ -1,6 +1,6 @@
 # Initiation Phase
 
-<figure><img src="../../../.gitbook/assets/Initiation phase (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Initiation phase.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -12,8 +12,8 @@ In the initiation phase key roles are assigned to specific parties. These roles 
 
 **The roles are:**
 
-1. **Milestone Approver:** Approves or disputes milestones.
-2. **Milestone Marker:** Marks milestones as completed and ready for approval.
+1. **Client:** Approves or disputes milestones.
+2. **Service Provider:** Marks milestones as completed and ready for approval.
 3. **Release Signer:** Approves the release of funds for completed milestones.
 4. **Dispute Resolver:** Resolves disputes and adjusts milestone statuses if necessary.
 5. **Receiver:** The final recipient of funds once conditions are met.
