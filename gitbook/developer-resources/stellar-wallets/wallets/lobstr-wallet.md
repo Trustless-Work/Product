@@ -49,7 +49,8 @@ Lobstr Wallet is a user-friendly mobile and web wallet for managing Stellar acco
 ## **Useful Links and Resources**
 - **Lobstr Official Website:** [Lobstr Wallet](https://lobstr.co/)
 - **Lobstr Mobile Apps:** [iOS](https://apps.apple.com) | [Android](https://play.google.com)
-- **Getting Testnet Tokens:** {% content-ref url="../testnet-tokens.md" %}Testnet Tokens{% endcontent-ref %}
+- **Testnet Tokens:** [How to Get Testnet Tokens](../testnet-tokens.md)
+- **Troubleshooting:** [Troubleshooting & FAQs](../troubleshooting.md)
 - **FAQs and Support:** [Lobstr FAQ](https://lobstr.co/faq)
 
 ---

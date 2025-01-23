@@ -99,8 +99,8 @@ Rabet Wallet is a browser extension and desktop wallet that simplifies Stellar a
 ## **Useful Links and Resources**
 
 - **Official Website:** [Rabet Wallet](https://rabet.io/)
-- **Testnet Tokens:** {% content-ref url="../testnet-tokens.md" %}How to Get Testnet Tokens{% endcontent-ref %}
-- **Troubleshooting:** {% content-ref url="../troubleshooting.md" %}Troubleshooting & FAQs{% endcontent-ref %}
+- **Testnet Tokens:** [How to Get Testnet Tokens](../testnet-tokens.md)
+- **Troubleshooting:** [Troubleshooting & FAQs](../troubleshooting.md)
 
 ---
 

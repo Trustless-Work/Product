@@ -9,12 +9,12 @@ description: A Comprehensive Developer's Guide to Stellar Wallet Integration
 Stellar wallets are essential tools for interacting with the Stellar blockchain, enabling developers and users to securely manage, send, and receive digital assets. 
 This section covers the setup and integration of popular Stellar wallets:
 
-* {% content-ref url="./wallets/freighter-wallet.md" %}**Freighter Wallet**{% endcontent-ref %}
-* {% content-ref url="./wallets/albedo-wallet.md" %}**Albedo Wallet**{% endcontent-ref %}
-* {% content-ref url="./wallets/xbull-wallet.md" %}**xBull Wallet**{% endcontent-ref %}
-* {% content-ref url="./wallets/rabet-wallet.md" %}**Rabet Wallet**{% endcontent-ref %}
-* {% content-ref url="./wallets/lobstr-wallet.md" %}**Lobstr Wallet**{% endcontent-ref %}
-* {% content-ref url="./wallets/hana-wallet.md" %}**Hana Wallet**{% endcontent-ref %}
+* [**Freighter Wallet**](./wallets/freighter-wallet.md)
+* [**Albedo Wallet**](./wallets/albedo-wallet.md)
+* [**xBull Wallet**](./wallets/xbull-wallet.md)
+* [**Rabet Wallet**](./wallets/rabet-wallet.md)
+* [**Lobstr Wallet**](./wallets/lobstr-wallet.md)
+* [**Hana Wallet**](./wallets/hana-wallet.md)
 
 ## Key Concepts
 

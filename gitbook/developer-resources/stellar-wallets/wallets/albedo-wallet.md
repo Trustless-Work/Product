@@ -49,8 +49,8 @@ Albedo is a web-based wallet for Stellar, offering simple and secure ways to sig
 
 - **Official Website:** [Albedo](https://albedo.link/)
 - **Documentation:** [Albedo Documentation](https://albedo.link/docs)
-- **Testnet Tokens:** {% content-ref url="../testnet-tokens.md" %}How to Get Testnet Tokens{% endcontent-ref %}
-- **Troubleshooting:** {% content-ref url="../troubleshooting.md" %}Troubleshooting & FAQs{% endcontent-ref %}
+- **Testnet Tokens:** [How to Get Testnet Tokens](../testnet-tokens.md)
+- **Troubleshooting:** [Troubleshooting & FAQs](../troubleshooting.md)
 
 ---
 

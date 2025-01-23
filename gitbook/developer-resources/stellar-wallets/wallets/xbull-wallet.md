@@ -1,54 +1,53 @@
-# Freighter Wallet Guide
+# xBull Wallet Guide
 
-Freighter is a browser extension wallet for Stellar. It is a non-custodial wallet extension for your browser. 
+xBull Wallet is a secure and fast web-based wallet designed for Stellar users. It provides a seamless experience for managing Stellar accounts and interacting with Stellar dApps.
 
 ---
 
 ## **What You’ll Learn**
-- How to install and set up Freighter Wallet.
-- How to connect Freighter Wallet to Trustless Work.
-- Useful resources, security tips, and FAQs.
+- How to install and set up xBull Wallet.
+- How to connect xBull Wallet to Trustless Work.
+- Useful resources, tips, and troubleshooting.
 
 ---
 
 ## **Installation**
 
 ### **Step-by-Step Instructions:**
-1. Open the official [Freighter Wallet website](https://www.freighter.app/).
-2. Click on **"Add to Browser"** for your preferred browser (e.g., Chrome, Brave, or Firefox).
+1. Visit the official [xBull Wallet](https://xbull.app) website.
+2. Click **"Download Wallet"** and then install for your preferred browser (e.g., Chrome, Brave, or Firefox).
    - Ensure you download only from the official website to avoid scams.
-3. Follow the browser prompts to install the extension.
-4. After installation, pin the Freighter extension for easy access.
+3. After installation, pin the Freighter extension for easy access.
 
 ---
 
-## **Setting Up Freighter Wallet**
+## **Setting Up xBull Wallet**
 
 ### **Creating a New Wallet**
-1. Open the Freighter extension by clicking on its icon in your browser.
+1. Open the xBull extension by clicking on its icon in your browser.
 2. Click on **"Create Wallet"**.
 3. Set a secure password (store this password securely).
-4. Freighter will generate a **Recovery Phrase** (also called a Seed Phrase).
+4. xBull will generate a **Recovery Phrase** (also called a Seed Phrase).
    - Write it down and store it in a safe place. **Do not share it with anyone**.
 
 ### **Importing an Existing Wallet**
-1. Open the Freighter extension.
+1. Open the xBull extension.
 2. Click on **"Import Wallet"**.
 3. Enter your existing Seed Phrase and set a password.
 
 ---
 
-## **Connecting Freighter to Trustless Work**
+## **Connecting xBull Wallet to Trustless Work**
 
 1. Navigate to the Trustless Work platform.
    - Example link: [Trustless Work](https://dapp.trustlesswork.com/).
 2. Click **"Connect Wallet"** in the top-right corner of the page.
-3. Select **"Freighter Wallet"** from the list of options.
+3. Select **"xBull Wallet"** from the list of options.
 4. A pop-up will appear from Freighter asking for confirmation.
 5. Approve the connection in the wallet extension.  
 
 ### **Note:** 
-- Ensure Freighter is set to the correct network (Testnet or Mainnet) based on your environment. You can toggle the network in the Freighter settings.
+- Ensure xBull is set to the correct network (Testnet or Mainnet) based on your environment. You can toggle the network in the xBull settings.
 
 ---
 
@@ -61,11 +60,10 @@ Freighter is a browser extension wallet for Stellar. It is a non-custodial walle
 ---
 
 ## **Useful Links and Resources**
-
-- **Official Website:** [Freighter Wallet](https://www.freighter.app/)
-- **Documentation:** [Freighter GitHub Repo](https://github.com/stellar/freighter)
-- **Testnet Tokens:** {% content-ref url="../testnet-tokens.md" %}How to Get Testnet Tokens{% endcontent-ref %}
-- **Troubleshooting:** {% content-ref url="../troubleshooting.md" %}Troubleshooting & FAQs{% endcontent-ref %}
+- **xBull Official Website:** [xBull Wallet](https://xbull.app)
+- **xBull Documentation:** [xBull Docs](https://xbull.app/docs/)
+- **Testnet Tokens:** [How to Get Testnet Tokens](../testnet-tokens.md)
+- **Troubleshooting:** [Troubleshooting & FAQs](../troubleshooting.md)
 
 ---
 
@@ -75,6 +73,6 @@ Freighter is a browser extension wallet for Stellar. It is a non-custodial walle
 - Your recovery phrase is the only way to restore your wallet. If it’s lost, your funds cannot be recovered.
 
 ### **Q: How do I switch between Testnet and Mainnet?**
-1. Open the Freighter extension.
+1. Open the xBull extension.
 2. Click on the settings icon.
 3. Toggle between Testnet and Mainnet in the dropdown.
