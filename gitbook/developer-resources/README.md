@@ -12,6 +12,6 @@
 [stellar-wallets](stellar-wallets/)
 {% endcontent-ref %}
 
-Dapps:
+Dapp:
 
 {% embed url="https://dapp.trustlesswork.com" %}
