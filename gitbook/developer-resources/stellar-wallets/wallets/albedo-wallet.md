@@ -1,4 +1,7 @@
-# Albedo Wallet Guide
+# Albedo Wallet Guide 
+
+![Rabet Wallet Logo](../images/albedo-logo.png)  
+*Official logo of the Albedo Wallet.*
 
 Albedo is a web-based wallet for Stellar, offering simple and secure ways to sign Stellar transactions.
 
@@ -19,6 +22,8 @@ Albedo is a web-based wallet for Stellar, offering simple and secure ways to sig
 3. Save your backup key securely.
 4. Verify your account and log in.
 
+![Albedo Account](../images/albedo-account.png) ![Albedo SetUp](../images/albedo-setup.png)
+
 ### **Importing an Existing Account**
 1. Open Albedo Wallet.
 2. Click on **"Create Albedo Account"** and follow the prompts.
@@ -34,6 +39,8 @@ Albedo is a web-based wallet for Stellar, offering simple and secure ways to sig
 2. Click **"Connect Wallet"** in the top-right corner of the page.
 3. Select **"Albedo Wallet"** from the list of options.
 4. Authorize the connection on Albedo's interface.
+
+![Trustless Work](../images/trustless-work.png)  ![Wallet](../images/wallet-select.png)
 
 ---
 

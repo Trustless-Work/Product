@@ -1,5 +1,8 @@
 # Freighter Wallet Guide
 
+![Rabet Wallet Logo](../images/freighter-logo.png)  
+*Official logo of the Freighter Wallet.*
+
 Freighter is a browser extension wallet for Stellar. It is a non-custodial wallet extension for your browser. 
 
 ---
@@ -20,21 +23,27 @@ Freighter is a browser extension wallet for Stellar. It is a non-custodial walle
 3. Follow the browser prompts to install the extension.
 4. After installation, pin the Freighter extension for easy access.
 
+![Freighter Preview](../images/freighter-install.png)
+
 ---
 
 ## **Setting Up Freighter Wallet**
 
 ### **Creating a New Wallet**
 1. Open the Freighter extension by clicking on its icon in your browser.
-2. Click on **"Create Wallet"**.
+2. Click on **"Create New Wallet"**.
 3. Set a secure password (store this password securely).
 4. Freighter will generate a **Recovery Phrase** (also called a Seed Phrase).
    - Write it down and store it in a safe place. **Do not share it with anyone**.
+
+![Freighter Setup](../images/freighter-create-wallet.png)  ![Freighter Setup](../images/freighter-setup.png)
 
 ### **Importing an Existing Wallet**
 1. Open the Freighter extension.
 2. Click on **"Import Wallet"**.
 3. Enter your existing Seed Phrase and set a password.
+
+![Freighter Setup](../images/freighter-create-wallet.png)
 
 ---
 
@@ -46,6 +55,8 @@ Freighter is a browser extension wallet for Stellar. It is a non-custodial walle
 3. Select **"Freighter Wallet"** from the list of options.
 4. A pop-up will appear from Freighter asking for confirmation.
 5. Approve the connection in the wallet extension.  
+
+![Trustless Work](../images/trustless-work.png)  ![Wallet](../images/wallet-select.png)
 
 ### **Note:** 
 - Ensure Freighter is set to the correct network (Testnet or Mainnet) based on your environment. You can toggle the network in the Freighter settings.

@@ -1,5 +1,8 @@
 # Hana Wallet Guide
 
+![Rabet Wallet Logo](../images/hana-logo.png)  
+*Official logo of the Hana Wallet.*
+
 Hana Wallet is a lightweight browser extension wallet for Stellar, offering an easy and secure way to manage accounts and sign transactions.
 
 ---
@@ -18,6 +21,8 @@ Hana Wallet is a lightweight browser extension wallet for Stellar, offering an e
 2. Download and install the browser extension for your preferred browser (Chrome or Brave).
 3. Pin the Hana extension for quick access.
 
+![Hana Preview](../images/hana-preview.png)
+
 ---
 
 ## **Setting Up Hana Wallet**
@@ -28,6 +33,8 @@ Hana Wallet is a lightweight browser extension wallet for Stellar, offering an e
 3. Set a secure password (store this password securely).
 4. Hana will generate a **Recovery Phrase** (also called a Seed Phrase).
    - Write it down and store it in a safe place. **Do not share it with anyone**.
+
+![Hana SetUp](../images/hana-setup.png)
 
 ### **Importing an Existing Wallet**
 1. Open the Hana extension.
@@ -44,6 +51,8 @@ Hana Wallet is a lightweight browser extension wallet for Stellar, offering an e
 3. Select **"Hana Wallet"** from the list of options.
 4. A pop-up will appear from Hana asking for confirmation.
 5. Approve the connection in the wallet extension.  
+
+![Trustless Work](../images/trustless-work.png)  ![Wallet](../images/wallet-select.png)
 
 ### **Note:** 
 - Ensure Hana is set to the correct network (Testnet or Mainnet) based on your environment. You can toggle the network in the Hana settings.

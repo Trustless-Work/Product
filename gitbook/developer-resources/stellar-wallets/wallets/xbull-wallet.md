@@ -1,5 +1,8 @@
 # xBull Wallet Guide
 
+![Rabet Wallet Logo](../images/xbull-logo.png)  
+*Official logo of the xBull Wallet.*
+
 xBull Wallet is a secure and fast web-based wallet designed for Stellar users. It provides a seamless experience for managing Stellar accounts and interacting with Stellar dApps.
 
 ---
@@ -17,7 +20,9 @@ xBull Wallet is a secure and fast web-based wallet designed for Stellar users. I
 1. Visit the official [xBull Wallet](https://xbull.app) website.
 2. Click **"Download Wallet"** and then install for your preferred browser (e.g., Chrome, Brave, or Firefox).
    - Ensure you download only from the official website to avoid scams.
-3. After installation, pin the Freighter extension for easy access.
+3. After installation, pin the xBull extension for easy access.
+
+![xBull SetUp](../images/xbull_preview.png)
 
 ---
 
@@ -25,10 +30,12 @@ xBull Wallet is a secure and fast web-based wallet designed for Stellar users. I
 
 ### **Creating a New Wallet**
 1. Open the xBull extension by clicking on its icon in your browser.
-2. Click on **"Create Wallet"**.
+2. Click on **"Generate Wallet"**.
 3. Set a secure password (store this password securely).
 4. xBull will generate a **Recovery Phrase** (also called a Seed Phrase).
    - Write it down and store it in a safe place. **Do not share it with anyone**.
+
+![xBull Create Wallet](../images/xbull-create-wallet.png)
 
 ### **Importing an Existing Wallet**
 1. Open the xBull extension.
@@ -43,8 +50,10 @@ xBull Wallet is a secure and fast web-based wallet designed for Stellar users. I
    - Example link: [Trustless Work](https://dapp.trustlesswork.com/).
 2. Click **"Connect Wallet"** in the top-right corner of the page.
 3. Select **"xBull Wallet"** from the list of options.
-4. A pop-up will appear from Freighter asking for confirmation.
+4. A pop-up will appear from xBull asking for confirmation.
 5. Approve the connection in the wallet extension.  
+
+![Trustless Work](../images/trustless-work.png)  ![Wallet](../images/wallet-select.png)
 
 ### **Note:** 
 - Ensure xBull is set to the correct network (Testnet or Mainnet) based on your environment. You can toggle the network in the xBull settings.
