@@ -1,5 +1,5 @@
 ---
-description: A Comprehensive Developer's Guide to Stellar Wallet Integration
+description: A Comprehensive Developer's Guide to Stellar Wallet Integrations
 ---
 
 # Stellar Wallet 
