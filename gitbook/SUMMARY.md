@@ -73,7 +73,7 @@
     * [E-commerce Marketplace (e.g., eBay)](developer-resources/design-examples/e-commerce-marketplace-e.g.-ebay.md)
   * [Open-Source Templates](developer-resources/open-source-templates.md)
   * [FAQs and Troubleshooting](developer-resources/faqs-and-troubleshooting.md)
-  * [Stellar Wallets](developer-resources/stellar-waleets/README.md)
+  * [Stellar Wallets](developer-resources/stellar-wallets/README.md)
 * [Interesting Reports](interesting-reports/README.md)
   * [Benefits for Businesses](interesting-reports/benefits-for-businesses.md)
   * [How to Integrate](interesting-reports/how-to-integrate.md)
