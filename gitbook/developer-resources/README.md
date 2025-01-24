@@ -8,6 +8,10 @@
 [api-reference](api-reference/)
 {% endcontent-ref %}
 
+{% content-ref url="stellar-wallets/" %}
+[stellar-wallets](stellar-wallets/)
+{% endcontent-ref %}
+
 Dapp:
 
 {% embed url="https://dapp.trustlesswork.com" %}
