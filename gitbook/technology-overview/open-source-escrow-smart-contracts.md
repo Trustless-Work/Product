@@ -4,19 +4,18 @@
 
 ### **What Are Open-Source Escrow Smart Contracts?**
 
-**Escrow Smart Contracts** are programmable agreements that securely manage and release funds based on predefined conditions. They replace the traditional need for an intermediary, like a bank or lawyer, by embedding all terms directly in **code**.
+**Escrow Smart Contracts** are programmable agreements that securely manage and release funds based on predefined actions. They replace the traditional need for a custodian, like a bank, and allow participants to play an active role in the Escrow Lifecycle.&#x20;
 
 #### **Key Features**
 
 1. **Trustless Transactions** 🌐
-   * The **smart contracts** manage funds autonomously. There is no need for human involvement once an escrow is set up—the contract ensures that all conditions are met before releasing funds.
-   * This **trustless nature** removes third-party dependencies, reducing costs and the potential for errors or conflicts.
+   * The **smart contracts** manage funds transparently. Once deployed there are only specific flows the escrow can take. Escrow status can be updated only by explicit participants, addresess that are assigned roles, during the deployment stage.
 2. **Transparency and Security** 🔒
    * As **open-source** contracts, they are fully auditable by anyone. Participants can review every line of code to understand exactly how their funds will be handled.
    * Deployed on **Soroban** (Stellar's blockchain for smart contracts), they benefit from blockchain's inherent **security**—making them **tamper-proof** and resistant to unauthorized changes.
 3. **Flexible and Programmable Conditions** ⚙️
    * The contracts can be configured to suit a wide variety of use cases. Conditions such as **milestone completions**, **multi-party sign-offs**, or **specific timelines** can all be encoded in the smart contracts.
-   * Whether it’s milestone payments for freelancers, security deposits for rentals, or crowdfunding releases, our smart contracts provide **flexible automation** to fit your needs.
+   * Whether it’s milestone payments for freelancers, security deposits for rentals, or crowdfunding releases, our smart contracts provide **flexible configuration** to fit your needs.
 
 #### **Benefits of Using Our Smart Contracts**
 

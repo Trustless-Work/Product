@@ -33,11 +33,11 @@ Trustless Work is an Escrow-as-a-Service platform designed to secure transaction
 
     Escrows are neutral way to hold funds while specific conditions are met. Most people tend to think about Real Estate when I mention escrows, and they are right! we DO use escrows for Real Estate and high value transactions!
 
-<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption><p>Simple representation of a Real Estate Escrow.</p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Simple representation of a Real Estate Escrow.</p></figcaption></figure>
 
 But Escrows are useful for so many things, for example, marketplaces like Upwork and Ebay use them:&#x20;
 
-<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption><p>Escrows on digital marketplaces. </p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Escrows on digital marketplaces. </p></figcaption></figure>
 
 Ebay and Upwork can afford to build their own escrow infrastructure. Well, sort of... Ebay actually uses Escrow.com, a huge legacy escrow company that takes between (3% -  8%) , Upwork, built Upwork Escrow inc. \
 But thats not the reality of most businesses...&#x20;

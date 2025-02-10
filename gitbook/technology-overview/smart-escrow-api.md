@@ -1,5 +1,9 @@
 # 🚀 Smart Escrow API
 
+{% hint style="info" %}
+Escrow API 2.0 is around the Corner, this section is in construction
+{% endhint %}
+
 {% hint style="danger" %}
 There will be a fixed 0.3% fee on released funds from escrows on Mainnet.&#x20;
 
