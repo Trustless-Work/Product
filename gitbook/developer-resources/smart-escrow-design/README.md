@@ -2,6 +2,8 @@
 
 Welcome to the Smart Escrow Design section.&#x20;
 
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Escrow Lifecycle</p></figcaption></figure>
+
 To simplify the design process, we have subdivided the escrow lifecycle into distinct phases. Click on any phase to learn more:
 
 [Initiation phase](escrow-lifecycle/initiation-phase.md)
@@ -24,9 +26,11 @@ To understand how roles interact accross the lifecycle, visit the [Roles in Trus
 [roles-in-trustless-work.md](roles-in-trustless-work.md)
 {% endcontent-ref %}
 
-### Figma Template for Escrow Design
+### Escrow Design
 
-Start designing your escrow configurations visually using our Figma template. Feel free to copy it and accelerate your Go To market by correctly planning your Trustless Work integration!
+Start designing your escrow configurations visually using our Excalidraw or Figma (old)  template. Feel free to copy it and accelerate your Go To market by correctly planning your Trustless Work integration!
+
+[https://link.excalidraw.com/readonly/uT289bCBJUCpKK0sTxYr](https://link.excalidraw.com/readonly/uT289bCBJUCpKK0sTxYr)
 
 &#x20;\
 [https://www.figma.com/community/file/1456840320155816764/trustless-design-framework](https://www.figma.com/community/file/1456840320155816764/trustless-design-framework)
