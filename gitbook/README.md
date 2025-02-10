@@ -31,24 +31,31 @@ Trustless Work is an Escrow-as-a-Service platform designed to secure transaction
 
 *   **Escrows are a great way to solve for trust.**&#x20;
 
-    Escrows are neutral way to hold funds while specific conditions are met. Think of it as a **secure, neutral envelope** where funds are kept until the conditions of a contract are met (or not)
-* **Escrows with Fiat are next to impossible to do digitally (Legacy escrows).**\
-  Escrows are more commonly found on high value transactions, like Real Estate, Merge and Aquisitions, and cross border trade mainly because they are costly. Fiat requires bank accounts or a complex settlement system to achieve this functionality, this makes them slow too. Big Techs like Upwork, or Ebay can afford this (their users pay high fees), but for most platforms it's too resource intensive or too expensive to integrate.&#x20;
-* **Blockchain solves this, but complexity to do so is high.**\
-  Blockchain and web3 are the perfect solution for this, but we can't expect for every marketplace out there to have a Smart Contract engineer. Getting to experiment, test and scale with this technology is resource intensive and has a high learning curve.
+    Escrows are neutral way to hold funds while specific conditions are met. Most people tend to think about Real Estate when I mention escrows, and they are right! we DO use escrows for Real Estate and high value transactions!
 
-Trustless Work aims to solve trust in global payments by providing configurable, scalable, and transparent escrow infrastructure and tools for platforms to join the new economy.
+<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption><p>Simple representation of a Real Estate Escrow.</p></figcaption></figure>
+
+But Escrows are useful for so many things, for example, marketplaces like Upwork and Ebay use them:&#x20;
+
+<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption><p>Escrows on digital marketplaces. </p></figcaption></figure>
+
+Ebay and Upwork can afford to build their own escrow infrastructure. Well, sort of... Ebay actually uses Escrow.com, a huge legacy escrow company that takes between (3% -  8%) , Upwork, built Upwork Escrow inc. \
+But thats not the reality of most businesses...&#x20;
+
+Platforms that could greatly benefit from the use of escrows don't use them because of the technical complexity and cost of building an escrow infrastructure.
+
+<figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+* **Escrows with Fiat are next to impossible to build (Legacy escrows).**\
+  Escrows are more commonly found on high value transactions, like Real Estate, Merge and Aquisitions, and cross border trade mainly because they are costly and sloe. Fiat requires bank accounts or a complex settlement system to achieve this functionality. I've met people who toook a year to build their escrow infrastrucute, A YEAR!
+* **Blockchain obviously solves this, but complexity to built it is still high.**\
+  Blockchain and web3 are the perfect solution for this, but we can't expect for every marketplace out there to have a Smart Contract engineer. Getting to experiment, test and scale with this technology is resource intensive and has a steep learning curve.
 
 ***
 
-### **Who Is This Documentation For?**
+### Trustless Work is building the Escrow Infrastructure for the New Economy.&#x20;
 
-* **Developers**\
-  Get up and running with our API to integrate smart escrows into your platform.
-* **Marketplaces and Platforms**\
-  Secure transactions with ease while enhancing user trust and satisfaction.
-* **Innovators**\
-  Build the future of finance with blockchain-powered escrows.
+A simple, scalable solution for anyone to integrate blockchain-based escrows to their payment flow.&#x20;
 
 ***
 
