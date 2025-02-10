@@ -12,7 +12,7 @@ To fund testnet escrows you will also need testnet XLM and testnet USDC. Learn m
 
 #### **Step 1: Sign Up**
 
-* Log in with your Stellar wallet on TW dApp: [https://d-app-trustless-work.vercel.app/](https://d-app-trustless-work.vercel.app/)
+* Log in with your Stellar wallet on TW dApp: [dapp.trustlesswork.com](https://dapp.trustlesswork.com)
 * Create your account at Trustless Work to access your API key.
 * Choose between **testnet** for experimentation ~~or **mainnet** for production use.~~
 
