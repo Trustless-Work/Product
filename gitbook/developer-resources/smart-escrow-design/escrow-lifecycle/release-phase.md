@@ -1,8 +1,6 @@
 # Release phase
 
-<figure><img src="../../../.gitbook/assets/Release Sign.png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 The Release Phase is initiated when the **Release Signer** approves the release of funds. This triggers the escrow smart contract to perform verification checks, deduct fees, and securely disburse funds to the **Receiver**. The escrow is then marked as completed, concluding the transaction.
 

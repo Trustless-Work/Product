@@ -6,7 +6,7 @@ description: A Journey in Phases
 
 The escrow lifecycle represents the structured flow of actions and responsibilities involved in securely managing a transaction. At Trustless Work, we break this lifecycle into clear, logical phases, ensuring transparency and adaptability for diverse use cases.
 
-<figure><img src="../../../.gitbook/assets/Escorw Lifecycle.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### **Core Phases of the Escrow Lifecycle**
 
@@ -20,8 +20,6 @@ The escrow lifecycle represents the structured flow of actions and responsibilit
    The phase where milestones are reviewed and approved (or disputed), moving the transaction closer to resolution.
 5. **Release Phase:**\
    Funds are released to the designated recipient based on milestone approvals or dispute resolutions, completing the financial component of the transaction.
-6. **Closure Phase:**\
-   Marks the official end of the escrow process, ensuring all conditions are met, funds are distributed, and the contract is finalized.
 
 ***
 
@@ -31,5 +29,5 @@ In some scenarios, the lifecycle may include additional phases to address unique
 
 1. **Dispute Resolution Phase:**\
    Engaged when there are disagreements between parties, this phase ensures fairness by resolving disputes and determining the final outcome.
-2. **Escrow Cancellation Phase:**\
+2. **Escrow Refund Phase:**\
    Allows for the early termination of the escrow contract under specific conditions, ensuring any funds or fees are appropriately handled.

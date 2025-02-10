@@ -1,8 +1,6 @@
 # Initiation Phase
 
-<figure><img src="../../../.gitbook/assets/Initiation phase.png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 The Initiation Phase is the foundation of the escrow process. It ensures that all necessary details are captured, roles are assigned, and conditions are clearly defined. This phase lays the groundwork for a secure, transparent, and efficient transaction.
 
@@ -12,7 +10,7 @@ In the initiation phase key roles are assigned to specific parties. These roles 
 
 {% hint style="info" %}
 We are currently on the process of updating from client to milestone approver and from service provider to milestone marker. \
-Receiver will be added too (For now, it assumes service rpovider will be the receiver)
+Receiver will be added too (For now, it assumes service provider will be the receiver)
 {% endhint %}
 
 **The roles are:**

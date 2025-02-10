@@ -2,7 +2,7 @@
 
 Welcome to the Smart Escrow Design section.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>Escrow Lifecycle</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Escrow Lifecycle</p></figcaption></figure>
 
 To simplify the design process, we have subdivided the escrow lifecycle into distinct phases. Click on any phase to learn more:
 

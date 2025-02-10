@@ -1,8 +1,6 @@
 # Funding Phase
 
-<figure><img src="../../../.gitbook/assets/Funding.png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 The Funding Phase is where funds are deposited into the escrow smart contract, signaling the formal commitment of all parties to the transaction. This phase ensures the financial security of the agreement, builds trust among participants, and sets the stage for the remaining phases.
 
@@ -35,7 +33,6 @@ The Funding Phase is where funds are deposited into the escrow smart contract, s
 * **Blockchain Transparency:** All participants can independently verify the funding status using the transaction ID on-chain.
 * **Stellar Integration Flexibility:** Any Stellar Anchor (on/off-ramp) can be seamlessly integrated to fund the escrow, allowing for global accessibility and currency flexibility.
 * **Escrow Balance Updates:** Participants calculate funding status off-chain by comparing the balance with the agreed amount.
-* **Platform's Role:** The platform provides updates to participants.
 
 ***
 

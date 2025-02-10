@@ -1,8 +1,6 @@
 # Approval phase
 
-<figure><img src="../../../.gitbook/assets/Approval.png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 The Approval Phase is where the **Milestone Approver** evaluates the milestone marked as **For Review** by the **Milestone Marker**. This critical step determines whether the milestone is approved or disputed, dictating the next steps in the escrow process and transitioning the transaction toward completion or resolution.
 
