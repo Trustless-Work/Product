@@ -2,18 +2,18 @@
 
 <figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
-The Dispute Resolution Phase is triggered when the client (e.g., Alice) raises a dispute during the Approval Phase. This phase involves a thorough review by the designated dispute resolver (e.g., the platform, Marketplace) to determine how the funds should be allocated. The escrow contract remains in a locked state, with no funds released, until the dispute is resolved.
+The Dispute Resolution Phase is triggered when either the client or the service provider raises a dispute. This phase involves a review by the designated dispute resolver (e.g., the platform, Marketplace) to determine how the funds should be allocated. The escrow contract remains in a locked state, with no funds released, until the dispute is resolved.
 
 ***
 
 #### **Key Actions**
 
 1. **Raising a Dispute:**
-   * The client (Alice) identifies issues with the milestone deliverable and raises a dispute.
-   * Evidence or supporting documentation (e.g., screenshots, contracts, delivery notes) is submitted to the dispute resolver.
+   * The client (or Service Provider) identifies issues with the milestone deliverable and raises a dispute.
+   * Evidence or supporting documentation (e.g., screenshots, contracts, delivery notes) is submitted to the dispute resolver (As a URL)
    * The escrow contract updates:
      * **Milestone Status:** Set to **In Dispute.**
-     * **Approved Flag:** Updated to reflect the dispute status.
+     * **Dispute Flag:** Updated to reflect the dispute status.
 2. **Dispute Resolver Review:**
    * The dispute resolver (Marketplace) reviews the case, including:
      * Evidence provided by the client.
