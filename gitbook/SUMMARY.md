@@ -58,7 +58,7 @@
       * [Claim Escrow Earnings](developer-resources/api-reference/escrows/claim-escrow-earnings.md)
     * [Authentication](developer-resources/api-reference/authentication/README.md)
       * [Schema](developer-resources/api-reference/authentication/schema.md)
-      * [Register](developer-resources/api-reference/authentication/request-api-key.md)
+      * [Request Api Key](developer-resources/api-reference/authentication/request-api-key.md)
     * [Helpers](developer-resources/api-reference/helpers/README.md)
       * [Set Trustline](developer-resources/api-reference/helpers/set-trustline.md)
       * [Get Allowance](developer-resources/api-reference/helpers/get-allowance.md)
