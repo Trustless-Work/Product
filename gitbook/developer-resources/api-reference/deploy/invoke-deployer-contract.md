@@ -13,21 +13,24 @@ description: Deploy the contract and initialize the escrow entity.
 | Name         | Value              |
 | ------------ | ------------------ |
 | Content-Type | `application/json` |
+| Authorization  | `Bearer <token>` |
 
 **Body**
 
-| Name                                     | Type              | Description                                                                     |
-| ---------------------------------------- | ----------------- | ------------------------------------------------------------------------------- |
-| <pre><code>engagementId
-</code></pre>    | string            | The unique identifier linking this escrow to a specific project or transaction. |
-| <pre><code>description
-</code></pre>     | string            | A brief summary or metadata describing the scope of the service/product.        |
-| <pre><code>serviceProvider
-</code></pre> | string \| Address | The address of the entity receiving the payment.                                |
-| <pre><code>amount
-</code></pre>          | string            | The amount pacted (price of product/service).                                   |
-| <pre><code>signer
-</code></pre>          | string \| Address | The address authorized to approve the release of funds.                         |
+| Name            | Type         | Description                                                  |
+| --------------- | ------------ | ------------------------------------------------------------ |
+| signer          | string       | Entity that signs the transaction that deploys and initializes the escrow |
+| engagementId    | string       | engagementId: Unique identifier for the escrow               |
+| title           | string       | Name of the escrow                                           |
+| description     | string       | Text describing the function of the escrow                   |
+| client          | string       | Address of the entity requiring the service                  |
+| serviceProvider | string       | Address of the entity providing the service                  |
+| platformAddress | string       | Address of the platform that owns the escrow                 |
+| amount          | string       | Amount to be transferred upon completion of escrow milestones |
+| platformFee     | string       | Commission that the platform will receive when the escrow is completed |
+| milestones      | Milestones[] | Objectives to be completed to define the escrow as completed |
+| releaseSigner   | string       | Address of the entity in charge of releasing escrow funds    |
+| disputeResolver | string       | Address in charge of resolving disputes within the escrow    |
 
 
 
@@ -36,12 +39,22 @@ description: Deploy the contract and initialize the escrow entity.
 {% code overflow="wrap" fullWidth="false" %}
 ```json
 {
-  "engagementId": "1",
-  "description": "any",
-  "serviceProvider": "GA2RRI2...",
-  "amount": "1",
-  "signer": "GBPUACN..."
-}
+	"signer": "GAD4T6Z63N5NJLQYY3J5MVYFHH5I5UB7NDUUYZD7HHB3RMS6X3H4YK7P", 
+	"engagementId": "ENG12345",
+	"title": "Project Title",
+	"description": "This is a detailed description of the project.",
+	"client": "GAHJZHVKFLATA7RVGXSFKXAKT5H4RXJ4LU2UR2W2IDFXOJQ2BR7RHW62",
+	"serviceProvider": "GDWPCWWH7IXQJHDF7FJUI7VOGD5IT72T7YX55F4BR2H4WXFRBVMBK6A3", 
+	"platformAddress": "GBC5DVYUBTBSXJ3ZMRPGXDDDLKTALIFGRW73B33AF5EFSZBUECKSFO4R",
+	"amount": "1000.00",
+	"platformFee": "50.00", 
+	"milestones": [
+		{ "description": "Initial phase of the project", status: "Pending" },
+		{ "description": "Completion of design work", status: "Pending" }
+	],
+	"releaseSigner": "GBDKXCG6FHJMTUBWGAVVOD5PB5QXLYTRJGCH4NR4IMJVPXHHTBBXPY3V",
+	"disputeResolver": "GDJVCNR5GPOJH7XMOVMHBKZV7V7WQ3B7QK75C76HLOBD4AKHFG5OCARJ"
+};
 ```
 {% endcode %}
 
@@ -54,9 +67,7 @@ description: Deploy the contract and initialize the escrow entity.
 ```json
 {
     "status": "SUCCESS",
-    "message": "The escrow has been successfully initialized",
-    "contractId": "CCR3IWUP...",
-    "engagementId": "1"
+    "unsignedTransaction": "AAAAAgAAAAA1GKN..."
 }
 ```
 {% endtab %}
@@ -90,6 +101,18 @@ description: Deploy the contract and initialize the escrow entity.
 }
 ```
 {% endtab %}
+
+
+{% tab title="401 Unauthorized" %}
+```json
+{
+  "statusCode": 401,
+  "message": "Unauthorized",
+  "error": "Unauthorized"
+}
+```
+{% endtab %}
+
 
 {% tab title="429 Rate Limit" %}
 ```json

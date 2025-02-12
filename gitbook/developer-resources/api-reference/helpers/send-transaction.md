@@ -13,13 +13,14 @@ description: Confirm the transaction.
 | Name         | Value              |
 | ------------ | ------------------ |
 | Content-Type | `application/json` |
+| Authorization  | `Bearer <token>` |
 
 **Body**
 
-| Name                               | Type   | Description                                 |
-| ---------------------------------- | ------ | ------------------------------------------- |
-| <pre><code>signedXdr
-</code></pre> | string | The sign's hash. This come from the wallet. |
+| Name                  | Type    | Description                                 |
+| --------------------- | ------- | ------------------------------------------- |
+| signedXdr             | string  | The sign's hash. This come from the wallet. |
+| returnValueIsRequired | boolean | If a return value is needed.                |
 
 
 
@@ -29,6 +30,7 @@ description: Confirm the transaction.
 ```json
 {
   "signedXdr": "AAAAAgAAAAB...",
+  "returnValueIsRequired": true,
 }
 ```
 {% endcode %}
@@ -63,6 +65,16 @@ description: Confirm the transaction.
     "statusCode": 400
 }
 
+```
+{% endtab %}
+
+{% tab title="401 Unauthorized" %}
+```json
+{
+  "statusCode": 401,
+  "message": "Unauthorized",
+  "error": "Unauthorized"
+}
 ```
 {% endtab %}
 

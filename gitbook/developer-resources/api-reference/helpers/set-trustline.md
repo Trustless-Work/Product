@@ -13,6 +13,8 @@ description: Set the required trustline.
 | Name         | Value              |
 | ------------ | ------------------ |
 | Content-Type | `application/json` |
+| Authorization  | `Bearer <token>` |
+
 
 **Params**
 
@@ -60,6 +62,16 @@ description: Set the required trustline.
     "statusCode": 400
 }
 
+```
+{% endtab %}
+
+{% tab title="401 Unauthorized" %}
+```json
+{
+  "statusCode": 401,
+  "message": "Unauthorized",
+  "error": "Unauthorized"
+}
 ```
 {% endtab %}
 

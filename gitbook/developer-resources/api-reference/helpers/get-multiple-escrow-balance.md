@@ -1,10 +1,13 @@
 ---
-description: Responsible for setting the escrow in dispute state. Changes the value of the escrow's "dispute\_flag" property to true.
+description: Get the balance of multiple escrows.
+hidden: true
 ---
 
-# Change dispute flag
+# Get Multiple Escrow Balance
 
-<mark style="color:green;">**`POST`**</mark> `escrow/change-dispute-flag`
+<mark style="color:orange;">**`GET`**</mark> `helper/get-multiple-escrow-balance`
+
+
 
 **Headers**
 
@@ -13,24 +16,26 @@ description: Responsible for setting the escrow in dispute state. Changes the va
 | Content-Type | `application/json` |
 | Authorization  | `Bearer <token>` |
 
-**Body**
+**Params**
 
-| Name       | Type   | Description                                       |
-| ---------- | ------ | ------------------------------------------------- |
-| contractId | string | ID (address) that identifies the escrow contract  |
-| signer     | string | Address of the user who will sign the transaction |
+| Name    | Type     | Description                                                  |
+| ------- | -------- | ------------------------------------------------------------ |
+| signer  | string   | Entity that signs the transaction that deploys and initializes the escrow |
+| addresses | string[] | List of addresses requesting escrow balance retrieval        |
 
 
-**Example of Request Body:**
+
+**Example of Request Params:**
 
 {% code overflow="wrap" fullWidth="false" %}
 ```json
 {
-	"contractId": "GC3DJY4LLQYJHEONXFDLQVVRCFZQCPFX7VD33KP4P7QSVZY3SJHQBZGV",
-	"signer": "GBY3PAJY5R3ZIXTYBGFW4URB4RINEXQBC3T4RWDDKJ5TZXQYZUN6A4TP", 
+    "signer": "GAD4T6Z63N5NJLQYY3J5MVYFHH5I5UB7NDUUYZD7HHB3RMS6X3H4YK7P",
+    "addresses": ["GAHJZHVKFLATA7RVGXSFKXAKT5H4RXJ4LU2UR2W2IDFXOJQ2BR7RHW62",            "GAHJZHVKFLATA7RVGXSFKXAKT5H4RXJ4LU2UR2W2IDFXOJQ2BR7RHW62"]
 }
 ```
 {% endcode %}
+
 
 
 **Possible Responses**
