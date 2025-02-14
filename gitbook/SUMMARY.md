@@ -52,6 +52,7 @@
       * [Change milestone status](developer-resources/api-reference/escrows/change-milestone-status.md)
       * [Change dispute flag](developer-resources/api-reference/escrows/change-dispute-flag.md)
       * [Get escrow balance](developer-resources/api-reference/escrows/get-escrow-balance.md)
+      * [Get multiple escrow balance](developer-resources/api-reference/escrows/get-multiple-escrow-balance.md)
       * [Distribute escrow funds](developer-resources/api-reference/escrows/distribute-escrow-funds.md)
       * [Cancel Escrow](developer-resources/api-reference/escrows/cancel-escrow.md)
       * [Refund Remaining Funds](developer-resources/api-reference/escrows/refund-remaining-funds.md)
