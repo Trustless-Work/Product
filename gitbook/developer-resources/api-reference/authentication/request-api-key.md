@@ -1,6 +1,5 @@
 ---
 description: Request an api key to interact with other endpoints.
-hidden: true
 ---
 
 # Request Api Key
