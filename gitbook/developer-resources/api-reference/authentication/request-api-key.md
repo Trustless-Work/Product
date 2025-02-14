@@ -2,11 +2,9 @@
 description: Request an api key to interact with other endpoints.
 ---
 
-# Request Api Key 
+# Request Api Key
 
 <mark style="color:green;">**`POST`**</mark> `auth/request-api-key`
-
-
 
 **Headers**
 
@@ -14,14 +12,9 @@ description: Request an api key to interact with other endpoints.
 | ------------ | ------------------ |
 | Content-Type | `application/json` |
 
-
 | Name   | Type   | Description                         |
 | ------ | ------ | ----------------------------------- |
 | wallet | string | Your wallet alredy sign on the dApp |
-
-
-
-
 
 **Example of Request Body:**
 
@@ -32,8 +25,6 @@ description: Request an api key to interact with other endpoints.
 }
 ```
 {% endcode %}
-
-
 
 **Possible Responses**
 
@@ -59,13 +50,20 @@ description: Request an api key to interact with other endpoints.
 {% endtab %}
 
 {% tab title="500 Server Error" %}
-<mark style="color:red;">**Engagement Id**</mark>
 
+{% endtab %}
+
+{% tab title="undefined" %}
+<mark style="color:red;">**Engagement Id**</mark>
+{% endtab %}
+
+{% tab title="undefined" %}
 ```json
 {
   "error": "Wallet cannot be empty"
 }
 ```
+{% endtab %}
 
 {% tab title="400 Bad Request" %}
 ```json
