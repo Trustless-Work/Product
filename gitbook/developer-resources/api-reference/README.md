@@ -8,8 +8,6 @@ description: >-
 
 # API Reference
 
-<mark style="color:blue;">**Base URL:**</mark> <mark style="color:yellow;">`https://dev.api.trustlesswork.com`</mark>
-
 ### Version
 
 We actually are in version 2 of Trustless Work API.
