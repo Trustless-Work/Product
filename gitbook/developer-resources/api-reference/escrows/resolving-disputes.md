@@ -1,5 +1,8 @@
 ---
-description: Handles the resolution of disputes within an escrow by transferring the amounts entered so far in the escrow to the client and service provider according to what the dispute resolver deems appropriate.
+description: >-
+  Handles the resolution of disputes within an escrow by transferring the
+  amounts entered so far in the escrow to the client and service provider
+  according to what the dispute resolver deems appropriate
 ---
 
 # Resolving disputes
@@ -8,19 +11,23 @@ description: Handles the resolution of disputes within an escrow by transferring
 
 **Headers**
 
-| Name         | Value              |
-| ------------ | ------------------ |
-| Content-Type | `application/json` |
-| Authorization  | `Bearer <token>` |
+| Name          | Value              |
+| ------------- | ------------------ |
+| Content-Type  | `application/json` |
+| Authorization | `Bearer <token>`   |
 
 **Body**
 
-| Name                 | Type   | Description                                                  |
-| -------------------- | ------ | ------------------------------------------------------------ |
-| <pre><code>contractId</code></pre>           | string | ID (address) that identifies the escrow contract             |
-| <pre><code>disputeResolver</code></pre>      | string | Address of the user defined to resolve disputes in an escrow |
-| <pre><code>clientFunds</code></pre>          | string | Amount to transfer to the client for dispute resolution      |
-| <pre><code> serviceProviderFunds </code></pre> | string | Amount to transfer to the service provider for dispute resolution |
+| Name                                            | Type   | Description                                                       |
+| ----------------------------------------------- | ------ | ----------------------------------------------------------------- |
+| <pre><code>contractId
+</code></pre>             | string | ID (address) that identifies the escrow contract                  |
+| <pre><code>disputeResolver
+</code></pre>        | string | Address of the user defined to resolve disputes in an escrow      |
+| <pre><code>clientFunds
+</code></pre>            | string | Amount to transfer to the client for dispute resolution           |
+| <pre><code> serviceProviderFunds 
+</code></pre> | string | Amount to transfer to the service provider for dispute resolution |
 
 **Example of Request Body:**
 
@@ -65,7 +72,6 @@ description: Handles the resolution of disputes within an escrow by transferring
 ```
 {% endtab %}
 
-
 {% tab title="401 Unauthorized" %}
 ```json
 {
@@ -76,7 +82,6 @@ description: Handles the resolution of disputes within an escrow by transferring
 ```
 {% endtab %}
 
-
 {% tab title="429 Rate Limit" %}
 ```json
 {
@@ -86,5 +91,3 @@ description: Handles the resolution of disputes within an escrow by transferring
 ```
 {% endtab %}
 {% endtabs %}
-
-

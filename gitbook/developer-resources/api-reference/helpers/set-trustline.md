@@ -6,24 +6,20 @@ description: Set the required trustline.
 
 <mark style="color:green;">**`POST`**</mark> helper/set-trustline
 
-
-
 **Headers**
 
-| Name         | Value              |
-| ------------ | ------------------ |
-| Content-Type | `application/json` |
-| Authorization  | `Bearer <token>` |
-
+| Name          | Value              |
+| ------------- | ------------------ |
+| Content-Type  | `application/json` |
+| Authorization | `Bearer <token>`   |
 
 **Params**
 
 | Name                                     | Type   | Description                   |
 | ---------------------------------------- | ------ | ----------------------------- |
 | <pre><code>sourceSecretKey
-</code></pre> | string | The key of the secret source. |
-
-
+</code></pre> |        |                               |
+|                                          | string | The key of the secret source. |
 
 **Example of Request Body:**
 
@@ -32,8 +28,6 @@ description: Set the required trustline.
   "sourceSecretKey": "GDN6I...", 
 }
 ```
-
-
 
 **Possible Responses**
 
@@ -84,4 +78,3 @@ description: Set the required trustline.
 ```
 {% endtab %}
 {% endtabs %}
-

@@ -2,37 +2,33 @@
 description: Deploy the contract and initialize the escrow entity.
 ---
 
-# Invoke Deployer Contract
+# Initialize Escrow
 
 <mark style="color:green;">**`POST`**</mark> `deployer/invoke-deployer-contract`
 
-
-
 **Headers**
 
-| Name         | Value              |
-| ------------ | ------------------ |
-| Content-Type | `application/json` |
-| Authorization  | `Bearer <token>` |
+| Name          | Value              |
+| ------------- | ------------------ |
+| Content-Type  | `application/json` |
+| Authorization | `Bearer <token>`   |
 
 **Body**
 
-| Name            | Type         | Description                                                  |
-| --------------- | ------------ | ------------------------------------------------------------ |
-| signer          | string       | Entity that signs the transaction that deploys and initializes the escrow |
-| engagementId    | string       | engagementId: Unique identifier for the escrow               |
-| title           | string       | Name of the escrow                                           |
-| description     | string       | Text describing the function of the escrow                   |
-| client          | string       | Address of the entity requiring the service                  |
-| serviceProvider | string       | Address of the entity providing the service                  |
-| platformAddress | string       | Address of the platform that owns the escrow                 |
-| amount          | string       | Amount to be transferred upon completion of escrow milestones |
-| platformFee     | string       | Commission that the platform will receive when the escrow is completed |
-| milestones      | Milestones[] | Objectives to be completed to define the escrow as completed |
-| releaseSigner   | string       | Address of the entity in charge of releasing escrow funds    |
-| disputeResolver | string       | Address in charge of resolving disputes within the escrow    |
-
-
+| Name            | Type          | Description                                                               |
+| --------------- | ------------- | ------------------------------------------------------------------------- |
+| signer          | string        | Entity that signs the transaction that deploys and initializes the escrow |
+| engagementId    | string        | Unique identifier for the escrow                                          |
+| title           | string        | Name of the escrow                                                        |
+| description     | string        | Text describing the function of the escrow                                |
+| client          | string        | Address of the entity requiring the service                               |
+| serviceProvider | string        | Address of the entity providing the service                               |
+| platformAddress | string        | Address of the platform that owns the escrow                              |
+| amount          | string        | Amount to be transferred upon completion of escrow milestones             |
+| platformFee     | string        | Commission that the platform will receive when the escrow is completed    |
+| milestones      | Milestones\[] | Objectives to be completed to define the escrow as completed              |
+| releaseSigner   | string        | Address of the entity in charge of releasing escrow funds                 |
+| disputeResolver | string        | Address in charge of resolving disputes within the escrow                 |
 
 **Example of Request Body:**
 
@@ -58,8 +54,6 @@ description: Deploy the contract and initialize the escrow entity.
 ```
 {% endcode %}
 
-
-
 **Possible Responses**
 
 {% tabs %}
@@ -81,8 +75,6 @@ description: Deploy the contract and initialize the escrow entity.
 }
 ```
 
-
-
 <mark style="color:red;">**Prices**</mark>
 
 ```json
@@ -102,7 +94,6 @@ description: Deploy the contract and initialize the escrow entity.
 ```
 {% endtab %}
 
-
 {% tab title="401 Unauthorized" %}
 ```json
 {
@@ -112,7 +103,6 @@ description: Deploy the contract and initialize the escrow entity.
 }
 ```
 {% endtab %}
-
 
 {% tab title="429 Rate Limit" %}
 ```json

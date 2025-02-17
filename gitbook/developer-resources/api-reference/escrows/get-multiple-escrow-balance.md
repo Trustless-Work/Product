@@ -1,29 +1,24 @@
 ---
 description: Get the balance of multiple escrows.
-hidden: true
 ---
 
-# Get Multiple Escrow Balance
+# Get multiple escrow balance
 
 <mark style="color:orange;">**`GET`**</mark> `helper/get-multiple-escrow-balance`
 
-
-
 **Headers**
 
-| Name         | Value              |
-| ------------ | ------------------ |
-| Content-Type | `application/json` |
-| Authorization  | `Bearer <token>` |
+| Name          | Value              |
+| ------------- | ------------------ |
+| Content-Type  | `application/json` |
+| Authorization | `Bearer <token>`   |
 
 **Params**
 
-| Name    | Type     | Description                                                  |
-| ------- | -------- | ------------------------------------------------------------ |
-| signer  | string   | Entity that signs the transaction that deploys and initializes the escrow |
-| addresses | string[] | List of addresses requesting escrow balance retrieval        |
-
-
+| Name      | Type      | Description                                                               |
+| --------- | --------- | ------------------------------------------------------------------------- |
+| signer    | string    | Entity that signs the transaction that deploys and initializes the escrow |
+| addresses | string\[] | List of addresses requesting escrow balance retrieval                     |
 
 **Example of Request Params:**
 
@@ -35,8 +30,6 @@ hidden: true
 }
 ```
 {% endcode %}
-
-
 
 **Possible Responses**
 
@@ -68,7 +61,6 @@ hidden: true
 ```
 {% endtab %}
 
-
 {% tab title="401 Unauthorized" %}
 ```json
 {
@@ -78,7 +70,6 @@ hidden: true
 }
 ```
 {% endtab %}
-
 
 {% tab title="429 Rate Limit" %}
 ```json
