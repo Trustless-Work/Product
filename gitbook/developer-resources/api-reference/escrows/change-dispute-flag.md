@@ -115,11 +115,34 @@ const http = axios.create({
 });
 
 export const useExample = async () => {
+    // Get the signer address
+    const { address } = await kit.getAddress();
+
+    // Execute the endpoint
     const response = await http.post(
       "/escrow/change-dispute-flag",
       {
         // body requested for the endpoint
       },
     ); 
+    
+    // Get the unsigned transaction hash
+    const { unsignedTransaction } = response.data;
+
+    // Sign the transaction by wallet
+    const { signedTxXdr } = await signTransaction(unsignedTransaction, {
+      address,
+      networkPassphrase: WalletNetwork.TESTNET,
+    });
+
+    // Send the transaction to Stellar Network
+    const tx = await http.post("/helper/send-transaction", {
+      signedXdr: signedTxXdr,
+      returnValueIsRequired: false,
+    });
+
+    const { data } = tx;
+
+    return data;
 }
 ```
