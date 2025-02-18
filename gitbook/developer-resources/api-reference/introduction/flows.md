@@ -270,7 +270,7 @@ With this endpoint you'll change the status of the milestones, but **just the Se
 export type ChangeMilestoneStatusPayload = {
   contractId?: string;
   milestoneIndex: string;
-  newStatus: MilestoneStatus;
+  newStatus: MilestoneStatus; // you can custom your status
   serviceProvider?: string;
 };
 ```
@@ -399,11 +399,215 @@ export const changeMilestoneFlag = async (
 [change-milestone-flag.md](../escrows/change-milestone-flag.md)
 {% endcontent-ref %}
 
+
+
+6. **Change Dispute Flag**
+
+In any moment, the **approver or service provider** can start a dispute. This cannot executed without funds in the escrow's balance.
+
+
+
+> **Payload Type:**
+
+```typescript
+export type StartDisputePayload = Pick<Escrow, "contractId"> & {
+  signer: string;
+};
+```
+
+
+
+> **Execute Endpoint:**
+
+```tsx
+export const startDispute = async (
+  payload: StartDisputePayload,
+) => {
+  try {
+  
+    // Get the address
+    const { address } = await kit.getAddress();
+  
+    // Execute the endpoint
+    const response = await http.post(
+      "/escrow/change-dispute-flag",
+      payload,
+    );
+
+    // Get the unsigned transaction hash
+    const { unsignedTransaction } = response.data;
+
+    // Sign the transaction by wallet
+    const { signedTxXdr } = await signTransaction(unsignedTransaction, {
+      address,
+      networkPassphrase: WalletNetwork.TESTNET,
+    });
+
+    // Send the transaction to Stellar Network
+    const tx = await http.post("/helper/send-transaction", {
+      signedXdr: signedTxXdr,
+    });
+
+    const { data } = tx;
+    return data;
+  } catch (error: unknown) {
+   // catch code...
+  }
+};
+```
+
+
+
+> **References:**
+
+{% content-ref url="../escrows/change-dispute-flag.md" %}
+[change-dispute-flag.md](../escrows/change-dispute-flag.md)
+{% endcontent-ref %}
+
+
+
 ***
 
+{% hint style="warning" %}
+**Case #1:** If all the milestones were completed and approved, you'll be able to release the funds.
+{% endhint %}
+
+7. **Distribute Escrow Earnings**
+
+When the escrow is ready to be released, you can do it with this endpoint. Only the **release signer** can do it.
+
+> **Payload Type:**
+
+```typescript
+export type DistributeEscrowEarningsEscrowPayload = Pick<Escrow, "contractId"> &
+  Partial<Pick<Escrow, "serviceProvider" | "releaseSigner">> & {
+    signer: string;
+  };
+```
 
 
 
+> **Execute Endpoint:**
+
+<pre class="language-tsx"><code class="lang-tsx"><strong>export const distributeEscrowEarnings = async (
+</strong>  payload: DistributeEscrowEarningsEscrowPayload,
+) => {
+  try {
+  
+    // Get the address
+    const { address } = await kit.getAddress();
+  
+    // Execute the endpoint
+    const response = await http.post(
+      "/escrow/distribute-escrow-earnings",
+      payload,
+    );
+
+    // Get the unsigned transaction hash
+    const { unsignedTransaction } = response.data;
+
+    // Sign the transaction by wallet
+    const { signedTxXdr } = await signTransaction(unsignedTransaction, {
+      address,
+      networkPassphrase: WalletNetwork.TESTNET,
+    });
+
+    // Send the transaction to Stellar Network
+    const tx = await http.post("/helper/send-transaction", {
+      signedXdr: signedTxXdr,
+    });
+
+    const { data } = tx;
+    return data;
+  } catch (error: unknown) {
+   // catch code...
+  }
+};
+</code></pre>
+
+
+
+> **References:**
+
+{% content-ref url="../../smart-escrow-design/escrow-lifecycle/release-phase.md" %}
+[release-phase.md](../../smart-escrow-design/escrow-lifecycle/release-phase.md)
+{% endcontent-ref %}
+
+{% content-ref url="../escrows/distribute-escrow-funds.md" %}
+[distribute-escrow-funds.md](../escrows/distribute-escrow-funds.md)
+{% endcontent-ref %}
+
+
+
+{% hint style="warning" %}
+**Case #2:** If the approver or service provider started the dispute, you'll be able to resolve the dispute.
+{% endhint %}
+
+8. Resolve Dispute
+
+When the escrow is in dispute, you can resolve it with this endpoint. Only the **dispute resolver** can do it.
+
+> **Payload Type:**
+
+```typescript
+export type ResolveDisputePayload = Pick<Escrow, "contractId"> &
+  Partial<Pick<Escrow, "disputeResolver">> & {
+    approverFunds: string;
+    serviceProviderFunds: string;
+  };
+```
+
+
+
+> **Execute Endpoint:**
+
+<pre class="language-tsx"><code class="lang-tsx"><strong>export const resolveDispute = async (
+</strong>  payload: ResolveDisputePayload,
+) => {
+  try {
+  
+    // Get the address
+    const { address } = await kit.getAddress();
+  
+    // Execute the endpoint
+    const response = await http.post(
+      "/escrow/resolving-disputes",
+      payload,
+    );
+
+    // Get the unsigned transaction hash
+    const { unsignedTransaction } = response.data;
+
+    // Sign the transaction by wallet
+    const { signedTxXdr } = await signTransaction(unsignedTransaction, {
+      address,
+      networkPassphrase: WalletNetwork.TESTNET,
+    });
+
+    // Send the transaction to Stellar Network
+    const tx = await http.post("/helper/send-transaction", {
+      signedXdr: signedTxXdr,
+    });
+
+    const { data } = tx;
+    return data;
+  } catch (error: unknown) {
+   // catch code...
+  }
+};
+</code></pre>
+
+
+
+> **References:**
+
+{% content-ref url="../../smart-escrow-design/escrow-lifecycle/dispute-resolution.md" %}
+[dispute-resolution.md](../../smart-escrow-design/escrow-lifecycle/dispute-resolution.md)
+{% endcontent-ref %}
+
+{% content-ref url="../escrows/resolving-disputes.md" %}
+[resolving-disputes.md](../escrows/resolving-disputes.md)
+{% endcontent-ref %}
 
 
 
