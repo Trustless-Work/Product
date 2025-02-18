@@ -1,9 +1,17 @@
 ---
-description: Set the required trustline.
 icon: scribble
+description: >-
+  This endpoint allows a trustline to be established on the Stellar blockchain
+  specifically for the USDC token issued by Circle on the user's account.
 ---
 
 # Set Trustline
+
+### What is it for?
+
+In Stellar, before a token such as Circle's USDC can be received and stored, an account must establish a trustline with the issuer of the asset. This endpoint facilitates that process in an automated fashion.
+
+**Note:** This endpoint should not necessarily work in main.
 
 <mark style="color:green;">**`POST`**</mark> helper/set-trustline
 
@@ -19,8 +27,8 @@ icon: scribble
 | Name                                     | Type   | Description                   |
 | ---------------------------------------- | ------ | ----------------------------- |
 | <pre><code>sourceSecretKey
-</code></pre> |        |                               |
-|                                          | string | The key of the secret source. |
+</code></pre> | string | The key of the secret source. |
+|                                          |        |                               |
 
 **Example of Request Body:**
 

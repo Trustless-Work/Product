@@ -1,29 +1,26 @@
 ---
-description: >-
-  Responsible for modifying the "flag" property of a specific milestone in the
-  escrow to approve that milestone.
-icon: thumbs-up
+description: Responsible for modifying the "flag" property of a specific milestone in the escrow to approve that milestone.
 ---
 
-# Change Milestone Flag (Approve)
+# Change milestone flag
 
 <mark style="color:green;">**`POST`**</mark> `escrow/change-milestone-flag`
 
 **Headers**
 
-| Name          | Value              |
-| ------------- | ------------------ |
-| Content-Type  | `application/json` |
-| Authorization | `Bearer <token>`   |
+| Name         | Value              |
+| ------------ | ------------------ |
+| Content-Type | `application/json` |
+| Authorization  | `Bearer <token>` |
 
 **Body**
 
-| Name           | Type    | Description                                                                         |
-| -------------- | ------- | ----------------------------------------------------------------------------------- |
-| contractId     | string  | ID (address) that identifies the escrow contract                                    |
-| milestoneIndex | string  | Position that identifies the milestone within the group of milestones in the escrow |
-| newFlag        | boolean | New value for the "flag" property within the escrow milestone                       |
-| client         | string  | Address of the client who will approve the milestone                                |
+| Name           | Type   | Description                                                  |
+| -------------- | ------ | ------------------------------------------------------------ |
+| contractId     | string | ID (address) that identifies the escrow contract             |
+| milestoneIndex | string | Position that identifies the milestone within the group of milestones in the escrow |
+| newFlag        | boolean | New value for the "flag" property within the escrow milestone |
+| client         | string | Address of the client who will approve the milestone         |
 
 **Example of Request Body:**
 
@@ -37,6 +34,7 @@ icon: thumbs-up
 }
 ```
 {% endcode %}
+
 
 **Possible Responses**
 
@@ -68,6 +66,7 @@ icon: thumbs-up
 ```
 {% endtab %}
 
+
 {% tab title="401 Unauthorized" %}
 ```json
 {
@@ -77,6 +76,7 @@ icon: thumbs-up
 }
 ```
 {% endtab %}
+
 
 {% tab title="429 Rate Limit" %}
 ```json

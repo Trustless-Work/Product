@@ -1,5 +1,5 @@
 ---
-icon: get-pocket
+icon: circle-l
 description: Get an escrow through the engagement id.
 ---
 

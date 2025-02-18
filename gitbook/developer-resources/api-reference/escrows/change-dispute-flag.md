@@ -1,8 +1,8 @@
 ---
+icon: face-pouting
 description: >-
   Responsible for setting the escrow in dispute state. Changes the value of the
-  escrow's "dispute\_flag" property to true.
-icon: face-pouting
+  escrow's "dispute_flag" property to true.
 ---
 
 # Change Dispute Flag
@@ -40,18 +40,30 @@ icon: face-pouting
 {% tab title="200 OK" %}
 ```json
 {
-    ???
+    "status": "SUCCESS",
+    "unsignedTransaction": "AAAAAgAAAABfQAm/gS..."  // XDR Hash Transaction
 }
 ```
 {% endtab %}
 
 {% tab title="500 Server Error " %}
-<mark style="color:red;">**Not Found VERIFICAR**</mark>
+<mark style="color:red;">**Not found**</mark>
 
-<pre class="language-json"><code class="lang-json"><strong>{
-</strong>  "error": "Escrow not found"
+```json
+{
+  "status": "FAILED"
+  "message": "Escrow not found"
 }
-</code></pre>
+```
+
+<mark style="color:red;">**Escrow already in dispute**</mark>
+
+```javascript
+{
+  "status": "FAILED"
+  "message": "Escrow already in dispute"
+}
+```
 {% endtab %}
 
 {% tab title="400 Bad Request" %}
@@ -83,3 +95,7 @@ icon: face-pouting
 ```
 {% endtab %}
 {% endtabs %}
+
+**What this Endpoint returns?**
+
+This endpoint returns the transaction unsigned so that the transaction can be signed by means of a customer wallet.

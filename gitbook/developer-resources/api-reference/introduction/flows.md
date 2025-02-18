@@ -1,6 +1,5 @@
 ---
 description: Here you'll find the basic flow in order to use Trustless Work API.
-icon: arrow-progress
 ---
 
 # Flows

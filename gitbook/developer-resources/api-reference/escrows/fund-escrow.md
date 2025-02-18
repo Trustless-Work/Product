@@ -13,10 +13,7 @@ Allows flexible USDC amounts to be transferred to the escrow contract.
 
 **Headers**
 
-| Name          | Value              |
-| ------------- | ------------------ |
-| Content-Type  | `application/json` |
-| Authorization | `Bearer <token>`   |
+<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>Authorization</td><td><code>Bearer &#x3C;token></code></td></tr></tbody></table>
 
 **Body**
 
@@ -41,57 +38,54 @@ Allows flexible USDC amounts to be transferred to the escrow contract.
 **Possible Responses**
 
 {% tabs %}
-{% tab title="201 Created" %}
-```json
-{
-    "status": "SUCCESS",
+{% tab title="201 Success" %}
+<pre class="language-json"><code class="lang-json"><strong>{
+</strong>    "status": "SUCCESS",
     "unsignedTransaction": "AAAAAgAAAABfQAm/gS..."  // XDR Hash Transaction
-}
-```
+<strong>}
+</strong></code></pre>
 {% endtab %}
 
 {% tab title="500 Server Error" %}
-<mark style="color:red;">**Only Signer**</mark>
+<mark style="color:red;">**Escrow in dispute**</mark>
 
 ```json
 {
-  "error": "Only the signer can fund the escrow"
-}
-```
-
-<mark style="color:red;">**Already Funded**</mark>
-
-```json
-{
-  "error": "Escrow already funded"
+  "status": "FAILED"
+  "messgae": "Escrow has been opened for dispute resolution"
 }
 ```
 
 <mark style="color:red;">**Fully Funded**</mark>
 
 <pre class="language-json"><code class="lang-json"><strong>{
-</strong>  "error": "This escrow is already fully funded"
+</strong><strong>  "status": "FAILED"
+</strong>  "message": "This escrow is already fully funded"
 }
 </code></pre>
+
+<mark style="color:red;">**Amount to deposit is greater than escrow amount**</mark>
+
+```javascript
+{
+  "status": "FAILED"
+  "message": "Amount to deposit is greater than the escrow amount"
+}
+```
 
 <mark style="color:red;">**Insufficient Founds**</mark>
 
 <pre class="language-json"><code class="lang-json"><strong>{
-</strong>  "error": "The signer does not have sufficient funds"
+</strong>  "status": "FAILED"
+  "message": "The signer does not have sufficient funds"
 }
 </code></pre>
 
 <mark style="color:red;">**Not Found**</mark>
 
 <pre class="language-json"><code class="lang-json"><strong>{
-</strong>  "error": "Escrow not found"
-}
-</code></pre>
-
-<mark style="color:red;">**Not Enough Allowance**</mark>
-
-<pre class="language-json"><code class="lang-json"><strong>{
-</strong>  "error": "Not enough allowance to fund this escrow"
+</strong><strong>  "status": "FAILED"
+</strong>  "message": "Escrow not found"
 }
 </code></pre>
 {% endtab %}
@@ -103,7 +97,6 @@ Allows flexible USDC amounts to be transferred to the escrow contract.
     "error": "Bad Request",
     "statusCode": 400
 }
-
 ```
 {% endtab %}
 

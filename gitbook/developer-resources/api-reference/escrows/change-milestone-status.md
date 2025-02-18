@@ -1,29 +1,26 @@
 ---
-description: >-
-  Responsible for modifying the "status" property of a specific milestone in the
-  escrow.
-icon: hexagon-check
+description: Responsible for modifying the "status" property of a specific milestone in the escrow.
 ---
 
-# Change Milestone Status (Complete)
+# Change milestone status
 
 <mark style="color:green;">**`POST`**</mark> `escrow/change-milestone-status`
 
 **Headers**
 
-| Name          | Value              |
-| ------------- | ------------------ |
-| Content-Type  | `application/json` |
-| Authorization | `Bearer <token>`   |
+| Name         | Value              |
+| ------------ | ------------------ |
+| Content-Type | `application/json` |
+| Authorization  | `Bearer <token>` |
 
 **Body**
 
-| Name            | Type    | Description                                                                         |
-| --------------- | ------- | ----------------------------------------------------------------------------------- |
-| contractId      | string  | ID (address) that identifies the escrow contract                                    |
+| Name            | Type    | Description                                                  |
+| --------------- | ------- | ------------------------------------------------------------ |
+| contractId      | string  | ID (address) that identifies the escrow contract             |
 | milestoneIndex  | string  | Position that identifies the milestone within the group of milestones in the escrow |
-| newFlag         | boolean | New value for the "flag" property within the escrow milestone                       |
-| serviceProvider | string  | Address of the service provider who will modify the contract's "status" property    |
+| newFlag         | boolean | New value for the "flag" property within the escrow milestone |
+| serviceProvider | string  | Address of the service provider who will modify the contract's "status" property |
 
 **Example of Request Body:**
 
@@ -37,6 +34,7 @@ icon: hexagon-check
 }
 ```
 {% endcode %}
+
 
 **Possible Responses**
 
@@ -68,6 +66,7 @@ icon: hexagon-check
 ```
 {% endtab %}
 
+
 {% tab title="401 Unauthorized" %}
 ```json
 {
@@ -78,6 +77,7 @@ icon: hexagon-check
 ```
 {% endtab %}
 
+
 {% tab title="429 Rate Limit" %}
 ```json
 {
@@ -87,3 +87,4 @@ icon: hexagon-check
 ```
 {% endtab %}
 {% endtabs %}
+
