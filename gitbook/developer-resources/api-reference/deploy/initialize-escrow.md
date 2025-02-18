@@ -1,6 +1,6 @@
 ---
-description: Deploy the escrow contract and define the escrow properties.
 icon: circle-plus
+description: Deploy the escrow contract and define the escrow properties.
 ---
 
 # Initialize Escrow
@@ -34,7 +34,7 @@ icon: circle-plus
 | status         | string  | Milestone status. Ex: Approved, In dispute, etc...                    |
 | approved\_flag | boolean | Flag indicating whether a milestone has been approved by the approver |
 
-#### Example:
+#### Body example:
 
 ```jsx
 {
@@ -109,3 +109,26 @@ icon: circle-plus
 ```
 {% endtab %}
 {% endtabs %}
+
+#### Use example (Using axios):
+
+<pre class="language-typescript"><code class="lang-typescript">import axios from "axios";
+
+const http = axios.create({
+  baseURL: "http://localhost:3000",
+  timeout: 10000,
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer your_api_key`,
+  },
+});
+
+export const useExample = async () => {
+<strong>    const response = await http.post(
+</strong>      "/deployer/invoke-deployer-contract",
+      {
+        // body requested for the endpoint
+      },
+    ); 
+}
+</code></pre>

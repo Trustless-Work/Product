@@ -91,15 +91,28 @@ description: >-
 
 ```typescript
 import { FundEscrowPayload } from "@/@types/escrow.entity";
-import http from "@/core/config/axios/http";
 import { kit } from "@/components/modules/auth/wallet/constants/wallet-kit.constant";
 import { WalletNetwork } from "@creit.tech/stellar-wallets-kit";
 import { signTransaction } from "@stellar/freighter-api";
 import axios from "axios";
 
-export const fundEscrow = async (payload: FundEscrowPayload) => {
+const http = axios.create({
+  baseURL: "http://localhost:3000",
+  timeout: 10000,
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer your_api_key`,
+  },
+});
+
+export const fundEscrow = async () => {
   try {
-    const response = await http.post("/escrow/fund-escrow", payload);
+    const response = await http.post(
+      "/escrow/fund-escrow", 
+      {
+       // body requested for the endpoint
+      }    
+    );
 
     const { unsignedTransaction } = response.data;
     const { address } = await kit.getAddress();

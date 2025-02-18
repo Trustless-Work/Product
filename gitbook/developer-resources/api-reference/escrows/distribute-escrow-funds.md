@@ -3,7 +3,7 @@ icon: square-dollar
 description: You release the escrow funds to the service provider through the approver.
 ---
 
-# Distribute escrow earnings
+# Distribute Escrow Earnings
 
 <mark style="color:green;">**`POST`**</mark> `escrow/distribute-escrow-earnings`
 
@@ -128,3 +128,27 @@ description: You release the escrow funds to the service provider through the ap
 **What this Endpoint returns?**
 
 This endpoint returns the transaction unsigned so that the transaction can be signed by means of a customer wallet.
+
+#### Use example (Using axios):
+
+```typescript
+import axios from "axios";
+
+const http = axios.create({
+  baseURL: "http://localhost:3000",
+  timeout: 10000,
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer your_api_key`,
+  },
+});
+
+export const useExample = async () => {
+    const response = await http.post(
+      "/escrow/distribute-escrow-earnings",
+      {
+        // body requested for the endpoint
+      },
+    ); 
+}
+```

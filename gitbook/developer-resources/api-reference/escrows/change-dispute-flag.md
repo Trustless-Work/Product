@@ -99,3 +99,27 @@ description: >-
 **What this Endpoint returns?**
 
 This endpoint returns the transaction unsigned so that the transaction can be signed by means of a customer wallet.
+
+#### Use example (Using axios):
+
+```typescript
+import axios from "axios";
+
+const http = axios.create({
+  baseURL: "http://localhost:3000",
+  timeout: 10000,
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer your_api_key`,
+  },
+});
+
+export const useExample = async () => {
+    const response = await http.post(
+      "/escrow/change-dispute-flag",
+      {
+        // body requested for the endpoint
+      },
+    ); 
+}
+```
