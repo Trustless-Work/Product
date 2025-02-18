@@ -1,4 +1,4 @@
-# 🔍 What are Escrows
+# 🎒 Historical Context
 
 **Escrows** are a critical financial tool that ensures **security, trust, and transparency** in transactions. Traditionally, escrows involve a **neutral third party** that holds funds until specific conditions are met, protecting both buyers and sellers.
 

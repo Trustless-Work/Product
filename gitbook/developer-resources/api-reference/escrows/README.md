@@ -7,7 +7,7 @@ description: >-
 
 # Escrows
 
-### dIntroduction
+### Introduction
 
 The purpose of this documentation is to guide users through the process of utilizing the Escrow system effectively. By understanding its functionalities and endpoints, users can ensure that their transactions are handled with precision and security. This guide will cover the essentials, from initialization to finalizing transactions, enabling a seamless experience for all parties involved.
 

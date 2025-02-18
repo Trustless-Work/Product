@@ -1,4 +1,4 @@
-# Developer Resources
+# 💻 Developer Resources
 
 {% content-ref url="smart-escrow-design/" %}
 [smart-escrow-design](smart-escrow-design/)
