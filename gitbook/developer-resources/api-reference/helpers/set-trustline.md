@@ -1,5 +1,6 @@
 ---
 description: Set the required trustline.
+icon: scribble
 ---
 
 # Set Trustline

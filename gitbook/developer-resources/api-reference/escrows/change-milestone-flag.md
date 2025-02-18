@@ -1,26 +1,29 @@
 ---
-description: Responsible for modifying the "flag" property of a specific milestone in the escrow to approve that milestone.
+description: >-
+  Responsible for modifying the "flag" property of a specific milestone in the
+  escrow to approve that milestone.
+icon: thumbs-up
 ---
 
-# Change milestone flag
+# Change Milestone Flag (Approve)
 
 <mark style="color:green;">**`POST`**</mark> `escrow/change-milestone-flag`
 
 **Headers**
 
-| Name         | Value              |
-| ------------ | ------------------ |
-| Content-Type | `application/json` |
-| Authorization  | `Bearer <token>` |
+| Name          | Value              |
+| ------------- | ------------------ |
+| Content-Type  | `application/json` |
+| Authorization | `Bearer <token>`   |
 
 **Body**
 
-| Name           | Type   | Description                                                  |
-| -------------- | ------ | ------------------------------------------------------------ |
-| contractId     | string | ID (address) that identifies the escrow contract             |
-| milestoneIndex | string | Position that identifies the milestone within the group of milestones in the escrow |
-| newFlag        | boolean | New value for the "flag" property within the escrow milestone |
-| client         | string | Address of the client who will approve the milestone         |
+| Name           | Type    | Description                                                                         |
+| -------------- | ------- | ----------------------------------------------------------------------------------- |
+| contractId     | string  | ID (address) that identifies the escrow contract                                    |
+| milestoneIndex | string  | Position that identifies the milestone within the group of milestones in the escrow |
+| newFlag        | boolean | New value for the "flag" property within the escrow milestone                       |
+| client         | string  | Address of the client who will approve the milestone                                |
 
 **Example of Request Body:**
 
@@ -34,7 +37,6 @@ description: Responsible for modifying the "flag" property of a specific milesto
 }
 ```
 {% endcode %}
-
 
 **Possible Responses**
 
@@ -66,7 +68,6 @@ description: Responsible for modifying the "flag" property of a specific milesto
 ```
 {% endtab %}
 
-
 {% tab title="401 Unauthorized" %}
 ```json
 {
@@ -76,7 +77,6 @@ description: Responsible for modifying the "flag" property of a specific milesto
 }
 ```
 {% endtab %}
-
 
 {% tab title="429 Rate Limit" %}
 ```json

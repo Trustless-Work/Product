@@ -1,19 +1,18 @@
 ---
 description: Confirm the transaction.
+icon: comment-arrow-up-right
 ---
 
 # Send Transaction
 
 <mark style="color:green;">**`POST`**</mark> `helper/send-transaction`
 
-
-
 **Headers**
 
-| Name         | Value              |
-| ------------ | ------------------ |
-| Content-Type | `application/json` |
-| Authorization  | `Bearer <token>` |
+| Name          | Value              |
+| ------------- | ------------------ |
+| Content-Type  | `application/json` |
+| Authorization | `Bearer <token>`   |
 
 **Body**
 
@@ -21,8 +20,6 @@ description: Confirm the transaction.
 | --------------------- | ------- | ------------------------------------------- |
 | signedXdr             | string  | The sign's hash. This come from the wallet. |
 | returnValueIsRequired | boolean | If a return value is needed.                |
-
-
 
 **Example of Request Body:**
 
@@ -34,8 +31,6 @@ description: Confirm the transaction.
 }
 ```
 {% endcode %}
-
-
 
 **Possible Responses**
 

@@ -1,5 +1,6 @@
 ---
 description: Deploy the contract and initialize the escrow entity.
+icon: chart-scatter-3d
 ---
 
 # Initialize Escrow

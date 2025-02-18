@@ -1,6 +1,7 @@
 ---
 description: The escrow has been successful completed.
+icon: square-dollar
 ---
 
-# Distribute escrow funds
+# Distribute Escrow Funds
 

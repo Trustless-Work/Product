@@ -1,26 +1,29 @@
 ---
-description: Responsible for modifying the "status" property of a specific milestone in the escrow.
+description: >-
+  Responsible for modifying the "status" property of a specific milestone in the
+  escrow.
+icon: hexagon-check
 ---
 
-# Change milestone status
+# Change Milestone Status (Complete)
 
 <mark style="color:green;">**`POST`**</mark> `escrow/change-milestone-status`
 
 **Headers**
 
-| Name         | Value              |
-| ------------ | ------------------ |
-| Content-Type | `application/json` |
-| Authorization  | `Bearer <token>` |
+| Name          | Value              |
+| ------------- | ------------------ |
+| Content-Type  | `application/json` |
+| Authorization | `Bearer <token>`   |
 
 **Body**
 
-| Name            | Type    | Description                                                  |
-| --------------- | ------- | ------------------------------------------------------------ |
-| contractId      | string  | ID (address) that identifies the escrow contract             |
+| Name            | Type    | Description                                                                         |
+| --------------- | ------- | ----------------------------------------------------------------------------------- |
+| contractId      | string  | ID (address) that identifies the escrow contract                                    |
 | milestoneIndex  | string  | Position that identifies the milestone within the group of milestones in the escrow |
-| newFlag         | boolean | New value for the "flag" property within the escrow milestone |
-| serviceProvider | string  | Address of the service provider who will modify the contract's "status" property |
+| newFlag         | boolean | New value for the "flag" property within the escrow milestone                       |
+| serviceProvider | string  | Address of the service provider who will modify the contract's "status" property    |
 
 **Example of Request Body:**
 
@@ -34,7 +37,6 @@ description: Responsible for modifying the "status" property of a specific miles
 }
 ```
 {% endcode %}
-
 
 **Possible Responses**
 
@@ -66,7 +68,6 @@ description: Responsible for modifying the "status" property of a specific miles
 ```
 {% endtab %}
 
-
 {% tab title="401 Unauthorized" %}
 ```json
 {
@@ -77,7 +78,6 @@ description: Responsible for modifying the "status" property of a specific miles
 ```
 {% endtab %}
 
-
 {% tab title="429 Rate Limit" %}
 ```json
 {
@@ -87,4 +87,3 @@ description: Responsible for modifying the "status" property of a specific miles
 ```
 {% endtab %}
 {% endtabs %}
-

@@ -1,8 +1,9 @@
 ---
 description: Get the balance of multiple escrows.
+icon: dollar-sign
 ---
 
-# Get multiple escrow balance
+# Get Multiple Escrow Balance
 
 <mark style="color:orange;">**`GET`**</mark> `helper/get-multiple-escrow-balance`
 

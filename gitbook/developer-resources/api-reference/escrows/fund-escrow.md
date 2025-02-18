@@ -1,8 +1,8 @@
 ---
+icon: sack-dollar
 description: >-
   Allows users to deposit funds into an existing escrow contract, securing them
   until the agreed conditions are met.
-icon: '2'
 ---
 
 # Fund Escrow
@@ -13,20 +13,18 @@ Allows flexible USDC amounts to be transferred to the escrow contract.
 
 **Headers**
 
-| Name         | Value              |
-| ------------ | ------------------ |
-| Content-Type | `application/json` |
-| Authorization  | `Bearer <token>` |
-
+| Name          | Value              |
+| ------------- | ------------------ |
+| Content-Type  | `application/json` |
+| Authorization | `Bearer <token>`   |
 
 **Body**
 
-| Name            | Type         | Description                                                  |
-| --------------- | ------------ | ------------------------------------------------------------ |
-| contractId      | string       | ID (address) that identifies the escrow contract             |
-| signer          | string       | Address of the user signing the contract transaction         |
-| amount          | string       | Amount to transfer to the escrow contract                    |
-
+| Name       | Type   | Description                                          |
+| ---------- | ------ | ---------------------------------------------------- |
+| contractId | string | ID (address) that identifies the escrow contract     |
+| signer     | string | Address of the user signing the contract transaction |
+| amount     | string | Amount to transfer to the escrow contract            |
 
 **Example of Request Body:**
 
@@ -39,7 +37,6 @@ Allows flexible USDC amounts to be transferred to the escrow contract.
 }
 ```
 {% endcode %}
-
 
 **Possible Responses**
 
@@ -130,11 +127,6 @@ Allows flexible USDC amounts to be transferred to the escrow contract.
 {% endtab %}
 {% endtabs %}
 
-
-
 **What this Endpoint returns?**
 
 This endpoint returns the transaction unsigned so that the transaction can be signed by means of a customer wallet.
-
-
-

@@ -1,17 +1,20 @@
 ---
-description: Responsible for setting the escrow in dispute state. Changes the value of the escrow's "dispute\_flag" property to true.
+description: >-
+  Responsible for setting the escrow in dispute state. Changes the value of the
+  escrow's "dispute\_flag" property to true.
+icon: face-pouting
 ---
 
-# Change dispute flag
+# Change Dispute Flag
 
 <mark style="color:green;">**`POST`**</mark> `escrow/change-dispute-flag`
 
 **Headers**
 
-| Name         | Value              |
-| ------------ | ------------------ |
-| Content-Type | `application/json` |
-| Authorization  | `Bearer <token>` |
+| Name          | Value              |
+| ------------- | ------------------ |
+| Content-Type  | `application/json` |
+| Authorization | `Bearer <token>`   |
 
 **Body**
 
@@ -19,7 +22,6 @@ description: Responsible for setting the escrow in dispute state. Changes the va
 | ---------- | ------ | ------------------------------------------------- |
 | contractId | string | ID (address) that identifies the escrow contract  |
 | signer     | string | Address of the user who will sign the transaction |
-
 
 **Example of Request Body:**
 
@@ -31,7 +33,6 @@ description: Responsible for setting the escrow in dispute state. Changes the va
 }
 ```
 {% endcode %}
-
 
 **Possible Responses**
 
@@ -63,7 +64,6 @@ description: Responsible for setting the escrow in dispute state. Changes the va
 ```
 {% endtab %}
 
-
 {% tab title="401 Unauthorized" %}
 ```json
 {
@@ -73,7 +73,6 @@ description: Responsible for setting the escrow in dispute state. Changes the va
 }
 ```
 {% endtab %}
-
 
 {% tab title="429 Rate Limit" %}
 ```json
