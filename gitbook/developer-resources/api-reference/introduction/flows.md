@@ -1,104 +1,200 @@
 ---
-description: Here you'll find the basic flow in order to use Trustless Work API.
 icon: arrow-progress
+description: >-
+  Here you'll find the basic flow in order to use Trustless Work API. In this
+  flows tutorial, we'll use as an example the integration of Trustless Work in
+  our dApp.
 ---
 
-# Flows
-
-Before you start:
-
-A public and private address must be generated with this stellar resource:&#x20;
-
-{% embed url="https://lab.stellar.org/account/create?$=network$id=testnet&horizonUrl=https:////horizon-testnet.stellar.org&label=Testnet&passphrase=Test+SDF+Network+/;+September+2015&rpcUrl=https:////soroban-testnet.stellar.org" %}
+# How to Integrate us
 
 
 
-Then stellar funds must be given to this address by placing the public key in this stellar resource:&#x20;
+{% hint style="warning" %}
+**Important Notes**
+{% endhint %}
 
-{% embed url="https://lab.stellar.org/account/fund?$=network$id=testnet&horizonUrl=https:////horizon-testnet.stellar.org&label=Testnet&passphrase=Test+SDF+Network+/;+September+2015&rpcUrl=https:////soroban-testnet.stellar.org" %}
+* We are using the Stellar Wallet Kit library.
 
+{% embed url="https://stellarwalletskit.dev" %}
 
+* We are using axios library with a pre-configuration with the Trustless Work URL and the Bearer token.
 
-USDC on testnet faucet Stellar testnet:&#x20;
+```typescript
+import axios from "axios";
 
-{% embed url="https://faucet.circle.com/" %}
+const http = axios.create({
+  baseURL: process.env.API_URL || "", // Trustless Work API URL
+  timeout: 60000, // time
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${process.env.API_KEY}`, // Trustless Work API Key
+  },
+});
 
+export default http;
 
+```
 
-1. To be able to interact with USDC from a stellar address you have to define the trustline. For this you can use this api endpoint:&#x20;
+* You should connect to your favorite wallet, if you are in development, Freighter is recommended.
 
-{% embed url="https://api.trustlesswork.com/helper/set-trustline" %}
+{% content-ref url="../../stellar-wallets/" %}
+[stellar-wallets](../../stellar-wallets/)
+{% endcontent-ref %}
 
-### Case 1:
+* You'll be able to see the **Escrow** entity in the page below.
 
-_**Normal case where a escrow is created and the escrow are completed correctly:**_
+{% content-ref url="../escrows/schema.md" %}
+[schema.md](../escrows/schema.md)
+{% endcontent-ref %}
 
-
-
-1. The escrow contract must be deployed, which in turn initializes the escrow with its metadata.
-
-{% embed url="https://api.trustlesswork.com/deployer/invoke-deployer-contract" %}
-
-Among the information returned you will get the id of the contract you have just deployed, which you will need to enter to be able to use the other endpoints.
-
-**NOTE:** This 50 percent that is being transferred goes directly to the balance of the deployed contract, not to the service provider. The escrow must then be funded so that the service provider can be assured of 50 percent of the escrow value.
-
-
-
-2. To do this, the following endpoint must be executed:&#x20;
-
-{% embed url="https://api.trustlesswork.com/escrow/fund-escrow" %}
-
-
-
-3. The following endpoint must be executed in order to complete the escrow after mutual agreement:&#x20;
-
-{% embed url="https://api.trustlesswork.com/escrow/complete-escrow" %}
-
-With this step the other 50 percent of the escrow value will be transferred to the balance of the deployed contract.
+***
 
 
 
-4. After the escrow is completed, the service provider may claim the proceeds of the escrow through this endpoint:&#x20;
+## Steps
 
-{% embed url="https://api.trustlesswork.com/escrow/claim-escrow-earnings" %}
+1. **Initialize Escrow**
 
-### Case 2:
+The escrow contract must be deployed, which in turn initializes the escrow with its metadata.
 
-Case in which the contract is deployed and the escrow is initialized and funded but the service provider decides to cancel the escrow:
+> **Payload Type:**
 
-1. The escrow contract must be deployed, which in turn initializes the escrow with its metadata.
+```tsx
+export type EscrowPayload = Omit<
+  Escrow,
+  "user" | "createdAt" | "updatedAt" | "id"
+>;
+```
 
-{% embed url="https://api.trustlesswork.com/deployer/invoke-deployer-contract" %}
+> **Execute Endpoint:**
 
-Among the information returned you will get the id of the contract you have just deployed, which you will need to enter to be able to use the other endpoints.
+```tsx
+interface EscrowPayloadWithSigner extends EscrowPayload {
+  signer?: string;
+}
 
-NOTE: This 50 percent that is being transferred goes directly to the balance of the deployed contract, not to the service provider.
+export const initializeEscrow = async (
+  payload: EscrowPayloadWithSigner,
+) => {
+  try {
+  
+    // Get the address
+    const { address } = await kit.getAddress();
+  
+    // Add the signer
+    const payloadWithSigner: EscrowPayloadWithSigner = {
+      ...payload,
+      signer: address,
+    };
+
+    // Execute the endpoint
+    const response = await http.post(
+      "/deployer/invoke-deployer-contract",
+      payloadWithSigner,
+    );
+
+    // Get the unsigned transaction hash
+    const { unsignedTransaction } = response.data;
+
+    // Sign the transaction by wallet
+    const { signedTxXdr } = await signTransaction(unsignedTransaction, {
+      address,
+      networkPassphrase: WalletNetwork.TESTNET,
+    });
+
+    // Send the transaction to Stellar Network
+    const tx = await http.post("/helper/send-transaction", {
+      signedXdr: signedTxXdr,
+      returnValueIsRequired: true,
+    });
+
+    const { data } = tx;
+
+    return data;
+  } catch (error: unknown) {
+    // catch code ...
+  }
+};
+```
 
 
 
-2. The escrow must then be funded so that the service provider can be assured of 50 percent of the escrow value.
+> **References:**
 
-{% embed url="https://api.trustlesswork.com/escrow/fund-escrow" %}
+{% content-ref url="../deploy/initialize-escrow.md" %}
+[initialize-escrow.md](../deploy/initialize-escrow.md)
+{% endcontent-ref %}
 
-3. Due to an external cause the service provider decided to cancel the escrow.
-
-{% embed url="https://api.trustlesswork.com/escrow/cancel-escrow" %}
-
-4. The escrow owner (signer) will be able to refund to his account the 50 percent that he financed for the escrow due to the above mentioned situation.&#x20;
-
-{% embed url="https://api.trustlesswork.com/escrow/refund-remaining-funds" %}
-
-**IMPORTANT NOTE:** All endpoints related to escrow management return the transaction unsigned. This is done by means of a string returned in XDR (External Data Representation) format, which is a format that stellar uses to encode transactions. This string is what you should use to sign the transaction with the wallet of your choice. After being signed it will return the transaction signed in the same way by means of a string in XDR format.&#x20;
+{% content-ref url="../../smart-escrow-design/escrow-lifecycle/initiation-phase.md" %}
+[initiation-phase.md](../../smart-escrow-design/escrow-lifecycle/initiation-phase.md)
+{% endcontent-ref %}
 
 
 
-5. This string is the one that must be sent to the next endpoint for the transaction to be sent to the Stellar network:&#x20;
+2. **Fund Escrow**
 
-{% embed url="https://api.trustlesswork.com/helper/send-transaction" %}
+**Each escrow must be funded before the release funds or resolve dispute. It's important to clarify that you can fund the escrow in any moment, but just for this case, we'll fund it in the beginning.**
 
-The only endpoints that do not require the previous step since they are signed and sent to the network directly when executed, are the following (mentioning them by the name they have in the documentation):
+> **Payload Type:**
 
-1. Invoke Deployer Contract
-2. Get Escrow by Engagement ID
-3. Set Trustline
+```typescript
+export type FundEscrowPayload = Pick<Escrow, "amount" | "contractId"> & {
+  signer: string;
+};
+```
+
+
+
+> **Execute Endpoint:**
+
+```typescript
+export const fundEscrow = async (payload: FundEscrowPayload) => {
+  try {
+  
+    // Get the address
+    const { address } = await kit.getAddress();
+  
+    // Execute the endpoint
+    const response = await http.post("/escrow/fund-escrow", payload);
+
+    // Get the unsigned transaction hash
+    const { unsignedTransaction } = response.data;
+
+    // Sign the transaction by wallet
+    const { signedTxXdr } = await signTransaction(unsignedTransaction, {
+      address,
+      networkPassphrase: WalletNetwork.TESTNET,
+    });
+
+    // Send the transaction to Stellar Network
+    const tx = await http.post("/helper/send-transaction", {
+      signedXdr: signedTxXdr,
+    });
+
+    const { data } = tx;
+    return data;
+  } catch (error: unknown) {
+    // catch code...
+  }
+};
+
+```
+
+
+
+> **References:**
+
+
+
+{% hint style="info" %}
+**IMPORTANT NOTE**
+{% endhint %}
+
+**All endpoints related to escrow management return the&#x20;**_**transaction unsigned**_. This is done by means of a string returned in XDR (External Data Representation) format, which is a format that stellar uses to encode transactions. This string is what you should use to sign the transaction with the wallet of your choice. After being signed it will return the transaction signed in the same way by means of a string in XDR format.&#x20;
+
+* This string is the one that must be sent to the next endpoint for the transaction to be sent to the Stellar network:&#x20;
+
+{% embed url="https://dev.api.trustlesswork.com/helper/send-transaction" %}
+
+That's all, thanks.

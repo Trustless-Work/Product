@@ -41,7 +41,7 @@
     * [Dispute Resolution](developer-resources/smart-escrow-design/escrow-lifecycle/dispute-resolution.md)
   * [API Reference](developer-resources/api-reference/README.md)
     * [Introduction](developer-resources/api-reference/introduction/README.md)
-      * [Flows](developer-resources/api-reference/introduction/flows.md)
+      * [How to Integrate us](developer-resources/api-reference/introduction/flows.md)
     * [Deploy](developer-resources/api-reference/deploy/README.md)
       * [Initialize Escrow](developer-resources/api-reference/deploy/initialize-escrow.md)
     * [Authentication](developer-resources/api-reference/authentication/README.md)
