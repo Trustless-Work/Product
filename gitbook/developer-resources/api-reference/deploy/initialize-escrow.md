@@ -1,5 +1,6 @@
 ---
 description: Deploy the escrow contract and define the escrow properties.
+icon: circle-plus
 ---
 
 # Initialize Escrow

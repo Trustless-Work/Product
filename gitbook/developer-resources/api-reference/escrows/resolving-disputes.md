@@ -3,9 +3,10 @@ description: >-
   Handles the resolution of disputes within an escrow by transferring the
   amounts entered so far in the escrow to the client and service provider
   according to what the dispute resolver deems appropriate
+icon: handshake
 ---
 
-# Resolving disputes
+# Resolve Dispute
 
 <mark style="color:green;">**`POST`**</mark> `escrow/resolving-disputes`
 
