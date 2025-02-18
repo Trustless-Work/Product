@@ -8,8 +8,6 @@ description: >-
 
 # How to Integrate us
 
-
-
 {% hint style="warning" %}
 **Important Notes**
 {% endhint %}
@@ -134,7 +132,7 @@ export const initializeEscrow = async (
 
 2. **Fund Escrow**
 
-**Each escrow must be funded before the release funds or resolve dispute. It's important to clarify that you can fund the escrow in any moment, but just for this case, we'll fund it in the beginning.**
+Each escrow must be funded before the release funds or resolve dispute. It's important to clarify that you can fund the escrow in any moment, but just for this case, we'll fund it in the beginning.
 
 > **Payload Type:**
 
@@ -184,6 +182,228 @@ export const fundEscrow = async (payload: FundEscrowPayload) => {
 
 
 > **References:**
+
+{% content-ref url="../escrows/fund-escrow.md" %}
+[fund-escrow.md](../escrows/fund-escrow.md)
+{% endcontent-ref %}
+
+{% content-ref url="../../smart-escrow-design/escrow-lifecycle/funding-phase.md" %}
+[funding-phase.md](../../smart-escrow-design/escrow-lifecycle/funding-phase.md)
+{% endcontent-ref %}
+
+
+
+***
+
+{% hint style="info" %}
+These endpoints don't have any specific order to execute them
+{% endhint %}
+
+3. **Edit Milestones**
+
+You can edit the milestones in any moment, but **just the Platform Entity** will be able to do it. Only the pending milestones will be editable.
+
+> **Payload Type:**
+
+```tsx
+export type EditMilestonesPayload = {
+  contractId: string;
+  escrow: EscrowPayload;
+  signer: string;
+};
+```
+
+
+
+> **Execute Endpoint:**
+
+```typescript
+export const editMilestones = async (payload: EditMilestonesPayload) => {
+  try {
+  
+    // Get the address
+    const { address } = await kit.getAddress();
+  
+    // Execute the endpoint
+    const response = await http.put(
+      "/escrow/update-escrow-by-contract-id",
+      payload,
+    );
+
+    // Get the unsigned transaction hash
+    const { unsignedTransaction } = response.data;
+
+    // Sign the transaction by wallet
+    const { signedTxXdr } = await signTransaction(unsignedTransaction, {
+      address,
+      networkPassphrase: WalletNetwork.TESTNET,
+    });
+
+    // Send the transaction to Stellar Network
+    const tx = await http.post("/helper/send-transaction", {
+      signedXdr: signedTxXdr,
+    });
+
+    const { data } = tx;
+    return data;
+  } catch (error: unknown) {
+    // catch code...
+  }
+};
+```
+
+
+
+> **References:**
+
+<mark style="color:red;">ADD REFERENCES</mark>
+
+
+
+4. **Change Milestone Status**
+
+With this endpoint you'll change the status of the milestones, but **just the Service Provider** will be able to do it.
+
+> **Payload Type:**
+
+```typescript
+export type ChangeMilestoneStatusPayload = {
+  contractId?: string;
+  milestoneIndex: string;
+  newStatus: MilestoneStatus;
+  serviceProvider?: string;
+};
+```
+
+
+
+> **Execute Endpoint:**
+
+```typescript
+export const changeMilestoneStatus = async (
+  payload: ChangeMilestoneStatusPayload,
+) => {
+  try {
+  
+    // Get the address
+    const { address } = await kit.getAddress();
+  
+    // Execute the endpoint
+    const response = await http.post(
+      "/escrow/change-milestone-status",
+      payload,
+    );
+
+    // Get the unsigned transaction hash
+    const { unsignedTransaction } = response.data;
+
+    // Sign the transaction by wallet
+    const { signedTxXdr } = await signTransaction(unsignedTransaction, {
+      address,
+      networkPassphrase: WalletNetwork.TESTNET,
+    });
+
+    // Send the transaction to Stellar Network
+    const tx = await http.post("/helper/send-transaction", {
+      signedXdr: signedTxXdr,
+    });
+
+    const { data } = tx;
+    return data;
+  } catch (error: unknown) {
+   // catch code...
+  }
+};
+```
+
+
+
+> **References:**
+
+{% content-ref url="../../smart-escrow-design/escrow-lifecycle/milestone-status-update.md" %}
+[milestone-status-update.md](../../smart-escrow-design/escrow-lifecycle/milestone-status-update.md)
+{% endcontent-ref %}
+
+{% content-ref url="../escrows/change-milestone-status.md" %}
+[change-milestone-status.md](../escrows/change-milestone-status.md)
+{% endcontent-ref %}
+
+
+
+5. **Change Milestone Flag**
+
+With this endpoint you'll approve the milestones, but **just the Approver** will be able to do it.
+
+> **Payload Type:**
+
+```typescript
+export type ChangeMilestoneFlagPayload = Omit<
+  ChangeMilestoneStatusPayload,
+  "serviceProvider" | "newStatus"
+> & {
+  approver?: string;
+  newFlag: boolean;
+};
+```
+
+
+
+> **Execute Endpoint:**
+
+```tsx
+export const changeMilestoneFlag = async (
+  payload: ChangeMilestoneFlagPayload,
+) => {
+  try {
+  
+    // Get the address
+    const { address } = await kit.getAddress();
+  
+    // Execute the endpoint
+    const response = await http.post(
+      "/escrow/change-milestone-flag",
+      payload,
+    );
+
+    // Get the unsigned transaction hash
+    const { unsignedTransaction } = response.data;
+
+    // Sign the transaction by wallet
+    const { signedTxXdr } = await signTransaction(unsignedTransaction, {
+      address,
+      networkPassphrase: WalletNetwork.TESTNET,
+    });
+
+    // Send the transaction to Stellar Network
+    const tx = await http.post("/helper/send-transaction", {
+      signedXdr: signedTxXdr,
+    });
+
+    const { data } = tx;
+    return data;
+  } catch (error: unknown) {
+   // catch code...
+  }
+};
+```
+
+
+
+> **References:**
+
+{% content-ref url="../../smart-escrow-design/escrow-lifecycle/approval-phase.md" %}
+[approval-phase.md](../../smart-escrow-design/escrow-lifecycle/approval-phase.md)
+{% endcontent-ref %}
+
+{% content-ref url="../escrows/change-milestone-flag.md" %}
+[change-milestone-flag.md](../escrows/change-milestone-flag.md)
+{% endcontent-ref %}
+
+***
+
+
+
+
 
 
 
