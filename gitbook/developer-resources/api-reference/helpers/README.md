@@ -15,7 +15,7 @@ Helper endpoints are designed to provide additional functionalities that complem
 
 Helper endpoints offer several benefits that enhance both development efficiency and user satisfaction.&#x20;
 
-1. **Set Trustline:** Allows the user to interact with some tokens.
-2. **Send Transaction:** Send the transaction to Stellar Network with the signed hash.
+* **Set Trustline:** Allows the user to interact with some tokens.
+* **Send Transaction:** Send the transaction to Stellar Network with the signed hash.
 
 These endpoints ensure secure transactions by leveraging Stellar's infrastructure, guaranteeing transparency and reliability.

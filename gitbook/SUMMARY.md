@@ -35,7 +35,7 @@
   * [Escrow Lifecycle](developer-resources/smart-escrow-design/escrow-lifecycle/README.md)
     * [Initiation Phase](developer-resources/smart-escrow-design/escrow-lifecycle/initiation-phase.md)
     * [Funding Phase](developer-resources/smart-escrow-design/escrow-lifecycle/funding-phase.md)
-    * [Milestone Status Update](developer-resources/smart-escrow-design/escrow-lifecycle/milestone-status-update.md)
+    * [Complete phase](developer-resources/smart-escrow-design/escrow-lifecycle/milestone-status-update.md)
     * [Approval phase](developer-resources/smart-escrow-design/escrow-lifecycle/approval-phase.md)
     * [Release phase](developer-resources/smart-escrow-design/escrow-lifecycle/release-phase.md)
     * [Dispute Resolution](developer-resources/smart-escrow-design/escrow-lifecycle/dispute-resolution.md)
