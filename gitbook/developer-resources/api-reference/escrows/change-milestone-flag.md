@@ -1,13 +1,13 @@
 ---
+icon: thumbs-up
 description: >-
   Responsible for modifying the "flag" property of a specific milestone in the
   escrow to approve that milestone.
-icon: thumbs-up
 ---
 
-# Change Milestone Flag (Approve)
+# Change Milestone Approved Flag
 
-<mark style="color:green;">**`POST`**</mark> `escrow/change-milestone-flag`
+<mark style="color:green;">**`POST`**</mark> `escrow/change-milestone-approved-flag`
 
 **Headers**
 

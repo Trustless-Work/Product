@@ -1,9 +1,8 @@
 ---
 description: Interact with Escrows Seamlessly
-hidden: true
 ---
 
-# Trustless Work Dapp Tutorial
+# 🤖 Trustless Work Dapp Tutorial
 
 ### **Introduction**
 
