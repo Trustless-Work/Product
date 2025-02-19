@@ -1,6 +1,6 @@
 # Funding Phase
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 The Funding Phase is where funds are deposited into the escrow smart contract, signaling the formal commitment of all parties to the transaction. This phase ensures the financial security of the agreement, builds trust among participants, and sets the stage for the remaining phases.
 

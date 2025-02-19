@@ -1,10 +1,10 @@
-# Milestone Status Update
+# Complete phase
 
 {% hint style="info" %}
 This explanation is for the Multiple-release type of contract (to be available soon). The single release is very similar, just that there is only one release if and only if all milestones are approved.&#x20;
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 The Milestone Status Update Phase is where the **Milestone Marker** signals progress by marking a milestone as completed. This step is critical for keeping all participants informed about the transaction's progress and prepares the milestone for review by the **Milestone Approver** in the subsequent Approval Phase.
 

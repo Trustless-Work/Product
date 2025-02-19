@@ -103,3 +103,7 @@
     * [👩‍💻 Swagger for API](https://api.trustlesswork.com/docs)
     * [📜 Github](https://github.com/Tico4Chain-Coders)
 * [Trustless Work Dapp Tutorial](trustless-work-dapp-tutorial.md)
+  * [Step 1: Accessing the Trustless Work Dapp and Logging In](trustless-work-dapp-tutorial/step-1-accessing-the-trustless-work-dapp-and-logging-in.md)
+  * [Step 2: Creating a Profile and Requesting an API Key](trustless-work-dapp-tutorial/step-2-creating-a-profile-and-requesting-an-api-key.md)
+  * [Step 3: Creating an Escrow](trustless-work-dapp-tutorial/step-3-creating-an-escrow.md)
+  * [Step 4: Funding an Escrow](trustless-work-dapp-tutorial/step-4-funding-an-escrow.md)
