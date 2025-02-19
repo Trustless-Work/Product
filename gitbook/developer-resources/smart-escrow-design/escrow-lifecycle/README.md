@@ -23,11 +23,9 @@ The escrow lifecycle represents the structured flow of actions and responsibilit
 
 ***
 
-### **Alternative Phases in the Escrow Lifecycle**
+### **Alternative Phase in the Escrow Lifecycle**
 
-In some scenarios, the lifecycle may include additional phases to address unique circumstances:
+If, any of the parties raise a dispute, the lifecycle takes a " detour" into the dispute resolution phase.
 
 1. **Dispute Resolution Phase:**\
-   Engaged when there are disagreements between parties, this phase ensures fairness by resolving disputes and determining the final outcome.
-2. **Escrow Refund Phase:**\
-   Allows for the early termination of the escrow contract under specific conditions, ensuring any funds or fees are appropriately handled.
+   Engaged when there are disagreements between parties, this phase ensures fairness by resolving disputes and determining the final outcome. Disputes can end in a full refund, partial refund, or null refund to the client.&#x20;
