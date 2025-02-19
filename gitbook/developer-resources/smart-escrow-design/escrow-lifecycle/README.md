@@ -6,7 +6,7 @@ description: A Journey in Phases
 
 The escrow lifecycle represents the structured flow of actions and responsibilities involved in securely managing a transaction. At Trustless Work, we break this lifecycle into clear, logical phases, ensuring transparency and adaptability for diverse use cases.
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### **Core Phases of the Escrow Lifecycle**
 

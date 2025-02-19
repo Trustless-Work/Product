@@ -6,13 +6,13 @@ description: 'High-level architecture: Smart contracts, APIs, and escrow workflo
 
 **Trustless Work** provides an **Escrow-as-a-Service (EaaS)** platform that makes building **Smart Escrows** as simple and accessible as possible. By leveraging **open-source tools** and a **developer-friendly API**, we remove the barriers traditionally associated with escrows—making them **secure, transparent, and easy to integrate**.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 ### **How It All Works Together** 🏗️
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 The diagram above illustrates the architecture of Trustless Work, showing how each component interacts to make **Smart Escrows** possible.
 
@@ -22,7 +22,7 @@ The diagram above illustrates the architecture of Trustless Work, showing how ea
 
 
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **Open-Source Templates & Developer Tools** are designed to assist developers in integrating **Smart Escrows** quickly. These templates are customizable, helping you transform your vision into functionality without the friction of building everything from scratch.
 

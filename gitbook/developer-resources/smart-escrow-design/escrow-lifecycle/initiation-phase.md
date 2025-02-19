@@ -1,6 +1,6 @@
 # Initiation Phase
 
-<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 The Initiation Phase is the foundation of the escrow process. It ensures that all necessary details are captured, roles are assigned, and conditions are clearly defined. This phase lays the groundwork for a secure, transparent, and efficient transaction.
 

@@ -1,6 +1,6 @@
 # Dispute Resolution
 
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 The Dispute Resolution Phase is triggered when either the client or the service provider raises a dispute. This phase involves a review by the designated dispute resolver (e.g., the platform, Marketplace) to determine how the funds should be allocated. The escrow contract remains in a locked state, with no funds released, until the dispute is resolved.
 

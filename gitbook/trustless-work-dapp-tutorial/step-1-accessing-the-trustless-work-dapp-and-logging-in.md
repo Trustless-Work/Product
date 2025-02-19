@@ -18,7 +18,7 @@ A pop-up will appear, showing the available wallet options.
 
 ➡️ **Select your preferred wallet** and follow the prompts to authorize the connection.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 **3. Login Confirmation**
 
@@ -28,4 +28,4 @@ Once connected, you will be redirected to the **Dashboard**, where you can manag
 
 
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>

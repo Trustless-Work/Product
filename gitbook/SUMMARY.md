@@ -107,3 +107,6 @@
   * [Step 2: Creating a Profile and Requesting an API Key](trustless-work-dapp-tutorial/step-2-creating-a-profile-and-requesting-an-api-key.md)
   * [Step 3: Creating an Escrow](trustless-work-dapp-tutorial/step-3-creating-an-escrow.md)
   * [Step 4: Funding an Escrow](trustless-work-dapp-tutorial/step-4-funding-an-escrow.md)
+  * [Step 5: Marking a Milestone as Done ✅](trustless-work-dapp-tutorial/step-5-marking-a-milestone-as-done.md)
+  * [Step 6: Approving the Milestone](trustless-work-dapp-tutorial/step-6-approving-the-milestone.md)
+  * [Step 7: Releasing the Payment](trustless-work-dapp-tutorial/step-7-releasing-the-payment.md)
