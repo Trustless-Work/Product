@@ -1,6 +1,6 @@
 # What does a Smart Escrow "look like"?
 
-<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p>Single Release Escrow</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 **Escrow ID:** This is the same as the contract address, users will send funds to this Address. (Trustline should be set).
 

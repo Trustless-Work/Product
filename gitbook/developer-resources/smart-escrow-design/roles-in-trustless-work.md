@@ -6,7 +6,7 @@ description: Before we begin designing, let's understand what each role represen
 
 Roles are assigned to addresses. Anyone can deposit funds into an escrow, but the status while only changed by predetermined steps, which are initiated and signed by the corresponding roles.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Roles are marked in black</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Roles are marked in black</p></figcaption></figure>
 
 ***
 

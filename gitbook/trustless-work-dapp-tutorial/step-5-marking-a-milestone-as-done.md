@@ -14,7 +14,7 @@ his step is done by the **Service Provider** once they have successfully deliver
 * In the **escrows section**, navigate to the **Service Provider** tab.
 *
 
-    <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 * This tab will only show escrows where your **logged-in wallet** is assigned as the **Service Provider**.
 
 ***
