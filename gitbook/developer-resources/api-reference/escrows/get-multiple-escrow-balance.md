@@ -1,6 +1,6 @@
 ---
-description: Get the balance of multiple escrows.
 icon: dollar-sign
+description: Get the balance of multiple escrows.
 ---
 
 # Get Multiple Escrow Balance
@@ -37,9 +37,16 @@ icon: dollar-sign
 {% tabs %}
 {% tab title="200 OK" %}
 ```json
-{
-    ???
-}
+[
+    {
+        "address": "DD3RT4I2OETACMZL7XVZLMMRZOHMLPSB2I6S7ZF5NE42OAKZPA2NGFGC",
+        "balance": 1
+    },
+    {
+        "address": "DFT67K4L62WSFVDSUADSG35JGZZNW2TXWSS6XN3PPJDHLYZ2XCOE7BPZ",
+        "balance": 0
+    }
+]
 ```
 {% endtab %}
 
