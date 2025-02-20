@@ -34,7 +34,7 @@ description: Deploy the escrow contract and define the escrow properties.
 | status         | string  | Milestone status. Ex: Approved, In dispute, etc...                    |
 | approved\_flag | boolean | Flag indicating whether a milestone has been approved by the approver |
 
-#### Body example:
+#### Example:
 
 ```jsx
 {

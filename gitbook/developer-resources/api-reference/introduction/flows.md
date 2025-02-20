@@ -10,6 +10,8 @@ description: >-
 
 {% hint style="warning" %}
 **Important Notes**
+
+Be sure to checkout the [Smart Escrow Design](../../smart-escrow-design/) section for visual helpers.&#x20;
 {% endhint %}
 
 * We are using the Stellar Wallet Kit library.
