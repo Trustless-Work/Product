@@ -6,6 +6,8 @@ description: Interact with Escrows Seamlessly
 
 ### **Introduction**
 
+{% embed url="https://youtu.be/wps4iH_qtrA" %}
+
 The **Trustless Work Dapp** is the visual interface for interacting with the **Trustless Work Escrow API**. It serves as a **back-office for the escrow lifecycle**, allowing users, developers, and platforms to:\
 ✅ **Deploy** an escrow\
 ✅ **Sign** transactions\

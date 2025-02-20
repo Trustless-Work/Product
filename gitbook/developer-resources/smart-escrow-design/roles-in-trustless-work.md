@@ -4,9 +4,9 @@ description: Before we begin designing, let's understand what each role represen
 
 # Roles in Trustless Work
 
-Now that you know how an escrow looks like, lets understand roles and their significance within the escrow lifecycle.&#x20;
+Roles are assigned to addresses. Anyone can deposit funds into an escrow, but the status while only changed by predetermined steps, which are initiated and signed by the corresponding roles.
 
-Roles are assigned to specific addresses, however, anyone can deposit funds into an escrow, and reading the escrow's configuration, status, and transaction history doesn't require an assigned role.
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Roles are marked in black</p></figcaption></figure>
 
 ***
 
@@ -29,7 +29,7 @@ Roles are assigned to specific addresses, however, anyone can deposit funds into
 
 ***
 
-**2. Milestone Marker**
+**2. Service Provider**
 
 * **Function:** Delivers the product, service, or objective set on milestine. Marks milestones as completed and ready for approval.
 * **Examples:**
@@ -71,20 +71,19 @@ Each individual  milestone will have an amount, each amount can be individually 
 
 ***
 
-**5. Receiver - Final Recipient**
+**5. Platform Address**
+
+* **Function:** An address designated to receive the **platform fee**, a percentage or fixed amount of the total funds processed through escrow. Platform can also update a milestone while it's status is still pending.&#x20;
+* **Examples:**
+  * Airbnb collecting platform fees.
+  * Crowdfunding platform taking a fee from funds raised.
+
+***
+
+**6. Receiver - Final Recipient**
 
 * **Function:** The final recipient of funds after conditions are met or disputes are resolved.
 * **Examples:**
   * Freelancer receiving payment.
   * Turist receiving a security deposit.
   * Company receiving funds
-
-***
-
-**6. Platform Address**
-
-* **Function:** An address designated to receive the **platform fee**, a percentage or fixed amount of the total funds processed through escrow.
-* **Examples:**
-  * Airbnb collecting platform fees.
-  * Crowdfunding platform taking a fee from funds raised.
-
