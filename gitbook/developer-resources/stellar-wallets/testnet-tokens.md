@@ -20,7 +20,7 @@ Testnet tokens are virtual assets used on Stellar's test network (testnet) to:
 
 ***
 
-## **How to Obtain Testnet Tokens**
+## **How to Obtain XLM Testnet Tokens**
 
 ### **Option 1: Use the Stellar Lab Faucet**
 
