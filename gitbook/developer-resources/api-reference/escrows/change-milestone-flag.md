@@ -43,19 +43,58 @@ description: >-
 {% tabs %}
 {% tab title="200 OK" %}
 ```json
-{
-    ???
+{    
+    "status": "SUCCESS",
+    "unsignedTransaction": "AAAAAgAAAABfQAm/gS..."  // XDR Hash Transaction
 }
 ```
 {% endtab %}
 
 {% tab title="500 Server Error " %}
-<mark style="color:red;">**Not Found VERIFICAR**</mark>
+<mark style="color:red;">**Not Found**</mark>
 
-<pre class="language-json"><code class="lang-json"><strong>{
-</strong>  "error": "Escrow not found"
+```json
+{
+  "status": "FAILED"
+  "messgae": "Escrow not found"
 }
-</code></pre>
+```
+
+<mark style="color:red;">**Only the approver can change the**</mark>&#x20;
+
+```json
+{
+  "status": "FAILED"
+  "messgae": "Only the approver can change milestone flag"
+}
+```
+
+<mark style="color:red;">**No milestones defined**</mark>
+
+```json
+{
+  "status": "FAILED"
+  "messgae": "Escrow initialized without milestone"
+}
+```
+
+<mark style="color:red;">**Invalid milestone index**</mark>
+
+```json
+{
+  "status": "FAILED"
+  "messgae": "Invalid milestone index"
+}
+```
+
+<mark style="color:red;">**500**</mark>
+
+```json
+{
+  "status": "500"
+  "messgae": "An unexpected error occurred"
+}
+```
 {% endtab %}
 
 {% tab title="400 Bad Request" %}
@@ -87,3 +126,53 @@ description: >-
 ```
 {% endtab %}
 {% endtabs %}
+
+**What this Endpoint returns?**
+
+This endpoint returns the transaction unsigned so that the transaction can be signed by means of a customer wallet.
+
+#### Use example (Using axios):
+
+```typescript
+import axios from "axios";
+
+const http = axios.create({
+  baseURL: "http://localhost:3000",
+  timeout: 10000,
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer your_api_key`,
+  },
+});
+
+export const useExample = async () => {
+    // Get the signer address
+    const { address } = await kit.getAddress();
+
+    const response = await http.post(
+      "/escrow/change-milestone-approved-flag",
+      {
+        // body requested for the endpoint
+      },
+    ); 
+    
+    // Get the unsigned transaction hash
+    const { unsignedTransaction } = response.data;
+
+    // Sign the transaction by wallet
+    const { signedTxXdr } = await signTransaction(unsignedTransaction, {
+      address,
+      networkPassphrase: WalletNetwork.TESTNET,
+    });
+
+    // Send the transaction to Stellar Network
+    const tx = await http.post("/helper/send-transaction", {
+      signedXdr: signedTxXdr,
+      returnValueIsRequired: true,
+    });
+
+    const { data } = tx;
+
+    return data;
+}
+```

@@ -1,9 +1,8 @@
 ---
-description: >-
-  Handles the resolution of disputes within an escrow by transferring the
-  amounts entered so far in the escrow to the client and service provider
-  according to what the dispute resolver deems appropriate
 icon: handshake
+description: >-
+  Resolves escrow disputes by distributing funds to the approver and service
+  provider as determined by the dispute resolver.
 ---
 
 # Resolve Dispute
@@ -25,8 +24,8 @@ icon: handshake
 </code></pre>             | string | ID (address) that identifies the escrow contract                  |
 | <pre><code>disputeResolver
 </code></pre>        | string | Address of the user defined to resolve disputes in an escrow      |
-| <pre><code>clientFunds
-</code></pre>            | string | Amount to transfer to the client for dispute resolution           |
+| <pre><code>approverFunds
+</code></pre>          | string | Amount to transfer to the approver for dispute resolution         |
 | <pre><code> serviceProviderFunds 
 </code></pre> | string | Amount to transfer to the service provider for dispute resolution |
 
@@ -37,7 +36,7 @@ icon: handshake
 {
 	"contractId": "GC3DJY4LLQYJHEONXFDLQVVRCFZQCPFX7VD33KP4P7QSVZY3SJHQBZGV",
 	"disputeResolver": "GBY3PAJY5R3ZIXTYBGFW4URB4RINEXQBC3T4RWDDKJ5TZXQYZUN6A4TP", 
-	"clientFunds": "100",
+	"approverFunds": "100",
 	"serviceProviderFunds": "50"
 }
 ```
@@ -48,19 +47,58 @@ icon: handshake
 {% tabs %}
 {% tab title="200 OK" %}
 ```json
-{
-    ???
+{    
+    "status": "SUCCESS",
+    "unsignedTransaction": "AAAAAgAAAABfQAm/gS..."  // XDR Hash Transaction
 }
 ```
 {% endtab %}
 
 {% tab title="500 Server Error " %}
-<mark style="color:red;">**Not Found VERIFICAR**</mark>
+<mark style="color:red;">**Only the dispute resolver**</mark>
 
-<pre class="language-json"><code class="lang-json"><strong>{
-</strong>  "error": "Escrow not found"
+```json
+{
+  "status": "FAILED"
+  "messgae": "Only the dispute resolver can execute this function"
 }
-</code></pre>
+```
+
+<mark style="color:red;">**Escrow not in dispute**</mark>
+
+```json
+{
+  "status": "FAILED"
+  "messgae": "Escrow not in dispute"
+}
+```
+
+<mark style="color:red;">**Insufficient approver funds for commissions**</mark>
+
+```json
+{
+  "status": "FAILED"
+  "messgae": "Insufficient approver funds for commissions"
+}
+```
+
+<mark style="color:red;">**Insufficient service provider funds for commissions**</mark>
+
+```json
+{
+  "status": "FAILED"
+  "messgae": "Insufficient Service Provider funds for commissions"
+}
+```
+
+<mark style="color:red;">**500**</mark>
+
+```json
+{
+  "status": "500"
+  "messgae": "An unexpected error occurred"
+}
+```
 {% endtab %}
 
 {% tab title="400 Bad Request" %}
@@ -92,3 +130,53 @@ icon: handshake
 ```
 {% endtab %}
 {% endtabs %}
+
+**What this Endpoint returns?**
+
+This endpoint returns the transaction unsigned so that the transaction can be signed by means of a customer wallet.
+
+#### Use example (Using axios):
+
+```typescript
+import axios from "axios";
+
+const http = axios.create({
+  baseURL: "http://localhost:3000",
+  timeout: 10000,
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer your_api_key`,
+  },
+});
+
+export const useExample = async () => {
+    // Get the signer address
+    const { address } = await kit.getAddress();
+
+    const response = await http.post(
+      "/escrow/resolving-disputes",
+      {
+        // body requested for the endpoint
+      },
+    ); 
+    
+    // Get the unsigned transaction hash
+    const { unsignedTransaction } = response.data;
+
+    // Sign the transaction by wallet
+    const { signedTxXdr } = await signTransaction(unsignedTransaction, {
+      address,
+      networkPassphrase: WalletNetwork.TESTNET,
+    });
+
+    // Send the transaction to Stellar Network
+    const tx = await http.post("/helper/send-transaction", {
+      signedXdr: signedTxXdr,
+      returnValueIsRequired: true,
+    });
+
+    const { data } = tx;
+
+    return data;
+}
+```
