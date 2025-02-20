@@ -49,6 +49,19 @@ Testnet tokens are virtual assets used on Stellar's test network (testnet) to:
 
 ***
 
+### **How to Get Testnet USDC**
+
+1. **Set the Trustline:** Ensure you've established a trustline for USDC on your Stellar testnet account. \
+   Issuer: GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5
+2. **Visit the Circle USDC Faucet:**
+   * Go to [Circle USDC Faucet](https://faucet.circle.com/).
+3. **Select Stellar and Request USDC:**
+   * Use the dropdown menu to select "Stellar".
+   * Paste your Stellar testnet address.
+   * Click on "Get Tokens" to receive testnet USDC.
+
+***
+
 ## **How to Use Testnet Tokens**
 
 ### **1. Explore Wallet Operations**
