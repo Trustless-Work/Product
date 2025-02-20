@@ -3,37 +3,36 @@ icon: get-pocket
 description: Get an escrow through the engagement id.
 ---
 
-# Get Escrow by Engagement ID
+# Get Escrow by Contract ID
 
-<mark style="color:orange;">**`GET`**</mark> `escrow/get-escrow-by-engagement-id`
+<mark style="color:orange;">**`GET`**</mark> `escrow/get-escrow-by-contract-id`
 
 
 
 **Headers**
 
-| Name         | Value              |
-| ------------ | ------------------ |
-| Content-Type | `application/json` |
+| Name          | Value              |
+| ------------- | ------------------ |
+| Content-Type  | `application/json` |
+| Authorization | `Bearer <token>`   |
 
 **Params**
 
-| Name                                  | Type   | Description                                                                     |
-| ------------------------------------- | ------ | ------------------------------------------------------------------------------- |
-| <pre><code>engagementId
-</code></pre> | string | The unique identifier linking this escrow to a specific project or transaction. |
+| Name                                | Type   | Description                                          |
+| ----------------------------------- | ------ | ---------------------------------------------------- |
+| <pre><code>signer
+</code></pre>     | string | Address of the user signing the contract transaction |
 | <pre><code>contractId
-</code></pre>   | string | The unique identifier of the contract.                                          |
+</code></pre> | string | The unique identifier of the contract.               |
 
 
 
 **Example of Request Params:**
 
 ```javascript
-engagementId = 10xs
+signer = GBPUACN...
 contractId = GD2SVFOJ...
 ```
-
-
 
 **Possible Responses**
 
@@ -41,16 +40,27 @@ contractId = GD2SVFOJ...
 {% tab title="200 OK" %}
 ```json
 {
-    "engagementId": "test",
-    "description": "test description",
-    "issuer": "GD2SVFOJ...",
-    "signer": "GD2SVFOJ...",
-    "serviceProvider": "GD2SVFOJ...",
-    "amount": 1,
-    "balance": 0.5,
-    "cancelled": true,
-    "completed": false
-}
+    "amount":7,
+    "approver":"GBPUACN...",
+    "description":"description",
+    "dispute_flag":true,
+    "dispute_resolver":"GDBMRVZ....",
+    "engagement_id":"12321",
+    "milestones":[
+        {
+            "approved_flag":false,
+            "description":"milestone 1",
+            "status":"pending"
+        }
+    ],
+    "platform_address":"GBPA2L...",
+    "platform_fee":1000,
+    "release_flag":false,
+    "release_signer":"GCPZUO...",
+    "resolved_flag":true,
+    "service_provider":"GA2RRI...",
+    "title":"Ebay",
+    "trustline":"CBIEL..."}
 ```
 {% endtab %}
 
