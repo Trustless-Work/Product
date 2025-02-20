@@ -1,6 +1,6 @@
 ---
 icon: get-pocket
-description: Get an escrow through the engagement id.
+description: Returns all the information of an escrow requested through the contractId.
 ---
 
 # Get Escrow by Contract ID
