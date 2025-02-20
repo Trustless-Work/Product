@@ -18,12 +18,12 @@ description: >-
 
 **Body**
 
-| Name            | Type    | Description                                                                         |
-| --------------- | ------- | ----------------------------------------------------------------------------------- |
-| contractId      | string  | ID (address) that identifies the escrow contract                                    |
-| milestoneIndex  | string  | Position that identifies the milestone within the group of milestones in the escrow |
-| newFlag         | boolean | New value for the "flag" property within the escrow milestone                       |
-| serviceProvider | string  | Address of the service provider who will modify the contract's "status" property    |
+| Name            | Type   | Description                                                                         |
+| --------------- | ------ | ----------------------------------------------------------------------------------- |
+| contractId      | string | ID (address) that identifies the escrow contract                                    |
+| milestoneIndex  | string | Position that identifies the milestone within the group of milestones in the escrow |
+| newStatus       | string | New value for the "status" property within the escrow milestone                     |
+| serviceProvider | string | Address of the service provider who will modify the contract's "status" property    |
 
 **Example of Request Body:**
 
@@ -43,7 +43,7 @@ description: >-
 {% tabs %}
 {% tab title="200 OK" %}
 ```json
-{    
+{
     "status": "SUCCESS",
     "unsignedTransaction": "AAAAAgAAAABfQAm/gS..."  // XDR Hash Transaction
 }
@@ -56,36 +56,20 @@ description: >-
 ```json
 {
   "status": "FAILED"
-  "messgae": "Escrow not found"
+  "messgae": "Only the dispute resolver can execute this function"
 }
 ```
 
-<mark style="color:red;">**Only the approver can change the flag**</mark>
+<mark style="color:red;">**Only the service provider can change milestone status**</mark>
 
 ```json
 {
   "status": "FAILED"
-  "messgae": "Only the approver can change milestone flag"
+  "messgae": "Only the service provider can change milestone status"
 }
 ```
 
-<mark style="color:red;">**No milestones defined**</mark>
 
-```json
-{
-  "status": "FAILED"
-  "messgae": "Escrow initialized without milestone"
-}
-```
-
-<mark style="color:red;">**Invalid milestone index**</mark>
-
-```json
-{
-  "status": "FAILED"
-  "messgae": "Invalid milestone index"
-}
-```
 {% endtab %}
 
 {% tab title="400 Bad Request" %}
