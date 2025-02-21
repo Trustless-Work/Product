@@ -123,3 +123,49 @@ Allows flexible USDC amounts to be transferred to the escrow contract.
 **What this Endpoint returns?**
 
 This endpoint returns the transaction unsigned so that the transaction can be signed by means of a customer wallet.
+
+#### Use example (Using axios):
+
+```typescript
+import axios from "axios";
+
+const http = axios.create({
+  baseURL: "https://dev.api.trustlesswork.com",
+  timeout: 10000,
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer your_api_key`,
+  },
+});
+
+export const useExample = async () => {
+    // Get the signer address
+    const { address } = await kit.getAddress();
+
+    const response = await http.post(
+      "/escrow/fund-escrow",
+      {
+        // body requested for the endpoint
+      },
+    ); 
+    
+    // Get the unsigned transaction hash
+    const { unsignedTransaction } = response.data;
+
+    // Sign the transaction by wallet
+    const { signedTxXdr } = await signTransaction(unsignedTransaction, {
+      address,
+      networkPassphrase: WalletNetwork.TESTNET,
+    });
+
+    // Send the transaction to Stellar Network
+    const tx = await http.post("/helper/send-transaction", {
+      signedXdr: signedTxXdr,
+      returnValueIsRequired: true,
+    });
+
+    const { data } = tx;
+
+    return data;
+}
+```

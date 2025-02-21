@@ -69,7 +69,31 @@ description: >-
 }
 ```
 
+<mark style="color:red;">**Invalid milestone index**</mark>
 
+```json
+{
+  "status": "FAILED"
+  "messgae": "Invalid milestone index"
+}
+```
+
+<mark style="color:red;">**No milestone defined**</mark>
+
+```json
+{
+  "status": "FAILED"
+  "messgae": "Escrow initialized without milestone"
+}
+```
+
+<mark style="color:red;">**Not Found**</mark>
+
+<pre class="language-json"><code class="lang-json"><strong>{
+</strong><strong>  "status": "FAILED"
+</strong>  "message": "Escrow not found"
+}
+</code></pre>
 {% endtab %}
 
 {% tab title="400 Bad Request" %}
@@ -114,7 +138,7 @@ This endpoint returns the transaction unsigned so that the transaction can be si
 import axios from "axios";
 
 const http = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "https://dev.api.trustlesswork.com",
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",

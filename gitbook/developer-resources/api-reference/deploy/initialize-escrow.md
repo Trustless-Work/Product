@@ -115,7 +115,7 @@ description: Deploy the escrow contract and define the escrow properties.
 <pre class="language-typescript"><code class="lang-typescript">import axios from "axios";
 
 const http = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "https://dev.api.trustlesswork.com",
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
