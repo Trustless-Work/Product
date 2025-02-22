@@ -1,6 +1,17 @@
 ---
 icon: get-pocket
 description: Returns all the information of an escrow requested through the contractId.
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Get Escrow by Contract ID
