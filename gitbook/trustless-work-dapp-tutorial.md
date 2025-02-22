@@ -40,6 +40,8 @@ Learn more at. [Get Testnet Tokens](trustless-work-dapp-tutorial.md#id-1.2.-gett
 
 ### **2. Full Escrow Lifecycle in the Dapp**
 
+{% embed url="https://youtu.be/Dv7ZEmZPxBc" %}
+
 #### **Core Phases of the Escrow Lifecycle**
 
 This section walks through the structured process of managing a transaction using the Dapp.
