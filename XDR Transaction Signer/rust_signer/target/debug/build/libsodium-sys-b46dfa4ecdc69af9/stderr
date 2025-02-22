@@ -1,0 +1,1848 @@
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_auth/hmacsha256/auth_hmacsha256.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_aead/chacha20poly1305/sodium/aead_chacha20poly1305.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/crypto_hash_sha512.h:12,
+                 from ./include/sodium/crypto_auth_hmacsha512.h:5,
+                 from ./include/sodium/crypto_auth_hmacsha512256.h:5,
+                 from ./include/sodium/crypto_auth.h:6,
+                 from crypto_auth/crypto_auth.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_auth/hmacsha512256/auth_hmacsha512256.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/crypto_stream_xsalsa20.h:13,
+                 from ./include/sodium/crypto_box_curve25519xsalsa20poly1305.h:5,
+                 from ./include/sodium/crypto_box.h:13,
+                 from crypto_box/crypto_box.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_auth/hmacsha512/auth_hmacsha512.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/limits.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:210,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h:7,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:34,
+                 from crypto_box/crypto_box_easy.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_aead/xchacha20poly1305/sodium/aead_xchacha20poly1305.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/string.h:26,
+                 from crypto_box/crypto_box_seal.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_core/ed25519/ref10/ed25519_ref10.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/string.h:26,
+                 from crypto_box/curve25519xsalsa20poly1305/box_curve25519xsalsa20poly1305.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/export.h:6,
+                 from ./include/sodium/crypto_core_hsalsa20.h:5,
+                 from crypto_core/hsalsa20/core_hsalsa20.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_core/hsalsa20/ref2/core_hsalsa20_ref2.c:7:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_core/hchacha20/core_hchacha20.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_core/salsa/ref/core_salsa_ref.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+crypto_core/ed25519/ref10/ed25519_ref10.c:508:1: warning: ‘ge25519_p3_to_precomp’ defined but not used [-Wunused-function]
+  508 | ge25519_p3_to_precomp(ge25519_precomp *pi, const ge25519_p3 *p)
+      | ^~~~~~~~~~~~~~~~~~~~~
+In file included from ./include/sodium/private/ed25519_ref10.h:23,
+                 from crypto_core/ed25519/ref10/ed25519_ref10.c:8:
+./include/sodium/private/ed25519_ref10_fe_51.h:146:1: warning: ‘fe25519_cswap’ defined but not used [-Wunused-function]
+  146 | fe25519_cswap(fe25519 f, fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/crypto_generichash_blake2b.h:5,
+                 from ./include/sodium/crypto_generichash.h:6,
+                 from crypto_generichash/crypto_generichash.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/crypto_generichash_blake2b.h:5,
+                 from crypto_generichash/blake2b/generichash_blake2.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_generichash/blake2b/ref/blake2b-compress-ref.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from crypto_generichash/blake2b/ref/blake2b-ref.c:16:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from crypto_generichash/blake2b/ref/generichash_blake2b.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/crypto_hash_sha512.h:12,
+                 from ./include/sodium/crypto_hash.h:13,
+                 from crypto_hash/crypto_hash.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/crypto_hash_sha256.h:12,
+                 from crypto_hash/sha256/hash_sha256.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/limits.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:210,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h:7,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:34,
+                 from crypto_hash/sha256/cp/hash_sha256_cp.c:29:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/crypto_hash_sha512.h:12,
+                 from crypto_hash/sha512/hash_sha512.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/limits.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:210,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h:7,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:34,
+                 from crypto_hash/sha512/cp/hash_sha512_cp.c:29:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/crypto_kdf.h:5,
+                 from crypto_kdf/crypto_kdf.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/crypto_onetimeauth_poly1305.h:11,
+                 from ./include/sodium/crypto_onetimeauth.h:6,
+                 from crypto_onetimeauth/crypto_onetimeauth.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/export.h:6,
+                 from ./include/sodium/core.h:5,
+                 from crypto_kx/crypto_kx.c:4:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/errno.h:25,
+                 from crypto_kdf/blake2b/kdf_blake2b.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/crypto_onetimeauth_poly1305.h:11,
+                 from crypto_onetimeauth/poly1305/onetimeauth_poly1305.h:5,
+                 from crypto_onetimeauth/poly1305/onetimeauth_poly1305.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/crypto_onetimeauth_poly1305.h:11,
+                 from crypto_onetimeauth/poly1305/donna/../onetimeauth_poly1305.h:5,
+                 from crypto_onetimeauth/poly1305/donna/poly1305_donna.h:6,
+                 from crypto_onetimeauth/poly1305/donna/poly1305_donna.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/errno.h:25,
+                 from crypto_pwhash/argon2/argon2-core.c:14:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+crypto_pwhash/argon2/argon2-core.c: In function ‘argon2_validate_inputs’:
+crypto_pwhash/argon2/argon2-core.c:275:31: warning: comparison of unsigned expression in ‘< 0’ is always false [-Wtype-limits]
+  275 |     if (ARGON2_MIN_PWD_LENGTH > context->pwdlen) {
+      |                               ^
+crypto_pwhash/argon2/argon2-core.c:304:31: warning: comparison of unsigned expression in ‘< 0’ is always false [-Wtype-limits]
+  304 |         if (ARGON2_MIN_SECRET > context->secretlen) {
+      |                               ^
+crypto_pwhash/argon2/argon2-core.c:319:34: warning: comparison of unsigned expression in ‘< 0’ is always false [-Wtype-limits]
+  319 |         if (ARGON2_MIN_AD_LENGTH > context->adlen) {
+      |                                  ^
+crypto_pwhash/argon2/argon2-core.c:342:27: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+  342 |     if (ARGON2_MAX_MEMORY < context->m_cost) {
+      |                           ^
+In file included from crypto_pwhash/argon2/argon2-core.c:31:
+crypto_pwhash/argon2/argon2-core.h: At top level:
+crypto_pwhash/argon2/argon2-core.h:139:17: warning: ‘index_alpha’ defined but not used [-Wunused-function]
+  139 | static uint32_t index_alpha(const argon2_instance_t *instance,
+      |                 ^~~~~~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_pwhash/argon2/argon2-fill-block-ref.c:14:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/limits.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:210,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h:7,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:34,
+                 from crypto_pwhash/argon2/blake2b-long.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/limits.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:210,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h:7,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:34,
+                 from crypto_pwhash/argon2/argon2.h:15,
+                 from crypto_pwhash/argon2/argon2-encoding.h:4,
+                 from crypto_pwhash/argon2/argon2-encoding.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/limits.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:210,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h:7,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:34,
+                 from crypto_pwhash/argon2/argon2.c:14:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+crypto_pwhash/argon2/argon2-fill-block-ref.c: In function ‘argon2_fill_segment_ref’:
+crypto_pwhash/argon2/argon2-fill-block-ref.c:199: warning: ignoring ‘#pragma warning ’ [-Wunknown-pragmas]
+  199 | #pragma warning(push)
+crypto_pwhash/argon2/argon2-fill-block-ref.c:200: warning: ignoring ‘#pragma warning ’ [-Wunknown-pragmas]
+  200 | #pragma warning(disable : 6385)
+crypto_pwhash/argon2/argon2-fill-block-ref.c:202: warning: ignoring ‘#pragma warning ’ [-Wunknown-pragmas]
+  202 | #pragma warning(pop)
+In file included from crypto_pwhash/argon2/argon2-encoding.c:2:
+crypto_pwhash/argon2/argon2-core.h:139:17: warning: ‘index_alpha’ defined but not used [-Wunused-function]
+  139 | static uint32_t index_alpha(const argon2_instance_t *instance,
+      |                 ^~~~~~~~~~~
+In file included from /usr/include/errno.h:25,
+                 from crypto_pwhash/argon2/pwhash_argon2i.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from crypto_pwhash/argon2/argon2.c:22:
+crypto_pwhash/argon2/argon2-core.h:139:17: warning: ‘index_alpha’ defined but not used [-Wunused-function]
+  139 | static uint32_t index_alpha(const argon2_instance_t *instance,
+      |                 ^~~~~~~~~~~
+crypto_pwhash/argon2/pwhash_argon2i.c: In function ‘crypto_pwhash_argon2i’:
+crypto_pwhash/argon2/pwhash_argon2i.c:160:19: warning: comparison of unsigned expression in ‘< 0’ is always false [-Wtype-limits]
+  160 |     if (passwdlen < crypto_pwhash_argon2i_PASSWD_MIN ||
+      |                   ^
+crypto_pwhash/argon2/pwhash_argon2i.c: In function ‘crypto_pwhash_argon2i_str’:
+crypto_pwhash/argon2/pwhash_argon2i.c:200:19: warning: comparison of unsigned expression in ‘< 0’ is always false [-Wtype-limits]
+  200 |     if (passwdlen < crypto_pwhash_argon2i_PASSWD_MIN ||
+      |                   ^
+crypto_pwhash/argon2/pwhash_argon2i.c: In function ‘crypto_pwhash_argon2i_str_verify’:
+crypto_pwhash/argon2/pwhash_argon2i.c:228:19: warning: comparison of unsigned expression in ‘< 0’ is always false [-Wtype-limits]
+  228 |     if (passwdlen < crypto_pwhash_argon2i_PASSWD_MIN) {
+      |                   ^
+In file included from crypto_pwhash/argon2/pwhash_argon2i.c:9:
+crypto_pwhash/argon2/argon2-core.h: At top level:
+crypto_pwhash/argon2/argon2-core.h:139:17: warning: ‘index_alpha’ defined but not used [-Wunused-function]
+  139 | static uint32_t index_alpha(const argon2_instance_t *instance,
+      |                 ^~~~~~~~~~~
+In file included from /usr/include/errno.h:25,
+                 from crypto_pwhash/argon2/pwhash_argon2id.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/errno.h:25,
+                 from crypto_pwhash/crypto_pwhash.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+crypto_pwhash/argon2/pwhash_argon2id.c: In function ‘crypto_pwhash_argon2id’:
+crypto_pwhash/argon2/pwhash_argon2id.c:156:19: warning: comparison of unsigned expression in ‘< 0’ is always false [-Wtype-limits]
+  156 |     if (passwdlen < crypto_pwhash_argon2id_PASSWD_MIN ||
+      |                   ^
+crypto_pwhash/argon2/pwhash_argon2id.c: In function ‘crypto_pwhash_argon2id_str’:
+crypto_pwhash/argon2/pwhash_argon2id.c:196:19: warning: comparison of unsigned expression in ‘< 0’ is always false [-Wtype-limits]
+  196 |     if (passwdlen < crypto_pwhash_argon2id_PASSWD_MIN ||
+      |                   ^
+crypto_pwhash/argon2/pwhash_argon2id.c: In function ‘crypto_pwhash_argon2id_str_verify’:
+crypto_pwhash/argon2/pwhash_argon2id.c:224:19: warning: comparison of unsigned expression in ‘< 0’ is always false [-Wtype-limits]
+  224 |     if (passwdlen < crypto_pwhash_argon2id_PASSWD_MIN) {
+      |                   ^
+In file included from crypto_pwhash/argon2/pwhash_argon2id.c:8:
+crypto_pwhash/argon2/argon2-core.h: At top level:
+crypto_pwhash/argon2/argon2-core.h:139:17: warning: ‘index_alpha’ defined but not used [-Wunused-function]
+  139 | static uint32_t index_alpha(const argon2_instance_t *instance,
+      |                 ^~~~~~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/export.h:6,
+                 from ./include/sodium/crypto_scalarmult_curve25519.h:6,
+                 from ./include/sodium/crypto_scalarmult.h:6,
+                 from crypto_scalarmult/crypto_scalarmult.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_scalarmult/curve25519/ref10/x25519_ref10.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/crypto_stream_xsalsa20.h:13,
+                 from ./include/sodium/crypto_secretbox_xsalsa20poly1305.h:5,
+                 from ./include/sodium/crypto_secretbox.h:6,
+                 from crypto_secretbox/crypto_secretbox.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/export.h:6,
+                 from ./include/sodium/crypto_scalarmult_curve25519.h:6,
+                 from crypto_scalarmult/curve25519/scalarmult_curve25519.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from ./include/sodium/private/ed25519_ref10.h:23,
+                 from crypto_scalarmult/curve25519/ref10/x25519_ref10.c:7:
+./include/sodium/private/ed25519_ref10_fe_51.h:413:1: warning: ‘fe25519_sq2’ defined but not used [-Wunused-function]
+  413 | fe25519_sq2(fe25519 h, const fe25519 f)
+      | ^~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:109:1: warning: ‘fe25519_cmov’ defined but not used [-Wunused-function]
+  109 | fe25519_cmov(fe25519 f, const fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from crypto_secretbox/crypto_secretbox_easy.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/crypto_onetimeauth_poly1305.h:11,
+                 from crypto_secretbox/xsalsa20poly1305/secretbox_xsalsa20poly1305.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_secretstream/xchacha20poly1305/secretstream_xchacha20poly1305.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/export.h:6,
+                 from ./include/sodium/crypto_shorthash_siphash24.h:5,
+                 from ./include/sodium/crypto_shorthash.h:6,
+                 from crypto_shorthash/crypto_shorthash.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/export.h:6,
+                 from ./include/sodium/crypto_shorthash_siphash24.h:5,
+                 from crypto_shorthash/siphash24/shorthash_siphash24.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/export.h:6,
+                 from ./include/sodium/crypto_shorthash_siphash24.h:5,
+                 from crypto_shorthash/siphash24/ref/shorthash_siphash24_ref.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/crypto_hash_sha512.h:12,
+                 from ./include/sodium/crypto_sign_ed25519.h:5,
+                 from ./include/sodium/crypto_sign.h:13,
+                 from crypto_sign/crypto_sign.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/string.h:26,
+                 from crypto_sign/ed25519/sign_ed25519.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/string.h:26,
+                 from crypto_sign/ed25519/ref10/keypair.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from ./include/sodium/private/ed25519_ref10.h:23,
+                 from crypto_sign/ed25519/ref10/keypair.c:8:
+./include/sodium/private/ed25519_ref10_fe_51.h:493:1: warning: ‘fe25519_mul32’ defined but not used [-Wunused-function]
+  493 | fe25519_mul32(fe25519 h, const fe25519 f, uint32_t n)
+      | ^~~~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:413:1: warning: ‘fe25519_sq2’ defined but not used [-Wunused-function]
+  413 | fe25519_sq2(fe25519 h, const fe25519 f)
+      | ^~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:334:1: warning: ‘fe25519_sq’ defined but not used [-Wunused-function]
+  334 | fe25519_sq(fe25519 h, const fe25519 f)
+      | ^~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:146:1: warning: ‘fe25519_cswap’ defined but not used [-Wunused-function]
+  146 | fe25519_cswap(fe25519 f, fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:109:1: warning: ‘fe25519_cmov’ defined but not used [-Wunused-function]
+  109 | fe25519_cmov(fe25519 f, const fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/limits.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:210,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h:7,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:34,
+                 from crypto_sign/ed25519/ref10/open.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from ./include/sodium/private/ed25519_ref10.h:23,
+                 from crypto_sign/ed25519/ref10/open.c:10:
+./include/sodium/private/ed25519_ref10_fe_51.h:493:1: warning: ‘fe25519_mul32’ defined but not used [-Wunused-function]
+  493 | fe25519_mul32(fe25519 h, const fe25519 f, uint32_t n)
+      | ^~~~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:413:1: warning: ‘fe25519_sq2’ defined but not used [-Wunused-function]
+  413 | fe25519_sq2(fe25519 h, const fe25519 f)
+      | ^~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:334:1: warning: ‘fe25519_sq’ defined but not used [-Wunused-function]
+  334 | fe25519_sq(fe25519 h, const fe25519 f)
+      | ^~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:243:1: warning: ‘fe25519_mul’ defined but not used [-Wunused-function]
+  243 | fe25519_mul(fe25519 h, const fe25519 f, const fe25519 g)
+      | ^~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:146:1: warning: ‘fe25519_cswap’ defined but not used [-Wunused-function]
+  146 | fe25519_cswap(fe25519 f, fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:109:1: warning: ‘fe25519_cmov’ defined but not used [-Wunused-function]
+  109 | fe25519_cmov(fe25519 f, const fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/string.h:26,
+                 from crypto_sign/ed25519/ref10/sign.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from ./include/sodium/private/ed25519_ref10.h:23,
+                 from crypto_sign/ed25519/ref10/sign.c:7:
+./include/sodium/private/ed25519_ref10_fe_51.h:493:1: warning: ‘fe25519_mul32’ defined but not used [-Wunused-function]
+  493 | fe25519_mul32(fe25519 h, const fe25519 f, uint32_t n)
+      | ^~~~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:413:1: warning: ‘fe25519_sq2’ defined but not used [-Wunused-function]
+  413 | fe25519_sq2(fe25519 h, const fe25519 f)
+      | ^~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:334:1: warning: ‘fe25519_sq’ defined but not used [-Wunused-function]
+  334 | fe25519_sq(fe25519 h, const fe25519 f)
+      | ^~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:243:1: warning: ‘fe25519_mul’ defined but not used [-Wunused-function]
+  243 | fe25519_mul(fe25519 h, const fe25519 f, const fe25519 g)
+      | ^~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:146:1: warning: ‘fe25519_cswap’ defined but not used [-Wunused-function]
+  146 | fe25519_cswap(fe25519 f, fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:109:1: warning: ‘fe25519_cmov’ defined but not used [-Wunused-function]
+  109 | fe25519_cmov(fe25519 f, const fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/crypto_stream_chacha20.h:13,
+                 from crypto_stream/chacha20/stream_chacha20.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_stream/chacha20/ref/chacha20_ref.c:8:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/crypto_stream_salsa20.h:13,
+                 from crypto_stream/salsa20/stream_salsa20.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/crypto_stream_xsalsa20.h:13,
+                 from ./include/sodium/crypto_stream.h:14,
+                 from crypto_stream/crypto_stream.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/export.h:6,
+                 from ./include/sodium/crypto_core_hsalsa20.h:5,
+                 from crypto_stream/xsalsa20/stream_xsalsa20.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_verify/sodium/verify.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from randombytes/randombytes.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from sodium/codecs.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from sodium/core.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from sodium/runtime.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from sodium/utils.c:4:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/export.h:6,
+                 from ./include/sodium/version.h:5,
+                 from sodium/version.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+sodium/utils.c: In function ‘sodium_sub’:
+sodium/utils.c:364:14: warning: unused variable ‘t32’ [-Wunused-variable]
+  364 |     uint32_t t32;
+      |              ^~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_stream/salsa20/xmm6/salsa20_xmm6.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/export.h:6,
+                 from ./include/sodium/utils.h:7,
+                 from crypto_scalarmult/curve25519/sandy2x/curve25519_sandy2x.c:12:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_scalarmult/curve25519/sandy2x/fe.h:9,
+                 from crypto_scalarmult/curve25519/sandy2x/fe_frombytes_sandy2x.c:5:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_scalarmult/curve25519/sandy2x/fe51.h:15,
+                 from crypto_scalarmult/curve25519/sandy2x/fe51_invert.c:6:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/limits.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:210,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h:7,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:34,
+                 from crypto_box/curve25519xchacha20poly1305/box_curve25519xchacha20poly1305.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/string.h:26,
+                 from crypto_box/curve25519xchacha20poly1305/box_seal_curve25519xchacha20poly1305.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_core/ed25519/core_ed25519.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from ./include/sodium/private/ed25519_ref10.h:23,
+                 from crypto_core/ed25519/core_ed25519.c:6:
+./include/sodium/private/ed25519_ref10_fe_51.h:493:1: warning: ‘fe25519_mul32’ defined but not used [-Wunused-function]
+  493 | fe25519_mul32(fe25519 h, const fe25519 f, uint32_t n)
+      | ^~~~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:413:1: warning: ‘fe25519_sq2’ defined but not used [-Wunused-function]
+  413 | fe25519_sq2(fe25519 h, const fe25519 f)
+      | ^~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:334:1: warning: ‘fe25519_sq’ defined but not used [-Wunused-function]
+  334 | fe25519_sq(fe25519 h, const fe25519 f)
+      | ^~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:243:1: warning: ‘fe25519_mul’ defined but not used [-Wunused-function]
+  243 | fe25519_mul(fe25519 h, const fe25519 f, const fe25519 g)
+      | ^~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:146:1: warning: ‘fe25519_cswap’ defined but not used [-Wunused-function]
+  146 | fe25519_cswap(fe25519 f, fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:109:1: warning: ‘fe25519_cmov’ defined but not used [-Wunused-function]
+  109 | fe25519_cmov(fe25519 f, const fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_core/ed25519/core_ristretto255.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_pwhash/scryptsalsa208sha256/crypto_scrypt-common.c:21:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from ./include/sodium/private/ed25519_ref10.h:23,
+                 from crypto_core/ed25519/core_ristretto255.c:7:
+./include/sodium/private/ed25519_ref10_fe_51.h:493:1: warning: ‘fe25519_mul32’ defined but not used [-Wunused-function]
+  493 | fe25519_mul32(fe25519 h, const fe25519 f, uint32_t n)
+      | ^~~~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:413:1: warning: ‘fe25519_sq2’ defined but not used [-Wunused-function]
+  413 | fe25519_sq2(fe25519 h, const fe25519 f)
+      | ^~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:334:1: warning: ‘fe25519_sq’ defined but not used [-Wunused-function]
+  334 | fe25519_sq(fe25519 h, const fe25519 f)
+      | ^~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:243:1: warning: ‘fe25519_mul’ defined but not used [-Wunused-function]
+  243 | fe25519_mul(fe25519 h, const fe25519 f, const fe25519 g)
+      | ^~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:146:1: warning: ‘fe25519_cswap’ defined but not used [-Wunused-function]
+  146 | fe25519_cswap(fe25519 f, fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:109:1: warning: ‘fe25519_cmov’ defined but not used [-Wunused-function]
+  109 | fe25519_cmov(fe25519 f, const fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/limits.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:210,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h:7,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:34,
+                 from crypto_pwhash/scryptsalsa208sha256/pbkdf2-sha256.c:27:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/sys/mman.h:22,
+                 from crypto_pwhash/scryptsalsa208sha256/scrypt_platform.c:22:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/errno.h:25,
+                 from crypto_pwhash/scryptsalsa208sha256/pwhash_scryptsalsa208sha256.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+crypto_pwhash/scryptsalsa208sha256/pwhash_scryptsalsa208sha256.c: In function ‘crypto_pwhash_scryptsalsa208sha256_str’:
+crypto_pwhash/scryptsalsa208sha256/pwhash_scryptsalsa208sha256.c:207:19: warning: comparison of unsigned expression in ‘< 0’ is always false [-Wtype-limits]
+  207 |     if (passwdlen < crypto_pwhash_scryptsalsa208sha256_PASSWD_MIN ||
+      |                   ^
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/string.h:26,
+                 from crypto_scalarmult/ed25519/ref10/scalarmult_ed25519_ref10.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/errno.h:25,
+                 from crypto_pwhash/scryptsalsa208sha256/nosse/pwhash_scryptsalsa208sha256_nosse.c:31:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from ./include/sodium/private/ed25519_ref10.h:23,
+                 from crypto_scalarmult/ed25519/ref10/scalarmult_ed25519_ref10.c:5:
+./include/sodium/private/ed25519_ref10_fe_51.h:493:1: warning: ‘fe25519_mul32’ defined but not used [-Wunused-function]
+  493 | fe25519_mul32(fe25519 h, const fe25519 f, uint32_t n)
+      | ^~~~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:413:1: warning: ‘fe25519_sq2’ defined but not used [-Wunused-function]
+  413 | fe25519_sq2(fe25519 h, const fe25519 f)
+      | ^~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:334:1: warning: ‘fe25519_sq’ defined but not used [-Wunused-function]
+  334 | fe25519_sq(fe25519 h, const fe25519 f)
+      | ^~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:243:1: warning: ‘fe25519_mul’ defined but not used [-Wunused-function]
+  243 | fe25519_mul(fe25519 h, const fe25519 f, const fe25519 g)
+      | ^~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:146:1: warning: ‘fe25519_cswap’ defined but not used [-Wunused-function]
+  146 | fe25519_cswap(fe25519 f, fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:109:1: warning: ‘fe25519_cmov’ defined but not used [-Wunused-function]
+  109 | fe25519_cmov(fe25519 f, const fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/string.h:26,
+                 from crypto_scalarmult/ristretto255/ref10/scalarmult_ristretto255_ref10.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from ./include/sodium/private/ed25519_ref10.h:23,
+                 from crypto_scalarmult/ristretto255/ref10/scalarmult_ristretto255_ref10.c:6:
+./include/sodium/private/ed25519_ref10_fe_51.h:493:1: warning: ‘fe25519_mul32’ defined but not used [-Wunused-function]
+  493 | fe25519_mul32(fe25519 h, const fe25519 f, uint32_t n)
+      | ^~~~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:413:1: warning: ‘fe25519_sq2’ defined but not used [-Wunused-function]
+  413 | fe25519_sq2(fe25519 h, const fe25519 f)
+      | ^~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:334:1: warning: ‘fe25519_sq’ defined but not used [-Wunused-function]
+  334 | fe25519_sq(fe25519 h, const fe25519 f)
+      | ^~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:243:1: warning: ‘fe25519_mul’ defined but not used [-Wunused-function]
+  243 | fe25519_mul(fe25519 h, const fe25519 f, const fe25519 g)
+      | ^~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:146:1: warning: ‘fe25519_cswap’ defined but not used [-Wunused-function]
+  146 | fe25519_cswap(fe25519 f, fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:109:1: warning: ‘fe25519_cmov’ defined but not used [-Wunused-function]
+  109 | fe25519_cmov(fe25519 f, const fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from crypto_secretbox/xchacha20poly1305/secretbox_xchacha20poly1305.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/export.h:6,
+                 from ./include/sodium/crypto_shorthash_siphash24.h:5,
+                 from crypto_shorthash/siphash24/shorthash_siphashx24.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/export.h:6,
+                 from ./include/sodium/crypto_shorthash_siphash24.h:5,
+                 from crypto_shorthash/siphash24/ref/shorthash_siphashx24_ref.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/limits.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:210,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h:7,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h:34,
+                 from crypto_sign/ed25519/ref10/obsolete.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from ./include/sodium/private/ed25519_ref10.h:23,
+                 from crypto_sign/ed25519/ref10/obsolete.c:9:
+./include/sodium/private/ed25519_ref10_fe_51.h:493:1: warning: ‘fe25519_mul32’ defined but not used [-Wunused-function]
+  493 | fe25519_mul32(fe25519 h, const fe25519 f, uint32_t n)
+      | ^~~~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:413:1: warning: ‘fe25519_sq2’ defined but not used [-Wunused-function]
+  413 | fe25519_sq2(fe25519 h, const fe25519 f)
+      | ^~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:334:1: warning: ‘fe25519_sq’ defined but not used [-Wunused-function]
+  334 | fe25519_sq(fe25519 h, const fe25519 f)
+      | ^~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:243:1: warning: ‘fe25519_mul’ defined but not used [-Wunused-function]
+  243 | fe25519_mul(fe25519 h, const fe25519 f, const fe25519 g)
+      | ^~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:146:1: warning: ‘fe25519_cswap’ defined but not used [-Wunused-function]
+  146 | fe25519_cswap(fe25519 f, fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~~
+./include/sodium/private/ed25519_ref10_fe_51.h:109:1: warning: ‘fe25519_cmov’ defined but not used [-Wunused-function]
+  109 | fe25519_cmov(fe25519 f, const fe25519 g, unsigned int b)
+      | ^~~~~~~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_stream/salsa2012/ref/stream_salsa2012_ref.c:7:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/export.h:6,
+                 from ./include/sodium/crypto_stream_salsa2012.h:13,
+                 from crypto_stream/salsa2012/stream_salsa2012.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_stream/salsa208/ref/stream_salsa208_ref.c:7:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from ./include/sodium/export.h:6,
+                 from ./include/sodium/crypto_stream_salsa208.h:13,
+                 from crypto_stream/salsa208/stream_salsa208.c:1:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdlib.h:26,
+                 from crypto_stream/xchacha20/stream_xchacha20.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from randombytes/sysrandom/randombytes_sysrandom.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/errno.h:25,
+                 from crypto_aead/aes256gcm/aesni/aead_aes256gcm_aesni.c:8:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_onetimeauth/poly1305/sse2/poly1305_sse2.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/errno.h:25,
+                 from crypto_pwhash/scryptsalsa208sha256/sse/pwhash_scryptsalsa208sha256_sse.c:31:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_generichash/blake2b/ref/blake2b-compress-ssse3.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_pwhash/argon2/argon2-fill-block-ssse3.c:14:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+crypto_pwhash/argon2/argon2-fill-block-ssse3.c: In function ‘argon2_fill_segment_ssse3’:
+crypto_pwhash/argon2/argon2-fill-block-ssse3.c:202: warning: ignoring ‘#pragma warning ’ [-Wunknown-pragmas]
+  202 | #pragma warning(push)
+crypto_pwhash/argon2/argon2-fill-block-ssse3.c:203: warning: ignoring ‘#pragma warning ’ [-Wunknown-pragmas]
+  203 | #pragma warning(disable : 6385)
+crypto_pwhash/argon2/argon2-fill-block-ssse3.c:205: warning: ignoring ‘#pragma warning ’ [-Wunknown-pragmas]
+  205 | #pragma warning(pop)
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_stream/chacha20/dolbeau/chacha20_dolbeau-ssse3.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_generichash/blake2b/ref/blake2b-compress-sse41.c:5:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_generichash/blake2b/ref/blake2b-compress-avx2.c:6:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_pwhash/argon2/argon2-fill-block-avx2.c:14:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+libtool: warning: '-version-info/-version-number' is ignored for convenience libraries
+ar: `u' modifier ignored since `D' is the default (see `U')
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_stream/chacha20/dolbeau/chacha20_dolbeau-avx2.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+libtool: warning: '-version-info/-version-number' is ignored for convenience libraries
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: warning: '-version-info/-version-number' is ignored for convenience libraries
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: warning: '-version-info/-version-number' is ignored for convenience libraries
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_stream/salsa20/xmm6int/salsa20_xmm6int-avx2.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+ar: `u' modifier ignored since `D' is the default (see `U')
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdint.h:26,
+                 from /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h:9,
+                 from crypto_pwhash/argon2/argon2-fill-block-avx512f.c:14:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from randombytes/internal/randombytes_internal_random.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+crypto_pwhash/argon2/argon2-fill-block-avx2.c: In function ‘argon2_fill_segment_avx2’:
+crypto_pwhash/argon2/argon2-fill-block-avx2.c:203: warning: ignoring ‘#pragma warning ’ [-Wunknown-pragmas]
+  203 | #pragma warning(push)
+crypto_pwhash/argon2/argon2-fill-block-avx2.c:204: warning: ignoring ‘#pragma warning ’ [-Wunknown-pragmas]
+  204 | #pragma warning(disable : 6385)
+crypto_pwhash/argon2/argon2-fill-block-avx2.c:206: warning: ignoring ‘#pragma warning ’ [-Wunknown-pragmas]
+  206 | #pragma warning(pop)
+crypto_pwhash/argon2/argon2-fill-block-avx512f.c: In function ‘argon2_fill_segment_avx512f’:
+crypto_pwhash/argon2/argon2-fill-block-avx512f.c:208: warning: ignoring ‘#pragma warning ’ [-Wunknown-pragmas]
+  208 | #pragma warning(push)
+crypto_pwhash/argon2/argon2-fill-block-avx512f.c:209: warning: ignoring ‘#pragma warning ’ [-Wunknown-pragmas]
+  209 | #pragma warning(disable : 6385)
+crypto_pwhash/argon2/argon2-fill-block-avx512f.c:211: warning: ignoring ‘#pragma warning ’ [-Wunknown-pragmas]
+  211 | #pragma warning(pop)
+randombytes/internal/randombytes_internal_random.c:317:1: warning: ‘safe_read’ defined but not used [-Wunused-function]
+  317 | safe_read(const int fd, void * const buf_, size_t size)
+      | ^~~~~~~~~
+libtool: warning: '-version-info/-version-number' is ignored for convenience libraries
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: warning: '-version-info/-version-number' is ignored for convenience libraries
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: warning: '-version-info/-version-number' is ignored for convenience libraries
+ar: `u' modifier ignored since `D' is the default (see `U')
+ar: `u' modifier ignored since `D' is the default (see `U')
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from aead_aes256gcm.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from aead_aes256gcm2.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from aead_chacha20poly13052.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from aead_chacha20poly1305.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from auth.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from auth3.c:4:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from auth2.c:4:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from aead_xchacha20poly1305.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from auth5.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from auth6.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from auth7.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from box.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from box2.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from box7.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from box8.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from box_easy.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from box_seal.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from box_easy2.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from box_seed.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from chacha20.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from codecs.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from core1.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from core3.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from core2.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from core4.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from core5.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from core6.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from ed25519_convert.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from generichash.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from generichash2.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from generichash3.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from hash.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from hash3.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from kdf.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from keygen.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from kx.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from metamorphic.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from misuse.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from onetimeauth.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from onetimeauth2.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from onetimeauth7.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from pwhash_argon2id.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from pwhash_argon2i.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from randombytes.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from scalarmult.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from scalarmult2.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+pwhash_argon2id.c: In function ‘str_tests’:
+pwhash_argon2id.c:307:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 81 [-Wstringop-overread]
+  307 |     if (crypto_pwhash_str_verify("$argon2id$m=65536,t=2,p=1c29tZXNhbHQ"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  308 |                                  "$9sTbSlTio3Biev89thdrlKKiCaYsjjYVJxGAL3swxpQ",
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  309 |                                  "password", 0x100000000ULL) != -1) {
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:307:9: note: referencing argument 1 of type ‘const char[128]’
+In file included from ../../src/libsodium/include/sodium.h:32,
+                 from cmptest.h:17:
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:312:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 81 [-Wstringop-overread]
+  312 |     if (crypto_pwhash_str_verify("$argon2id$m=65536,t=2,p=1c29tZXNhbHQ"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  313 |                                  "$9sTbSlTio3Biev89thdrlKKiCaYsjjYVJxGAL3swxpQ",
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  314 |                                  "password", strlen("password")) != -1) {
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:312:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:317:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 81 [-Wstringop-overread]
+  317 |     if (crypto_pwhash_str_verify("$argon2id$m=65536,t=2,p=1$c29tZXNhbHQ"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  318 |                                  "9sTbSlTio3Biev89thdrlKKiCaYsjjYVJxGAL3swxpQ",
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  319 |                                  "password", strlen("password")) != -1) {
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:317:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:322:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 82 [-Wstringop-overread]
+  322 |     if (crypto_pwhash_str_verify("$argon2id$m=65536,t=2,p=1$c29tZXNhbHQ"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  323 |                                  "$b2G3seW+uPzerwQQC+/E1K50CLLO7YXy0JRcaTuswRo",
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  324 |                                  "password", strlen("password")) != -1) {
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:322:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:327:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 86 [-Wstringop-overread]
+  327 |     if (crypto_pwhash_str_verify("$argon2id$v=19$m=65536,t=2,p=1c29tZXNhbHQ"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  328 |                                  "$wWKIMhR9lyDFvRz9YTZweHKfbftvj+qf+YFY4NeBbtA",
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  329 |                                  "password", strlen("password")) != -1) {
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c: In function ‘str_tests’:
+pwhash_argon2id.c:327:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:332:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 86 [-Wstringop-overread]
+  332 |     if (crypto_pwhash_str_verify("$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  333 |                                  "wWKIMhR9lyDFvRz9YTZweHKfbftvj+qf+YFY4NeBbtA",
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  334 |                                  "password", strlen("password")) != -1) {
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:332:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:293:9: warning: ‘crypto_pwhash_argon2i_str_verify’ reading 128 bytes from a region of size 80 [-Wstringop-overread]
+  293 |     if (crypto_pwhash_argon2i_str_verify("$argon2i$m=65536,t=2,p=1c29tZXNhbHQ"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  294 |                                          "$9sTbSlTio3Biev89thdrlKKiCaYsjjYVJxGAL3swxpQ",
+      |                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  295 |                                          "password", 0x100000000ULL) != -1) {
+      |                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:293:9: note: referencing argument 1 of type ‘const char[128]’
+pwhash_argon2id.c:337:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 87 [-Wstringop-overread]
+  337 |     if (crypto_pwhash_str_verify("$argon2id$v=19$m=65536,t=2,p=1$c29tZXNhbHQ"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  338 |                                  "$8iIuixkI73Js3G1uMbezQXD0b8LG4SXGsOwoQkdAQIM",
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  339 |                                  "password", strlen("password")) != -1) {
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:337:9: note: referencing argument 1 of type ‘const char[128]’
+In file included from ../../src/libsodium/include/sodium/crypto_pwhash.h:6,
+                 from ../../src/libsodium/include/sodium.h:32,
+                 from cmptest.h:17:
+../../src/libsodium/include/sodium/crypto_pwhash_argon2i.h:108:5: note: in a call to function ‘crypto_pwhash_argon2i_str_verify’
+  108 | int crypto_pwhash_argon2i_str_verify(const char str[crypto_pwhash_argon2i_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:342:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 85 [-Wstringop-overread]
+  342 |     if (crypto_pwhash_str_verify("$argon2id$v=19$m=256,t=3,p=1$MDEyMzQ1Njc"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  343 |                                  "$G5ajKFCoUzaXRLdz7UJb5wGkb2Xt+X5/GQjUYtS2+TE",
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  344 |                                  "password", strlen("password")) != 0) {
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:298:9: warning: ‘crypto_pwhash_argon2i_str_verify’ reading 128 bytes from a region of size 80 [-Wstringop-overread]
+  298 |     if (crypto_pwhash_argon2i_str_verify("$argon2i$m=65536,t=2,p=1c29tZXNhbHQ"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  299 |                                  "$9sTbSlTio3Biev89thdrlKKiCaYsjjYVJxGAL3swxpQ",
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  300 |                                  "password", strlen("password")) != -1) {
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:342:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:298:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash_argon2i.h:108:5: note: in a call to function ‘crypto_pwhash_argon2i_str_verify’
+  108 | int crypto_pwhash_argon2i_str_verify(const char str[crypto_pwhash_argon2i_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:347:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 85 [-Wstringop-overread]
+  347 |     if (crypto_pwhash_str_verify("$argon2id$v=19$m=256,t=3,p=1$MDEyMzQ1Njc"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  348 |                                  "$G5ajKFCoUzaXRLdz7UJb5wGkb2Xt+X5/GQjUYtS2+TE",
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  349 |                                  "passwore", strlen("passwore")) != -1 || errno != EINVAL) {
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:303:9: warning: ‘crypto_pwhash_argon2i_str_verify’ reading 128 bytes from a region of size 80 [-Wstringop-overread]
+  303 |     if (crypto_pwhash_argon2i_str_verify("$argon2i$m=65536,t=2,p=1$c29tZXNhbHQ"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  304 |                                          "9sTbSlTio3Biev89thdrlKKiCaYsjjYVJxGAL3swxpQ",
+      |                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  305 |                                          "password", strlen("password")) != -1) {
+      |                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:347:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:303:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash_argon2i.h:108:5: note: in a call to function ‘crypto_pwhash_argon2i_str_verify’
+  108 | int crypto_pwhash_argon2i_str_verify(const char str[crypto_pwhash_argon2i_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:352:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 85 [-Wstringop-overread]
+  352 |     if (crypto_pwhash_str_verify("$Argon2id$v=19$m=256,t=3,p=1$MDEyMzQ1Njc"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  353 |                                  "$G5ajKFCoUzaXRLdz7UJb5wGkb2Xt+X5/GQjUYtS2+TE",
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  354 |                                  "password", strlen("password")) != -1 || errno != EINVAL) {
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:308:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 81 [-Wstringop-overread]
+  308 |     if (crypto_pwhash_str_verify("$argon2i$m=65536,t=2,p=1$c29tZXNhbHQ"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  309 |                                  "$b2G3seW+uPzerwQQC+/E1K50CLLO7YXy0JRcaTuswRo",
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  310 |                                  "password", strlen("password")) != -1) {
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:352:9: note: referencing argument 1 of type ‘const char[128]’
+pwhash_argon2i.c:308:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:357:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 85 [-Wstringop-overread]
+  357 |     if (crypto_pwhash_str_verify("$argon2id$v=19$m=256,t=3,p=2$MDEyMzQ1Njc"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  358 |                                  "$G5ajKFCoUzaXRLdz7UJb5wGkb2Xt+X5/GQjUYtS2+TE",
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  359 |                                  "password", strlen("password")) != -1 || errno != EINVAL) {
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:357:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:313:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 85 [-Wstringop-overread]
+  313 |     if (crypto_pwhash_str_verify("$argon2i$v=19$m=65536,t=2,p=1c29tZXNhbHQ"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  314 |                                  "$wWKIMhR9lyDFvRz9YTZweHKfbftvj+qf+YFY4NeBbtA",
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  315 |                                  "password", strlen("password")) != -1) {
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:313:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:376:12: warning: ‘crypto_pwhash_argon2i_str_needs_rehash’ reading 128 bytes from a region of size 1 [-Wstringop-overread]
+  376 |     assert(crypto_pwhash_argon2i_str_needs_rehash("", OPSLIMIT, MEMLIMIT) == -1);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:318:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 85 [-Wstringop-overread]
+  318 |     if (crypto_pwhash_str_verify("$argon2i$v=19$m=65536,t=2,p=1$c29tZXNhbHQ"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  319 |                                  "wWKIMhR9lyDFvRz9YTZweHKfbftvj+qf+YFY4NeBbtA",
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  320 |                                  "password", strlen("password")) != -1) {
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:376:12: note: referencing argument 1 of type ‘const char[128]’
+pwhash_argon2i.c:318:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../../src/libsodium/include/sodium/crypto_pwhash.h:6:
+../../src/libsodium/include/sodium/crypto_pwhash_argon2i.h:114:5: note: in a call to function ‘crypto_pwhash_argon2i_str_needs_rehash’
+  114 | int crypto_pwhash_argon2i_str_needs_rehash(const char str[crypto_pwhash_argon2i_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:323:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 86 [-Wstringop-overread]
+  323 |     if (crypto_pwhash_str_verify("$argon2i$v=19$m=65536,t=2,p=1$c29tZXNhbHQ"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  324 |                                  "$8iIuixkI73Js3G1uMbezQXD0b8LG4SXGsOwoQkdAQIM",
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  325 |                                  "password", strlen("password")) != -1) {
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:388:12: warning: ‘crypto_pwhash_argon2i_str_needs_rehash’ reading 128 bytes from a region of size 1 [-Wstringop-overread]
+  388 |     assert(crypto_pwhash_argon2i_str_needs_rehash("", OPSLIMIT, MEMLIMIT) == -1);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:323:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2id.c:388:12: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash_argon2i.h:114:5: note: in a call to function ‘crypto_pwhash_argon2i_str_needs_rehash’
+  114 | int crypto_pwhash_argon2i_str_needs_rehash(const char str[crypto_pwhash_argon2i_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:328:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 96 [-Wstringop-overread]
+  328 |     if (crypto_pwhash_str_verify(
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+  329 |             "$argon2i$v=19$m=4096,t=3,p=2$b2RpZHVlamRpc29kaXNrdw"
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  330 |             "$TNnWIwlu1061JHrnCqIAmjs3huSxYIU+0jWipu7Kc9M",
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  331 |             "password", strlen("password")) != 0) {
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:328:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:334:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 96 [-Wstringop-overread]
+  334 |     if (crypto_pwhash_str_verify(
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+  335 |             "$argon2i$v=19$m=4096,t=3,p=2$b2RpZHVlamRpc29kaXNrdw"
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  336 |             "$TNnWIwlu1061JHrnCqIAmjs3huSxYIU+0jWipu7Kc9M",
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  337 |             "passwore", strlen("passwore")) != -1 || errno != EINVAL) {
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:334:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:340:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 96 [-Wstringop-overread]
+  340 |     if (crypto_pwhash_str_verify(
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+  341 |             "$Argon2i$v=19$m=4096,t=3,p=2$b2RpZHVlamRpc29kaXNrdw"
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  342 |             "$TNnWIwlu1061JHrnCqIAmjs3huSxYIU+0jWipu7Kc9M",
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  343 |             "password", strlen("password")) != -1 || errno != EINVAL) {
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:340:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:346:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 95 [-Wstringop-overread]
+  346 |     if (crypto_pwhash_str_verify(
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+  347 |             "$argon2i$v=1$m=4096,t=3,p=2$b2RpZHVlamRpc29kaXNrdw"
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  348 |             "$TNnWIwlu1061JHrnCqIAmjs3huSxYIU+0jWipu7Kc9M",
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  349 |             "password", strlen("password")) != -1 || errno != EINVAL) {
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:346:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:352:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 97 [-Wstringop-overread]
+  352 |     if (crypto_pwhash_str_verify(
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+  353 |             "$argon2i$v=1$m=4096,t=3,p=2$b2RpZHVla~=mRpc29kaXNrdw"
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  354 |             "$TNnWIwlu1061JHrnCqIAmjs3huSxYIU+0jWipu7Kc9M",
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  355 |             "password", strlen("password")) != -1 || errno != EINVAL) {
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:352:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:358:9: warning: ‘crypto_pwhash_str_verify’ reading 128 bytes from a region of size 97 [-Wstringop-overread]
+  358 |     if (crypto_pwhash_str_verify(
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+  359 |             "$argon2i$v=1$m=4096,t=3,p=2$b2RpZHVlamRpc29kaXNrdw"
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  360 |             "$TNnWIwlu1061JHrnCqIAmjs3huSxYI~=U+0jWipu7Kc9M",
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  361 |             "password", strlen("password")) != -1 || errno != EINVAL) {
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:358:9: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash.h:128:5: note: in a call to function ‘crypto_pwhash_str_verify’
+  128 | int crypto_pwhash_str_verify(const char str[crypto_pwhash_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:378:12: warning: ‘crypto_pwhash_argon2id_str_needs_rehash’ reading 128 bytes from a region of size 1 [-Wstringop-overread]
+  378 |     assert(crypto_pwhash_argon2id_str_needs_rehash("", OPSLIMIT, MEMLIMIT) == -1);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:378:12: note: referencing argument 1 of type ‘const char[128]’
+In file included from ../../src/libsodium/include/sodium/crypto_pwhash.h:7:
+../../src/libsodium/include/sodium/crypto_pwhash_argon2id.h:114:5: note: in a call to function ‘crypto_pwhash_argon2id_str_needs_rehash’
+  114 | int crypto_pwhash_argon2id_str_needs_rehash(const char str[crypto_pwhash_argon2id_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:390:12: warning: ‘crypto_pwhash_argon2id_str_needs_rehash’ reading 128 bytes from a region of size 1 [-Wstringop-overread]
+  390 |     assert(crypto_pwhash_argon2id_str_needs_rehash("", OPSLIMIT, MEMLIMIT) == -1);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_argon2i.c:390:12: note: referencing argument 1 of type ‘const char[128]’
+../../src/libsodium/include/sodium/crypto_pwhash_argon2id.h:114:5: note: in a call to function ‘crypto_pwhash_argon2id_str_needs_rehash’
+  114 | int crypto_pwhash_argon2id_str_needs_rehash(const char str[crypto_pwhash_argon2id_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from scalarmult5.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from scalarmult6.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from scalarmult7.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+scalarmult2.c: In function ‘xmain’:
+scalarmult2.c:16:19: warning: unused variable ‘i’ [-Wunused-variable]
+   16 |     int           i;
+      |                   ^
+scalarmult5.c: In function ‘xmain’:
+scalarmult5.c:22:19: warning: unused variable ‘i’ [-Wunused-variable]
+   22 |     int           i;
+      |                   ^
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from scalarmult8.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from secretbox2.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from secretbox.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from secretbox8.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from secretbox7.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from secretbox_easy.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from secretbox_easy2.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from secretstream.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from sodium_utils.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from sodium_core.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from sign.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from shorthash.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from sodium_version.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from stream.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from stream2.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from stream3.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from stream4.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from verify1.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdlib.h:26,
+                 from sodium_utils3.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from core_ed25519.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/bits/libc-header-start.h:33,
+                 from /usr/include/stdlib.h:26,
+                 from sodium_utils2.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from core_ristretto255.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from pwhash_scrypt.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from pwhash_scrypt_ll.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from scalarmult_ristretto255.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+pwhash_scrypt.c: In function ‘str_tests’:
+pwhash_scrypt.c:356:12: warning: ‘crypto_pwhash_scryptsalsa208sha256_str_needs_rehash’ reading 102 bytes from a region of size 1 [-Wstringop-overread]
+  356 |     assert(crypto_pwhash_scryptsalsa208sha256_str_needs_rehash
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  357 |            ("", OPSLIMIT, MEMLIMIT) == -1);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~
+pwhash_scrypt.c:356:12: note: referencing argument 1 of type ‘const char[102]’
+In file included from ../../src/libsodium/include/sodium.h:63,
+                 from cmptest.h:17:
+../../src/libsodium/include/sodium/crypto_pwhash_scryptsalsa208sha256.h:111:5: note: in a call to function ‘crypto_pwhash_scryptsalsa208sha256_str_needs_rehash’
+  111 | int crypto_pwhash_scryptsalsa208sha256_str_needs_rehash(const char str[crypto_pwhash_scryptsalsa208sha256_STRBYTES],
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from scalarmult_ed25519.c:2:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from siphashx24.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
+In file included from /usr/include/assert.h:35,
+                 from cmptest.h:9,
+                 from xchacha20.c:3:
+/usr/include/features.h:422:4: warning: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]
+  422 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
+      |    ^~~~~~~
