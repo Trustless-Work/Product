@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import StellarSdk from 'stellar-sdk';
+import { handleApiError } from '@/lib/errorHandler';
 
 const server = new StellarSdk.Horizon.Server('https://horizon-testnet.stellar.org');
 
@@ -35,12 +36,7 @@ export async function POST(request: NextRequest) {
             xdr: xdr,
             message: 'Transaction prepared. Please sign and submit using your wallet.'
         });
-
-    } catch (error: any) {
-        console.error('Trustline creation error:', error);
-        return NextResponse.json(
-            { error: error.message || 'Failed to prepare trustline transaction' },
-            { status: 500 }
-        );
+    } catch (error: unknown) {
+        return handleApiError(error);
     }
 }

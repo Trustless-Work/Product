@@ -1,8 +1,7 @@
 import React from 'react';
-import { Droplets, BookOpen, Code, Users, Rocket, ChevronRight } from 'lucide-react';
+import { Droplets, Code, Rocket } from 'lucide-react';
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import Link from 'next/link';
 
