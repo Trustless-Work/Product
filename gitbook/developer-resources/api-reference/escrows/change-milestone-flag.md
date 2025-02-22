@@ -5,9 +5,9 @@ description: >-
   escrow to approve that milestone.
 ---
 
-# Change Milestone Approved Flag
+# Change Milestone Flag
 
-<mark style="color:green;">**`POST`**</mark> `escrow/change-milestone-approved-flag`
+<mark style="color:green;">**`POST`**</mark> `escrow/change-milestone-flag`
 
 **Headers**
 

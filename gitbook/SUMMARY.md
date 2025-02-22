@@ -61,7 +61,7 @@
       * [Get Escrow by Contract ID](developer-resources/api-reference/escrows/get-escrow-by-engagement-id.md)
       * [Resolve Dispute](developer-resources/api-reference/escrows/resolving-disputes.md)
       * [Change Milestone Status](developer-resources/api-reference/escrows/change-milestone-status.md)
-      * [Change Milestone Approved Flag](developer-resources/api-reference/escrows/change-milestone-flag.md)
+      * [Change Milestone Flag](developer-resources/api-reference/escrows/change-milestone-flag.md)
       * [Change Dispute Flag](developer-resources/api-reference/escrows/change-dispute-flag.md)
       * [Get Multiple Escrow Balance](developer-resources/api-reference/escrows/get-multiple-escrow-balance.md)
       * [Distribute Escrow Earnings](developer-resources/api-reference/escrows/distribute-escrow-funds.md)
