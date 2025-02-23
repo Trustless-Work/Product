@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import StellarSdk from 'stellar-sdk';
+import { handleApiError } from '@/lib/errorHandler';
 
 // Initialize Stellar server connection
 const server = new StellarSdk.Horizon.Server('https://horizon-testnet.stellar.org');
@@ -57,19 +58,7 @@ export async function POST(request: NextRequest) {
             message: `Successfully sent ${amount} ${process.env.NEXT_PUBLIC_TOKEN_SYMBOL} tokens`
         });
 
-    } catch (error: any) {
-        // Handle specific Stellar errors
-        if (error.response?.data?.extras?.result_codes?.operations?.[0] === 'op_no_trust') {
-            return NextResponse.json(
-                { error: 'No trustline established for this token' },
-                { status: 400 }
-            );
-        }
-
-        console.error('Distribution error:', error);
-        return NextResponse.json(
-            { error: error.message || 'Failed to distribute tokens' },
-            { status: 500 }
-        );
+    } catch (error: unknown) {
+        return handleApiError(error);
     }
 }

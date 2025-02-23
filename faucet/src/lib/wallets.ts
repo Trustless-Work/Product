@@ -40,7 +40,7 @@ export interface WalletInfo {
             networkPassphrase: "Test SDF Network ; September 2015"
             });
 
-            const signedXDR = (signed as any).signedTxXdr || signed.xdr;
+            const signedXDR = (signed as { signedTxXdr?: string; xdr?: string }).signedTxXdr || signed.xdr;
             return { signedXdr: signedXDR || signed.xdr };
         }
         catch(error){

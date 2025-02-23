@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import StellarSdk from 'stellar-sdk';
+import { handleApiError } from '@/lib/errorHandler';
 
 const server = new StellarSdk.Horizon.Server('https://horizon-testnet.stellar.org');
 
@@ -27,17 +28,7 @@ export async function POST(request: NextRequest) {
 
         return NextResponse.json({ hasTrustline });
 
-    } catch (error: any) {
-        // Handle case where account doesn't exist
-        if (error.response?.status === 404) {
-            return NextResponse.json(
-                { error: 'Account not found' },
-                { status: 404 }
-            );
-        }
-        return NextResponse.json(
-            { error: 'Invalid Stellar address' },
-            { status: 500 }
-        );
+    } catch (error: unknown) {
+        return handleApiError(error);
     }
 }

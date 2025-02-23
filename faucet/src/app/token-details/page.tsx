@@ -1,8 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-import { Separator } from '@/components/ui/separator';
-import { ExternalLink, Check } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
@@ -131,7 +130,7 @@ const TokenDetailsPage = () => {
                     <p>If you prefer to add the trustline manually, follow these steps:</p>
                     <ol className="list-decimal list-inside space-y-2 ml-4">
                       <li>Open your Stellar wallet.</li>
-                      <li>Navigate to the "Manage Assets" section.</li>
+                      <li>Navigate to the &quot;Manage Assets&quot; section.</li>
                       <li>Add a new asset by entering the following details:</li>
                       <ul className="ml-6 space-y-2 mt-2">
                         <li className="flex gap-2">
@@ -154,11 +153,11 @@ const TokenDetailsPage = () => {
                     <p>You can also add the trustline via Stellar Lab by following these detailed steps:</p>
                     <ol className="list-decimal list-inside space-y-2 ml-4">
                       <li>Go to <a href="https://laboratory.stellar.org/" className="text-primary hover:underline">Stellar Laboratory</a>.</li>
-                      <li>On the top right corner, select "Testnet" to ensure you are interacting with the testnet network.</li>
-                      <li>Click on "Transactions" to start creating a new transaction.</li>
-                      <li>In the "Source Account" field, enter your Stellar wallet address and click "Fetch next sequence" to load your account data.</li>
-                      <li>Under "Operation Type", select "Change Trust" from the dropdown list.</li>
-                      <li>In the "Asset" section, provide the asset details:</li>
+                      <li>On the top right corner, select &quot;Testnet&quot; to ensure you are interacting with the testnet network.</li>
+                      <li>Click on &quot;Transactions&quot; to start creating a new transaction.</li>
+                      <li>In the &quot;Source Account&quot; field, enter your Stellar wallet address and click &quot;Fetch next sequence&quot; to load your account data.</li>
+                      <li>Under &quot;Operation Type&quot;, select &quot;Change Trust&quot; from the dropdown list.</li>
+                      <li>In the &quot;Asset&quot; section, provide the asset details:</li>
                       <ul className="ml-6 space-y-2 mt-2">
                         <li className="flex gap-2">
                           <span className="text-primary">•</span>
@@ -170,7 +169,7 @@ const TokenDetailsPage = () => {
                         </li>
                       </ul>
                       <li>Set the limit if required or leave it blank for the default value.</li>
-                      <li>Click "Sign with wallet extension" and sign the transaction using your Stellar wallet.</li>
+                      <li>Click &quot;Sign with wallet extension&quot; and sign the transaction using your Stellar wallet.</li>
                       <li>Submit the transaction and wait for the confirmation.</li>
                       <li>Verify the trustline addition by checking your account balance in the Stellar Testnet Explorer.</li>
                     </ol>

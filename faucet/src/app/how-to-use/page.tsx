@@ -1,10 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Separator } from "@/components/ui/separator";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
-import { ExternalLink } from "lucide-react";
 
 const HowToUseFaucet = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -41,7 +39,7 @@ const HowToUseFaucet = () => {
               <ol className="list-decimal pl-6 space-y-2">
                 <li>Enter your Stellar wallet address.</li>
                 <li>Select the desired amount (10, 25, or 50 tokens).</li>
-                <li>Click the "Request Tokens" button.</li>
+                <li>Click the &quot;Request Tokens&quot; button.</li>
                 <li>Check your wallet balance in the Stellar testnet explorer.</li>
               </ol>
             </section>  
