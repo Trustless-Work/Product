@@ -46,9 +46,6 @@ Event emission was added to:
 - `fund_escrow` function (emits `escrow_funded` event).
 - `change_milestone_status` function (emits `milestone_status_changed` event).
 
-For detailed implementation, refer to the **PR in the Smart Escrow repo**:  
-[**View PR Here**](https://github.com/Trustless-Work/Trustless-Work-Smart-Escrow/pull/50)  
-
 ## How Events Can Be Consumed
 - External systems can listen to these events using Stellar’s event API.
 - The Trustless Work API can integrate with Soroban’s event logs to track escrow funding and milestone changes in real time.
