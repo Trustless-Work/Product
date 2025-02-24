@@ -1,73 +1,72 @@
-use stellar_sdk::{Transaction, Keypair, Network};
-use stellar_sdk::xdr::{TransactionEnvelope, TransactionV1Envelope};
+use stellar_base::{
+    transaction::TransactionEnvelope,
+    network::Network,
+    crypto::SodiumKeyPair,
+    xdr::{XDRDeserialize, XDRSerialize},
+};
 use std::error::Error;
 
-struct SignerInput {
-    unsigned_xdr: String,
-    signers: Vec<SignerKey>,
-}
-
-struct SignerKey {
-    public_key: String,
-    secret_key: String,
-}
-
-struct SignerOutput {
-    signed_transaction: String,
-}
-
-fn sign_xdr_transaction(input: SignerInput, network_passphrase: &str) -> Result<SignerOutput, Box<dyn Error>> {
-    // Parse the unsigned XDR
-    let mut tx = Transaction::from_xdr_base64(&input.unsigned_xdr, network_passphrase)?;
-    
-    // Validate we have at least one signer
-    if input.signers.is_empty() {
-        return Err("At least one signer is required".into());
+fn main() {
+    let unsigned_xdr = "AAAAAgAAA..."; // Example unsigned XDR transaction
+    let secret_keys = vec!["SDS3...", "SDS5..."]; // Example secret keys
+    match sign_transaction(unsigned_xdr, &secret_keys) {
+        Ok(signed_xdr) => println!("Signed Transaction: {}", signed_xdr),
+        Err(e) => eprintln!("Error signing transaction: {}", e),
     }
+}
 
-    // Sign with each provided key
-    for signer in input.signers.iter() {
-        let keypair = Keypair::from_secret(&signer.secret_key)
-            .map_err(|_| "Invalid secret key")?;
-        
-        if keypair.public_key().to_string() != signer.public_key {
-            return Err("Public key doesn't match secret key".into());
-        }
-        
-        tx.sign(&keypair)?;
+fn sign_transaction(unsigned_xdr: &str, secret_keys: &[&str]) -> Result<String, Box<dyn Error>> {
+    // Parse the XDR string
+    let envelope = TransactionEnvelope::from_xdr_base64(unsigned_xdr)
+        .map_err(|e| format!("Failed to parse XDR: {}", e))?;
+    let mut envelope_clone = envelope.clone();
+
+    // Create network instance
+    let network = Network::new_public();
+
+    // Sign with each secret key
+    for &secret_key_str in secret_keys {
+        let keypair = SodiumKeyPair::from_secret_seed(secret_key_str)
+            .map_err(|e| format!("Failed to create keypair: {}", e))?;
+        envelope_clone.sign(keypair.as_ref(), &network)
+            .map_err(|e| format!("Failed to sign transaction: {}", e))?;
     }
 
     // Convert back to XDR
-    let signed_xdr = tx.to_envelope()
-        .to_xdr_base64()
-        .map_err(|_| "Failed to serialize signed transaction")?;
-
-    Ok(SignerOutput {
-        signed_transaction: signed_xdr
-    })
+    envelope_clone.xdr_base64()
+        .map_err(|e| format!("Failed to serialize signed XDR: {}", e).into())
 }
 
-fn main() -> Result<(), Box<dyn Error>> {
-    // Example usage
-    let input = SignerInput {
-        unsigned_xdr: "AAAAAgAAAAA...".to_string(),
-        signers: vec![
-            SignerKey {
-                public_key: "GB3D...".to_string(),
-                secret_key: "SDS3...".to_string(),
-            },
-            SignerKey {
-                public_key: "GB5D...".to_string(),
-                secret_key: "SDS5...".to_string(),
-            }
-        ]
-    };
+#[cfg(test)]
+mod tests {
+    use super::*;
 
-    let network = Network::testnet();
-    match sign_xdr_transaction(input, network.passphrase()) {
-        Ok(output) => println!("Signed XDR: {}", output.signed_transaction),
-        Err(e) => eprintln!("Error: {}", e),
+    #[test]
+    fn test_single_signature() {
+        // Example valid unsigned XDR transaction
+        let unsigned_xdr = "AAAAAgAAA..."; 
+        let secret_keys = vec!["SDS3..."]; // Example secret key
+        let result = sign_transaction(unsigned_xdr, &secret_keys);
+        println!("Result: {:?}", result); // Debug output
+        assert!(result.is_ok());
     }
-    
-    Ok(())
+
+    #[test]
+    fn test_multi_signature() {
+        // Example valid unsigned XDR transaction
+        let unsigned_xdr = "AAAAAgAAA..."; 
+        let secret_keys = vec!["SDS3...", "SDS5..."]; // Example secret keys
+        let result = sign_transaction(unsigned_xdr, &secret_keys);
+        println!("Result: {:?}", result); // Debug output
+        assert!(result.is_ok());
+    }
+
+    #[test]
+    fn test_invalid_xdr() {
+        let unsigned_xdr = "INVALID_XDR";
+        let secret_keys = vec!["SDS3..."];
+        let result = sign_transaction(unsigned_xdr, &secret_keys);
+        println!("Result: {:?}", result); // Debug output
+        assert!(result.is_err());
+    }
 }
