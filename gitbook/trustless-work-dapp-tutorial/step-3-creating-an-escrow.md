@@ -1,5 +1,7 @@
 # Step 3: Creating an Escrow
 
+{% embed url="https://youtu.be/p7DZWAfewwc" %}
+
 **1. Navigate to the Escrows Section**
 
 * Click on **"Escrows"** in the **sidebar**.

@@ -1,5 +1,7 @@
 # Step 7: Releasing the Payment
 
+{% embed url="https://youtu.be/peOUqQyXfnU" %}
+
 This step is performed by the **Release Signer**, who authorizes the funds to be released to the Service Provider.
 
 **Instructions to Release Payment**

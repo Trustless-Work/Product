@@ -1,5 +1,9 @@
 # Step 1: Accessing the Trustless Work Dapp and Logging In
 
+{% embed url="https://youtu.be/HKmMd5pU2WI" %}
+
+
+
 **1. Go to the Trustless Work Dapp**
 
 Open your web browser and navigate to:\

@@ -4,6 +4,8 @@ Once an escrow is initialized, the next step is to **fund it**. Funding locks th
 
 ***
 
+{% embed url="https://youtu.be/yABe2Krugt0" %}
+
 #### **1. Open the Escrow Modal**
 
 * Navigate to the **Escrows** section.

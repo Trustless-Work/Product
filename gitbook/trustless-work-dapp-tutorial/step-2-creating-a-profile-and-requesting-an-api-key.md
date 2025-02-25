@@ -1,5 +1,7 @@
 # Step 2: Creating a Profile and Requesting an API Key
 
+{% embed url="https://youtu.be/HKmMd5pU2WI" %}
+
 **1. Access the Profile Settings**
 
 * Click on your **wallet address** at the **bottom left** of the screen.

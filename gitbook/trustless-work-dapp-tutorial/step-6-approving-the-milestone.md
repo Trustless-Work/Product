@@ -1,5 +1,7 @@
 # Step 6: Approving the Milestone
 
+{% embed url="https://youtu.be/LObfeUW7NEk" %}
+
 Now that the milestone has been completed by the **service provider**, the **approver** needs to verify and approve it.
 
 **1. Switch to the "Approver" tab**

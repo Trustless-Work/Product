@@ -36,6 +36,7 @@
   * [Step 5: Marking a Milestone as Done ✅](trustless-work-dapp-tutorial/step-5-marking-a-milestone-as-done.md)
   * [Step 6: Approving the Milestone](trustless-work-dapp-tutorial/step-6-approving-the-milestone.md)
   * [Step 7: Releasing the Payment](trustless-work-dapp-tutorial/step-7-releasing-the-payment.md)
+  * [Resolving Disputes](trustless-work-dapp-tutorial/resolving-disputes.md)
   * [How to Get Testnet Tokens](developer-resources/stellar-wallets/testnet-tokens.md)
 * [💻 Developer Resources](developer-resources/README.md)
   * [Smart Escrow Design](developer-resources/smart-escrow-design/README.md)

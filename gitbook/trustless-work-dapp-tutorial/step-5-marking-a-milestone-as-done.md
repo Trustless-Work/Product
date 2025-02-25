@@ -1,6 +1,8 @@
 # Step 5: Marking a Milestone as Done ✅
 
-his step is done by the **Service Provider** once they have successfully delivered the product or service.
+{% embed url="https://youtu.be/SaTlwkC7DXI" %}
+
+This step is done by the **Service Provider** once they have successfully delivered the product or service.
 
 📌 **Why is this step important?**
 
