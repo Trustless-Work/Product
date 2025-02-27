@@ -19,10 +19,10 @@ description: >-
 
 **Body**
 
-| Name                             | Type    | Description                                                                                           |
-| -------------------------------- | ------- | ----------------------------------------------------------------------------------------------------- |
-| signedXdr                        | string  | The sign's hash. This come from the wallet.                                                           |
-| returnValueIsRequired (Optional) | boolean | If a return escrow data is needed (Note that not all contract functions return data from an escrow.). |
+| Name                                  | Type    | Description                                                                                           |
+| ------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------- |
+| signedXdr                             | string  | The sign's hash. This come from the wallet.                                                           |
+| returnEscrowDataIsRequired (Optional) | boolean | If a return escrow data is needed (Note that not all contract functions return data from an escrow.). |
 
 **Example of Request Body:**
 

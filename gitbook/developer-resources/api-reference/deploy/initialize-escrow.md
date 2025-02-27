@@ -149,7 +149,7 @@ export const useExample = async () => {
     // Send the transaction to Stellar Network
     const tx = await http.post("/helper/send-transaction", {
       signedXdr: signedTxXdr,
-      returnValueIsRequired: true,
+      returnEscrowDataIsRequired: true,
     });
 
     const { data } = tx;
