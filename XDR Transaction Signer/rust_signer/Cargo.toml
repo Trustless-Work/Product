@@ -1,0 +1,8 @@
+[package]
+name = "rust_signer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+stellar_sdk = "0.1.4"
+thiserror = "2.0.11"
