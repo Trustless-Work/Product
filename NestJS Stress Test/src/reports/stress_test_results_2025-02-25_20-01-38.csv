@@ -1,0 +1,9 @@
+Metric,Value
+Total time,11.351 seconds
+Total requests,20
+Successful requests,20
+Failed requests,0
+Success rate,100.00%
+Average response time,5534.90 ms
+Requests per second,1.76
+Status code 201,20
