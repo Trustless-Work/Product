@@ -25,6 +25,7 @@ description: Deploy the escrow contract and define the escrow properties.
 | plataformFee    | string             | Commission that the platform will receive when the escrow is completed                                                                |
 | milestones      | Milestones\<Array> | Objectives to be completed to define the escrow as completed releaseSigner: Address of the entity in charge of releasing escrow funds |
 | disputeResolver | string             | Address in charge of resolving disputes within the escrow                                                                             |
+| releaseSigner   | string             | Address of the user in charge of releasing the escrow funds to the service provider.                                                  |
 
 #### Milestone
 
