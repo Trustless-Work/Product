@@ -16,6 +16,7 @@ description: Deploy the escrow contract and define the escrow properties.
 | Name            | Type               | Description                                                                                                                           |
 | --------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
 | signer          | string             | Entity that signs the transaction that deploys and initializes the escrow engagementId: Unique identifier for the escrow              |
+| engagementId    | string             | ID that the user who created the escrow wants to define to it                                                                         |
 | title           | string             | Name of the escrow                                                                                                                    |
 | description     | string             | Text describing the function of the escrow                                                                                            |
 | approver        | string             | Address of the entity requiring the service                                                                                           |
