@@ -1,4 +1,3 @@
-// src/event-listener/event-listener.module.ts
 import { Module } from '@nestjs/common';
 import { HttpModule } from '@nestjs/axios';
 import { ScheduleModule } from '@nestjs/schedule';

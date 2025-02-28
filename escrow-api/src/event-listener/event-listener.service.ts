@@ -24,7 +24,7 @@ export class EventListenerService {
       this.logger.log("Checking for new contract events...");
 
       const eventsResponse = await this.sorobanServer.getEvents({
-        startLedger: 0, // Replace with latest processed ledger if using DB
+        startLedger: 0,
         filters: [
           {
             type: "contract",
