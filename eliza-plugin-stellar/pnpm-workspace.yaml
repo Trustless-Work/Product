@@ -1,0 +1,10 @@
+packages:
+  - src/plugins/*
+ignoredBuiltDependencies:
+  - better-sqlite3
+  - bufferutil
+  - esbuild
+  - sharp
+  - utf-8-validate
+onlyBuiltDependencies:
+  - better-sqlite3

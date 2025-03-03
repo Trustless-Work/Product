@@ -1,0 +1,52 @@
+{
+  "name": "eliza-plugin-starter",
+  "version": "0.1.0",
+  "description": "Starter template for creating Eliza plugins",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && cp -R src/plugins dist/plugins",
+    "dev": "tsc -w",
+    "test": "jest",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write src",
+    "mock-eliza": "node --loader ts-node/esm ./src/scripts/load-with-plugin.ts"
+  },
+  "keywords": [
+    "eliza",
+    "ai",
+    "plugin",
+    "exa",
+    "search"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@elizaos/adapter-sqlite": "0.1.7",
+    "@elizaos/client-direct": "0.1.7",
+    "@elizaos/core": "0.1.7",
+    "@elizaos/plugin-bootstrap": "0.1.7",
+    "@elizaos/plugin-node": "0.1.7",
+    "@tavily/core": "^0.3.1",
+    "better-sqlite3": "11.5.0",
+    "dotenv": "^16.4.7",
+    "sharp": "0.33.5",
+    "ws": "8.18.0"
+  },
+  "devDependencies": {
+    "@babel/parser": "^7.26.3",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.17.10",
+    "acorn": "^8.14.0",
+    "acorn-walk": "^8.3.4",
+    "jest": "^29.7.0",
+    "prettier": "^3.4.2",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "workspaces": [
+    "src/plugins/*"
+  ]
+}
