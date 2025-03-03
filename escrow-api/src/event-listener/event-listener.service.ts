@@ -13,7 +13,7 @@ export class EventListenerService {
     this.sorobanServer = new StellarRpc.Server(
       this.configService.get<string>("SOROBAN_RPC_URL") ?? "https://soroban-testnet.stellar.org"
     );
-    this.contractId = this.configService.get<string>("CONTRACT_ID") ?? "CDOA2TCTQXLNEVTODWE3ROCRPUYTS5G2AIZUGIA2N6CYLFKMRM7BMDKU";
+    this.contractId = this.configService.get<string>("CONTRACT_ID") ?? "CDTDRQMSR4YK4KXYJRVTPONULQTUHBMYDNZ2ZAMZBQOIUKG5KUK7WY4M";
   }
 
   /** Fetch latest ledger before querying events */
@@ -50,21 +50,18 @@ export class EventListenerService {
       this.logger.log("Checking for new contract events...");
       
       const latestLedger = await this.getLatestLedger();
-      this.logger.log(`Polling from ledger: ${latestLedger}`);
-
       const eventsResponse = await this.sorobanServer.getEvents({
         startLedger: latestLedger,
         filters: [
           {
             type: "contract",
             contractIds: [this.contractId],
-            topics: [["AAAADwAAAAh0cmFuc2Zlcg==", "*", "*", "*"]],
           },
         ],
       });
 
       if (eventsResponse?.events?.length) {
-        this.logger.log(`Detected ${eventsResponse.events.length} new events`);
+        this.logger.log(`Detected ${eventsResponse.events.length} new event`);
         eventsResponse.events.forEach((event) => this.handleEvent(event));
       }
     } 
@@ -75,12 +72,12 @@ export class EventListenerService {
   }
 
   private handleEvent(event: any) {
-    this.logger.log(`Event received: ${JSON.stringify(event)}`);
-
-    if (event.topic[0] === "fund_esc") {
-      this.logger.log(
-        `Escrow Funded - signer: ${event.data.signer}, Amount: ${event.data.amount_to_deposit}`
-      );
-    } 
+    try{
+      const usdc_deposited = Number(event.value._value.find(item => item._arm === "i128")._value._attributes.lo._value)/10000000;
+      this.logger.log(`fund_escrow: ${usdc_deposited} USDC deposited to to ${this.contractId}`);
+    }
+    catch (error) {
+      this.logger.error(`Error handling events: ${error.message}`);
+    }
   }
 }
