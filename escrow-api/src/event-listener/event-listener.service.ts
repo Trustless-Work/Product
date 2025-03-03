@@ -53,7 +53,7 @@ export class EventListenerService {
       this.logger.log(`Polling from ledger: ${latestLedger}`);
 
       const eventsResponse = await this.sorobanServer.getEvents({
-        startLedger: latestLedger, // Use latest ledger
+        startLedger: latestLedger,
         filters: [
           {
             type: "contract",
