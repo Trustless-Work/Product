@@ -8,23 +8,52 @@ export class EventListenerService {
   private readonly logger = new Logger(EventListenerService.name);
   private readonly sorobanServer: StellarRpc.Server;
   private readonly contractId: string;
-  private readonly pollInterval: number;
 
   constructor(private configService: ConfigService) {
     this.sorobanServer = new StellarRpc.Server(
-      this.configService.get<string>("SOROBAN_RPC_URL") ?? ""
+      this.configService.get<string>("SOROBAN_RPC_URL") ?? "https://soroban-testnet.stellar.org"
     );
-    this.contractId = this.configService.get<string>("CONTRACT_ID") ?? "";
-    this.pollInterval = this.configService.get<number>("POLL_INTERVAL") ?? 10000;
+    this.contractId = this.configService.get<string>("CONTRACT_ID") ?? "CDOA2TCTQXLNEVTODWE3ROCRPUYTS5G2AIZUGIA2N6CYLFKMRM7BMDKU";
   }
 
-  @Interval("pollEvents", 10000) // Poll every 10 seconds
+  /** Fetch latest ledger before querying events */
+  private async getLatestLedger(): Promise<number> {
+    const requestBody = {
+      jsonrpc: "2.0",
+      id: 8675309,
+      method: "getLatestLedger",
+    };
+
+    try {
+      const response = await fetch(this.configService.get<string>("SOROBAN_RPC_URL") ?? "https://soroban-testnet.stellar.org", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(requestBody),
+      });
+
+      const data = await response.json();
+      
+      if (data?.result?.sequence) {
+        return data.result.sequence;
+      } else {
+        throw new Error("Failed to fetch latest ledger.");
+      }
+    } catch (error) {
+      this.logger.error("Error fetching latest ledger:", error);
+      throw error;
+    }
+  }
+
+  @Interval("pollEvents", 1000) // Poll every second
   async pollContractEvents() {
     try {
       this.logger.log("Checking for new contract events...");
+      
+      const latestLedger = await this.getLatestLedger();
+      this.logger.log(`Polling from ledger: ${latestLedger}`);
 
       const eventsResponse = await this.sorobanServer.getEvents({
-        startLedger: 0,
+        startLedger: latestLedger, // Use latest ledger
         filters: [
           {
             type: "contract",
@@ -34,11 +63,13 @@ export class EventListenerService {
         ],
       });
 
-      if (eventsResponse.events.length > 0) {
+      if (eventsResponse?.events?.length) {
         this.logger.log(`Detected ${eventsResponse.events.length} new events`);
         eventsResponse.events.forEach((event) => this.handleEvent(event));
       }
-    } catch (error) {
+    } 
+    
+    catch (error) {
       this.logger.error(`Error polling events: ${error.message}`);
     }
   }
@@ -46,14 +77,10 @@ export class EventListenerService {
   private handleEvent(event: any) {
     this.logger.log(`Event received: ${JSON.stringify(event)}`);
 
-    if (event.topic[0] === "escrow_funded") {
+    if (event.topic[0] === "fund_esc") {
       this.logger.log(
-        `Escrow Funded - ID: ${event.data.escrow_id}, Amount: ${event.data.amount}`
+        `Escrow Funded - signer: ${event.data.signer}, Amount: ${event.data.amount_to_deposit}`
       );
-    } else if (event.topic[0] === "milestone_status_changed") {
-      this.logger.log(
-        `Milestone Status Changed - ID: ${event.data.escrow_id}, Status: ${event.data.new_status}`
-      );
-    }
+    } 
   }
 }
