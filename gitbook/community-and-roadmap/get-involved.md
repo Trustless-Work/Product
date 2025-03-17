@@ -1,4 +1,4 @@
-# Get Involved
+# Contribute
 
 If you want to contribute and get rewarded, follow us on Only Dust:&#x20;
 
