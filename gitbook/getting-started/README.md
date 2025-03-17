@@ -59,4 +59,4 @@ Integrating Trustless Work into your platform is simple:
 
 * **Developers**: Do the [Quickstart](quickstart.md) or Explore the [API Reference](../developer-resources/api-reference/) to build your integration.
 * **Businesses**: Visit [Use Cases](../use-cases-unlocking-the-potential-of-smart-escrows/) to see how others are using Trustless Work.
-* [**Join Our Community**](../community-and-roadmap/community.md): Participate in hackathons and contribute to open-source projects.
+* [**Join Our Community**](../community/): Participate in hackathons and contribute to open-source projects.

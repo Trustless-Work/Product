@@ -37,7 +37,7 @@ We’ve organized everything you need into clear sections tailored to your role:
    Discover how Trustless Work transforms industries, from marketplaces to crowdfunding.
 4. [**Technology Overview**](technology-overview/)\
    Dive into the technical architecture, featuring Stellar, Soroban, and smart escrows.
-5. [**Community and Roadmap**](community-and-roadmap/)\
+5. [**Community and Roadmap**](broken-reference)\
    Join our growing ecosystem, explore our open-source projects, and see where we’re headed next.
 
 {% hint style="info" %}

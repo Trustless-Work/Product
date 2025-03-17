@@ -4,7 +4,7 @@
 
 ### **Short-Term Goals (Q1 2025)** 🚀
 
-#### &#x20;**Mainnet Launch: Q1 2025** 🌐
+#### &#x20;**Mainnet Launch: Q2 2025** 🌐
 
 * We’re working hard to **launch Trustless Work on the Stellar mainnet** sometime in **Q1 2025**.
 * Our priority is to ensure that the system is **secure**, **scalable**, and ready for **real-world adoption**. The launch will mark a major milestone as **Smart Escrows** become available for anyone to integrate and use.

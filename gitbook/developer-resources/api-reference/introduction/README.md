@@ -31,8 +31,7 @@ The Trustless Work API is a key component for any platform that requires secure 
 ### Key API Functions:
 
 * **Create and manage escrow contracts:** Users can set up payment agreements with specific conditions that must be met before funds are released.
-* **Real-time status updates:** The API provides real-time access to escrow statuses, allowing users to verify the state of funds at any time.
-* **Process automation:** Through the use of smart contracts, actions such as fund releases, milestone verification, or dispute resolution can be automated.
+* **Real-time status updates:** The API provides real-time access to escrow statuses, allowing users to verify the state of funds at any time. (Working)
 
 ### Why is the API important?
 
