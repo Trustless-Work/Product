@@ -1,6 +1,6 @@
 ---
-icon: circle-plus
 description: Deploy the escrow contract and define the escrow properties.
+icon: circle-plus
 ---
 
 # Initialize Escrow
@@ -13,20 +13,22 @@ description: Deploy the escrow contract and define the escrow properties.
 
 ### Body params:
 
-| Name            | Type               | Description                                                                                                                           |
-| --------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| signer          | string             | Entity that signs the transaction that deploys and initializes the escrow engagementId: Unique identifier for the escrow              |
-| engagementId    | string             | ID that the user who created the escrow wants to define to it                                                                         |
-| title           | string             | Name of the escrow                                                                                                                    |
-| description     | string             | Text describing the function of the escrow                                                                                            |
-| approver        | string             | Address of the entity requiring the service                                                                                           |
-| serviceProvider | string             | Address of the entity providing the service                                                                                           |
-| platformAddress | string             | Address of the platform that owns the escrow                                                                                          |
-| amount          | string             | Amount to be transferred upon completion of escrow milestones                                                                         |
-| plataformFee    | string             | Commission that the platform will receive when the escrow is completed                                                                |
-| milestones      | Milestones\<Array> | Objectives to be completed to define the escrow as completed releaseSigner: Address of the entity in charge of releasing escrow funds |
-| disputeResolver | string             | Address in charge of resolving disputes within the escrow                                                                             |
-| releaseSigner   | string             | Address of the user in charge of releasing the escrow funds to the service provider.                                                  |
+| Name              | Type               | Description                                                                                                                           |
+| ----------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| signer            | string             | Entity that signs the transaction that deploys and initializes the escrow engagementId: Unique identifier for the escrow              |
+| engagementId      | string             | ID that the user who created the escrow wants to define to it                                                                         |
+| title             | string             | Name of the escrow                                                                                                                    |
+| description       | string             | Text describing the function of the escrow                                                                                            |
+| approver          | string             | Address of the entity requiring the service                                                                                           |
+| serviceProvider   | string             | Address of the entity providing the service                                                                                           |
+| platformAddress   | string             | Address of the platform that owns the escrow                                                                                          |
+| amount            | string             | Amount to be transferred upon completion of escrow milestones                                                                         |
+| plataformFee      | string             | Commission that the platform will receive when the escrow is completed                                                                |
+| milestones        | Milestones\<Array> | Objectives to be completed to define the escrow as completed releaseSigner: Address of the entity in charge of releasing escrow funds |
+| disputeResolver   | string             | Address in charge of resolving disputes within the escrow                                                                             |
+| releaseSigner     | string             | Address of the user in charge of releasing the escrow funds to the service provider.                                                  |
+| trustline         | string             | Address of the token that will manage USDC movements                                                                                  |
+| trustlineDecimals | number             | Number of decimal places determining the divisibility of the token base unit (trustline)                                              |
 
 #### Milestone
 
