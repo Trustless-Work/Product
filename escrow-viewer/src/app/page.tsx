@@ -1,103 +1,129 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// app/page.tsx
+"use client";
+
+import { Inter } from "next/font/google";
+import { NavbarSimple } from "@/components/Navbar";
 import Image from "next/image";
+import {
+  getLedgerKeyContractCode,
+  type EscrowMap,
+} from "@/utils/ledgerkeycontract";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import type { NextPage } from "next";
+import { JSX, useState } from "react";
 
-export default function Home() {
+const inter = Inter({ subsets: ["latin"] });
+
+const Home: NextPage = () => {
+  const [contractId, setContractId] = useState<string>("");
+  const [escrowData, setEscrowData] = useState<EscrowMap | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const fetchEscrowData = async () => {
+    if (!contractId) {
+      setError("Please enter a contract ID");
+      return;
+    }
+    setLoading(true);
+    setError(null);
+    try {
+      const data = await getLedgerKeyContractCode(contractId);
+      setEscrowData(data);
+    } catch (err: any) {
+      setError(err.message || "Failed to fetch escrow data");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const renderValue = (val: EscrowMap[number]["val"]): JSX.Element | string => {
+    if (val.bool !== undefined) {
+      return val.bool ? "True" : "False";
+    } else if (val.string) {
+      return val.string;
+    } else if (val.address) {
+      return val.address;
+    } else if (val.i128) {
+      return `${val.i128.lo}`;
+    } else if (val.vec) {
+      return (
+        <ul className="list-disc pl-4">
+          {val.vec.map((item, index) => (
+            <li key={index}>{renderMap(item)}</li>
+          ))}
+        </ul>
+      );
+    } else if (val.map) {
+      return renderMap(val.map);
+    }
+    return JSON.stringify(val);
+  };
+
+  const renderMap = (map: EscrowMap): JSX.Element => {
+    if (!Array.isArray(map)) {
+      console.error("renderMap received non-array:", map);
+      return (
+        <div className="text-red-500">Error: Invalid escrow data format</div>
+      );
+    }
+    return (
+      <div className="space-y-2">
+        {map.map(({ key, val }, index) => (
+          <div key={index} className="flex space-x-2">
+            <strong>{key.symbol}:</strong>
+            <span>{renderValue(val)}</span>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <>
+      <NavbarSimple />
+      <div
+        className={`relative z-10 flex flex-col lg:flex-row items-center justify-around py-20 gap-2 ${inter.className}`}
+      >
+        <section className="flex justify-center items-center order-1 lg:order-1">
+          <div className="relative w-full max-w-[300px] sm:max-w-[350px] lg:max-w-[450px]">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/escrow-background.png"
+              alt="Blockchain Network"
+              width={450}
+              height={450}
+              className="relative rounded-lg w-full h-auto"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          </div>
+        </section>
+        <section className="text-center lg:text-left space-y-8 order-2 lg:order-1">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+            Escrow Data Viewer
+          </h1>
+          <div className="flex w-full max-w-sm items-center space-x-2">
+            <Input
+              type="text"
+              placeholder="Enter your escrow ID"
+              value={contractId}
+              onChange={(e) => setContractId(e.target.value)}
+            />
+            <Button onClick={fetchEscrowData} disabled={loading}>
+              {loading ? "Fetching..." : "Fetch"}
+            </Button>
+          </div>
+          {error && <p className="text-red-500">{error}</p>}
+          {escrowData && (
+            <div className="mt-4 p-4 bg-gray-100 rounded-lg">
+              <h2 className="text-xl font-semibold">Escrow Details</h2>
+              {renderMap(escrowData)}
+            </div>
+          )}
+        </section>
+      </div>
+    </>
   );
-}
+};
+
+export default Home;
