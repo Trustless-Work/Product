@@ -1,7 +1,7 @@
 <p align="center"> <img src="https://github.com/user-attachments/assets/5b182044-dceb-41f5-acf0-da22dea7c98a" alt="CLR-S (2)"> </p>
 
 # Trustless Work | [API Documentation](https://docs.trustlesswork.com/trustless-work)
-It enables trustless payments via smart contracts, securing funds in escrow until milestones are approved by clients. Stablecoins like USDC are used to ensure stability and ease of use.
+Trustless work is set to become the Escrow Escosystem of Stellar. We are building the tools to enable any platform to integrate escrows to their payment flow. 
 
 # Maintainers | [Telegram](https://t.me/+kmr8tGegxLU0NTA5)
 
