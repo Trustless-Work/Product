@@ -138,6 +138,6 @@ Types:
 ### 🔹 6. Additional Resources
 
 📖 [**Trustless Work GitHub**](https://github.com/TrustlessWork) – Browse our repositories.\
-💬 **Join our Telegram**– Connect with other contributors.
+💬 [**Join our Telegram**](https://t.me/+kmr8tGegxLU0NTA5) – Connect with other contributors.
 
 Happy coding! 🎉
