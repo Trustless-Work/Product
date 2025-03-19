@@ -90,7 +90,7 @@
   * [How to Integrate](interesting-reports/how-to-integrate.md)
   * [Case Studies](interesting-reports/case-studies.md)
 * [Community](community-and-roadmap/community.md)
-  * [Contribute](community-and-roadmap/get-involved.md)
+  * [Contributor's Guide](community-and-roadmap/get-involved.md)
 * [🛣️ Roadmap: The Journey Ahead](community-and-roadmap/roadmap-the-journey-ahead.md)
 * [🎒 Historical Context](historical-context/README.md)
   * [📜 Escrow History:](historical-context/escrow-history/README.md)
