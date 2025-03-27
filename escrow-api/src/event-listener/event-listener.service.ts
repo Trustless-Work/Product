@@ -7,13 +7,29 @@ import { rpc as StellarRpc } from "@stellar/stellar-sdk";
 export class EventListenerService {
   private readonly logger = new Logger(EventListenerService.name);
   private readonly sorobanServer: StellarRpc.Server;
-  private readonly contractId: string;
+  private readonly contractIds: string[];
+  private hasStarted = false;
+  private currentContractIndex = 0;
+  private startLedger: number | null = null;
 
   constructor(private configService: ConfigService) {
     this.sorobanServer = new StellarRpc.Server(
       this.configService.get<string>("SOROBAN_RPC_URL") ?? "https://soroban-testnet.stellar.org"
     );
-    this.contractId = this.configService.get<string>("CONTRACT_ID") ?? "CDTDRQMSR4YK4KXYJRVTPONULQTUHBMYDNZ2ZAMZBQOIUKG5KUK7WY4M";
+
+    // Load from environment or use default list
+    const contracts = this.configService.get<string>("CONTRACT_IDS") ?? "";
+    this.contractIds = contracts
+      ? contracts.split(",").map(id => id.trim())
+      : [
+          "CBAZK4CXB7LQYUNIIX4RO2LMBJBTCO64FQRNETAJPRKPPQMG6OY2AZVC",
+          "CC6XXJ76J3BAMQUXBJ6MI35NSIDW5LQWLWSGKRSO375IFLIZBC5ABRB7",
+          "CBO6GUJ5UXSJEAEB3ADB36Z3YTMRNGSL5M7DPXQQOZLHLWQC3SO4LHDF",
+        ];
+
+    if (!this.contractIds.length) {
+      throw new Error("No contract IDs provided.");
+    }
   }
 
   /** Fetch latest ledger before querying events */
@@ -25,14 +41,17 @@ export class EventListenerService {
     };
 
     try {
-      const response = await fetch(this.configService.get<string>("SOROBAN_RPC_URL") ?? "https://soroban-testnet.stellar.org", {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(requestBody),
-      });
+      const response = await fetch(
+        this.configService.get<string>("SOROBAN_RPC_URL") ?? "https://soroban-testnet.stellar.org",
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(requestBody),
+        }
+      );
 
       const data = await response.json();
-      
+
       if (data?.result?.sequence) {
         return data.result.sequence;
       } else {
@@ -44,40 +63,60 @@ export class EventListenerService {
     }
   }
 
-  @Interval("pollEvents", 1000) // Poll every second
+  @Interval("pollEvents", 300) //set polling time in ms
   async pollContractEvents() {
     try {
-      this.logger.log("Checking for new contract events...");
-      
-      const latestLedger = await this.getLatestLedger();
+      if (!this.hasStarted) {
+        this.logger.log("Checking for new contract events...");
+        this.startLedger = await this.getLatestLedger(); // Start with the latest ledger
+        this.hasStarted = true;
+      }
+
+      if (this.contractIds.length === 0 || this.startLedger === null) return;
+
+      // Cycle through contracts using index
+      const contractId = this.contractIds[this.currentContractIndex];
+
       const eventsResponse = await this.sorobanServer.getEvents({
-        startLedger: latestLedger,
+        startLedger: this.startLedger,
         filters: [
           {
             type: "contract",
-            contractIds: [this.contractId],
+            contractIds: [contractId],
           },
         ],
       });
 
       if (eventsResponse?.events?.length) {
-        this.logger.log(`Detected ${eventsResponse.events.length} new event`);
-        eventsResponse.events.forEach((event) => this.handleEvent(event));
+        this.logger.log(`Detected ${eventsResponse.events.length} new events for contract ${contractId}`);
+        eventsResponse.events.forEach(event => this.handleEvent(event, contractId));
       }
-    } 
-    
-    catch (error) {
-      this.logger.error(`Error polling events: ${error.message}`);
+
+      this.currentContractIndex = (this.currentContractIndex + 1) % this.contractIds.length;
+
+      if (this.currentContractIndex === 0) {
+        this.startLedger++;
+      }
+    } catch (error) {
+      const errorMessage = error.message || "";
+
+      // Handle "startLedger must be within the ledger range" error
+      if (errorMessage.includes("startLedger must be within the ledger range:")) {
+        //this.logger.warn(`startLedger out of range. Resetting to latest ledger...`);
+        this.startLedger = await this.getLatestLedger(); // Reset to latest ledger
+      } else {
+      }
     }
   }
 
-  private handleEvent(event: any) {
-    try{
-      const usdc_deposited = Number(event.value._value.find(item => item._arm === "i128")._value._attributes.lo._value)/10000000;
-      this.logger.log(`fund_escrow: ${usdc_deposited} USDC deposited to to ${this.contractId}`);
-    }
-    catch (error) {
-      this.logger.error(`Error handling events: ${error.message}`);
+  private handleEvent(event: any, contractId: string) {
+    try {
+      const usdcDeposited = Number(
+        event.value._value.find(item => item._arm === "i128")._value._attributes.lo._value
+      ) / 10000000;
+
+      this.logger.log(`fund_escrow: ${usdcDeposited} USDC deposited to contract ${contractId}`);
+    } catch (error) {
     }
   }
 }
