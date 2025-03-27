@@ -8,6 +8,9 @@ reclaim provides also zk-fetch flow for public data, which is more simple and ca
 ## SPIKE 
 
 ### How are proofs requested from users?
+
+<p align="center"> <img src="imgs/scheme.png" alt="CLR-S (2)"> </p>
+
 user MUST scan QR code on frontend app and install mobile Reclaim app, using which all proxy magic happens,
 i.e creates claim, auth, extracting TLS blocks and creating something like zk proof.
 
@@ -194,6 +197,16 @@ transaction. It could be returned after some time to sender.
 So that there was no malicious intent, the money was actually sent and proof was created
 
 
+the cool part is we can create custom provider 
+
+for example it's possible to change params of arbitrary url
+<p align="center"> <img src="imgs/custom_provider.png" alt="CLR-S (2)"> </p>
+
+and pick what we whould be claim  
+
+<p align="center"> <img src="imgs/claim.png" alt="CLR-S (2)"> </p>
+
+
 ## How reclaim works
 
 
@@ -202,7 +215,9 @@ https://gov.optimism.io/t/reclaim-protocol-verified-https-traffic-for-privacy-pr
 whitepaper https://drive.google.com/file/d/1wmfdtIGPaN9uJBI1DHqN903tP9c_aTG2/view
 (you can find it in footer here https://reclaimprotocol.org/)
 
-
+i draw diagram which gives simplistic and very rough idea.
+<p align="center"> <img src="imgs/proof.jpg" alt="CLR-S (2)"> </p>
+ part after creating proof is how it should work on our (escrow) side 
 
 ### TLS Request Selective Reveal
 
@@ -220,7 +235,7 @@ whitepaper https://drive.google.com/file/d/1wmfdtIGPaN9uJBI1DHqN903tP9c_aTG2/vie
  
 **from whitepaper**: *In reality, private and public data in the User’s request can be mixed-up, so the key update mechanism above has to be carried out several times. Therefore, the User will disclose to the Attestor all of their TLS sending keys that were used to encrypt public parts of the request.*
 
-I did not find out how exactly TLS client understands where is private data and where is public.
+I did not find out for the whitepaper how exactly TLS client understands where is private data and where is public.
 
 ### TLS Response Selective Reveal
 
@@ -234,17 +249,17 @@ I did not find out how exactly TLS client understands where is private data and 
 
 from whitepaper:
 
-Example of a TLS Response Modification
-Let’s say the user wants to prove they have $1000 on their bank account. The user sends a request to the bank website to log in to their account and receives as a response the following ciphertext (enc_resp):
+_Example of a TLS Response Modification
+Let’s say the user wants to prove they have $1000 on their bank account. The user sends a request to the bank website to log in to their account and receives as a response the following ciphertext (enc_resp):_
 
 `Sapi1sH9vM0HZb8mWdnhzOWlzWF+4IxF7LdUZ26JEu3TCHNuY`
 
-This ciphertext can be decrypted to the following plaintext (resp):
+_This ciphertext can be decrypted to the following plaintext (resp):_
 
 `Hello Jake; Balance: $1000; Account number: 12345`
 
-The data that has to be revealed to prove that the user indeed has $1000 at their bank account is the middle part of the response, namely: “Balance: $1000;” For simplicity let’s consider the packet size as 16 byte, and the block size as
-6 bytes. Thereafter, at the following steps the user will get the following strings: 
+_The data that has to be revealed to prove that the user indeed has $1000 at their bank account is the middle part of the response, namely: “Balance: $1000;” For simplicity let’s consider the packet size as 16 byte, and the block size as
+6 bytes. Thereafter, at the following steps the user will get the following strings:_ 
 
 ```
 respp = “∗∗∗∗∗∗∗∗∗∗∗∗Balance: $1000;∗∗∗∗∗”
@@ -252,8 +267,8 @@ respr = “Balance: $1000;∗ ∗ ∗”
 
 ```
 
-The last step is to replace the corresponding bytes in the enc_resp with
-the gibberish symbol and discard some of them to get enc_respr: 
+_The last step is to replace the corresponding bytes in the enc_resp with
+the gibberish symbol and discard some of them to get enc_respr:_ 
 
 `Zb8mWdnhzOWlzWF∗ ∗ ∗`
 
