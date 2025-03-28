@@ -58,8 +58,8 @@ export class EventListenerService {
         throw new Error("Failed to fetch latest ledger.");
       }
     } catch (error) {
-      this.logger.error("Error fetching latest ledger:", error);
-      throw error;
+      this.logger.error("Error fetching latest ledger:");
+      throw new Error("Failed to fetch latest ledger.");
     }
   }
 
@@ -88,7 +88,6 @@ export class EventListenerService {
       });
 
       if (eventsResponse?.events?.length) {
-        this.logger.log(`Detected ${eventsResponse.events.length} new events for contract ${contractId}`);
         eventsResponse.events.forEach(event => this.handleEvent(event, contractId));
       }
 
@@ -102,7 +101,6 @@ export class EventListenerService {
 
       // Handle "startLedger must be within the ledger range" error
       if (errorMessage.includes("startLedger must be within the ledger range:")) {
-        //this.logger.warn(`startLedger out of range. Resetting to latest ledger...`);
         this.startLedger = await this.getLatestLedger(); // Reset to latest ledger
       } else {
       }
