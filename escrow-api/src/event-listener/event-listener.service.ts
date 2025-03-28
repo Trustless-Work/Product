@@ -8,16 +8,17 @@ export class EventListenerService {
   private readonly logger = new Logger(EventListenerService.name);
   private readonly sorobanServer: StellarRpc.Server;
   private readonly contractIds: string[];
-  private hasStarted = false;
-  private currentContractIndex = 0;
+  private readonly fundEventsMap: Map<string, number> = new Map();
   private startLedger: number | null = null;
+  private hasStarted = false;
+  private isProcessing = false;
 
   constructor(private configService: ConfigService) {
     this.sorobanServer = new StellarRpc.Server(
       this.configService.get<string>("SOROBAN_RPC_URL") ?? "https://soroban-testnet.stellar.org"
     );
 
-    // Load from environment or use default list
+    // Load contract IDs from environment or use default list
     const contracts = this.configService.get<string>("CONTRACT_IDS") ?? "";
     this.contractIds = contracts
       ? contracts.split(",").map(id => id.trim())
@@ -30,6 +31,9 @@ export class EventListenerService {
     if (!this.contractIds.length) {
       throw new Error("No contract IDs provided.");
     }
+
+    // Initialize the fund events map with default value 0
+    this.contractIds.forEach(id => this.fundEventsMap.set(id, 0));
   }
 
   /** Fetch latest ledger before querying events */
@@ -58,63 +62,84 @@ export class EventListenerService {
         throw new Error("Failed to fetch latest ledger.");
       }
     } catch (error) {
-      this.logger.error("Error fetching latest ledger:");
+      this.logger.error("Error fetching latest ledger:", error);
       throw new Error("Failed to fetch latest ledger.");
     }
   }
 
-  @Interval("pollEvents", 300) //set polling time in ms
+  @Interval(1000) // Poll every second
   async pollContractEvents() {
+    if (this.isProcessing) return; //Prevent overlapping calls
+    this.isProcessing = true;
+
     try {
       if (!this.hasStarted) {
-        this.logger.log("Checking for new contract events...");
-        this.startLedger = await this.getLatestLedger(); // Start with the latest ledger
+        this.logger.log("Initializing contract event listener...");
+        this.startLedger = await this.getLatestLedger();
         this.hasStarted = true;
+        this.logger.log("listening.....");
       }
 
-      if (this.contractIds.length === 0 || this.startLedger === null) return;
+      if (this.startLedger === null) return;
 
-      // Cycle through contracts using index
-      const contractId = this.contractIds[this.currentContractIndex];
+      for (const contractId of this.contractIds) {
+        const previousEventCount = this.fundEventsMap.get(contractId) || 0;
 
-      const eventsResponse = await this.sorobanServer.getEvents({
-        startLedger: this.startLedger,
-        filters: [
-          {
-            type: "contract",
-            contractIds: [contractId],
-          },
-        ],
-      });
+        const eventsResponse = await this.sorobanServer.getEvents({
+          startLedger: this.startLedger,
+          filters: [
+            {
+              type: "contract",
+              contractIds: [contractId],
+            },
+          ],
+        });
 
-      if (eventsResponse?.events?.length) {
-        eventsResponse.events.forEach(event => this.handleEvent(event, contractId));
-      }
+        if (eventsResponse?.events?.length) {
+          const newEvents = eventsResponse.events
+            .map(event => this.extractUSDC(event))
+            .filter(amount => amount !== null);
 
-      this.currentContractIndex = (this.currentContractIndex + 1) % this.contractIds.length;
+          const newEventCount = newEvents.length;
 
-      if (this.currentContractIndex === 0) {
-        this.startLedger++;
+          if (newEventCount > previousEventCount) {
+            //Handle new events (the difference)
+            const diff = newEventCount - previousEventCount;
+            const newEventsToProcess = newEvents.slice(-diff);
+
+            newEventsToProcess.forEach(amount => {
+              this.logger.log(`fund_escrow: ${amount} USDC deposited to contract ${contractId}`);
+            });
+
+            // Update the stored event count
+            this.fundEventsMap.set(contractId, newEventCount);
+          }
+        }
       }
     } catch (error) {
       const errorMessage = error.message || "";
 
-      // Handle "startLedger must be within the ledger range" error
       if (errorMessage.includes("startLedger must be within the ledger range:")) {
+        this.logger.warn(`startLedger out of range. Resetting to latest ledger...`);
         this.startLedger = await this.getLatestLedger(); // Reset to latest ledger
       } else {
+        this.logger.error(`Error polling events: ${errorMessage}`);
       }
+    } finally {
+      this.isProcessing = false;
     }
   }
 
-  private handleEvent(event: any, contractId: string) {
+  /** Extract USDC amount from event */
+  private extractUSDC(event: any): number | null {
     try {
       const usdcDeposited = Number(
         event.value._value.find(item => item._arm === "i128")._value._attributes.lo._value
       ) / 10000000;
 
-      this.logger.log(`fund_escrow: ${usdcDeposited} USDC deposited to contract ${contractId}`);
-    } catch (error) {
+      return usdcDeposited;
+    } catch {
+      return null;
     }
   }
 }
