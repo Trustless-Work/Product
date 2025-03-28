@@ -18,7 +18,6 @@ export class EventListenerService {
       this.configService.get<string>("SOROBAN_RPC_URL") ?? "https://soroban-testnet.stellar.org"
     );
 
-    // Load contract IDs from environment or use default list
     const contracts = this.configService.get<string>("CONTRACT_IDS") ?? "";
     this.contractIds = contracts
       ? contracts.split(",").map(id => id.trim())
@@ -32,7 +31,12 @@ export class EventListenerService {
       throw new Error("No contract IDs provided.");
     }
 
-    // Initialize the fund events map with default value 0
+    // Initialize fund_event counts to 0
+    this.resetFundEventsMap();
+  }
+
+  /** Reset fund event counts for all contracts */
+  private resetFundEventsMap() {
     this.contractIds.forEach(id => this.fundEventsMap.set(id, 0));
   }
 
@@ -69,15 +73,15 @@ export class EventListenerService {
 
   @Interval(1000) // Poll every second
   async pollContractEvents() {
-    if (this.isProcessing) return; //Prevent overlapping calls
+    if (this.isProcessing) return; // Prevent overlapping calls
     this.isProcessing = true;
 
     try {
       if (!this.hasStarted) {
         this.logger.log("Initializing contract event listener...");
-        this.startLedger = await this.getLatestLedger();
+        this.startLedger = 137500//await this.getLatestLedger();
         this.hasStarted = true;
-        this.logger.log("listening.....");
+        this.logger.log("Listening...");
       }
 
       if (this.startLedger === null) return;
@@ -103,7 +107,7 @@ export class EventListenerService {
           const newEventCount = newEvents.length;
 
           if (newEventCount > previousEventCount) {
-            //Handle new events (the difference)
+            // Handle new events
             const diff = newEventCount - previousEventCount;
             const newEventsToProcess = newEvents.slice(-diff);
 
@@ -111,7 +115,7 @@ export class EventListenerService {
               this.logger.log(`fund_escrow: ${amount} USDC deposited to contract ${contractId}`);
             });
 
-            // Update the stored event count
+            // Update stored fund_event count
             this.fundEventsMap.set(contractId, newEventCount);
           }
         }
@@ -120,8 +124,9 @@ export class EventListenerService {
       const errorMessage = error.message || "";
 
       if (errorMessage.includes("startLedger must be within the ledger range:")) {
-        this.logger.warn(`startLedger out of range. Resetting to latest ledger...`);
+        this.logger.warn("startLedger out of range. Resetting to latest ledger...");
         this.startLedger = await this.getLatestLedger(); // Reset to latest ledger
+        this.resetFundEventsMap(); //Reset fund_event counts when ledger is reset
       } else {
         this.logger.error(`Error polling events: ${errorMessage}`);
       }
