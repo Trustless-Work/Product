@@ -1,11 +1,10 @@
 The goal of this Spike is to explore how Reclaim Protocol can be integrated into Trustless Work's escrow system to enable attestations of off-chain actions.
 
-all of the following is flow **for PRIVATE data**, i.e. which require auth from user
+# SPIKE 
+there are two mean flow: UI and zkfetch.
+with zkfetch it's possible to make proofs without frontend (see below)
 
-reclaim provides also zk-fetch flow for public data, which is more simple and can be done from backend
-
-
-## SPIKE 
+## UI flow:
 
 ### How are proofs requested from users?
 
@@ -75,6 +74,7 @@ and in some cases we should not store it publicly (eg. last transaction of the b
 `context` field is fully custom
 
 ### How is a proof validated in a smart contract?
+actually it's not requiered to validate it on chain, you can find this in zkfetch example (sig verified off-chain)
 we take only `signedClaim` part of proof.
 and send to smart contract: 
 
@@ -106,6 +106,35 @@ So that it require to trust witness (attestor)
 Proofs (signatures) themselves are not stored on-chain. 
 They are typically stored off-chain and only validated on-chain upon request.
 But it's up to whoever implement this.
+
+## zkfetch flow:
+
+the only difference that we can fetch data without frontend
+but in case of private data with auth we need to obtain token or credentials somehow.
+
+```javascript
+  const publicOptions = {
+    method: 'GET', // or POST
+    headers : {
+      accept: 'application/json, text/plain, */*' 
+    }
+  }
+ 
+  const privateOptions = {
+    headers {
+        apiKey: "123...456",   <---------- token
+        someOtherHeader: "someOtherValue",
+    }
+  }
+ 
+  const proof = await client.zkFetch(
+    'https://your.url.org',
+    publicOptions,
+    privateOptions
+  )
+```
+
+the rest logic is the same as UI flow
 
 ### What modifications are needed to store & verify attestations?
 
@@ -291,7 +320,9 @@ _Therefore, despite its efficiency advantages, Reclaim is suitable primarily for
 
 ### Potential roadmap tasks for a full integration
 Considering all of the above, it is necessary to select specific areas that are not very demanding in terms of security and think through the flow for them individually,
-using the protocol in an agnostic approach is not possible especially if the data we are checking is private or we want to rely on it to release the transfer of funds
+using the protocol in an agnostic approach is not possible, because it's pretty flexible and especially if the data we are checking is private or we want to rely on it to release the transfer of funds
 
-#### other
-zkp2p also uses aes chacha [circuits](https://github.com/reclaimprotocol/zk-symmetric-crypto) 
+#### other staff
+zkp2p also uses aes chacha zk [circuits](https://github.com/reclaimprotocol/zk-symmetric-crypto) 
+
+more on web proofs: https://www.vlayer.xyz/blog/web-proofs-for-web3-applications
