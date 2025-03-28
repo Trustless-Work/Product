@@ -69,7 +69,7 @@ which transforms for on chain:
 ```
 
 but it's up to us how to store proof (except `signedClaim` part which used in validating the proof): 
-so `parameters` contain info we want to validate, like username or whatever
+so `parameters` contain info we want to check before validating proof, like username or whatever
 and in some cases we should not store it publicly (eg. last transaction of the bank account)
 
 `context` field is fully custom
@@ -112,7 +112,8 @@ But it's up to whoever implement this.
 There is data(signature and context) which we get from reclaim. 
 So to check claim it takes to create logic for each provider (`PROVIDER_ID`) like github or google. 
 
-for example what we have in claim is `parameters` object which proving GitHub username (full example above)
+For example we get some data(githhub username) from user via frontend form or from escrow itself(when freelancer should commit something on github)
+what we have in claim is `parameters` object which proving GitHub username (full example above)
 ```json
 {
   "additionalClientOptions": {},
@@ -150,10 +151,10 @@ so, in this case we should check username(form input, escrow description) matche
 in case of payments we should match destination with what we have in `parameters`
 so that it's additional parser and logic to handle what we want to check.
 
-On frontend side should be different UI when escrow support some provider and Step 5: Marking a Milestone as Done
+On frontend side should be different UI when escrow has some provider and Step 5: Marking a Milestone as Done
 should provide QR code to user and process claim
 
-On chain we just verify signature and if it's valid approve milestone
+On chain we just verify signature and if it's valid approve milestone and store the proof
 
 ### Can we attach attestations to milestones?
 yes, each attestation has it's id so for example: 
@@ -192,20 +193,19 @@ yes, each attestation has it's id so for example:
 ```
 
 ### Should attestations unlock payments under certain conditions?
-Sure. But this is tricky part. As example - payment via bank 
-transaction. It could be returned after some time to sender. 
-So that there was no malicious intent, the money was actually sent and proof was created
-
+Sure. But this is tricky part. As an example - payment via SEPA instant bank 
+transaction. It could be returned to sender after some time. 
+So that there was no malicious intent, the money was actually sent and proof was created, 
+but money never reached recipient.
 
 the cool part is we can create custom provider 
 
 for example it's possible to change params of arbitrary url
 <p align="center"> <img src="imgs/custom_provider.png" alt="CLR-S (2)"> </p>
 
-and pick what we whould be claim  
+and pick what whould be the claim piece 
 
 <p align="center"> <img src="imgs/claim.png" alt="CLR-S (2)"> </p>
-
 
 ## How reclaim works
 
@@ -243,7 +243,7 @@ I did not find out for the whitepaper how exactly TLS client understands where i
 
 * User decrypts the response locally, redacts sensitive data by substituting irrelevant bytes with placeholder symbols (∗), and adjusts encrypted response accordingly.
 
-* Using Zero-Knowledge Proofs, the User proves to the Attestor (proxy) that the selectively revealed encrypted response accurately corresponds to its plaintext, without exposing private information.
+* Using **Zero-Knowledge Proofs**, the User proves to the Attestor (proxy) that the selectively revealed encrypted response accurately corresponds to its plaintext, without exposing private information.
 
 * The Attestor validates the proof, confirming correctness of the response without learning sensitive content.
 
@@ -273,7 +273,25 @@ the gibberish symbol and discard some of them to get enc_respr:_
 `Zb8mWdnhzOWlzWF∗ ∗ ∗`
 
 
+
 I think the implementation of TLS magic is here https://github.com/reclaimprotocol/tls
 
+### Security 
 
-reclaim is efficient but has lower security guarantees
+from zkp2p chat:
+
+_The choice between TLSN and Reclaim protocols depends on balancing security guarantees against efficiency. TLSN offers stronger security but has lower bandwidth and compute efficiency, whereas Reclaim is more efficient but comes with weaker security guarantees._
+
+_Currently, we leverage Reclaim for scenarios where the security requirements are relatively low. However, Reclaim raises specific security concerns:_
+
+- _The attestor ("notary") in Reclaim signs data without fully understanding or verifying its context, making it susceptible to man-in-the-middle attacks like IP proxying or DNS spoofing._
+- _Additionally, the attestor physically initiates the requests, resulting in mismatched IP addresses between verification and normal user activity, potentially raising suspicion or triggering issues._
+
+_Therefore, despite its efficiency advantages, Reclaim is suitable primarily for use-cases where strong security assumptions are not essential. For scenarios involving higher security requirements or increased transaction limits, TLSN might be preferable, though current reliability concerns with TLSN remain a barrier._
+
+### Potential roadmap tasks for a full integration
+Considering all of the above, it is necessary to select specific areas that are not very demanding in terms of security and think through the flow for them individually,
+using the protocol in an agnostic approach is not possible especially if the data we are checking is private or we want to rely on it to release the transfer of funds
+
+#### other
+zkp2p also uses aes chacha [circuits](https://github.com/reclaimprotocol/zk-symmetric-crypto) 
