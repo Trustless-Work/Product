@@ -79,7 +79,7 @@ export class EventListenerService {
     try {
       if (!this.hasStarted) {
         this.logger.log("Initializing contract event listener...");
-        this.startLedger = 137500//await this.getLatestLedger();
+        this.startLedger = await this.getLatestLedger();
         this.hasStarted = true;
         this.logger.log("Listening...");
       }
