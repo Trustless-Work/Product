@@ -29,7 +29,10 @@ pub fn write_balance(e: &Env, addr: Address, amount: i128) {
 
 pub fn receive_balance(e: &Env, addr: Address, amount: i128) {
     let balance = read_balance(e, addr.clone());
-    let total_balance = balance.checked_add(amount).ok_or(ContractError::Overflow).unwrap();
+    let total_balance = balance
+        .checked_add(amount)
+        .ok_or(ContractError::Overflow)
+        .unwrap();
     write_balance(e, addr, total_balance);
 }
 
@@ -38,6 +41,9 @@ pub fn spend_balance(e: &Env, addr: Address, amount: i128) {
     if balance < amount {
         panic!("insufficient balance");
     }
-    let total_balance = balance.checked_sub(amount).ok_or(ContractError::Underflow).unwrap();
+    let total_balance = balance
+        .checked_sub(amount)
+        .ok_or(ContractError::Underflow)
+        .unwrap();
     write_balance(e, addr, total_balance);
 }
