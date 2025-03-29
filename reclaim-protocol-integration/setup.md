@@ -1,5 +1,5 @@
 ## Setup 
-prerequisites: installed stellar and soroban 
+prerequisites: installed rust, stellar and soroban 
 
 ```
 $ stellar -V
@@ -8,8 +8,10 @@ stellar-xdr 22.0.0-rc.1.1 (72e523004b5906eb1829990f9b14d2f0fa3018f0)
 xdr curr (529d5176f24c73eeccfa5eba481d4e89c19b1181)
 
 ```
+but i think should be ok with other versions 
 
 ### Contract repo
+[contract](./stellar-sdk)
 
 create an account
 
@@ -22,7 +24,7 @@ stellar keys secret reclaim
 you get your public address and secret
 
 deploy the contract and invoke it as described with address from previous step
-eou will get contract address
+you will get contract address
 
 ```bash
 RUSTFLAGS="-C target-feature=-reference-types" cargo build --target wasm32-unknown-unknown --release
@@ -32,14 +34,17 @@ export ACCOUNT= #Paste in your public address
 soroban contract invoke --id $CONTRACT --source reclaim --network testnet -- instantiate --user $ACCOUNT
 ```
 
+
+
 ### Frontend repo
+[frontend](./frontend) 
 
 for frontend app you will need `APP_SECRET` adn `APP_ID` for Github provider
 you can get it here https://dev.reclaimprotocol.org/dashboard
 
 in App.js change `APP_SECRET` adn `APP_ID`
 
-in `.env` set `REACT_APP_CONTRACT_ADDRESS="you contract addres from step 2"`
+in `.env` set `REACT_APP_CONTRACT_ADDRESS=<your deployied contract address>`
 
 run the frontend app
 

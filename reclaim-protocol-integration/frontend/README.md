@@ -1,3 +1,5 @@
+this repo has some changes because repo in examples of reclaim does not work
+
 # Reclaim Protocol Starter Pack - Stellar
 
 This repository provides a **React-based frontend example** for developers to interact with the Reclaim Protocol smart contract on the **Stellar** network. This template demonstrates how to submit and verify proofs on-chain, making it easier for developers to integrate Reclaim Protocol into their applications.

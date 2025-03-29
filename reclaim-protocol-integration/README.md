@@ -1,10 +1,13 @@
 The goal of this Spike is to explore how Reclaim Protocol can be integrated into Trustless Work's escrow system to enable attestations of off-chain actions.
 
+
 # SPIKE 
 there are two mean flow: UI and zkfetch.
 with zkfetch it's possible to make proofs without frontend (see below)
 
 ## UI flow:
+
+to build [and run example](./setup.md)
 
 ### How are proofs requested from users?
 
@@ -107,24 +110,32 @@ Proofs (signatures) themselves are not stored on-chain.
 They are typically stored off-chain and only validated on-chain upon request.
 But it's up to whoever implement this.
 
-## zkfetch flow:
+## zkFetch flow:
 
-the only difference that we can fetch data without frontend
+the only difference that we can fetch data without frontend and should create proof with zk circuit in place.
 but in case of private data with auth we need to obtain token or credentials somehow.
 
+here is all possible options to show potential usage 
 ```javascript
+
   const publicOptions = {
     method: 'GET', // or POST
     headers : {
       accept: 'application/json, text/plain, */*' 
-    }
+    }, 
+    geoLocation: "",
+    body: "",
   }
  
   const privateOptions = {
     headers {
-        apiKey: "123...456",   <---------- token
+        apiKey: "123...456",
         someOtherHeader: "someOtherValue",
-    }
+    },
+    cookieStr: "", 
+    paramValues: {},
+    responseMatches: [{ type: 'regex', value: '(?<data>.*)' }],
+    responseRedactions: [{'regex': '(?<data>.*)'}]
   }
  
   const proof = await client.zkFetch(
@@ -134,15 +145,16 @@ but in case of private data with auth we need to obtain token or credentials som
   )
 ```
 
-the rest logic is the same as UI flow
+the rest steps like validation of signature is the same as UI flow
 
 ### What modifications are needed to store & verify attestations?
 
-There is data(signature and context) which we get from reclaim. 
-So to check claim it takes to create logic for each provider (`PROVIDER_ID`) like github or google. 
+In order to verify proof it takes to create logic for each provider (`PROVIDER_ID`) like github or google. 
 
-For example we get some data(githhub username) from user via frontend form or from escrow itself(when freelancer should commit something on github)
-what we have in claim is `parameters` object which proving GitHub username (full example above)
+There is signature and context in proof which we get from reclaim. 
+For example, we get some proof of github username claim. 
+We should get username from user via frontend form or from escrow itself(when freelancer should commit something on github and it's written into the escrow.)
+And then we should match this username with what we have in `parameters` object in reclaim proof
 ```json
 {
   "additionalClientOptions": {},
@@ -175,10 +187,9 @@ what we have in claim is `parameters` object which proving GitHub username (full
 }
 ```
 
-so, in this case we should check username(form input, escrow description) matches with what we get in reclaim proof
 
 in case of payments we should match destination with what we have in `parameters`
-so that it's additional parser and logic to handle what we want to check.
+so that it's additional parser and logic to handle what we want to check for each provider.
 
 On frontend side should be different UI when escrow has some provider and Step 5: Marking a Milestone as Done
 should provide QR code to user and process claim
@@ -322,7 +333,10 @@ _Therefore, despite its efficiency advantages, Reclaim is suitable primarily for
 Considering all of the above, it is necessary to select specific areas that are not very demanding in terms of security and think through the flow for them individually,
 using the protocol in an agnostic approach is not possible, because it's pretty flexible and especially if the data we are checking is private or we want to rely on it to release the transfer of funds
 
-#### other staff
+### Also
+from a brief analysis, zkp2p uses a [fork](https://github.com/zkp2p/witness-sdk) of core reclaim because it's free : )
+
 zkp2p also uses aes chacha zk [circuits](https://github.com/reclaimprotocol/zk-symmetric-crypto) 
 
-more on web proofs: https://www.vlayer.xyz/blog/web-proofs-for-web3-applications
+
+[more on web proofs](https://www.vlayer.xyz/blog/web-proofs-for-web3-applications)
