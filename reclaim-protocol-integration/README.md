@@ -199,7 +199,7 @@ On chain we just verify signature and if it's valid approve milestone and store 
 ### Can we attach attestations to milestones?
 yes, each attestation has it's id so for example: 
 
-```json
+```
 {
     signer: "GAD4T6Z63N5NJLQYY3J5MVYFHH5I5UB7NDUUYZD7HHB3RMS6X3H4YK7P",
     engagementId: "ENG12345",
