@@ -1,8 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Trustless Work Wallet Dashboard
 
-## Getting Started
+This is a Next.js-based dashboard for managing Trustless Work wallet.
 
-First, run the development server:
+## Prerequisites
+
+- Node.js 18.x or later
+- npm, yarn, or pnpm package manager
+- A modern web browser
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Trustless-Work/Product.git
+cd dashboard-tw-wallet
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Configure the constants in `src/lib/constants.ts`:
+```typescript
+export const API_BASE_URL = 'your_api_url';
+export const DEFAULT_ACCOUNT_ID = 'your_account_id';
+export const TRANSACTIONS_PER_PAGE = 10;
+```
+
+## Development
+
+Start the development server:
 
 ```bash
 npm run dev
@@ -10,27 +42,40 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The dashboard will be available at [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+# or
+yarn build
+yarn start
+# or
+pnpm build
+pnpm start
+```
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- Web3 wallet integration
+- Transaction management
+- Balance tracking
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Next.js 15
+- TypeScript
+- Tailwind CSS
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[Add contribution guidelines]
+
+## License
+
+[Add license information]
