@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Stellar Network Dashboard",
-  description: "Monitor your Stellar network transactions and analytics",
+  title: "Trustless Work Wallet Dashboard",
+  description: "Monitor your transactions and analytics",
 };
 
 export default function RootLayout({
