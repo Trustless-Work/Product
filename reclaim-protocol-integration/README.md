@@ -238,7 +238,7 @@ transaction. It could be returned to sender after some time.
 So that there was no malicious intent, the money was actually sent and proof was created, 
 but money never reached recipient.
 
-the cool part is we can create custom provider 
+the cool part is we can create custom provider with [dashboard](https://dev.reclaimprotocol.org/dashboard)
 
 for example it's possible to change params of arbitrary url
 <p align="center"> <img src="imgs/custom_provider.png" alt="CLR-S (2)"> </p>
