@@ -27,8 +27,8 @@ pnpm install
 
 3. Configure the constants in `src/lib/constants.ts`:
 ```typescript
-export const API_BASE_URL = 'your_api_url';
-export const DEFAULT_ACCOUNT_ID = 'your_account_id';
+export const API_BASE_URL = 'https://horizon-testnet.stellar.org';
+export const DEFAULT_ACCOUNT_ID = 'GA6KH5VWPCHBOEF63X57SPX6T4H366YFFKKGCVDBTXT2N7JVL6PJCK7G';
 export const TRANSACTIONS_PER_PAGE = 10;
 ```
 
