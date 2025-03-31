@@ -1,8 +1,10 @@
 pub mod admin;
-pub mod escrow;
 pub mod dispute;
+pub mod escrow;
 pub mod milestone;
+mod mock_oracle;
 
-pub use escrow::*;
 pub use dispute::*;
+pub use escrow::*;
 pub use milestone::*;
+pub use mock_oracle::*;
