@@ -47,7 +47,7 @@ export const calculateTotalEscrowedAmount = (totalFees: string) => {
 
   // Parse the numeric value with validation
   const totalFeesNum = parseFloat(numericPart);
-  if (isNaN(totalFeesNum) || !isFinite(totalFeesNum)) {
+  if (Number.isNaN(totalFeesNum) || !Number.isFinite(totalFeesNum)) {
     return '0.00 XLM';
   }
 
