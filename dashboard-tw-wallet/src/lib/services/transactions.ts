@@ -1,53 +1,19 @@
 import { API_BASE_URL, DEFAULT_ACCOUNT_ID, TRANSACTIONS_PER_PAGE, Transaction } from '../constants';
 
-interface TransactionResponse {
-  _embedded?: {
-    records?: Array<{
-      id: string;
-      source_account: string;
-      created_at: string;
-    }>;
-  };
-  _links?: {
-    next?: { href: string };
-  };
-}
+let server: any = null;
 
-type OperationRecord = {
-  type: string;
-  amount?: string;
-  asset_type?: string;
-  asset_code?: string;
-  asset_issuer?: string;
-  destination?: string;
-  account?: string;
-  starting_balance?: string;
-  limit?: string;
-  trustee?: string;
-  transaction_successful?: boolean;
-};
-
-interface OperationResponse {
-  _embedded?: {
-    records?: OperationRecord[];
-  };
-}
-
-async function fetchOperations(txId: string): Promise<OperationResponse> {
-  try {
-    const response = await fetch(`${API_BASE_URL}/transactions/${txId}/operations`);
-    if (!response.ok) {
-      throw new Error(`Failed to fetch operations: ${response.status}`);
-    }
-    return await response.json();
-  } catch (error) {
-    console.error(`Error fetching operations for transaction ${txId}:`, error);
-    return { _embedded: { records: [] } };
-  }
+// Initialize server only on client side
+if (typeof window !== 'undefined') {
+  import('stellar-sdk').then((module) => {
+    const { Horizon } = module;
+    server = new Horizon.Server(API_BASE_URL);
+  }).catch((error) => {
+    console.error('Failed to initialize Stellar SDK:', error);
+  });
 }
 
 function processOperation(
-  operation: OperationRecord | undefined,
+  operation: any | undefined,
   sourceAccount: string
 ): Partial<Transaction> {
   if (!operation) return {};
@@ -89,19 +55,20 @@ export async function fetchRecentTransactions(page: number = 1): Promise<{
   currentPage: number 
 }> {
   try {
-    const url = new URL(`${API_BASE_URL}/accounts/${DEFAULT_ACCOUNT_ID}/transactions`);
-    url.searchParams.append('order', 'desc');
-    url.searchParams.append('limit', TRANSACTIONS_PER_PAGE.toString());
-    url.searchParams.append('offset', ((page - 1) * TRANSACTIONS_PER_PAGE).toString());
-
-    const response = await fetch(url.toString());
-    if (!response.ok) {
-      throw new Error(`Failed to fetch transactions: ${response.status}`);
+    if (!server) {
+      throw new Error('Stellar SDK not initialized');
     }
-    const data: TransactionResponse = await response.json();
+
+    // Fetch transactions using stellar-sdk
+    const transactionsResponse = await server
+      .transactions()
+      .forAccount(DEFAULT_ACCOUNT_ID)
+      .order('desc')
+      .limit(TRANSACTIONS_PER_PAGE)
+      .call();
 
     // Validate response structure
-    if (!data._embedded?.records?.length) {
+    if (!transactionsResponse.records?.length) {
       return {
         transactions: [],
         totalPages: 1,
@@ -110,17 +77,21 @@ export async function fetchRecentTransactions(page: number = 1): Promise<{
     }
 
     const transactionsWithOperations = await Promise.all(
-      data._embedded.records.map(async (tx) => {
+      transactionsResponse.records.map(async (tx: any) => {
         try {
-          const operationsData = await fetchOperations(tx.id);
-          
+          // Fetch operations using stellar-sdk
+          const operationsResponse = await server
+            .operations()
+            .forTransaction(tx.id)
+            .call();
+
           // Validate operations response structure
-          if (!operationsData._embedded?.records?.length) {
+          if (!operationsResponse.records?.length) {
             console.warn(`No operations found for transaction ${tx.id}`);
             return null;
           }
 
-          const operation = operationsData._embedded.records[0];
+          const operation = operationsResponse.records[0];
           const operationData = processOperation(operation, tx.source_account);
 
           const transaction: Transaction = {
@@ -161,8 +132,8 @@ export async function fetchRecentTransactions(page: number = 1): Promise<{
       };
     }
 
-    // Only calculate pagination if we have more than one row
-    const hasNextPage = !!data._links?.next;
+    // Calculate pagination based on the response
+    const hasNextPage = !!transactionsResponse._links?.next;
     const totalPages = hasNextPage ? page + 1 : page;
 
     return {
