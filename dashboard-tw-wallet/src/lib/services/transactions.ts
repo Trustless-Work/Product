@@ -1,42 +1,55 @@
 import { API_BASE_URL, DEFAULT_ACCOUNT_ID, TRANSACTIONS_PER_PAGE, Transaction } from '../constants';
 
 interface TransactionResponse {
-  _embedded: {
-    records: Array<{
+  _embedded?: {
+    records?: Array<{
       id: string;
       source_account: string;
       created_at: string;
     }>;
   };
-  _links: {
+  _links?: {
     next?: { href: string };
   };
 }
 
+type OperationRecord = {
+  type: string;
+  amount?: string;
+  asset_type?: string;
+  asset_code?: string;
+  asset_issuer?: string;
+  destination?: string;
+  account?: string;
+  starting_balance?: string;
+  limit?: string;
+  trustee?: string;
+  transaction_successful?: boolean;
+};
+
 interface OperationResponse {
-  _embedded: {
-    records: Array<{
-      type: string;
-      amount?: string;
-      asset_type?: string;
-      asset_code?: string;
-      asset_issuer?: string;
-      destination?: string;
-      account?: string;
-      starting_balance?: string;
-      limit?: string;
-      trustee?: string;
-      transaction_successful?: boolean;
-    }>;
+  _embedded?: {
+    records?: OperationRecord[];
   };
 }
 
 async function fetchOperations(txId: string): Promise<OperationResponse> {
-  const response = await fetch(`${API_BASE_URL}/transactions/${txId}/operations`);
-  return response.json();
+  try {
+    const response = await fetch(`${API_BASE_URL}/transactions/${txId}/operations`);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch operations: ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error(`Error fetching operations for transaction ${txId}:`, error);
+    return { _embedded: { records: [] } };
+  }
 }
 
-function processOperation(operation: OperationResponse['_embedded']['records'][0], sourceAccount: string): Partial<Transaction> {
+function processOperation(
+  operation: OperationRecord | undefined,
+  sourceAccount: string
+): Partial<Transaction> {
   if (!operation) return {};
 
   const baseTransaction = {
@@ -82,12 +95,31 @@ export async function fetchRecentTransactions(page: number = 1): Promise<{
     url.searchParams.append('offset', ((page - 1) * TRANSACTIONS_PER_PAGE).toString());
 
     const response = await fetch(url.toString());
+    if (!response.ok) {
+      throw new Error(`Failed to fetch transactions: ${response.status}`);
+    }
     const data: TransactionResponse = await response.json();
+
+    // Validate response structure
+    if (!data._embedded?.records?.length) {
+      return {
+        transactions: [],
+        totalPages: 1,
+        currentPage: 1
+      };
+    }
 
     const transactionsWithOperations = await Promise.all(
       data._embedded.records.map(async (tx) => {
         try {
           const operationsData = await fetchOperations(tx.id);
+          
+          // Validate operations response structure
+          if (!operationsData._embedded?.records?.length) {
+            console.warn(`No operations found for transaction ${tx.id}`);
+            return null;
+          }
+
           const operation = operationsData._embedded.records[0];
           const operationData = processOperation(operation, tx.source_account);
 
@@ -120,8 +152,17 @@ export async function fetchRecentTransactions(page: number = 1): Promise<{
         tx.from !== DEFAULT_ACCOUNT_ID
       );
 
-    // Calculate total pages based on the presence of next link
-    const hasNextPage = !!data._links.next;
+    // If we have only one row or no rows, always return page 1
+    if (filteredTransactions.length <= 1) {
+      return {
+        transactions: filteredTransactions,
+        totalPages: 1,
+        currentPage: 1
+      };
+    }
+
+    // Only calculate pagination if we have more than one row
+    const hasNextPage = !!data._links?.next;
     const totalPages = hasNextPage ? page + 1 : page;
 
     return {
