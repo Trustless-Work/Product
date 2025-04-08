@@ -21,6 +21,8 @@ In all these cases, **someone has to go first**—and that introduces risk.
 
 Without a neutral middle layer, users often rely on screenshots, trust, and hope.
 
+<figure><img src="../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+
 ***
 
 ### The Trustless Work Solution
@@ -29,7 +31,7 @@ Trustless Work provides **Smart Escrows**—programmable contracts that hold fun
 
 In the P2P trade flow:
 
-* Alice deposits her USDC into a Trustless Work escrow.
+* Alice deposits her USDC into an escrow.
 * Bob sends the BTC to Alice’s wallet.
 * Once Alice confirms receipt, the escrow releases the USDC to Bob.
 
@@ -39,17 +41,19 @@ Our escrow configuration defines **who can act at each step**—from marking the
 
 ### Escrow Lifecycle in a P2P Trade
 
-Here’s how we map the transaction flow to roles in Trustless Work:
+Here’s how we map the transaction flow to roles in Trustless Work, you can learn more about roles [here](../developer-resources/smart-escrow-design/roles-in-trustless-work.md):
 
-| **Phase**              | **Role (Trustless Work)**             | **Entity**                                                  |
-| ---------------------- | ------------------------------------- | ----------------------------------------------------------- |
-| **Initiation**         | Platform                              | P2P exchange or OTC desk (defines roles, fees, metadata)    |
-| **Funding**            | Funder                                | Alice (Buyer)                                               |
-| **Milestone Update**   | Milestone Marker (_Service Provider_) | Bob (Seller) – marks BTC as sent                            |
-| **Approval**           | Milestone Approver                    | Alice – confirms BTC received                               |
-| **Release**            | Release Signer                        | Alice – or dual signers (e.g., Alice + lawyer, or platform) |
-| **Receiver**           | Receiver                              | Bob – receives USDC from escrow                             |
-| **Dispute** (Optional) | Dispute Resolver                      | Platform or OTC desk                                        |
+<figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+
+| **Phase**                | **Escrow Role (Trustless Work)**      | **Entity**                                                  |
+| ------------------------ | ------------------------------------- | ----------------------------------------------------------- |
+| 1 - **Initiation**       | Platform                              | P2P exchange or OTC desk (defines roles, fees, metadata)    |
+| 2 - **Funding**          | Funder                                | Alice (Buyer)                                               |
+| 3 - **Milestone Update** | Milestone Marker (_Service Provider_) | Bob (Seller) – marks BTC as sent                            |
+| 4- **Approval**          | Milestone Approver                    | Alice – confirms BTC received                               |
+| 5 - **Release**          | Release Signer                        | Alice – or dual signers (e.g., Alice + lawyer, or platform) |
+| 6 - **Receiver**         | Receiver                              | Bob – receives USDC from escrow                             |
+| **Dispute** (Optional)   | Dispute Resolver                      | Platform or OTC desk                                        |
 
 ***
 
@@ -92,7 +96,3 @@ We’re currently live on **testnet**, with a full **mainnet launch planned for 
 Trustless Work brings the power of programmable smart escrows to P2P trades and OTC transactions. By abstracting the complexity of smart contracts and allowing platforms to define their own roles and flows, we enable a new layer of secure, transparent global commerce—whether you're trading across chains, across borders, or across platforms.
 
 **Try it. Integrate it. Build on it.**
-
-Want to see how this works for your use case?&#x20;
-
-Reach out to us or explore our API and templates.
