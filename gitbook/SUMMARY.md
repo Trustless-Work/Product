@@ -50,7 +50,7 @@
   * [Resolving Disputes](trustless-work-dapp-tutorial/resolving-disputes.md)
   * [How to Get Testnet Tokens](developer-resources/stellar-wallets/testnet-tokens.md)
 * [💻 Developer Resources](developer-resources/README.md)
-  * [Get Started](developer-resources/get-started.md)
+  * [Quickstart](developer-resources/quickstart.md)
   * [Smart Escrow Design](developer-resources/smart-escrow-design/README.md)
     * [What does a Smart Escrow "look like"?](developer-resources/smart-escrow-design/what-does-a-smart-escrow-look-like.md)
     * [Roles in Trustless Work](developer-resources/smart-escrow-design/roles-in-trustless-work.md)

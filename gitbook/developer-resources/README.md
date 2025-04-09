@@ -1,5 +1,9 @@
 # 💻 Developer Resources
 
+{% content-ref url="../getting-started/" %}
+[getting-started](../getting-started/)
+{% endcontent-ref %}
+
 {% content-ref url="smart-escrow-design/" %}
 [smart-escrow-design](smart-escrow-design/)
 {% endcontent-ref %}

@@ -2,4 +2,4 @@
 title: Telegram Chat
 ---
 
-[Telegram Chat](https://t.me/+kmr8tGegxLU0NTA5)
+[Telegram Chat](../../getting-started/quickstart.md#step-3-create-your-first-escrow)
