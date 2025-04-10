@@ -13,6 +13,8 @@ Trustless Work provides DAOs with an easy-to-integrate, blockchain-based escrow 
 * **Improved Fund Management:** Funds are only released when pre-agreed milestones are met, reducing risk and ensuring proper usage.
 * **Easy Integration:** Trustless Work's API and escrow management platform can be quickly adopted without extensive development or audits.
 
+<figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+
 **Typical Workflow:**
 
 1. **Initiation:** DAO defines working group, budget amount, milestones, and assigns roles (Milestone Marker, Approver, and Release Signer).
