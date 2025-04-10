@@ -12,7 +12,7 @@ With just a few API calls, funds can be held securely until the product is shipp
 
 ***
 
-<figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (25) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Core Use Cases
 

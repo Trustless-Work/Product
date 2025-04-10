@@ -59,7 +59,7 @@ export default http;
 
 ### Wallet Integration
 
-In our case, as we're using Stellar, so we'll use the [Stellar Wallet Kit](https://stellarwalletskit.dev) library, but you can use whatever you want.
+In our case, we're using [**Stellar Wallet Kit**](https://stellarwalletskit.dev), a library that simplifies connecting to Stellar-compatible wallets like **Freighter**. A wallet is necessary because all escrow actions—such as creating, funding, or releasing—require users to **sign blockchain transactions (XDR format)** with their private keys. Stellar Wallet Kit handles the interaction and signing process securely from the frontend. That said, you’re free to use any wallet that supports XDR signing, as long as it integrates smoothly with your app.
 
 {% tabs %}
 {% tab title="npm" %}
@@ -213,7 +213,7 @@ When you already have this part done, you can create some buttons to use the `ha
 
 ### Basic Flow
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
 ### Entities Typescript
 
@@ -365,6 +365,12 @@ export type EditMilestonesPayload = {
 ***
 
 ### Services - Endpoints
+
+Flow that must always be executed at each Endpoint **except** `Get Balances`
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+
 
 1. Initialize Escrow
 
