@@ -1,3 +1,7 @@
+---
+icon: face-glasses
+---
+
 # Education & Online Courses
 
 Online education platforms and independent educators often face challenges related to payment security, trust, and accountability. Learners worry about course quality and delivery, while educators face risks of non-payment, disputes, and complex refund processes. Existing solutions are centralized, costly, and can introduce delays or disputes.
@@ -7,6 +11,8 @@ Online education platforms and independent educators often face challenges relat
 Trustless Work provides a decentralized, transparent escrow solution to streamline transactions between learners and educators. By leveraging blockchain technology, it ensures secure, timely payments tied to course milestones and learner satisfaction, significantly reducing fraud and disputes.
 
 **How It Works**
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 1. **Course Enrollment (Initiation & Funding Phase):**
    * Learners enroll in a course and deposit payment into a Trustless Work escrow.

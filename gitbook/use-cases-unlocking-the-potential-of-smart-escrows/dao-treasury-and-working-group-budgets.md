@@ -1,3 +1,7 @@
+---
+icon: arrows-to-circle
+---
+
 # DAO Treasury & Working Group Budgets
 
 Decentralized Autonomous Organizations (DAOs) face significant challenges managing treasury funds, ensuring transparency, accountability, and efficiency in budget allocation for various working groups or sub-committees. Often, funds are either prematurely disbursed without clear milestone tracking or remain locked and inaccessible due to governance overhead. This leads to inefficiencies, potential misuse of funds, disputes, and governance friction.

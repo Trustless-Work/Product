@@ -1,3 +1,7 @@
+---
+icon: at
+---
+
 # Subscription + Performance-based Retainers
 
 Trustless Work's Smart Escrow infrastructure provides a secure, transparent, and flexible way to manage subscription-based and performance-driven retainers. This model ensures ongoing service payments are securely held and released only upon meeting predefined performance criteria, providing confidence to both subscribers and service providers.
@@ -9,6 +13,8 @@ Trustless Work's Smart Escrow infrastructure provides a secure, transparent, and
 * **Subscriber (Client):** Pays the retainer and approves milestones based on performance.
 * **Service Provider:** Delivers ongoing services and marks milestones as complete.
 * **Platform/Trustless Work Escrow:** Securely holds funds and facilitates transparent payment releases based on performance.
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 #### Escrow Lifecycle:
 

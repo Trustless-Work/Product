@@ -16,7 +16,7 @@ This step is done by the **Service Provider** once they have successfully delive
 * In the **escrows section**, navigate to the **Service Provider** tab.
 *
 
-    <figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 * This tab will only show escrows where your **logged-in wallet** is assigned as the **Service Provider**.
 
 ***
@@ -29,7 +29,7 @@ This step is done by the **Service Provider** once they have successfully delive
   * Roles assigned to different addresses
   * Current milestone status
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -46,7 +46,7 @@ This step is done by the **Service Provider** once they have successfully delive
 * This request confirms that you are **marking the milestone as completed**.
 * Click **"Sign"** to approve the transaction.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
