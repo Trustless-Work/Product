@@ -6,6 +6,12 @@ description: How to get started in Trustless Work API
 
 ## <mark style="color:orange;">Base URL</mark>
 
+Production API
+
+> https://api.trustlesswork.com
+
+Dev API
+
 > https://dev.api.trustlesswork.com
 
 ## <mark style="color:orange;">Warning!</mark>
