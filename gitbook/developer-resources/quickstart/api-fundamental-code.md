@@ -464,7 +464,11 @@ Flow that must always be executed at each Endpoint **except** `Get Balances`
 [dispute-resolution.md](../smart-escrow-design/escrow-lifecycle/dispute-resolution.md)
 {% endcontent-ref %}
 
+## Best Use Cases
 
+**Trustless Work** provides a flexible **Escrow-as-a-Service** platform that can be applied across many different use cases.
 
-
+{% content-ref url="../../use-cases-unlocking-the-potential-of-smart-escrows/" %}
+[use-cases-unlocking-the-potential-of-smart-escrows](../../use-cases-unlocking-the-potential-of-smart-escrows/)
+{% endcontent-ref %}
 
