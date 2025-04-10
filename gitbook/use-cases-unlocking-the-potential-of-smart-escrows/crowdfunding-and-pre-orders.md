@@ -1,8 +1,14 @@
+---
+icon: napster
+---
+
 # Crowdfunding & Pre-orders
 
 #### Trustless Work Use Case: Crowdfunding
 
 **Overview:** Crowdfunding platforms help innovators and creators raise funds directly from supporters. However, managing funds securely, transparently, and efficiently can be challenging, particularly with trust and accountability between backers and creators. Trustless Work simplifies this by providing an escrow infrastructure that guarantees transparency, safety, and efficient fund management.
+
+<figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
 **How It Works:**
 

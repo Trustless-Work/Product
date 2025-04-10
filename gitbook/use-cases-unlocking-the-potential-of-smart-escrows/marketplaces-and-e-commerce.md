@@ -1,3 +1,7 @@
+---
+icon: cart-arrow-up
+---
+
 # Marketplaces & E-commerce
 
 Trust is the foundation of every marketplace transaction—but building that trust usually means building complex infrastructure. Traditional platforms like eBay, Etsy, and Amazon use internal escrow mechanisms to ensure that sellers are paid **only** after buyers are satisfied. Most startups and emerging platforms can’t afford to build this kind of system.
@@ -7,6 +11,8 @@ Trust is the foundation of every marketplace transaction—but building that tru
 With just a few API calls, funds can be held securely until the product is shipped, received, or approved—ensuring fairness for both buyers and sellers.
 
 ***
+
+<figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
 ### Core Use Cases
 
@@ -30,6 +36,8 @@ Buyers escrow payment when purchasing from another user. Once the item is receiv
 
 ### Escrow Flow for Marketplaces
 
+<figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+
 1. **Initiation Phase**\
    The buyer places an order. A new escrow contract is created, defining the roles:
    * **Buyer** funds the escrow
@@ -43,7 +51,8 @@ Buyers escrow payment when purchasing from another user. Once the item is receiv
    The buyer confirms delivery or the system auto-approves after a timeout. If approved, funds move to release.
 5. **Release Phase**\
    The escrow releases the funds to the seller. Optionally, a platform fee is deducted.
-6. **Dispute Resolution (optional)**\
+6. **Receiver** - Receives the funds from Escrow
+7. **Dispute Resolution (optional)**\
    If the buyer disputes the delivery, a platform moderator or external resolver can step in, depending on the escrow configuration.
 
 ***

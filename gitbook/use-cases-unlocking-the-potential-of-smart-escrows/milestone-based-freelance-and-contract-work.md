@@ -1,3 +1,7 @@
+---
+icon: robot-astromech
+---
+
 # Milestone-based Freelance & Contract Work
 
 ## Trustless Work Use Case: Freelance and Gig Economy
@@ -20,6 +24,8 @@ Trustless Work’s escrow infrastructure offers:
 * Automatic payment release upon milestone approvals, minimizing administrative tasks.
 
 ### Workflow Example
+
+<figure><img src="../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
 
 #### 1. Initiation Phase
 

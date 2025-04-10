@@ -1,3 +1,7 @@
+---
+icon: chart-mixed-up-circle-dollar
+---
+
 # P2P Exchanges and OTC Desks
 
 Peer-to-peer (P2P) exchanges and Over-the-Counter (OTC) desks play a critical role in crypto trading—especially for trades that happen across different chains or involve fiat off-ramps. Yet these transactions often rely on trust between strangers, screenshots, and shaky coordination.

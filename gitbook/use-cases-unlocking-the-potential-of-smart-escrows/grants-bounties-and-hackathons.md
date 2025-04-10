@@ -1,3 +1,7 @@
+---
+icon: shovel
+---
+
 # Grants, Bounties, and Hackathons
 
 Grants, bounties, and hackathon prizes are meant to fuel innovation. But too often, they become a source of frustration—delayed payments, unclear timelines, or shifting token values that leave both recipients and organizers feeling shortchanged.
@@ -41,6 +45,16 @@ To make all this work seamlessly, Trustless Work introduces a concept that’s s
 These roles can be assigned to different people or entities depending on how your program is structured. A project team might mark a milestone as done, a grant committee member might approve it, and a finance admin or automated process might sign off on the release. There’s even an optional **dispute resolver** role, in case disagreements arise about whether a milestone was truly met.
 
 This separation of duties helps reduce delays, prevent mistakes, and build accountability into every step.
+
+<figure><img src="../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+
+In this example I have assigned Roles to different parties. \
+Alice, the sponsor is the one that deposits the funds, but not the one to approve a Milestone, or Release. \
+Bob, the grant receiver sees the funds are locked in Escrow and gets to work, one he completes the first tranche he marks the milestone as done. (Milestone Marker)
+
+The Approver, in this case would be the one who does some acceptance testing. Some maintainer who does QA, or checks the the deliverables match. He signs the approval, or does not (no action required) while Bob fixes something, or raise a dispute if something goes off with the agreement. \
+\
+The payment release could be done by another tester, or the program manager. In this case, the party who is assigned the Release signer. &#x20;
 
 ### Real-World Frustrations
 

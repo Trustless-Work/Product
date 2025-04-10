@@ -1,3 +1,7 @@
+---
+icon: lock
+---
+
 # Security Deposits
 
 Security deposits are a common requirement in rentals—whether it's housing, co-living spaces, equipment, or other real-world use cases. Trustless Work makes them **fair, transparent, and automated** using smart escrows.
@@ -13,6 +17,8 @@ With Trustless Work, platforms can configure non-custodial smart contracts that 
 ***
 
 ### Escrow Configuration
+
+<figure><img src="../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
 
 | Role                   | Address             |
 | ---------------------- | ------------------- |
