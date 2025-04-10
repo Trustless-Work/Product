@@ -366,63 +366,7 @@ export type EditMilestonesPayload = {
 
 ### Services - Endpoints
 
-<details>
-
-<summary>Initialize Escrow</summary>
-
-
-
-```typescript
-import { EscrowPayload } from "@/@types/escrow.entity";
-import http from "@/lib/axios.ts";
-import { kit, signTransaction } from ".lib/stellar-wallet-kit.ts";
-import axios from "axios";
-
-interface EscrowPayloadWithSigner extends EscrowPayload {
-  signer?: string;
-  trustlineDecimals: number | undefined;
-}
-
-export const initializeEscrow = async (
-  payload: EscrowPayloadWithSigner,
-  address: string,
-) => {
-  try {
-    const payloadWithSigner: EscrowPayloadWithSigner = {
-      ...payload,
-      signer: address,
-    };
-
-    // FETCH - Initialize Escrow
-    const response = await http.post(
-      "/deployer/invoke-deployer-contract",
-      payloadWithSigner,
-    );
-
-    // Get unsigned hash transaction 
-    const { unsignedTransaction } = response.data;
-
-    // Sign transaction
-    const signedTxXdr = await signTransaction({ unsignedTransaction, address });
-
-    // FETCH - Send transaction to Stellar Network
-    const tx = await http.post("/helper/send-transaction", {
-      signedXdr: signedTxXdr,
-      returnEscrowDataIsRequired: true,
-    });
-
-    const { data } = tx;
-
-    return data;
-  } catch (error: unknown) {
-    // catch logic
-};
-
-```
-
-</details>
-
-References:&#x20;
+1. Initialize Escrow
 
 {% content-ref url="../api-reference/deploy/initialize-escrow.md" %}
 [initialize-escrow.md](../api-reference/deploy/initialize-escrow.md)
@@ -434,27 +378,85 @@ References:&#x20;
 
 ***
 
-<details>
+2. Fund Escrow
 
-<summary>Fund Escrow</summary>
+{% content-ref url="../api-reference/escrows/fund-escrow.md" %}
+[fund-escrow.md](../api-reference/escrows/fund-escrow.md)
+{% endcontent-ref %}
 
+{% content-ref url="../smart-escrow-design/escrow-lifecycle/funding-phase.md" %}
+[funding-phase.md](../smart-escrow-design/escrow-lifecycle/funding-phase.md)
+{% endcontent-ref %}
 
+***
 
-</details>
+3. Get Multiple Escrow Balance
 
+{% content-ref url="../api-reference/escrows/get-multiple-escrow-balance.md" %}
+[get-multiple-escrow-balance.md](../api-reference/escrows/get-multiple-escrow-balance.md)
+{% endcontent-ref %}
 
+***
 
+4. Edit Milestones
 
+<mark style="color:red;">! AÑADIR CUANDO YA ESTE</mark>
 
+***
 
+5. Change Milestone Status
 
+{% content-ref url="../api-reference/escrows/change-milestone-status.md" %}
+[change-milestone-status.md](../api-reference/escrows/change-milestone-status.md)
+{% endcontent-ref %}
 
+{% content-ref url="../smart-escrow-design/escrow-lifecycle/milestone-status-update.md" %}
+[milestone-status-update.md](../smart-escrow-design/escrow-lifecycle/milestone-status-update.md)
+{% endcontent-ref %}
 
+***
 
+6. Change Milestone Flag
 
+{% content-ref url="../api-reference/escrows/change-milestone-flag.md" %}
+[change-milestone-flag.md](../api-reference/escrows/change-milestone-flag.md)
+{% endcontent-ref %}
 
+{% content-ref url="../smart-escrow-design/escrow-lifecycle/approval-phase.md" %}
+[approval-phase.md](../smart-escrow-design/escrow-lifecycle/approval-phase.md)
+{% endcontent-ref %}
 
+***
 
+7. Distribute Escrow Earnings
+
+{% content-ref url="../api-reference/escrows/distribute-escrow-funds.md" %}
+[distribute-escrow-funds.md](../api-reference/escrows/distribute-escrow-funds.md)
+{% endcontent-ref %}
+
+{% content-ref url="../smart-escrow-design/escrow-lifecycle/release-phase.md" %}
+[release-phase.md](../smart-escrow-design/escrow-lifecycle/release-phase.md)
+{% endcontent-ref %}
+
+***
+
+8. Change Dispute Flag
+
+{% content-ref url="../api-reference/escrows/change-dispute-flag.md" %}
+[change-dispute-flag.md](../api-reference/escrows/change-dispute-flag.md)
+{% endcontent-ref %}
+
+***
+
+9. Resolve Dispute
+
+{% content-ref url="../api-reference/escrows/resolving-disputes.md" %}
+[resolving-disputes.md](../api-reference/escrows/resolving-disputes.md)
+{% endcontent-ref %}
+
+{% content-ref url="../smart-escrow-design/escrow-lifecycle/dispute-resolution.md" %}
+[dispute-resolution.md](../smart-escrow-design/escrow-lifecycle/dispute-resolution.md)
+{% endcontent-ref %}
 
 
 

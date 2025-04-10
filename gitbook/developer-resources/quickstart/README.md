@@ -11,7 +11,8 @@ icon: flag-checkered
 
 * How can I run the dApp locally in  &#x20;order to have a code guide.
 * Important blocks in the dApp to make TW works.
-* How to use TW in a real use case called "GrantFox".
+
+
 
 
 
