@@ -54,8 +54,8 @@ icon: circle-plus
 	amount: "1000.00",
 	platformFee: "50.00", 
 	milestones: [
-		{ description: "Initial phase of the project", status: "Pending", approved_flag: false },
-		{ description: "Completion of design work", status: "Pending", approved_flag: false }
+		{ description: "Initial phase of the project" },
+		{ description: "Completion of design work" }
 	],
 	releaseSigner: "GBDKXCG6FHJMTUBWGAVVOD5PB5QXLYTRJGCH4NR4IMJVPXHHTBBXPY3V",
 	disputeResolver: "GDJVCNR5GPOJH7XMOVMHBKZV7V7WQ3B7QK75C76HLOBD4AKHFG5OCARJ",
