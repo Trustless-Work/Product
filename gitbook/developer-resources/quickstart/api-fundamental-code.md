@@ -368,7 +368,7 @@ export type EditMilestonesPayload = {
 
 Flow that must always be executed at each Endpoint **except** `Get Balances`
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
 
 
