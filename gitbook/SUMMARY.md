@@ -2,7 +2,6 @@
 
 * [Welcome](README.md)
 * [📌 Start Here](getting-started/README.md)
-  * [Quickstart](getting-started/quickstart.md)
   * [Core Concepts](getting-started/core-concepts.md)
   * [Essential Tools](getting-started/essential-tools.md)
 * [☀️ About Trustless Work](about-trustless-work/README.md)

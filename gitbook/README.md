@@ -80,7 +80,7 @@ A simple, scalable solution for anyone to integrate blockchain-based escrows to 
 
 ### **Next Steps**
 
-* **Get Started:** [Quick Start Guide](getting-started/quickstart.md)\
+* **Get Started:** [Quick Start Guide](getting-started/)\
   Begin integrating Trustless Work today.
 * **Learn More:** [About Trustless Work](about-trustless-work/)\
   Explore our mission, vision, and journey so far.
