@@ -1,6 +1,6 @@
 # Albedo Wallet
 
-![Rabet Wallet Logo](../images/albedo-logo.png)\
+![Rabet Wallet Logo](../../stellar-wallets/images/albedo-logo.png)\
 &#xNAN;_&#x4F;fficial logo of the Albedo Wallet._
 
 Albedo is a web-based wallet for Stellar, offering simple and secure ways to sign Stellar transactions.
@@ -24,7 +24,7 @@ Albedo is a web-based wallet for Stellar, offering simple and secure ways to sig
 3. Save your backup key securely.
 4. Verify your account and log in.
 
-![Albedo Account](../images/albedo-account.png) ![Albedo SetUp](../images/albedo-setup.png)
+![Albedo Account](../../stellar-wallets/images/albedo-account.png) ![Albedo SetUp](../../stellar-wallets/images/albedo-setup.png)
 
 ### **Importing an Existing Account**
 
@@ -43,7 +43,7 @@ Albedo is a web-based wallet for Stellar, offering simple and secure ways to sig
 3. Select **"Albedo Wallet"** from the list of options.
 4. Authorize the connection on Albedo's interface.
 
-![Trustless Work](../images/trustless-work.png) ![Wallet](../images/wallet-select.png)
+![Trustless Work](../../stellar-wallets/images/trustless-work.png) ![Wallet](../../stellar-wallets/images/wallet-select.png)
 
 ***
 
@@ -59,8 +59,8 @@ Albedo is a web-based wallet for Stellar, offering simple and secure ways to sig
 
 * **Official Website:** [Albedo](https://albedo.link/)
 * **Documentation:** [Albedo Documentation](https://albedo.link/docs)
-* **Testnet Tokens:** [How to Get Testnet Tokens](../../../using-the-dapp/testnet-tokens.md)
-* **Troubleshooting:** [Troubleshooting & FAQs](../troubleshooting.md)
+* **Testnet Tokens:** [How to Get Testnet Tokens](../testnet-tokens.md)
+* **Troubleshooting:** [Troubleshooting & FAQs](troubleshooting.md)
 
 ***
 

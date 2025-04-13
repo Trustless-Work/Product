@@ -54,8 +54,8 @@ We’ve built a lightweight dApp to help you deploy escrows without writing code
 
 **Before you start:**
 
-* Install a [Stellar Wallet](../developer-resources/stellar-wallets/) (Freighter, xBull, etc.)
-* Grab testnet[ XLM & USDC](../using-the-dapp/testnet-tokens.md)
+* Install a [Stellar Wallet](../developer-resources/essential-tools-for-developers/stellar-wallets/) (Freighter, xBull, etc.)
+* Grab testnet[ XLM & USDC](../developer-resources/essential-tools-for-developers/testnet-tokens.md)
 
 📵 Want a demo flow? [Watch our demo video](https://www.youtube.com/watch?v=wps4iH_qtrA\&list=PLF7UKEodb6OCkEmf__B5zJPiG-ZXs3vNv)
 

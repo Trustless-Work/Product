@@ -38,8 +38,8 @@ export default http;
 
 * You should connect to your favorite wallet, if you are in development, Freighter is recommended.
 
-{% content-ref url="../../stellar-wallets/" %}
-[stellar-wallets](../../stellar-wallets/)
+{% content-ref url="../../essential-tools-for-developers/stellar-wallets/" %}
+[stellar-wallets](../../essential-tools-for-developers/stellar-wallets/)
 {% endcontent-ref %}
 
 * You'll be able to see the **Escrow** entity in the page below.

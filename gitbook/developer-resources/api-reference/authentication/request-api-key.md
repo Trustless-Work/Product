@@ -11,8 +11,8 @@ The first step is to register in our dApp, in order to be able to have an user a
 
 In order to get registered,  you have to connect with a Stellar wallet. If you do not yet have one, or have never used one, there is more information in the following section:&#x20;
 
-{% content-ref url="../../stellar-wallets/" %}
-[stellar-wallets](../../stellar-wallets/)
+{% content-ref url="../../essential-tools-for-developers/stellar-wallets/" %}
+[stellar-wallets](../../essential-tools-for-developers/stellar-wallets/)
 {% endcontent-ref %}
 
 Once you have a wallet, the login process is straightforward. Just go to dapp.trustlesswork.com, and click login, this should ask for a signature and then you are in! \
