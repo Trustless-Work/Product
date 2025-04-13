@@ -22,7 +22,7 @@ Learn more about [how it works.](../technology-overview/)
 ### **2. Design your escrow lifecycle**
 
 Before you Deploy your first escrow, you need to know which parties (addresses) will play which roles. \
-You can learn more about escrow design [here](../developer-resources/smart-escrow-design/).
+You can learn more about escrow design [here](../smart-escrow-design/).
 
 Explore [Use Cases](../use-cases-unlocking-the-potential-of-smart-escrows/) for inspiration.
 

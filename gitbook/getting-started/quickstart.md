@@ -27,7 +27,7 @@ Mainnet is coming Q2 2025. Join our TG or follow on X or Linkedin to stay update
 
 #### **Step 3: Create Your First Escrow**
 
-* You will need the escrow details (parties addresses, roles, info) before creating your first escrow. Learn more [here](../developer-resources/smart-escrow-design/)
+* You will need the escrow details (parties addresses, roles, info) before creating your first escrow. Learn more [here](../smart-escrow-design/)
 * Initiate a smart escrow contract with minimal setup.
 
 #### **Step 4: Test and Iterate**

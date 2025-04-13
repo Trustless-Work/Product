@@ -2,7 +2,7 @@
 description: Interact with Escrows Seamlessly
 ---
 
-# 🤖 Trustless Work Dapp Tutorial
+# 🤖 Trustless Work Dapp
 
 ### **Introduction**
 
@@ -25,7 +25,7 @@ Before using the Dapp, ensure you have the necessary **prerequisites**:
 
 #### **1.1. Stellar Wallet Setup**
 
-To log in, you must connect a **Stellar-compatible wallet**. Read more in the [Stellar wallets section](developer-resources/stellar-wallets/).&#x20;
+To log in, you must connect a **Stellar-compatible wallet**. Read more in the [Stellar wallets section](../developer-resources/stellar-wallets/).&#x20;
 
 #### **1.2. Getting Testnet Tokens**
 
@@ -34,7 +34,7 @@ The Dapp currently operates on **Stellar Testnet**, so you’ll need:
 * **XLM** (for transaction fees)
 * **USDC** (to test escrow functionality)
 
-Learn more at. [Get Testnet Tokens](trustless-work-dapp-tutorial.md#id-1.2.-getting-testnet-tokens)
+Learn more at. [Get Testnet Tokens](./#id-1.2.-getting-testnet-tokens)
 
 ***
 

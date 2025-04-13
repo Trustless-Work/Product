@@ -1,8 +1,8 @@
-# Smart Escrow Design
+# 🥸 Smart Escrow Concepts
 
 Welcome to the Smart Escrow Design section.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 
 

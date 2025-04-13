@@ -76,7 +76,7 @@ Hana Wallet is a lightweight browser extension wallet for Stellar, offering an e
 
 * **Hana Official Website:** [Hana Wallet](https://www.hanawallet.io/)
 * **FAQs and Support:** [Hana Support](https://support.hanawallet.io/en/)
-* **Testnet Tokens:** [How to Get Testnet Tokens](../testnet-tokens.md)
+* **Testnet Tokens:** [How to Get Testnet Tokens](../../../trustless-work-dapp/testnet-tokens.md)
 * **Troubleshooting:** [Troubleshooting & FAQs](../troubleshooting.md)
 
 ***

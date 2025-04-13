@@ -1,6 +1,6 @@
 # What does a Smart Escrow "look like"?
 
-<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 **Escrow ID:** This is the same as the contract address, users will send funds to this Address. (Trustline should be set).
 
@@ -32,7 +32,7 @@
 We are also working on this type of escrow contract: multi-release\
 
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Main difference being that the amount and flags are moved to the milestone, therefore you can have independent fund releases per milestone. I will reference this type of contract in our docs too as it is currently being built.
 

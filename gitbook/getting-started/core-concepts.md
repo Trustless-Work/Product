@@ -39,7 +39,7 @@ Trustless Work builds on **Stellar’s Soroban** smart contract platform, combin
 * A smart escrow is configured using Trustless Work’s API.
 * Key parameters include:
   * **Amount**: The value being held.
-  * **Roles**: Learn more about roles [here](../developer-resources/smart-escrow-design/roles-in-trustless-work.md)
+  * **Roles**: Learn more about roles [here](../smart-escrow-design/roles-in-trustless-work.md)
   * **Milestones**: Rules for releasing funds.
 
 #### **2. Funding**
