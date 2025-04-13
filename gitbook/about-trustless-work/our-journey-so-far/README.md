@@ -22,7 +22,7 @@ Our journey is divided into key chapters, each showcasing a crucial part of our 
 4. **🏆** [**Key Milestones**](key-milestones/): Relive the pivotal moments, from hackathons to accelerator programs, that shaped our growth.
 5. **🚀**[ **Current Programs**](current-programs/): Dive into the exciting initiatives and collaborations driving our current success.
 6. **🛠️** [**Vertical Development**](vertical-development.md): See how our technology is powering specialized solutions for industries like real estate, agriculture, and more.
-7. **🌎** [**Spotlight: Kindify**](../../use-cases-unlocking-the-potential-of-smart-escrows/spotlight-kindifi.md): Discover Kindify, a standout use case transforming social impact crowdfunding.
+7. **🌎** [**Spotlight: Kindify**](../../community/spotlight-kindifi.md): Discover Kindify, a standout use case transforming social impact crowdfunding.
 8. **🔮** [**Future Vision**](future-vision.md): Get a glimpse into where Trustless Work is headed and our aspirations for the future.
 
 ***

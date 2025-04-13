@@ -1,30 +1,48 @@
-# Getting Started
+---
+description: Integrate Smart Escrows in Minutes
+---
 
-## **Getting Started with Trustless Work**
+# 📌 Start Here
 
-Welcome to the future of secure, trustless transactions! This guide will help you start using Trustless Work, whether you’re a developer integrating our API or a business seeking to scale with blockchain-powered escrows.
+Welcome to **Trustless Work** — your gateway to programmable, secure, and non-custodial escrows powered by blockchain.
 
-***
+This guide is your launchpad whether you're:
 
-### **1. Understand the Basics**
-
-Before diving into the technical details, take a moment to understand how Trustless Work can revolutionize your payment workflows:
-
-* **What is Trustless Work?**\
-  A blockchain-based Escrow-as-a-Service platform that secures payments and ensures transparency for all parties involved.
-* **Why Use Trustless Work?**\
-  Save time, reduce costs, and eliminate reliance on intermediaries.
-
-Learn more about [how it works.](../technology-overview/)
+* A **developer** exploring our [API](../developer-resources/quickstart/api-fundamental-code.md)
+* A **product team** testing use cases via our [no-code dApp](http://dapp.trustlesswork.com/)
+* A **business** aiming to scale global payments with programmable trust
 
 ***
 
-### **2. Design your escrow lifecycle**
+### 🧠 1. Understand the Basics
 
-Before you Deploy your first escrow, you need to know which parties (addresses) will play which roles. \
-You can learn more about escrow design [here](../smart-escrow-design/).
+**What is Trustless Work?**\
+Trustless Work is a blockchain-powered, **Escrow-as-a-Service** platform. We help you integrate milestone-based payments with **zero custodians** and **maximum flexibility**.
 
-Explore [Use Cases](../use-cases-unlocking-the-potential-of-smart-escrows/) for inspiration.
+**Why use it?**
+
+* 🚀 Launch escrow flows in minutes, not months
+* 🔐 Secure, neutral payment infrastructure
+* 💸 Save on dev costs and transaction fees
+* 🌍 Enable global, stablecoin-based payments
+
+📚 [Read how it works](../technology-overview/)\
+📖 [Explore use cases](../use-cases-unlocking-the-potential-of-smart-escrows/)
+
+***
+
+### 🧪 2. Design Your Escrow Lifecycle
+
+Before deploying, define the **roles and responsibilities** within your escrow flow.
+
+Use our [**Escrow Desig**](../smart-escrow-design/)**n Framework** to configure:
+
+* Milestone markers
+* Approvers
+* Release signers
+* Receivers
+
+💡 Not sure how to structure it? Check our [use cases](../use-cases-unlocking-the-potential-of-smart-escrows/)
 
 ***
 
