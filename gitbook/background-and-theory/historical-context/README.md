@@ -6,7 +6,7 @@ In an age of increasing digitization and decentralized systems, escrows are evol
 
 Let’s dive in. 🚀
 
-<figure><img src="../.gitbook/assets/Escrow.png" alt=""><figcaption><p>The image above shows a <strong>traditional escrow setup</strong>, where a third party (the escrow provider) manages funds between a <strong>client</strong> and a <strong>service provider</strong>. Payment is only released when the contractual obligations have been fulfilled.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Escrow.png" alt=""><figcaption><p>The image above shows a <strong>traditional escrow setup</strong>, where a third party (the escrow provider) manages funds between a <strong>client</strong> and a <strong>service provider</strong>. Payment is only released when the contractual obligations have been fulfilled.</p></figcaption></figure>
 
 ***
 
@@ -46,7 +46,7 @@ Escrows are more relevant today than ever, especially with the rise of the digit
 
 
 
-<figure><img src="../.gitbook/assets/Frame (1).png" alt=""><figcaption><p>In the traditional model, funds are often held by <strong>banks</strong> or <strong>lawyers</strong> during transactions like real estate purchases, ensuring all parties meet their obligations before money changes hands.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Frame (1).png" alt=""><figcaption><p>In the traditional model, funds are often held by <strong>banks</strong> or <strong>lawyers</strong> during transactions like real estate purchases, ensuring all parties meet their obligations before money changes hands.</p></figcaption></figure>
 
 ### **Learn More About Escrows**
 

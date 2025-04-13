@@ -77,7 +77,7 @@ xBull Wallet is a secure and fast web-based wallet designed for Stellar users. I
 
 * **xBull Official Website:** [xBull Wallet](https://xbull.app)
 * **xBull Documentation:** [xBull Docs](https://xbull.app/docs/)
-* **Testnet Tokens:** [How to Get Testnet Tokens](../../../trustless-work-dapp/testnet-tokens.md)
+* **Testnet Tokens:** [How to Get Testnet Tokens](../../../using-the-dapp/testnet-tokens.md)
 * **Troubleshooting:** [Troubleshooting & FAQs](../troubleshooting.md)
 
 ***

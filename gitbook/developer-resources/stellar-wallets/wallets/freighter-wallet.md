@@ -80,7 +80,7 @@ Freighter is a browser extension wallet for Stellar. It is a non-custodial walle
 
 * **Official Website:** [Freighter Wallet](https://www.freighter.app/)
 * **Documentation:** [Freighter GitHub Repo](https://github.com/stellar/freighter)
-* **Testnet Tokens:** [How to Get Testnet Tokens](../../../trustless-work-dapp/testnet-tokens.md)
+* **Testnet Tokens:** [How to Get Testnet Tokens](../../../using-the-dapp/testnet-tokens.md)
 * **Troubleshooting:** [Troubleshooting & FAQs](../troubleshooting.md)
 
 ***
