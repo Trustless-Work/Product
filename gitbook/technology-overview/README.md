@@ -2,11 +2,40 @@
 description: 'High-level architecture: Smart contracts, APIs, and escrow workflows.'
 ---
 
-# ⚒️ Technology Overview
+# ⚒️ Understanding Smart Escrows
 
-**Trustless Work** provides an **Escrow-as-a-Service (EaaS)** platform that makes building **Smart Escrows** as simple and accessible as possible. By leveraging **open-source tools** and a **developer-friendly API**, we remove the barriers traditionally associated with escrows—making them **secure, transparent, and easy to integrate**.
+Trustless Work enables programmable, non-custodial escrows tailored to any workflow. This section merges conceptual understanding with practical design tools, helping you move from theory to implementation.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+***
+
+#### 🔎 What is a Smart Escrow?
+
+A Smart Escrow is a blockchain-based smart contract that holds funds until specific conditions are met. It is trustless, programmable, and transparent by design.
+
+* 📅 **Set Up**: Define roles, amounts, and milestone logic
+* 💳 **Fund**: Lock stablecoins (USDC, XLM) on-chain
+* ✅ **Execute**: Release funds only when verified conditions are met
+
+Trustless Work escrows are:
+
+* 🔒 **Non-Custodial**
+* 🚀 **Fast & Low-Cost** (on Stellar/Soroban)
+* ⚖️ **Transparent & Programmable**
+
+Learn more in the Escrow Lifecycle Guide.
+
+***
+
+#### 🔌 Why Not Use Traditional Escrow?
+
+| Feature                 | Traditional Escrow | Trustless Work |
+| ----------------------- | ------------------ | -------------- |
+| Speed                   | Days to weeks      | Instant        |
+| Fees                    | 5–8%               | 0.3% – 0.5%    |
+| Custody                 | Centralized        | Trustless      |
+| Transparency            | Low                | High           |
+| Global Reach            | Region-Limited     | Borderless     |
+| Integration Flexibility | Rigid              | Fully flexible |
 
 ***
 
@@ -14,53 +43,51 @@ description: 'High-level architecture: Smart contracts, APIs, and escrow workflo
 
 <figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-The diagram above illustrates the architecture of Trustless Work, showing how each component interacts to make **Smart Escrows** possible.
+🧠 Key Roles in an Escrow
 
-* **Trustless Work API** provides an interface for developers and platforms to easily initialize, configure, fund, and manage escrows. With simple API calls, integration becomes intuitive and hassle-free.
-* **Stellar Network: Trustless Work** is built on the Stellar Network. Escrows work by assigning roles to addresses, these addresses are on the Stellar Network. Stellar wallets are required to sign transaccions and send/receive funds.&#x20;
-* **Open-Source Escrow Smart Contracts** form the **trustless foundation** of our system. Deployed on **Soroban**, Stellar’s smart contract platform, these contracts ensure that funds are securely managed and only released once conditions are met—offering transparency and tamper-proof execution.
+Roles define who can take actions at each phase.
 
+| Role                 | Responsibility                    |
+| -------------------- | --------------------------------- |
+| **Milestone Marker** | Marks deliverables as done        |
+| **Approver**         | Approves or disputes deliverables |
+| **Release Signer**   | Signs final release transaction   |
+| **Receiver**         | Receives funds                    |
+| **Dispute Resolver** | (Optional) Resolves disputes      |
+| **Platform Address** | (Optional) Collects platform fees |
 
-
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-* **Open-Source Templates & Developer Tools** are designed to assist developers in integrating **Smart Escrows** quickly. These templates are customizable, helping you transform your vision into functionality without the friction of building everything from scratch.
-
-Together, these components allow developers to focus on building great products without the worry of complex payment flows or third-party dependencies.
-
-***
-
-### **Trustless Work API** 🔌
-
-Our **Trustless Work API** is designed to make integrating Smart Escrows into your platform as seamless as possible. You can use the API to:
-
-* **Initialize, Fund, and Manage Escrows**: Easily set up an escrow contract, define conditions, manage its state, and approve fund releases—all in a developer-friendly way.
-* **View Escrow Data:** The API has functions optimized for Escrow exploration and audit.&#x20;
-
-➡️ Learn more: [Smart Escrow API](smart-escrow-api.md)
+Read more in the [Roles & Permissions section](https://dots.trustlesswork.com/roles).
 
 ***
 
-### **Open-Source Escrow Smart Contracts** 🔗
+#### 🛠️ Escrow Lifecycle Overview
 
-At the core of Trustless Work are **open-source escrow smart contracts** that are secure, trustless, and deployed on **Soroban**. These smart contracts:
+Trustless Work escrows follow a clear, auditable sequence:
 
-* **Hold and Release Funds**: Ensure that funds are securely held until all predefined conditions are met.
-* **Offer Transparency**: Being open-source means anyone can audit the contracts, providing complete transparency to all participants.
+1. **Initiation** → 2. **Funding** → 3. **Milestone Update** → 4. **Approval** → 5. **Release** → 6. **(Optional) Dispute Resolution**
 
-➡️ Learn more:[ Open-Source Escrow Smart Contracts](open-source-escrow-smart-contracts.md)
-
-***
-
-### **Open-Source Templates & Developer Tools** 📂
-
-To make integration even easier, we provide **open-source templates and developer tools**. These templates help developers quickly implement:
-
-* **Common Escrow Workflows**: From milestone payments to security deposits and crowdfunding, these templates offer easy-to-adapt solutions.
-* **Customizable Features**: Modify templates to fit your unique needs and seamlessly integrate Smart Escrows into your applications.
-
-➡️ Learn more: [Open-Source Templates & Developer Tools](open-source-templates-and-developer-tools.md)
+View the full Escrow Lifecycle Deep Dive.
 
 ***
 
-With **Trustless Work**, integrating trustless escrow solutions has never been easier. Dive in and start building today!
+#### 🧱 Use Case Examples
+
+* **Freelance Marketplace**
+* **DAO Grant Program**
+
+Explore full breakdowns in the [Use Case Gallery](https://dots.trustlesswork.com/use-cases).
+
+***
+
+#### ⬇️ Next Steps
+
+* ✏️ [Customize your roles](https://dots.trustlesswork.com/roles)
+* 🔄 [Test in our dApp](http://dapp.trustlesswork.com/)
+* 🌐 [Deploy via API](https://github.com/Trustless-Work)
+* 🎓 [Explore vertical use cases](https://dots.trustlesswork.com/use-cases)
+
+> 💬 Smart Escrows let you codify trust into your workflows. Start by designing your ideal transaction flow—and let Trustless Work handle the rest.
+
+***
+
+***
