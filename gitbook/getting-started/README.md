@@ -46,7 +46,7 @@ Use our [**Escrow Desig**](../smart-escrow-design/)**n Framework** to configure:
 
 ***
 
-#### 🧰 3. Deploy and Test on Our dApp
+### 🧰 3. Deploy and Test on Our dApp
 
 We’ve built a lightweight dApp to help you deploy escrows without writing code.
 
@@ -61,7 +61,7 @@ We’ve built a lightweight dApp to help you deploy escrows without writing code
 
 ***
 
-#### 🛠️ 4. Start Building
+### 🛠️ 4. Start Building
 
 Use our [developer resources](../developer-resources/) to:
 
@@ -74,7 +74,7 @@ Have a question or want to propose a feature?\
 
 ***
 
-#### 🤝 5. Contribute to the Ecosystem
+### 🤝 5. Contribute to the Ecosystem
 
 We grow in public — and you can join us:
 
