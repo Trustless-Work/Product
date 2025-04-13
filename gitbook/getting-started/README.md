@@ -35,7 +35,7 @@ Trustless Work is a blockchain-powered, **Escrow-as-a-Service** platform. We hel
 
 Before deploying, define the **roles and responsibilities** within your escrow flow.
 
-Use our [**Escrow Desig**](../smart-escrow-design/)**n Framework** to configure:
+Use our [**Escrow Desig**](../technology-overview/smart-escrow-design/)**n Framework** to configure:
 
 * Milestone markers
 * Approvers
@@ -86,7 +86,7 @@ We grow in public — and you can join us:
 
 ### 📈 Next Steps
 
-* ➡️ Understand [roles & permissions](../smart-escrow-design/roles-in-trustless-work.md)
+* ➡️ Understand [roles & permissions](../technology-overview/smart-escrow-design/roles-in-trustless-work.md)
 * ➡️ Explore vertical [use cases](../use-cases-unlocking-the-potential-of-smart-escrows/)
 * ➡️ [Join the community](../community-and-roadmap/community.md)
 

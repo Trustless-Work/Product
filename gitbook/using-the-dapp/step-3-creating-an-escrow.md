@@ -12,7 +12,7 @@
 * **Escrow tabs** are organized by **role** (Approver, Service Provider, Dispute Resolver, etc.).
   * If you don’t see any escrows, it means your wallet **hasn't been assigned a role yet**.
 
-📌 **Tip:** If you want to understand roles in escrows, refer to the [Roles in Escrow Design section.](../smart-escrow-design/roles-in-trustless-work.md)
+📌 **Tip:** If you want to understand roles in escrows, refer to the [Roles in Escrow Design section.](../technology-overview/smart-escrow-design/roles-in-trustless-work.md)
 
 ***
 

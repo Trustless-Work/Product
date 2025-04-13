@@ -11,7 +11,7 @@ icon: arrow-progress
 {% hint style="warning" %}
 **Important Notes**
 
-Be sure to checkout the [Smart Escrow Design](../../../smart-escrow-design/) section for visual helpers.&#x20;
+Be sure to checkout the [Smart Escrow Design](../../../technology-overview/smart-escrow-design/) section for visual helpers.&#x20;
 {% endhint %}
 
 * We are using the Stellar Wallet Kit library.
@@ -126,8 +126,8 @@ export const initializeEscrow = async (
 [initialize-escrow.md](../deploy/initialize-escrow.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../../smart-escrow-design/escrow-lifecycle/initiation-phase.md" %}
-[initiation-phase.md](../../../smart-escrow-design/escrow-lifecycle/initiation-phase.md)
+{% content-ref url="../../../technology-overview/smart-escrow-design/escrow-lifecycle/initiation-phase.md" %}
+[initiation-phase.md](../../../technology-overview/smart-escrow-design/escrow-lifecycle/initiation-phase.md)
 {% endcontent-ref %}
 
 
@@ -189,8 +189,8 @@ export const fundEscrow = async (payload: FundEscrowPayload) => {
 [fund-escrow.md](../escrows/fund-escrow.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../../smart-escrow-design/escrow-lifecycle/funding-phase.md" %}
-[funding-phase.md](../../../smart-escrow-design/escrow-lifecycle/funding-phase.md)
+{% content-ref url="../../../technology-overview/smart-escrow-design/escrow-lifecycle/funding-phase.md" %}
+[funding-phase.md](../../../technology-overview/smart-escrow-design/escrow-lifecycle/funding-phase.md)
 {% endcontent-ref %}
 
 
@@ -322,8 +322,8 @@ export const changeMilestoneStatus = async (
 
 > **References:**
 
-{% content-ref url="../../../smart-escrow-design/escrow-lifecycle/milestone-status-update.md" %}
-[milestone-status-update.md](../../../smart-escrow-design/escrow-lifecycle/milestone-status-update.md)
+{% content-ref url="../../../technology-overview/smart-escrow-design/escrow-lifecycle/milestone-status-update.md" %}
+[milestone-status-update.md](../../../technology-overview/smart-escrow-design/escrow-lifecycle/milestone-status-update.md)
 {% endcontent-ref %}
 
 {% content-ref url="../escrows/change-milestone-status.md" %}
@@ -393,8 +393,8 @@ export const changeMilestoneFlag = async (
 
 > **References:**
 
-{% content-ref url="../../../smart-escrow-design/escrow-lifecycle/approval-phase.md" %}
-[approval-phase.md](../../../smart-escrow-design/escrow-lifecycle/approval-phase.md)
+{% content-ref url="../../../technology-overview/smart-escrow-design/escrow-lifecycle/approval-phase.md" %}
+[approval-phase.md](../../../technology-overview/smart-escrow-design/escrow-lifecycle/approval-phase.md)
 {% endcontent-ref %}
 
 {% content-ref url="../escrows/change-milestone-flag.md" %}
@@ -531,8 +531,8 @@ export type DistributeEscrowEarningsEscrowPayload = Pick<Escrow, "contractId"> &
 
 > **References:**
 
-{% content-ref url="../../../smart-escrow-design/escrow-lifecycle/release-phase.md" %}
-[release-phase.md](../../../smart-escrow-design/escrow-lifecycle/release-phase.md)
+{% content-ref url="../../../technology-overview/smart-escrow-design/escrow-lifecycle/release-phase.md" %}
+[release-phase.md](../../../technology-overview/smart-escrow-design/escrow-lifecycle/release-phase.md)
 {% endcontent-ref %}
 
 {% content-ref url="../escrows/distribute-escrow-funds.md" %}
@@ -603,8 +603,8 @@ export type ResolveDisputePayload = Pick<Escrow, "contractId"> &
 
 > **References:**
 
-{% content-ref url="../../../smart-escrow-design/escrow-lifecycle/dispute-resolution.md" %}
-[dispute-resolution.md](../../../smart-escrow-design/escrow-lifecycle/dispute-resolution.md)
+{% content-ref url="../../../technology-overview/smart-escrow-design/escrow-lifecycle/dispute-resolution.md" %}
+[dispute-resolution.md](../../../technology-overview/smart-escrow-design/escrow-lifecycle/dispute-resolution.md)
 {% endcontent-ref %}
 
 {% content-ref url="../escrows/resolving-disputes.md" %}

@@ -45,7 +45,7 @@ Our escrow configuration defines **who can act at each step**—from marking the
 
 ### Escrow Lifecycle in a P2P Trade
 
-Here’s how we map the transaction flow to roles in Trustless Work, you can learn more about roles [here](../smart-escrow-design/roles-in-trustless-work.md):
+Here’s how we map the transaction flow to roles in Trustless Work, you can learn more about roles [here](../technology-overview/smart-escrow-design/roles-in-trustless-work.md):
 
 <figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 

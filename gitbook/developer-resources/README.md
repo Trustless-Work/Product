@@ -4,8 +4,8 @@
 [getting-started](../getting-started/)
 {% endcontent-ref %}
 
-{% content-ref url="../smart-escrow-design/" %}
-[smart-escrow-design](../smart-escrow-design/)
+{% content-ref url="../technology-overview/smart-escrow-design/" %}
+[smart-escrow-design](../technology-overview/smart-escrow-design/)
 {% endcontent-ref %}
 
 {% content-ref url="api-reference/" %}

@@ -378,8 +378,8 @@ Flow that must always be executed at each Endpoint **except** `Get Balances`
 [initialize-escrow.md](../api-reference/deploy/initialize-escrow.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../smart-escrow-design/escrow-lifecycle/initiation-phase.md" %}
-[initiation-phase.md](../../smart-escrow-design/escrow-lifecycle/initiation-phase.md)
+{% content-ref url="../../technology-overview/smart-escrow-design/escrow-lifecycle/initiation-phase.md" %}
+[initiation-phase.md](../../technology-overview/smart-escrow-design/escrow-lifecycle/initiation-phase.md)
 {% endcontent-ref %}
 
 ***
@@ -390,8 +390,8 @@ Flow that must always be executed at each Endpoint **except** `Get Balances`
 [fund-escrow.md](../api-reference/escrows/fund-escrow.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../smart-escrow-design/escrow-lifecycle/funding-phase.md" %}
-[funding-phase.md](../../smart-escrow-design/escrow-lifecycle/funding-phase.md)
+{% content-ref url="../../technology-overview/smart-escrow-design/escrow-lifecycle/funding-phase.md" %}
+[funding-phase.md](../../technology-overview/smart-escrow-design/escrow-lifecycle/funding-phase.md)
 {% endcontent-ref %}
 
 ***
@@ -416,8 +416,8 @@ Flow that must always be executed at each Endpoint **except** `Get Balances`
 [change-milestone-status.md](../api-reference/escrows/change-milestone-status.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../smart-escrow-design/escrow-lifecycle/milestone-status-update.md" %}
-[milestone-status-update.md](../../smart-escrow-design/escrow-lifecycle/milestone-status-update.md)
+{% content-ref url="../../technology-overview/smart-escrow-design/escrow-lifecycle/milestone-status-update.md" %}
+[milestone-status-update.md](../../technology-overview/smart-escrow-design/escrow-lifecycle/milestone-status-update.md)
 {% endcontent-ref %}
 
 ***
@@ -428,8 +428,8 @@ Flow that must always be executed at each Endpoint **except** `Get Balances`
 [change-milestone-flag.md](../api-reference/escrows/change-milestone-flag.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../smart-escrow-design/escrow-lifecycle/approval-phase.md" %}
-[approval-phase.md](../../smart-escrow-design/escrow-lifecycle/approval-phase.md)
+{% content-ref url="../../technology-overview/smart-escrow-design/escrow-lifecycle/approval-phase.md" %}
+[approval-phase.md](../../technology-overview/smart-escrow-design/escrow-lifecycle/approval-phase.md)
 {% endcontent-ref %}
 
 ***
@@ -440,8 +440,8 @@ Flow that must always be executed at each Endpoint **except** `Get Balances`
 [distribute-escrow-funds.md](../api-reference/escrows/distribute-escrow-funds.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../smart-escrow-design/escrow-lifecycle/release-phase.md" %}
-[release-phase.md](../../smart-escrow-design/escrow-lifecycle/release-phase.md)
+{% content-ref url="../../technology-overview/smart-escrow-design/escrow-lifecycle/release-phase.md" %}
+[release-phase.md](../../technology-overview/smart-escrow-design/escrow-lifecycle/release-phase.md)
 {% endcontent-ref %}
 
 ***
@@ -460,8 +460,8 @@ Flow that must always be executed at each Endpoint **except** `Get Balances`
 [resolving-disputes.md](../api-reference/escrows/resolving-disputes.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../smart-escrow-design/escrow-lifecycle/dispute-resolution.md" %}
-[dispute-resolution.md](../../smart-escrow-design/escrow-lifecycle/dispute-resolution.md)
+{% content-ref url="../../technology-overview/smart-escrow-design/escrow-lifecycle/dispute-resolution.md" %}
+[dispute-resolution.md](../../technology-overview/smart-escrow-design/escrow-lifecycle/dispute-resolution.md)
 {% endcontent-ref %}
 
 ## Best Use Cases
