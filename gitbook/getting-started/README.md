@@ -46,35 +46,48 @@ Use our [**Escrow Desig**](../smart-escrow-design/)**n Framework** to configure:
 
 ***
 
-### **3. Deploy and test in our dApp**
+#### 🧰 3. Deploy and Test on Our dApp
 
-We made a dApp to assist you on deploying escrows.  You can find it [here](https://d-app-trustless-work.vercel.app/).
+We’ve built a lightweight dApp to help you deploy escrows without writing code.
 
-To sign transactions, you will need 1 (or more) Stellar wallets. Learn more here
+➡️ [**Launch dApp**](http://dapp.trustlesswork.com/)
 
-To fund testnet escrows you will also need testnet XLM and testnet USDC. Learn more [here.](essential-tools.md)
+**Before you start:**
 
-***
+* Install a [Stellar Wallet](../developer-resources/stellar-wallets/) (Freighter, xBull, etc.)
+* Grab testnet[ XLM & USDC](../trustless-work-dapp/testnet-tokens.md)
 
-### **3. Start building!**
-
-Integrating Trustless Work into your platform is simple:
-
-* Work with your development team to integrate Trustless Work’s API.
-* Use our **open-source templates** for faster implementation.
-* Speak with our team to if you have feedback or feature requests: [Get in Touch](../appendices/contact-and-support.md).
+📵 Want a demo flow? [Watch our demo video](https://www.youtube.com/watch?v=wps4iH_qtrA\&list=PLF7UKEodb6OCkEmf__B5zJPiG-ZXs3vNv)
 
 ***
 
-### **4. Contribute!**
+#### 🛠️ 4. Start Building
 
-* We are open source and are constantly participating in OS campaigns through [Only Dust](https://app.onlydust.com/p/trustless-work-)
-* Learn more about our [Ecosystem](https://trustlesswork.notion.site/). Some of them are open source too!&#x20;
+Use our [developer resources](../developer-resources/) to:
+
+* Call the [Trustless Work API](../developer-resources/quickstart/api-fundamental-code.md)
+* Reuse open-source templates (React, Soroban)
+* Extend with your own integrations
+
+Have a question or want to propose a feature?\
+📩 [Contact](../appendices/contact-and-support.md) the team or [open an issue](https://github.com/Trustless-Work)
 
 ***
 
-### **Next Steps**
+#### 🤝 5. Contribute to the Ecosystem
 
-* **Developers**: Do the [Quickstart](quickstart.md) or Explore the [API Reference](../developer-resources/api-reference/) to build your integration.
-* **Businesses**: Visit [Use Cases](../use-cases-unlocking-the-potential-of-smart-escrows/) to see how others are using Trustless Work.
-* [**Join Our Community**](../community-and-roadmap/community.md): Participate in hackathons and contribute to open-source projects.
+We grow in public — and you can join us:
+
+* 🧑‍💻 Participate in our [OnlyDust open-source campaigns](https://app.onlydust.com/projects/trustless-work-)
+* 🧱 Build your own product on top of Trustless Work
+* 💥 Get featured in our Ecosystem Spotlight
+
+***
+
+### 📈 Next Steps
+
+* ➡️ Understand [roles & permissions](../smart-escrow-design/roles-in-trustless-work.md)
+* ➡️ Explore vertical [use cases](../use-cases-unlocking-the-potential-of-smart-escrows/)
+* ➡️ [Join the community](../community-and-roadmap/community.md)
+
+> 💬 _“The world runs on trust. And trust runs on escrow. Let’s build a better future, together.”_
