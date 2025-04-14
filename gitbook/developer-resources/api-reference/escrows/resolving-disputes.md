@@ -1,8 +1,8 @@
 ---
-icon: handshake
 description: >-
   Resolves escrow disputes by distributing funds to the approver and service
   provider as determined by the dispute resolver.
+icon: handshake
 ---
 
 # Resolve Dispute
@@ -18,16 +18,16 @@ description: >-
 
 **Body**
 
-| Name                                            | Type   | Description                                                       |
-| ----------------------------------------------- | ------ | ----------------------------------------------------------------- |
+| Name                                     | Type   | Description                                                       |
+| ---------------------------------------- | ------ | ----------------------------------------------------------------- |
 | <pre><code>contractId
-</code></pre>             | string | ID (address) that identifies the escrow contract                  |
+</code></pre>      | string | ID (address) that identifies the escrow contract                  |
 | <pre><code>disputeResolver
-</code></pre>        | string | Address of the user defined to resolve disputes in an escrow      |
+</code></pre> | string | Address of the user defined to resolve disputes in an escrow      |
 | <pre><code>approverFunds
-</code></pre>          | string | Amount to transfer to the approver for dispute resolution         |
-| <pre><code> serviceProviderFunds 
-</code></pre> | string | Amount to transfer to the service provider for dispute resolution |
+</code></pre>   | string | Amount to transfer to the approver for dispute resolution         |
+| <pre><code>receiverFunds
+</code></pre>   | string | Amount to transfer to the service provider for dispute resolution |
 
 **Example of Request Body:**
 
@@ -37,7 +37,7 @@ description: >-
 	"contractId": "GC3DJY4LLQYJHEONXFDLQVVRCFZQCPFX7VD33KP4P7QSVZY3SJHQBZGV",
 	"disputeResolver": "GBY3PAJY5R3ZIXTYBGFW4URB4RINEXQBC3T4RWDDKJ5TZXQYZUN6A4TP", 
 	"approverFunds": "100",
-	"serviceProviderFunds": "50"
+	"receiverFunds": "50"
 }
 ```
 {% endcode %}

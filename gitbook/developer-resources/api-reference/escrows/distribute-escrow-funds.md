@@ -1,6 +1,6 @@
 ---
-icon: square-dollar
 description: You release the escrow funds to the service provider through the approver.
+icon: square-dollar
 ---
 
 # Distribute Escrow Earnings
@@ -13,10 +13,11 @@ description: You release the escrow funds to the service provider through the ap
 
 ### Body
 
-| Name          | Type   | Description                                                       |
-| ------------- | ------ | ----------------------------------------------------------------- |
-| contractId    | string | ID (address) that identifies the escrow contract                  |
-| releaseSigner | string | Address of the signatory in charge of releasing the escrow funds. |
+| Name          | Type   | Description                                                               |
+| ------------- | ------ | ------------------------------------------------------------------------- |
+| contractId    | string | ID (address) that identifies the escrow contract                          |
+| signer        | string | Entity that signs the transaction that deploys and initializes the escrow |
+| releaseSigner | string | Address of the signatory in charge of releasing the escrow funds.         |
 
 #### Example of request body:
 

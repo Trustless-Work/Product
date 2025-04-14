@@ -1,8 +1,8 @@
 ---
-icon: thumbs-up
 description: >-
   Responsible for modifying the "flag" property of a specific milestone in the
   escrow to approve that milestone.
+icon: thumbs-up
 ---
 
 # Change Milestone Flag
@@ -23,7 +23,7 @@ description: >-
 | contractId     | string  | ID (address) that identifies the escrow contract                                    |
 | milestoneIndex | string  | Position that identifies the milestone within the group of milestones in the escrow |
 | newFlag        | boolean | New value for the "flag" property within the escrow milestone                       |
-| client         | string  | Address of the client who will approve the milestone                                |
+| approver       | string  | Address of the client who will approve the milestone                                |
 
 **Example of Request Body:**
 
@@ -33,7 +33,7 @@ description: >-
 	"contractId": "GC3DJY4LLQYJHEONXFDLQVVRCFZQCPFX7VD33KP4P7QSVZY3SJHQBZGV",
 	"milestoneIndex": "0", 
 	"newFlag": true,
-	"client": "GBY3PAJY5R3ZIXTYBGFW4URB4RINEXQBC3T4RWDDKJ5TZXQYZUN6A4TP"
+	"approver": "GBY3PAJY5R3ZIXTYBGFW4URB4RINEXQBC3T4RWDDKJ5TZXQYZUN6A4TP"
 }
 ```
 {% endcode %}

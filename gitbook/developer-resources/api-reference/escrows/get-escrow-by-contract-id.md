@@ -1,6 +1,6 @@
 ---
-icon: get-pocket
 description: Returns all the information of an escrow requested through the contractId.
+icon: get-pocket
 layout:
   title:
     visible: true
@@ -41,8 +41,10 @@ layout:
 **Example of Request Params:**
 
 ```javascript
-signer = GBPUACN...
-contractId = GD2SVFOJ...
+{
+    "signer": GBPUACN...
+    "contractId": GD2SVFOJ...
+}
 ```
 
 **Possible Responses**

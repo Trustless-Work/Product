@@ -53,6 +53,7 @@
       * [Change Dispute Flag](developer-resources/api-reference/escrows/change-dispute-flag.md)
       * [Get Multiple Escrow Balance](developer-resources/api-reference/escrows/get-multiple-escrow-balance.md)
       * [Distribute Escrow Earnings](developer-resources/api-reference/escrows/distribute-escrow-funds.md)
+      * [Update escrow properties](developer-resources/api-reference/escrows/update-escrow-properties.md)
     * [Helpers](developer-resources/api-reference/helpers/README.md)
       * [Set Trustline](developer-resources/api-reference/helpers/set-trustline.md)
       * [Send Transaction](developer-resources/api-reference/helpers/send-transaction.md)
