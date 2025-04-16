@@ -66,6 +66,16 @@ icon: circle-plus
 
 
 
+{% openapi-operation spec="trustless-work-api-dev" path="/deployer/invoke-deployer-contract" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
+
+{% openapi-schemas spec="trustless-work-api-dev" schemas="InvokeContract" grouped="true" %}
+[Broken link](broken-reference)
+{% endopenapi-schemas %}
+
+
+
 **Possible Responses**
 
 {% tabs %}
