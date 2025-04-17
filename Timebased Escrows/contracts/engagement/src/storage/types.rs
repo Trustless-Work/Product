@@ -29,7 +29,10 @@ pub struct Escrow {
     pub release_flag: bool,
     pub resolved_flag: bool,
     pub trustline: Address,
-    pub escrow_type: EscrowType, 
+    pub escrow_type: EscrowType,
+    pub oracle_id: Address, // Oracle contract address
+    pub party_a: Address,   // First party (receives funds if condition is true)
+    pub party_b: Address,   // Second party (receives funds if condition is false)
 }
 
 #[contracttype]
@@ -37,8 +40,8 @@ pub struct Escrow {
 pub struct Milestone {
     pub description: String,
     pub status: String,
-    pub approved_flag: bool, 
-    pub approval_deadline: Option<u64>
+    pub approved_flag: bool,
+    pub approval_deadline: Option<u64>,
 }
 
 #[contracttype]
