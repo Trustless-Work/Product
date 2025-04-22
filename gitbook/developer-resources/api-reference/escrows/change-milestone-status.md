@@ -20,13 +20,9 @@ icon: hexagon-check
 [Broken link](broken-reference)
 {% endopenapi-operation %}
 
-
-
-**What this Endpoint returns?**
+### **What this Endpoint returns?**
 
 This endpoint returns the transaction unsigned so that the transaction can be signed by means of a customer wallet.
-
-
 
 ### **Use example:**
 

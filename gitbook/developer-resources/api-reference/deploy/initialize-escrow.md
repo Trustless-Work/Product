@@ -25,6 +25,10 @@ icon: circle-plus
 [Broken link](broken-reference)
 {% endopenapi-operation %}
 
+### **What this Endpoint returns?**
+
+This endpoint returns the transaction unsigned so that the transaction can be signed by means of a customer wallet.
+
 ### Use Example:
 
 <pre class="language-typescript"><code class="lang-typescript">import axios from "axios";
