@@ -41,7 +41,6 @@ When using the escrow's endpoints, users can seamlessly manage escrows. Here's a
 {% endcontent-ref %}
 
 * **Change Dispute Flag:** Start a dispute in the escrow.
-* **Get Multiple Escrow Balance:** This endpoint allows users to retrieve the balances of multiple escrow accounts simultaneously.&#x20;
 * **Distribute Escrow Funds: A**llows users to finalize their escrow transactions once all milestones and conditions have been met.
 
 {% content-ref url="../../../technology-overview/smart-escrow-design/escrow-lifecycle/release-phase.md" %}

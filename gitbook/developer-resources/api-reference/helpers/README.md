@@ -1,8 +1,8 @@
 ---
-icon: hand-holding-medical
 description: >-
   These endpoints provide a way to receive tokens through Trustline and send any
   transactions to the Stellar Blockchain.
+icon: hand-holding-medical
 ---
 
 # Helpers
@@ -17,5 +17,6 @@ Helper endpoints offer several benefits that enhance both development efficiency
 
 * **Set Trustline:** Allows the user to interact with some tokens.
 * **Send Transaction:** Send the transaction to Stellar Network with the signed hash.
+* **Get Multiple Escrow Balance:** This endpoint allows users to retrieve the balances of multiple escrow accounts simultaneously.&#x20;
 
 These endpoints ensure secure transactions by leveraging Stellar's infrastructure, guaranteeing transparency and reliability.
