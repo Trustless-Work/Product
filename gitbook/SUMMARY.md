@@ -92,7 +92,7 @@
   * [🛣️ Roadmap: The Journey Ahead](community/roadmap-the-journey-ahead.md)
   * [Contributor's Guide](community-and-roadmap/get-involved.md)
   * [📂 Open-Source Templates & Developer Tools](community/open-source-templates-and-developer-tools.md)
-* [Background & Theory](background-and-theory/README.md)
+* [✒️ Background & Theory](background-and-theory/README.md)
   * [📘 Core Concepts & Escrow Glossary](background-and-theory/core-concepts.md)
   * [🎒 Historical Context](background-and-theory/historical-context/README.md)
     * [📜 Escrow History:](background-and-theory/historical-context/escrow-history/README.md)
