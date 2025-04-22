@@ -5,86 +5,39 @@ icon: dollar-sign
 
 # Get Multiple Escrow Balance
 
-<mark style="color:orange;">**`GET`**</mark> `helper/get-multiple-escrow-balance`
-
-**Headers**
+### **Headers**
 
 | Name          | Value              |
 | ------------- | ------------------ |
 | Content-Type  | `application/json` |
 | Authorization | `Bearer <token>`   |
 
-**Params**
+### **Open API**
 
-| Name      | Type      | Description                                                               |
-| --------- | --------- | ------------------------------------------------------------------------- |
-| signer    | string    | Entity that signs the transaction that deploys and initializes the escrow |
-| addresses | string\[] | List of addresses requesting escrow balance retrieval                     |
+{% openapi-operation spec="trustless-work-api-dev" path="/helper/get-multiple-escrow-balance" method="get" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
-**Example of Request Params:**
+### Use Example:
 
-{% code overflow="wrap" fullWidth="false" %}
-```json
-{
-    "signer": "GAD4T6Z63N5NJLQYY3J5MVYFHH5I5UB7NDUUYZD7HHB3RMS6X3H4YK7P",
-    "addresses": ["GAHJZHVKFLATA7RVGXSFKXAKT5H4RXJ4LU2UR2W2IDFXOJQ2BR7RHW62",            "GAHJZHVKFLATA7RVGXSFKXAKT5H4RXJ4LU2UR2W2IDFXOJQ2BR7RHW62"]
-}
+```typescript
+import axios from "axios";
+
+const http = axios.create({
+  baseURL: "https://dev.api.trustlesswork.com",
+  timeout: 10000,
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer your_api_key`,
+  },
+});
+
+export const useExample = async (signer: string, addresses: string[]) => {
+  const response = await http.get("/helper/get-multiple-escrow-balance", {
+    params: { addresses, signer },
+  });
+
+  return response;
+};
+
 ```
-{% endcode %}
-
-**Possible Responses**
-
-{% tabs %}
-{% tab title="200 OK" %}
-```json
-[
-    {
-        "address": "DD3RT4I2OETACMZL7XVZLMMRZOHMLPSB2I6S7ZF5NE42OAKZPA2NGFGC",
-        "balance": 1
-    },
-    {
-        "address": "DFT67K4L62WSFVDSUADSG35JGZZNW2TXWSS6XN3PPJDHLYZ2XCOE7BPZ",
-        "balance": 0
-    }
-]
-```
-{% endtab %}
-
-{% tab title="500 Server Error " %}
-<mark style="color:red;">**Not Found VERIFICAR**</mark>
-
-<pre class="language-json"><code class="lang-json"><strong>{
-</strong>  "error": "Escrow not found"
-}
-</code></pre>
-{% endtab %}
-
-{% tab title="400 Bad Request" %}
-```json
-{
-    "message": "Message",
-    "error": "Bad Request",
-    "statusCode": 400
-}
-```
-{% endtab %}
-
-{% tab title="401 Unauthorized" %}
-```json
-{
-  "statusCode": 401,
-  "message": "Unauthorized",
-  "error": "Unauthorized"
-}
-```
-{% endtab %}
-
-{% tab title="429 Rate Limit" %}
-```json
-{
-    "statusCode": 429,
-    "message": "ThrottlerException: Too Many Requests"
-}
-```
-{% endtab %}
-{% endtabs %}

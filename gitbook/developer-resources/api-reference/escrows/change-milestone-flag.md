@@ -7,8 +7,6 @@ icon: thumbs-up
 
 # Change Milestone Flag
 
-<mark style="color:green;">**`POST`**</mark> `escrow/change-milestone-flag`
-
 **Headers**
 
 | Name          | Value              |
@@ -16,122 +14,23 @@ icon: thumbs-up
 | Content-Type  | `application/json` |
 | Authorization | `Bearer <token>`   |
 
-**Body**
 
-| Name           | Type    | Description                                                                         |
-| -------------- | ------- | ----------------------------------------------------------------------------------- |
-| contractId     | string  | ID (address) that identifies the escrow contract                                    |
-| milestoneIndex | string  | Position that identifies the milestone within the group of milestones in the escrow |
-| newFlag        | boolean | New value for the "flag" property within the escrow milestone                       |
-| approver       | string  | Address of the client who will approve the milestone                                |
 
-**Example of Request Body:**
+### Open API
 
-{% code overflow="wrap" fullWidth="false" %}
-```json
-{
-	"contractId": "GC3DJY4LLQYJHEONXFDLQVVRCFZQCPFX7VD33KP4P7QSVZY3SJHQBZGV",
-	"milestoneIndex": "0", 
-	"newFlag": true,
-	"approver": "GBY3PAJY5R3ZIXTYBGFW4URB4RINEXQBC3T4RWDDKJ5TZXQYZUN6A4TP"
-}
-```
-{% endcode %}
+{% openapi-operation spec="trustless-work-api-dev" path="/escrow/change-milestone-approved-flag" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
-**Possible Responses**
 
-{% tabs %}
-{% tab title="200 OK" %}
-```json
-{    
-    "status": "SUCCESS",
-    "unsignedTransaction": "AAAAAgAAAABfQAm/gS..."  // XDR Hash Transaction
-}
-```
-{% endtab %}
 
-{% tab title="500 Server Error " %}
-<mark style="color:red;">**Not Found**</mark>
-
-```json
-{
-  "status": "FAILED"
-  "messgae": "Escrow not found"
-}
-```
-
-<mark style="color:red;">**Only the approver can change the**</mark>&#x20;
-
-```json
-{
-  "status": "FAILED"
-  "messgae": "Only the approver can change milestone flag"
-}
-```
-
-<mark style="color:red;">**No milestones defined**</mark>
-
-```json
-{
-  "status": "FAILED"
-  "messgae": "Escrow initialized without milestone"
-}
-```
-
-<mark style="color:red;">**Invalid milestone index**</mark>
-
-```json
-{
-  "status": "FAILED"
-  "messgae": "Invalid milestone index"
-}
-```
-
-<mark style="color:red;">**500**</mark>
-
-```json
-{
-  "status": "500"
-  "messgae": "An unexpected error occurred"
-}
-```
-{% endtab %}
-
-{% tab title="400 Bad Request" %}
-```json
-{
-    "message": "Message",
-    "error": "Bad Request",
-    "statusCode": 400
-}
-```
-{% endtab %}
-
-{% tab title="401 Unauthorized" %}
-```json
-{
-  "statusCode": 401,
-  "message": "Unauthorized",
-  "error": "Unauthorized"
-}
-```
-{% endtab %}
-
-{% tab title="429 Rate Limit" %}
-```json
-{
-    "statusCode": 429,
-    "message": "ThrottlerException: Too Many Requests"
-}
-```
-{% endtab %}
-{% endtabs %}
-
-**What this Endpoint returns?**
+### **What this Endpoint returns?**
 
 This endpoint returns the transaction unsigned so that the transaction can be signed by means of a customer wallet.
 
-#### Use example (Using axios):
+
+
+### Use Example:
 
 ```typescript
 import axios from "axios";

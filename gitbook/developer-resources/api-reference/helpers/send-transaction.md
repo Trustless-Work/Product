@@ -1,99 +1,31 @@
 ---
-icon: comment-arrow-up-right
 description: >-
   Most Trustless Work endpoints return an unsigned transaction in XDR format.
   This endpoint is used to sign such unsigned transactions and send them to the
   Stellar network.
+icon: comment-arrow-up-right
 ---
 
 # Send Transaction
 
-<mark style="color:green;">**`POST`**</mark> `helper/send-transaction`
-
-**Headers**
+### **Headers**
 
 | Name          | Value              |
 | ------------- | ------------------ |
 | Content-Type  | `application/json` |
 | Authorization | `Bearer <token>`   |
 
-**Body**
 
-| Name                                  | Type    | Description                                                                                           |
-| ------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------- |
-| signedXdr                             | string  | The sign's hash. This come from the wallet.                                                           |
-| returnEscrowDataIsRequired (Optional) | boolean | If a return escrow data is needed (Note that not all contract functions return data from an escrow.). |
 
-**Example of Request Body:**
+### **Open API**
 
-{% code overflow="wrap" fullWidth="false" %}
-```json
-{
-  "signedXdr": "AAAAAgAAAAB...",
-  "returnValueIsRequired": true,
-}
-```
-{% endcode %}
+{% openapi-operation spec="trustless-work-api-dev" path="/helper/send-transaction" method="post" %}
+[Broken link](broken-reference)
+{% endopenapi-operation %}
 
-**Possible Responses**
-
-{% tabs %}
-{% tab title="200 OK" %}
-```json
-{
-    "status": "SUCCESS",
-    "message": "The transaction has been successfully sent to the Stellar network"
-}
-```
-{% endtab %}
-
-{% tab title="500 Server Error" %}
-```json
-{
-    "status": "FAILED",
-    "message": "The transaction could not be sent to the Stellar network for some unknown reason. Please try again."
-}
-```
-{% endtab %}
-
-{% tab title="400 Bad Request" %}
-```json
-{
-    "message": "Message",
-    "error": "Bad Request",
-    "statusCode": 400
-}
-
-```
-{% endtab %}
-
-{% tab title="401 Unauthorized" %}
-```json
-{
-  "statusCode": 401,
-  "message": "Unauthorized",
-  "error": "Unauthorized"
-}
-```
-{% endtab %}
-
-{% tab title="429 Rate Limit" %}
-```json
-{
-    "statusCode": 429,
-    "message": "ThrottlerException: Too Many Requests"
-}
-```
-{% endtab %}
-{% endtabs %}
-
-#### Example of how to use this endpoint:
+### Use Example:
 
 ```typescript
-import { FundEscrowPayload } from "@/@types/escrow.entity";
-import { kit } from "@/components/modules/auth/wallet/constants/wallet-kit.constant";
-import { WalletNetwork } from "@creit.tech/stellar-wallets-kit";
-import { signTransaction } from "@stellar/freighter-api";
 import axios from "axios";
 
 const http = axios.create({
@@ -105,38 +37,33 @@ const http = axios.create({
   },
 });
 
-export const fundEscrow = async () => {
-  try {
-    const response = await http.post(
-      "/escrow/fund-escrow", 
-      {
-       // body requested for the endpoint
-      }    
-    );
-
-    const { unsignedTransaction } = response.data;
+export const useExample = async () => {
+    // Get the signer address
     const { address } = await kit.getAddress();
+
+    const response = await http.post(
+      "/any-endpoint",
+      {
+        // body requested for the endpoint
+      },
+    ); 
+    
+    // Get the unsigned transaction hash
+    const { unsignedTransaction } = response.data;
+
+    // Sign the transaction by wallet
     const { signedTxXdr } = await signTransaction(unsignedTransaction, {
       address,
       networkPassphrase: WalletNetwork.TESTNET,
     });
 
+    // Send the transaction to Stellar Network  <--------------- THIS
     const tx = await http.post("/helper/send-transaction", {
       signedXdr: signedTxXdr,
     });
 
     const { data } = tx;
+
     return data;
-  } catch (error: unknown) {
-    if (axios.isAxiosError(error)) {
-      console.error("Axios Error:", error.response?.data || error.message);
-      throw new Error(
-        error.response?.data?.message || "Error in Axios request",
-      );
-    } else {
-      console.error("Unexpected Error:", error);
-      throw new Error("Unexpected error occurred");
-    }
-  }
-};
+}
 ```
