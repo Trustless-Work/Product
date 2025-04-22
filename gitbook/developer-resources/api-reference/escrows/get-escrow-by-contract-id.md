@@ -16,14 +16,12 @@ layout:
 
 # Get Escrow by Contract ID
 
-**Headers**
+### **Headers**
 
 | Name          | Value              |
 | ------------- | ------------------ |
 | Content-Type  | `application/json` |
 | Authorization | `Bearer <token>`   |
-
-
 
 ### Open API
 

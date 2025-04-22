@@ -7,14 +7,12 @@ icon: face-pouting
 
 # Change Dispute Flag
 
-**Headers**
+### **Headers**
 
 | Name          | Value              |
 | ------------- | ------------------ |
 | Content-Type  | `application/json` |
 | Authorization | `Bearer <token>`   |
-
-
 
 ### **Open API**
 
@@ -25,8 +23,6 @@ icon: face-pouting
 ### **What this Endpoint returns?**
 
 This endpoint returns the transaction unsigned so that the transaction can be signed by means of a customer wallet.
-
-
 
 ### Use Example:
 

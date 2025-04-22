@@ -7,14 +7,12 @@ icon: handshake
 
 # Resolve Dispute
 
-**Headers**
+### **Headers**
 
 | Name          | Value              |
 | ------------- | ------------------ |
 | Content-Type  | `application/json` |
 | Authorization | `Bearer <token>`   |
-
-
 
 ### Open API
 

@@ -7,11 +7,9 @@ icon: sack-dollar
 
 # Fund Escrow
 
-**Headers**
+### **Headers**
 
 <table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>Authorization</td><td><code>Bearer &#x3C;token></code></td></tr></tbody></table>
-
-
 
 ### **Open API**
 

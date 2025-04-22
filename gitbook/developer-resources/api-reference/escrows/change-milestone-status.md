@@ -7,14 +7,14 @@ icon: hexagon-check
 
 # Change Milestone Status
 
-**Headers**
+### **Headers**
 
 | Name          | Value              |
 | ------------- | ------------------ |
 | Content-Type  | `application/json` |
 | Authorization | `Bearer <token>`   |
 
-
+### Open API
 
 {% openapi-operation spec="trustless-work-api-dev" path="/escrow/change-milestone-status" method="post" %}
 [Broken link](broken-reference)
