@@ -7,10 +7,6 @@ icon: sack-dollar
 
 # Fund Escrow
 
-Allows flexible USDC amounts to be transferred to the escrow contract.
-
-<mark style="color:green;">**`POST`**</mark> `escrow/fund-escrow`
-
 **Headers**
 
 <table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>Authorization</td><td><code>Bearer &#x3C;token></code></td></tr></tbody></table>

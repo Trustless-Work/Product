@@ -5,8 +5,6 @@ icon: circle-plus
 
 # Initialize Escrow
 
-<mark style="color:green;">**`POST`**</mark> `deployer/invoke-deployer-contract`
-
 ### Headers
 
 <table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>Authorization</td><td><code>Bearer &#x3C;token></code></td></tr></tbody></table>
