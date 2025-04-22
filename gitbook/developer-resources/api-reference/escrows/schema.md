@@ -1,5 +1,6 @@
 ---
 description: In this section, you'll see all the attributes of the Escrow Entity.
+icon: books
 ---
 
 # Schema
@@ -27,11 +28,11 @@ description: In this section, you'll see all the attributes of the Escrow Entity
 
 #### Milestone:
 
-| Name         | Type    | Description                                                            |
-| ------------ | ------- | ---------------------------------------------------------------------- |
-| description  | string  | Text describing the function of the milestone.                         |
-| status       | string  | Milestone status. Ex: Approved, In dispute, etc...                     |
-| approvedFlag | boolean | Flag indicating whether a milestone has been approved by the approver. |
+| Name           | Type    | Description                                                            |
+| -------------- | ------- | ---------------------------------------------------------------------- |
+| description    | string  | Text describing the function of the milestone.                         |
+| status         | string  | Milestone status. Ex: Approved, In dispute, etc...                     |
+| approved\_flag | boolean | Flag indicating whether a milestone has been approved by the approver. |
 
 ### Escrow flow:
 

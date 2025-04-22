@@ -1,6 +1,6 @@
 ---
-icon: dollar-sign
 description: Get the balance of multiple escrows.
+icon: dollar-sign
 ---
 
 # Get Multiple Escrow Balance

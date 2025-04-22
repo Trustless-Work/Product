@@ -398,8 +398,8 @@ Flow that must always be executed at each Endpoint **except** `Get Balances`
 
 3. Get Multiple Escrow Balance
 
-{% content-ref url="../api-reference/helpers/get-multiple-escrow-balance.md" %}
-[get-multiple-escrow-balance.md](../api-reference/helpers/get-multiple-escrow-balance.md)
+{% content-ref url="../api-reference/escrows/get-multiple-escrow-balance.md" %}
+[get-multiple-escrow-balance.md](../api-reference/escrows/get-multiple-escrow-balance.md)
 {% endcontent-ref %}
 
 ***
