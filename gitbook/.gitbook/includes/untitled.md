@@ -2,6 +2,6 @@
 title: Untitled
 ---
 
-{% content-ref url="../../developer-resources/smart-escrow-design/escrow-lifecycle/initiation-phase.md" %}
-[initiation-phase.md](../../developer-resources/smart-escrow-design/escrow-lifecycle/initiation-phase.md)
+{% content-ref url="../../technology-overview/smart-escrow-design/escrow-lifecycle/initiation-phase.md" %}
+[initiation-phase.md](../../technology-overview/smart-escrow-design/escrow-lifecycle/initiation-phase.md)
 {% endcontent-ref %}
