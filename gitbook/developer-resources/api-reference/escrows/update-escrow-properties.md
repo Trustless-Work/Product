@@ -18,7 +18,39 @@ icon: pencil
 
 <table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>Authorization</td><td><code>Bearer &#x3C;token></code></td></tr></tbody></table>
 
+### Roles:
 
+| Name             | Type   | Description                                                                          |
+| ---------------- | ------ | ------------------------------------------------------------------------------------ |
+| approver         | string | Address of the entity requiring the service.                                         |
+| serviceProvider  | string | Address of the entity providing the service.                                         |
+| plataformAddress | string | Address of the entity that owns the escrow                                           |
+| releaseSigner    | string | Address of the user in charge of releasing the escrow funds to the service provider. |
+| disputeResolver  | string | Address in charge of resolving disputes within the escrow.                           |
+| receiver         | string | Address where escrow proceeds will be sent to                                        |
+
+### Milestone:
+
+| Name         | Type    | Description                                                            |
+| ------------ | ------- | ---------------------------------------------------------------------- |
+| description  | string  | Text describing the function of the milestone.                         |
+| status       | string  | Milestone status. Ex: Approved, In dispute, etc...                     |
+| approvedFlag | boolean | Flag indicating whether a milestone has been approved by the approver. |
+
+### Flags
+
+| Name         | Type    | Description                                                       |
+| ------------ | ------- | ----------------------------------------------------------------- |
+| disputeFlag  | boolean | Flag indicating that an escrow is in dispute.                     |
+| releaseFlag  | boolean | Flag indicating that escrow funds have already been released.     |
+| resolvedFlag | boolean | Flag indicating that a disputed escrow has already been resolved. |
+
+### Trustline
+
+| Name     | Type   | Description                                                                |
+| -------- | ------ | -------------------------------------------------------------------------- |
+| address  | string | Public address establishing permission to accept and use a specific token. |
+| decimals | number | Number of decimals into which the token is divided.                        |
 
 ### Open API
 
@@ -29,8 +61,6 @@ icon: pencil
 ### **What this Endpoint returns?**
 
 This endpoint returns the transaction unsigned so that the transaction can be signed by means of a customer wallet.
-
-
 
 ### Use Example:
 
