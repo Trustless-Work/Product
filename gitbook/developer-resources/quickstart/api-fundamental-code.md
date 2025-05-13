@@ -438,8 +438,8 @@ Flow that must always be executed at each Endpoint **except** `Get Balances`
 
 7. Distribute Escrow Earnings
 
-{% content-ref url="../api-reference/escrows/distribute-escrow-funds.md" %}
-[distribute-escrow-funds.md](../api-reference/escrows/distribute-escrow-funds.md)
+{% content-ref url="../api-reference/escrows/release-funds.md" %}
+[release-funds.md](../api-reference/escrows/release-funds.md)
 {% endcontent-ref %}
 
 {% content-ref url="../../technology-overview/smart-escrow-design/escrow-lifecycle/release-phase.md" %}

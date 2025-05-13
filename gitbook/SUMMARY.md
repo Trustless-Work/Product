@@ -50,7 +50,7 @@
       * [Change Milestone Status](developer-resources/api-reference/escrows/change-milestone-status.md)
       * [Change Milestone Flag](developer-resources/api-reference/escrows/change-milestone-flag.md)
       * [Change Dispute Flag](developer-resources/api-reference/escrows/change-dispute-flag.md)
-      * [Distribute Escrow Earnings](developer-resources/api-reference/escrows/distribute-escrow-funds.md)
+      * [Release Funds](developer-resources/api-reference/escrows/release-funds.md)
       * [Update escrow properties](developer-resources/api-reference/escrows/update-escrow-properties.md)
     * [Helpers](developer-resources/api-reference/helpers/README.md)
       * [Set Trustline](developer-resources/api-reference/helpers/set-trustline.md)

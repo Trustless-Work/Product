@@ -3,25 +3,21 @@ description: You release the escrow funds to the service provider through the ap
 icon: square-dollar
 ---
 
-# Distribute Escrow Earnings
+# Release Funds
 
 ### Headers
 
 <table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>Authorization</td><td><code>Bearer &#x3C;token></code></td></tr></tbody></table>
 
-
-
 ### Open API
 
-{% openapi-operation spec="trustless-work-api-dev" path="/escrow/distribute-escrow-earnings" method="post" %}
+{% openapi-operation spec="trustless-work-api-dev" path="/escrow/release-funds" method="post" %}
 [Broken link](broken-reference)
 {% endopenapi-operation %}
 
 ### **What this Endpoint returns?**
 
 This endpoint returns the transaction unsigned so that the transaction can be signed by means of a customer wallet.
-
-
 
 ### Use Example:
 
