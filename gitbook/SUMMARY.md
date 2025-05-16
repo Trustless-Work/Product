@@ -34,6 +34,8 @@
 * [💻 Developer Resources](developer-resources/README.md)
   * [🚀 Smart Escrow API](developer-resources/smart-escrow-api.md)
   * [Quickstart](developer-resources/quickstart/README.md)
+    * [Integration Project](developer-resources/quickstart/integration-project/README.md)
+      * [Getting Started](developer-resources/quickstart/integration-project/getting-started.md)
     * [dApp locally](developer-resources/quickstart/dapp-locally.md)
     * [API Fundamental Code](developer-resources/quickstart/api-fundamental-code.md)
   * [API Reference](developer-resources/api-reference/README.md)

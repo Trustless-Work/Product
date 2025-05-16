@@ -226,9 +226,11 @@ export type MilestoneStatus = "" | ""; // You can set the necessary statuses
 
 export type Milestone = {
   description: string;
-  status?: MilestoneStatus;
-  approved_flag?: boolean;
+  status: MilestoneStatus;
+  evidence: string;
+  approvedFlag: boolean;
 };
+
 ```
 
 </details>
@@ -239,9 +241,9 @@ export type Milestone = {
 
 ```typescript
 export interface Trustline {
-  name: string;
-  trustline: string;
-  trustlineDecimals: number;
+  name?: string;
+  address: string;
+  decimals: number;
 }
 
 ```
@@ -253,14 +255,28 @@ export interface Trustline {
 <summary>Roles</summary>
 
 ```typescript
-export type RolesInEscrow =
-  | "issuer"
-  | "approver"
-  | "disputeResolver"
-  | "serviceProvider"
-  | "releaseSigner"
-  | "platformAddress"
-  | "reciever";
+export type Roles = {
+  approver: string;
+  serviceProvider: string;
+  platformAddress: string;
+  releaseSigner: string;
+  disputeResolver: string;
+  receiver: string;
+};
+```
+
+</details>
+
+<details>
+
+<summary>Flags</summary>
+
+```typescript
+export type Flags = {
+  disputeFlag?: boolean;
+  releaseFlag?: boolean;
+  resolvedFlag?: boolean;
+};
 ```
 
 </details>
@@ -284,54 +300,36 @@ export interface BalanceItem {
 
 ```typescript
 export interface Escrow {
-  id: string;
-  title: string;
-  description: string;
-  createdAt: CreatedAt;
-  updatedAt: UpdatedAt;
+  signer?: string;
   contractId?: string;
-  balance?: string;
-  trustline?: Trustline;
-  milestones: Milestone[];
-  serviceProvider: string;
   engagementId: string;
-  disputeResolver: string;
+  title: string;
+  roles: Roles;
+  description: string;
   amount: string;
-  platformAddress: string;
   platformFee: string;
-  approver: string;
-  releaseSigner: string;
-  user: string;
-  issuer: string;
-  disputeFlag?: boolean;
-  releaseFlag?: boolean;
-  resolvedFlag?: boolean;
-  approverFunds?: string;
-  serviceProviderFunds?: string;
-  receiver?: string;
-  receiverMemo?: number;
-  disputeStartedBy?: string;
+  balance?: string;
+  milestones: Milestone[];
+  flags?: Flags;
+  trustline: Trustline;
+  receiverMemo: number;
 }
 
 // Payloads to each Endpoint
-export type FundEscrowPayload = Pick<Escrow, "amount" | "contractId"> & {
-  signer: string;
-};
+import type { Escrow } from "./escrow.entity";
 
-export type DistributeEscrowEarningsEscrowPayload = Pick<Escrow, "contractId"> &
-  Partial<Pick<Escrow, "serviceProvider" | "releaseSigner">> & {
-    signer: string;
-  };
+// Payload base
+export type EscrowPayload = Escrow;
 
-export type EscrowPayload = Omit<
-  Escrow,
-  "user" | "createdAt" | "updatedAt" | "id" | "trustline"
->;
+export type InitializeEscrowPayload = Omit<
+  EscrowPayload, "contractId"
+> & {};
 
 export type ChangeMilestoneStatusPayload = {
   contractId?: string;
   milestoneIndex: string;
-  newStatus: MilestoneStatus;
+  newStatus: string;
+  evidence?: string;
   serviceProvider?: string;
 };
 
@@ -343,19 +341,60 @@ export type ChangeMilestoneFlagPayload = Omit<
   newFlag: boolean;
 };
 
-export type StartDisputePayload = Pick<Escrow, "contractId"> & {
+export type StartDisputePayload = {
+  contractId: string;
   signer: string;
 };
 
-export type ResolveDisputePayload = Pick<Escrow, "contractId"> &
-  Partial<Pick<Escrow, "disputeResolver">> & {
-    approverFunds: string;
-    serviceProviderFunds: string;
-  };
+export type ResolveDisputePayload = {
+  contractId: string;
+  disputeResolver?: string;
+  approverFunds: string;
+  receiverFunds: string;
+};
 
-export type EditMilestonesPayload = {
+export type FundEscrowPayload = {
+  amount: string;
+  contractId: string;
+  signer: string;
+};
+
+export type GetEscrowPayload = {
+  contractId: string;
+  signer: string;
+};
+
+export type ReleaseFundsEscrowPayload = {
+  contractId: string;
+  serviceProvider?: string;
+  releaseSigner?: string;
+  signer: string;
+};
+
+export type UpdateEscrowPayload = {
   contractId: string;
   escrow: EscrowPayload;
+  signer: string;
+};
+
+export type GetBalanceParams = {
+  signer: string;
+  addresses: string[];
+};
+
+export type EscrowPayloadService =
+  | Escrow
+  | InitializeEscrowPayload
+  | GetEscrowPayload
+  | ChangeMilestoneStatusPayload
+  | ChangeMilestoneFlagPayload
+  | StartDisputePayload
+  | ResolveDisputePayload
+  | FundEscrowPayload
+  | ReleaseFundsEscrowPayload
+  | UpdateEscrowPayload
+  | GetBalanceParams;
+crowPayload;
   signer: string;
 };
 ```
