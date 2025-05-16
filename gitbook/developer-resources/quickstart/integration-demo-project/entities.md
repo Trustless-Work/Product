@@ -240,3 +240,8 @@ export type HttpMethod = "get" | "post" | "put" | "delete";
 export type Status = "SUCCESS" | "FAILED";
 
 ```
+
+
+
+With these entities, you'll be able to keep typed all the interactions with our API.
+

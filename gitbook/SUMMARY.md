@@ -37,6 +37,7 @@
     * [Integration Demo Project](developer-resources/quickstart/integration-demo-project/README.md)
       * [Getting Started](developer-resources/quickstart/integration-demo-project/getting-started.md)
       * [Entities](developer-resources/quickstart/integration-demo-project/entities.md)
+      * [Configuration](developer-resources/quickstart/integration-demo-project/configuration.md)
     * [dApp locally](developer-resources/quickstart/dapp-locally.md)
     * [API Fundamental Code](developer-resources/quickstart/api-fundamental-code.md)
   * [API Reference](developer-resources/api-reference/README.md)
