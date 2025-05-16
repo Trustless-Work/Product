@@ -1,3 +1,7 @@
+---
+icon: flux-capacitor
+---
+
 # dApp locally
 
 How can I run the dApp locally in&#x20;order to have a code guide
