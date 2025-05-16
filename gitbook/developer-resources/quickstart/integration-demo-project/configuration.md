@@ -5,7 +5,7 @@ icon: gear
 
 # Configuration
 
-Overview
+## Overview
 
 In this section, we will configure the axios kit and stellar wallet. Everything you need to make it work.
 
@@ -13,7 +13,7 @@ In this section, we will configure the axios kit and stellar wallet. Everything 
 
 ## Environment Variables
 
-For this project, we'll use the dev environment. In order to request the API Key, please go to our  [**dApp**](https://dapp.dev.trustlesswork.com) **and request it. You can see this section below as well:**
+For this project, we'll use the dev environment. In order to request the API Key, please go to our  [**dApp**](https://dapp.dev.trustlesswork.com) and request it. You can see this section below as well:
 
 {% content-ref url="../../api-reference/authentication/request-api-key.md" %}
 [request-api-key.md](../../api-reference/authentication/request-api-key.md)
