@@ -9,11 +9,13 @@ icon: server
 
 ## Overview
 
-In order to have a good quality and clean code, we've generated a generic service which interacts with Trustless Work. Every response and payload are completely typed with the entities that we had defined before.
+In order to have a good quality and clean code, we've generated a generic service which interacts with Trustless Work.
 
 
 
 ## Generic Escrow Service
+
+Every response and payload are completely typed with the entities that we had defined before.
 
 ```typescript
 import http from "@/config/axios";
