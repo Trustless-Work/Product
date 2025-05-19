@@ -18,5 +18,5 @@ Trust**less Work demo is using TW API with the following packages:**
 * [**ShadCN** ](https://ui.shadcn.com/)for UI components.
 * [**React Hook Form**](https://react-hook-form.com/) for form handling.
 * [**Zod**](https://zod.dev/) for schemas handling.
-* [**Zustand** ](https://zustand-demo.pmnd.rs/) & [**Conext API**](https://legacy.reactjs.org/docs/context.html)  for global state management.
+* [**Context API**](https://legacy.reactjs.org/docs/context.html)  for global state management.
 
