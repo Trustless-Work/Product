@@ -2,21 +2,27 @@
 description: The ideal schema for this endpoint.
 ---
 
-# Fund Escrow Schema
+# Release Funds
 
 ## Schema
 
-This validates an escrow form using Zod, including wallet addresses and amount.
+This validates an escrow form using Zod, including wallet addresses.
 
 ```typescript
+import { isValidWallet } from "@/helpers/valid-data.helper";
 import { z } from "zod";
 
 export const formSchema = z.object({
   contractId: z.string().min(1, "Contract ID is required"),
+  releaseSigner: z
+    .string()
+    .min(1, {
+      message: "Release signer is required.",
+    })
+    .refine((value) => isValidWallet(value), {
+      message: "Release signer must be a valid wallet.",
+    }),
   signer: z.string().min(1, "Signer address is required"),
-  amount: z.string().min(1, {
-    message: "Amount is required.",
-  }),
 });
 
 ```
@@ -32,55 +38,70 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { formSchema } from "../schemas/fund-escrow-form.schema";
+import { formSchema } from "../schemas/release-funds-form.schema";
 import { escrowService } from "../services/escrow.service";
-import { toast } from "sonner";
 import { Escrow } from "@/@types/escrows/escrow.entity";
+import { toast } from "sonner";
 import { EscrowRequestResponse } from "@/@types/escrows/escrow-response.entity";
-import { FundEscrowPayload } from "@/@types/escrows/escrow-payload.entity";
+import { ReleaseFundsEscrowPayload } from "@/@types/escrows/escrow-payload.entity";
 
-export const useFundEscrowForm = () => {
+export const useReleaseFundsForm = () => {
   const { escrow } = useEscrowContext();
   const { setEscrow } = useEscrowContext();
   const { walletAddress } = useWalletContext();
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState<EscrowRequestResponse | null>(null);
-  const [error, setError] = useState<string | null>(null);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       contractId: escrow?.contractId || "",
-      amount: escrow?.amount?.toString() || "1000",
+      releaseSigner: escrow?.roles.releaseSigner || "",
       signer: walletAddress || "Connect your wallet to get your address",
     },
   });
 
-  const onSubmit = async (payload: FundEscrowPayload) => {
+  const onSubmit = async (payload: ReleaseFundsEscrowPayload) => {
     setLoading(true);
-    setError(null);
     setResponse(null);
 
     try {
+      /**
+       * API call by using the escrow service
+       * @Note:
+       * - We need to specify the endpoint and the method
+       * - We need to specify that the returnEscrowDataIsRequired is false
+       * - The result will be an EscrowRequestResponse
+       */
       const result = (await escrowService.execute({
         payload,
-        endpoint: "/escrow/fund-escrow",
+        endpoint: "/escrow/release-funds",
         method: "post",
         returnEscrowDataIsRequired: false,
       })) as EscrowRequestResponse;
 
+      /**
+       * @Responses:
+       * result.status === "SUCCESS"
+       * - Escrow updated successfully
+       * - Set the escrow in the context
+       * - Show a success toast
+       *
+       * result.status !== "SUCCESS"
+       * - Show an error toast
+       */
       if (result.status === "SUCCESS") {
         const escrowUpdated: Escrow = {
           ...escrow!,
-          balance:
-            escrow?.balance && Number(escrow.balance) > 0
-              ? (Number(escrow.balance) + Number(payload.amount)).toString()
-              : payload.amount,
+          flags: {
+            releaseFlag: true,
+          },
+          balance: "0",
         };
 
         setEscrow(escrowUpdated);
 
-        toast.info("Escrow Funded");
+        toast.info("The escrow has been released");
         setResponse(result);
       }
     } catch (err) {
@@ -92,12 +113,10 @@ export const useFundEscrowForm = () => {
     }
   };
 
-  return { form, loading, response, error, onSubmit };
+  return { form, loading, response, onSubmit };
 };
 
 ```
-
-
 
 ## Form
 
@@ -110,19 +129,18 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
   Form,
+  FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormControl,
   FormMessage,
 } from "@/components/ui/form";
-
-import { useFundEscrowForm } from "../../hooks/fund-escrow-form.hook";
+import { useReleaseFundsForm } from "../../hooks/release-funds-form.hook";
 import { useEscrowContext } from "@/providers/escrow.provider";
 import { ResponseDisplay } from "@/components/utils/response-display";
 
-export function FundEscrowForm() {
-  const { form, loading, response, onSubmit } = useFundEscrowForm();
+export function ReleaseFundsForm() {
+  const { form, loading, response, onSubmit } = useReleaseFundsForm();
   const { escrow } = useEscrowContext();
 
   return (
@@ -163,16 +181,12 @@ export function FundEscrowForm() {
 
           <FormField
             control={form.control}
-            name="amount"
+            name="releaseSigner"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Amount</FormLabel>
+                <FormLabel>Release Signer Address</FormLabel>
                 <FormControl>
-                  <Input
-                    disabled={Number(escrow?.balance) >= Number(escrow?.amount)}
-                    type="text"
-                    {...field}
-                  />
+                  <Input disabled placeholder="GSERVICE...XYZ" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -180,7 +194,7 @@ export function FundEscrowForm() {
           />
 
           <Button type="submit" className="w-full" disabled={loading}>
-            {loading ? "Funding..." : "Fund Escrow"}
+            {loading ? "Releasing..." : "Release Funds"}
           </Button>
         </form>
       </Form>
@@ -189,5 +203,5 @@ export function FundEscrowForm() {
     </div>
   );
 }
-
+typ
 ```
