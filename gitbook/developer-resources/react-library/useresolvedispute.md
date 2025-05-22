@@ -20,7 +20,7 @@ layout:
 
 ## Usage
 
-This custom hook exposes a mutation function to release the funds of an escrow.
+This custom hook exposes a mutation function to resolve a dispute in an escrow.
 
 {% code overflow="wrap" %}
 ```typescript

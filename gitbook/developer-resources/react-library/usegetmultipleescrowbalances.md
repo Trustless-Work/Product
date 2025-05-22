@@ -18,7 +18,7 @@ layout:
 
 ## Usage
 
-This custom hook exposes a mutation function to get the balances that you ar elooking obtain.
+This custom hook exposes a mutation function to get the balances that you are looking obtain.
 
 {% code overflow="wrap" %}
 ```typescript
@@ -51,12 +51,12 @@ await getMultipleBalances(payload);
 
 ### Mutation Function
 
-* getMultipleBalances\
+* `getMultipleBalances`\
   This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning data based on the provided payload.
 
 _Argument:_
 
-`SendTransactionPayload`: An object containing the required fields to send a transaction to the network.
+`GetBalanceParams` : An object containing the required fields to send a transaction to the network.
 
 {% content-ref url="../quickstart/integration-demo-project/entities.md" %}
 [entities.md](../quickstart/integration-demo-project/entities.md)
@@ -94,13 +94,13 @@ export const useGetMultipleEscrowBalancesForm = () => {
 /*
  * onSubmit function, this could be called by form button
 */
- const onSubmit = async (payload: GetEscrowPayload) => {
+ const onSubmit = async (payload: GetBalanceParams) => {
 
     try {
       /**
        * API call by using the trustless work hooks
        * @Note:
-       * - We need to pass the payload to the getMultipleBalancesfunction
+       * - We need to pass the payload to the getMultipleBalances function
        * - The result will be balances
       */
       await getMultipleBalances(payload);

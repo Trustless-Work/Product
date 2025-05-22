@@ -20,7 +20,7 @@ layout:
 
 ## Usage
 
-This custom hook exposes a mutation function to deploy an escrow.
+This custom hook exposes a mutation function to update an escrow.
 
 {% code overflow="wrap" %}
 ```typescript
@@ -79,7 +79,7 @@ import {
   UpdateEscrowPayload
 } from "@trustless-work/escrow/types";
 
-export const useUpdateEscrowForm= () => {
+export const useUpdateEscrowForm = () => {
 
  /*
   *  useUpdateEscrow

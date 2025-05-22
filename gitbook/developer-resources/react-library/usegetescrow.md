@@ -56,7 +56,7 @@ await getEscrow(payload);
 
 _Argument:_
 
-`SendTransactionPayload`: An object containing the required fields to send a transaction to the network.
+`GetEscrowParams`: An object containing the required fields to send a transaction to the network.
 
 {% content-ref url="../quickstart/integration-demo-project/entities.md" %}
 [entities.md](../quickstart/integration-demo-project/entities.md)
@@ -120,7 +120,7 @@ export const useGetEscrowForm = () => {
        * escrow === null
        * - Show an error toast
        */
-      if (escrow) {
+      if (escrow: Escrow) {
         toast.success("Escrow Received");
       }
     } catch (error: unknown) {

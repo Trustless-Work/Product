@@ -28,7 +28,7 @@ import { useFundEscrow } from "@trustless-work/escrow/hooks";
 import { FundEscrowPayload } from "@trustless-work/escrow/types";
 
 /*
- *  useChangeMilestoneApprovedFlag
+ *  useFundEscrow
 */
 const { fundEscrow, isPending, isError, isSuccess } = useFundEscrow();
 
