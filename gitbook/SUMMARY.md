@@ -83,7 +83,7 @@
       * [Get Multiple Escrow Balance](developer-resources/api-reference/escrows/get-multiple-escrow-balance.md)
   * [React Library](developer-resources/react-library/README.md)
     * [Getting Started](developer-resources/react-library/getting-started.md)
-    * [useInitializeEscrow](developer-resources/react-library/useinitializeescrow.md)
+    * [useChangeMilestoneApprovedFlag](developer-resources/react-library/usechangemilestoneapprovedflag.md)
   * [🚀 Smart Escrow API](developer-resources/smart-escrow-api.md)
   * [🧰 Essential Tools for Developers](developer-resources/essential-tools-for-developers/README.md)
     * [Stellar Wallets](developer-resources/essential-tools-for-developers/stellar-wallets/README.md)

@@ -143,9 +143,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 {% endstep %}
 
 {% step %}
-#### Using hooks
+#### Using hooks and entities
 
-You can now use the Trustless Work React hooks from any component wrapped by the root provider!
+You can now use the Trustless Work React hooks and entities from any component wrapped by the root provider!
 
 
 {% endstep %}
