@@ -41,24 +41,6 @@ const { unsignedTransaction } = await changeMilestoneApprovedFlag(payload);
 ```
 {% endcode %}
 
-### Hook Return Values
-
-```typescript
-const {
-  changeMilestoneApprovedFlag,
-  isPending,
-  isError,
-  isSuccess
-} = useChangeMilestoneApprovedFlag();
-
-```
-
-### changeMilestoneApprovedFlag Structure
-
-```typescript
-(payload: ChangeMilestoneApprovedFlagPayload) => UnsignedTransaction
-```
-
 ### Description of Return Values
 
 * **`isPending`**\
@@ -73,6 +55,10 @@ const {
 _Argument:_
 
 `ChangeMilestoneApprovedFlagPayload`: An object containing the required fields to approve a milestone.
+
+{% content-ref url="../entities.md" %}
+[entities.md](../entities.md)
+{% endcontent-ref %}
 
 _Return Value:_
 
@@ -131,7 +117,7 @@ export const useChangeMilestoneApprovedFlagForm = () => {
        * - We need to sign the transaction using your [private key] such as wallet
        * - The result will be a signed transaction
        */
-      const signedXdr = await signTransaction({
+      const signedXdr = await signTransaction({ /* This method should be provided by the wallet */
         unsignedTransaction,
         address: walletAddress || "",
       });
@@ -159,18 +145,13 @@ export const useChangeMilestoneApprovedFlagForm = () => {
        * data.status == "ERROR"
        * - Show an error toast
        */
-      if (data.status === "SUCCESS" && escrow) {
+      if (data.status === "SUCCESS") {
         toast.success(
           `Milestone index - ${payload.milestoneIndex} has been approved`
         );
       }
     } catch (error: unknown) {
-      const mappedError = handleError(error as AxiosError | WalletError);
-      console.error("Error:", mappedError.message);
-
-      toast.error(
-        mappedError ? mappedError.message : "An unknown error occurred"
-      );
+      // catch error logic
     }
   };
 }
