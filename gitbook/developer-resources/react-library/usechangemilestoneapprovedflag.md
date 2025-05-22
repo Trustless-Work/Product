@@ -70,7 +70,11 @@ const {
 * **`changeMilestoneApprovedFlag`**\
   This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning an unsigned transaction based on the provided payload.
 
+_Argument:_
+
 `ChangeMilestoneApprovedFlagPayload`: An object containing the required fields to approve a milestone.
+
+_Return Value:_
 
 `unsignedTransaction`: An object representing the constructed transaction, ready to be signed and broadcast.
 
