@@ -96,15 +96,15 @@ import {
   useSendTransaction,
 } from "@trustless-work/escrow/hooks";
 import {
-  FundEscrowPayload
+  useSomeEndpointPayload
 } from "@trustless-work/escrow/types";
 
-export const useFundEscrowForm= () => {
+export const useSomeEndpointForm= () => {
 
  /*
-  *  useFundEscrow
+  *  useSomeEndpoint
  */
- const { fundEscrow, isPending, isError, isSuccess } = useFundEscrow();
+ const { someFunction, isPending, isError, isSuccess } = useSomeEndpoint();
  
  /*
   *  useSendTransaction
@@ -114,7 +114,7 @@ export const useFundEscrowForm= () => {
 /*
  * onSubmit function, this could be called by form button
 */
- const onSubmit = async (payload: FundEscrowPayload) => {
+ const onSubmit = async (payload: useSomeEndpointPayload) => {
 
     try {
       // get unsignedTransaction from some endpoint ...
