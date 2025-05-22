@@ -1,8 +1,6 @@
 ---
-description: >-
-  Responsible for modifying the "flag" property of a specific milestone in the
-  escrow to approve that milestone.
-icon: thumbs-up
+description: Deploy the escrow contract and define the escrow properties.
+icon: circle-plus
 layout:
   title:
     visible: true
@@ -16,27 +14,27 @@ layout:
     visible: true
 ---
 
-# useChangeMilestoneApprovedFlag
+# useInitializeEscrow
 
 ## Usage
 
-This custom hook exposes a mutation function along with status flags to manage the approval of a milestone.
+This custom hook exposes a mutation function to deploy an escrow.
 
 {% code overflow="wrap" %}
 ```typescript
-import { useChangeMilestoneApprovedFlag } from "@trustless-work/escrow/hooks";
-import { ChangeMilestoneApprovedFlagPayload } from "@trustless-work/escrow/types";
+import { useInitializeEscrow } from "@trustless-work/escrow/hooks";
+import { InitializeEscrowPayload } from "@trustless-work/escrow/types";
 
 /*
- *  useChangeMilestoneApprovedFlag
+ *  useInitializeEscrow 
 */
-const { changeMilestoneApprovedFlag, isPending, isError, isSuccess } = useChangeMilestoneApprovedFlag();
+const { deployEscrow, isPending, isError, isSuccess } = useInitializeEscrow();
 
 /* 
  * It returns an unsigned transaction
- * payload should be of type `ChangeMilestoneApprovedFlagPayload`
+ * payload should be of type `InitializeEscrowPayload`
 */
-const { unsignedTransaction } = await changeMilestoneApprovedFlag(payload);
+const { unsignedTransaction } = await deployEscrow(payload);
 
 ```
 {% endcode %}
@@ -52,12 +50,12 @@ const { unsignedTransaction } = await changeMilestoneApprovedFlag(payload);
 
 ### Mutation Function
 
-* **`changeMilestoneApprovedFlag`**\
+* InitializeEscrowPayload\
   This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning an unsigned transaction based on the provided payload.
 
 _Argument:_
 
-`ChangeMilestoneApprovedFlagPayload`: An object containing the required fields to approve a milestone.
+InitializeEscrowPayload: An object containing the required fields to initialize an escrow.
 
 {% content-ref url="../quickstart/integration-demo-project/entities.md" %}
 [entities.md](../quickstart/integration-demo-project/entities.md)
@@ -71,22 +69,22 @@ _Return Value:_
 
 ## Usage Example
 
-{% code title="src/hooks/useChangeMilestoneApprovedFlagForm.ts" overflow="wrap" %}
+{% code title="src/hooks/useInitializeEscrowForm.ts" overflow="wrap" %}
 ```typescript
 import {
-  useChangeMilestoneApprovedFlag,
+  useInitializeEscrow,
   useSendTransaction,
 } from "@trustless-work/escrow/hooks";
 import {
-  ChangeMilestoneApprovedFlagPayload
+  InitializeEscrowPayload
 } from "@trustless-work/escrow/types";
 
-export const useChangeMilestoneApprovedFlagForm = () => {
+export const useInitializeEscrowForm = () => {
 
  /*
-  *  useChangeMilestoneApprovedFlag
+  *  useInitializeEscrow
  */
- const { changeMilestoneApprovedFlag, isPending, isError, isSuccess } = useChangeMilestoneApprovedFlag();
+ const { deployEscrow, isPending, isError, isSuccess } = useInitializeEscrow();
  
  /*
   *  useSendTransaction
@@ -96,22 +94,22 @@ export const useChangeMilestoneApprovedFlagForm = () => {
 /*
  * onSubmit function, this could be called by form button
 */
- const onSubmit = async (payload: ChangeMilestoneApprovedFlagPayload) => {
+ const onSubmit = async (payload: InitializeEscrowPayload) => {
 
     try {
       /**
        * API call by using the trustless work hooks
        * @Note:
-       * - We need to pass the payload to the changeMilestoneApprovedFlag function
+       * - We need to pass the payload to the deployEscrow function
        * - The result will be an unsigned transaction
        */
-      const { unsignedTransaction } = await changeMilestoneApprovedFlag(
+      const { unsignedTransaction } = await deployEscrow(
         payload
       );
 
       if (!unsignedTransaction) {
         throw new Error(
-          "Unsigned transaction is missing from changeMilestoneApprovedFlag response."
+          "Unsigned transaction is missing from deployEscrow response."
         );
       }
 
@@ -136,7 +134,7 @@ export const useChangeMilestoneApprovedFlagForm = () => {
        */
       const data = await sendTransaction({
         signedXdr,
-        returnEscrowDataIsRequired: false,
+        returnEscrowDataIsRequired: true, // make sure that in initialize this property is true
       });
 
       /**
@@ -149,9 +147,7 @@ export const useChangeMilestoneApprovedFlagForm = () => {
        * - Show an error toast
        */
       if (data.status === "SUCCESS") {
-        toast.success(
-          `Milestone index - ${payload.milestoneIndex} has been approved`
-        );
+        toast.success("Escrow Created");
       }
     } catch (error: unknown) {
       // catch error logic

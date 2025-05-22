@@ -15,8 +15,8 @@ In this section, we will configure the axios kit and stellar wallet. Everything 
 
 For this project, we'll use the dev environment. In order to request the API Key, please go to our  [**dApp**](https://dapp.dev.trustlesswork.com) and request it. You can see this section below as well:
 
-{% content-ref url="../../authentication/request-api-key.md" %}
-[request-api-key.md](../../authentication/request-api-key.md)
+{% content-ref url="../../api-reference/authentication/request-api-key.md" %}
+[request-api-key.md](../../api-reference/authentication/request-api-key.md)
 {% endcontent-ref %}
 
 ```markup
