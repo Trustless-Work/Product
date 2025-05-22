@@ -8,7 +8,7 @@ Welcome to **Trustless Work** — your gateway to programmable, secure, and non-
 
 This guide is your launchpad whether you're:
 
-* A **developer** exploring our [API](../developer-resources/quickstart/api-fundamental-code.md)
+* A **developer** exploring our [API](broken-reference)
 * A **product team** testing use cases via our [no-code dApp](http://dapp.trustlesswork.com/)
 * A **business** aiming to scale global payments with programmable trust
 
@@ -65,7 +65,7 @@ We’ve built a lightweight dApp to help you deploy escrows without writing code
 
 Use our [developer resources](../developer-resources/) to:
 
-* Call the [Trustless Work API](../developer-resources/quickstart/api-fundamental-code.md)
+* Call the [Trustless Work API](broken-reference)
 * Reuse open-source templates (React, Soroban)
 * Extend with your own integrations
 
