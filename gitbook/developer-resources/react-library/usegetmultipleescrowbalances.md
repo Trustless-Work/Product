@@ -56,7 +56,7 @@ await getMultipleBalances(payload);
 
 _Argument:_
 
-`GetBalanceParams` : An object containing the required fields to send a transaction to the network.
+`GetBalanceParams` : An object containing the required fields to get the balances.
 
 {% content-ref url="../quickstart/integration-demo-project/entities.md" %}
 [entities.md](../quickstart/integration-demo-project/entities.md)
