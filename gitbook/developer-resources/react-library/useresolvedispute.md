@@ -1,8 +1,8 @@
 ---
 description: >-
-  Responsible for modifying the "flag" property of a specific milestone in the
-  escrow to approve that milestone.
-icon: thumbs-up
+  Resolves escrow disputes by distributing funds to the approver and service
+  provider as determined by the dispute resolver.
+icon: handshake-simple
 layout:
   title:
     visible: true
@@ -16,27 +16,27 @@ layout:
     visible: true
 ---
 
-# useChangeMilestoneApprovedFlag
+# useResolveDispute
 
 ## Usage
 
-This custom hook exposes a mutation function along with status flags to manage the approval of a milestone.
+This custom hook exposes a mutation function to release the funds of an escrow.
 
 {% code overflow="wrap" %}
 ```typescript
-import { useChangeMilestoneApprovedFlag } from "@trustless-work/escrow/hooks";
-import { ChangeMilestoneApprovedFlagPayload } from "@trustless-work/escrow/types";
+import { useResolveDispute } from "@trustless-work/escrow/hooks";
+import { ResolveDisputePayload } from "@trustless-work/escrow/types";
 
 /*
- *  useChangeMilestoneApprovedFlag
+ *  useResolveDispute
 */
-const { changeMilestoneApprovedFlag, isPending, isError, isSuccess } = useChangeMilestoneApprovedFlag();
+const { resolveDispute, isPending, isError, isSuccess } = useResolveDispute();
 
 /* 
  * It returns an unsigned transaction
- * payload should be of type `ChangeMilestoneApprovedFlagPayload`
+ * payload should be of type `ResolveDisputePayload`
 */
-const { unsignedTransaction } = await changeMilestoneApprovedFlag(payload);
+const { unsignedTransaction } = await resolveDispute(payload);
 
 ```
 {% endcode %}
@@ -52,12 +52,12 @@ const { unsignedTransaction } = await changeMilestoneApprovedFlag(payload);
 
 ### Mutation Function
 
-* **`changeMilestoneApprovedFlag`**\
+* `resolveDispute`\
   This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning an unsigned transaction based on the provided payload.
 
 _Argument:_
 
-`ChangeMilestoneApprovedFlagPayload`: An object containing the required fields to approve a milestone.
+`ResolveDisputePayload`: An object containing the required fields to resolve the dispute in the escrow.
 
 {% content-ref url="../quickstart/integration-demo-project/entities.md" %}
 [entities.md](../quickstart/integration-demo-project/entities.md)
@@ -71,22 +71,22 @@ _Return Value:_
 
 ## Usage Example
 
-{% code title="src/hooks/useChangeMilestoneApprovedFlagForm.ts" overflow="wrap" %}
+{% code title="src/hooks/useResolveDisputeForm.ts" overflow="wrap" %}
 ```typescript
 import {
-  useChangeMilestoneApprovedFlag,
+  useResolveDispute,
   useSendTransaction,
 } from "@trustless-work/escrow/hooks";
 import {
-  ChangeMilestoneApprovedFlagPayload
+  ResolveDisputePayload
 } from "@trustless-work/escrow/types";
 
-export const useChangeMilestoneApprovedFlagForm = () => {
+export const useStartDisputeForm = () => {
 
  /*
-  *  useChangeMilestoneApprovedFlag
+  *  useResolveDispute
  */
- const { changeMilestoneApprovedFlag, isPending, isError, isSuccess } = useChangeMilestoneApprovedFlag();
+ const { resolveDispute, isPending, isError, isSuccess } = useResolveDispute();
  
  /*
   *  useSendTransaction
@@ -96,22 +96,22 @@ export const useChangeMilestoneApprovedFlagForm = () => {
 /*
  * onSubmit function, this could be called by form button
 */
- const onSubmit = async (payload: ChangeMilestoneApprovedFlagPayload) => {
+ const onSubmit = async (payload: ResolveDisputePayload) => {
 
     try {
       /**
        * API call by using the trustless work hooks
        * @Note:
-       * - We need to pass the payload to the changeMilestoneApprovedFlag function
+       * - We need to pass the payload to the resolveDispute function
        * - The result will be an unsigned transaction
        */
-      const { unsignedTransaction } = await changeMilestoneApprovedFlag(
+      const { unsignedTransaction } = await resolveDispute(
         payload
       );
 
       if (!unsignedTransaction) {
         throw new Error(
-          "Unsigned transaction is missing from changeMilestoneApprovedFlag response."
+          "Unsigned transaction is missing from resolveDispute."
         );
       }
 
@@ -142,16 +142,14 @@ export const useChangeMilestoneApprovedFlagForm = () => {
       /**
        * @Responses:
        * data.status === "SUCCESS"
-       * - Milestones approved successfully
+       * - Dispute resolved successfully
        * - Show a success toast
        *
        * data.status == "ERROR"
        * - Show an error toast
        */
       if (data.status === "SUCCESS") {
-        toast.success(
-          `Milestone index - ${payload.milestoneIndex} has been approved`
-        );
+         toast.success("Dispute Resolved");
       }
     } catch (error: unknown) {
       // catch error logic

@@ -1,6 +1,6 @@
 ---
 description: Returns all the information of an escrow requested through the contractId.
-icon: get-pocket
+icon: square-list
 layout:
   title:
     visible: true
@@ -14,7 +14,7 @@ layout:
     visible: true
 ---
 
-# Get Escrow by Contract ID
+# Get Escrow
 
 ### **Headers**
 

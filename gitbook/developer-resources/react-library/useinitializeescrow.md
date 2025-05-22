@@ -50,12 +50,12 @@ const { unsignedTransaction } = await deployEscrow(payload);
 
 ### Mutation Function
 
-* InitializeEscrowPayload\
+* `deployEscrow`\
   This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning an unsigned transaction based on the provided payload.
 
 _Argument:_
 
-InitializeEscrowPayload: An object containing the required fields to initialize an escrow.
+`InitializeEscrowPayload`: An object containing the required fields to initialize an escrow.
 
 {% content-ref url="../quickstart/integration-demo-project/entities.md" %}
 [entities.md](../quickstart/integration-demo-project/entities.md)
@@ -69,10 +69,8 @@ _Return Value:_
 
 ## Usage Example
 
-{% code title="src/hooks/useInitializeEscrowForm.ts" overflow="wrap" %}
-```typescript
-import {
-  useInitializeEscrow,
+<pre class="language-typescript" data-title="src/hooks/useInitializeEscrowForm.ts" data-overflow="wrap"><code class="lang-typescript"><strong>import {
+</strong>  useInitializeEscrow,
   useSendTransaction,
 } from "@trustless-work/escrow/hooks";
 import {
@@ -140,7 +138,7 @@ export const useInitializeEscrowForm = () => {
       /**
        * @Responses:
        * data.status === "SUCCESS"
-       * - Escrow updated successfully
+       * - Escrow initialized successfully
        * - Show a success toast
        *
        * data.status == "ERROR"
@@ -155,6 +153,5 @@ export const useInitializeEscrowForm = () => {
   };
 }
 
-```
-{% endcode %}
+</code></pre>
 
