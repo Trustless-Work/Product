@@ -60,4 +60,4 @@ icon: books
 
 ### Escrow flow:
 
-<figure><img src="../.gitbook/assets/Escrow_Schema.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Escrow_Schema.png" alt=""><figcaption></figcaption></figure>

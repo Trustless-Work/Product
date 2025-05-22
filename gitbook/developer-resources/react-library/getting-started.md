@@ -60,7 +60,7 @@ yarn add @trustless-work/escrow
 
 The next step is to configure the Trustless Work provider. You need to configure the following:
 
-* `baseURL`: Trustless Work URL, this should be the main or development environment.
+* `baseURL`: Trustless Work URL, this should be the main or development environment. We provide `mainNet`and `development`constants. So you only need to import one of them and pass it to the baseURL prop.
 * `apiKey`: Authorization provided by our dApp to use the API.
 
 Trustless Work React provides the `TrustlessWorkConfig` to provides all the custom hooks and entities to the whole project. To achieve this you'll need to create a Provider.
