@@ -1,5 +1,6 @@
 ---
-description: How to get started in Trustless Work API
+description: How to get started in Trustless Work API REST
+icon: play
 ---
 
 # Introduction
