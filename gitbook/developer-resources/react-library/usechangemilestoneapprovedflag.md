@@ -49,6 +49,9 @@ const { unsignedTransaction } = await changeMilestoneApprovedFlag(payload);
   A boolean status flag that becomes `true` if the mutation fails.
 * **`isSuccess`**\
   A boolean status flag that becomes `true` once the mutation completes successfully.
+
+### Mutation Function
+
 * **`changeMilestoneApprovedFlag`**\
   This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning an unsigned transaction based on the provided payload.
 
@@ -56,8 +59,8 @@ _Argument:_
 
 `ChangeMilestoneApprovedFlagPayload`: An object containing the required fields to approve a milestone.
 
-{% content-ref url="../entities.md" %}
-[entities.md](../entities.md)
+{% content-ref url="../quickstart/integration-demo-project/entities.md" %}
+[entities.md](../quickstart/integration-demo-project/entities.md)
 {% endcontent-ref %}
 
 _Return Value:_

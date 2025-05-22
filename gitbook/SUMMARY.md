@@ -34,7 +34,7 @@
 * [💻 Developer Resources](developer-resources/README.md)
   * [Introduction](developer-resources/api-reference/introduction/README.md)
   * [Schema](developer-resources/api-reference/escrows/schema.md)
-  * [Entities](developer-resources/entities.md)
+  * [Entities](developer-resources/quickstart/integration-demo-project/entities.md)
   * [Quickstart](developer-resources/quickstart/README.md)
     * [Integration Demo Project](developer-resources/quickstart/integration-demo-project/README.md)
       * [Getting Started](developer-resources/quickstart/integration-demo-project/getting-started.md)
