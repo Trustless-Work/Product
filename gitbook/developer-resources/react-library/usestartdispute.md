@@ -59,8 +59,8 @@ _Argument:_
 
 `StartDisputePayload`: An object containing the required fields to start a dispute in the escrow.
 
-{% content-ref url="../quickstart/integration-demo-project/entities.md" %}
-[entities.md](../quickstart/integration-demo-project/entities.md)
+{% content-ref url="../types/" %}
+[types](../types/)
 {% endcontent-ref %}
 
 _Return Value:_

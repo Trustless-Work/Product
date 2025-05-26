@@ -58,8 +58,8 @@ _Argument:_
 
 `GetBalanceParams` : An object containing the required fields to get the balances.
 
-{% content-ref url="../quickstart/integration-demo-project/entities.md" %}
-[entities.md](../quickstart/integration-demo-project/entities.md)
+{% content-ref url="../types/" %}
+[types](../types/)
 {% endcontent-ref %}
 
 _Return Value:_
@@ -85,11 +85,6 @@ export const useGetMultipleEscrowBalancesForm = () => {
   *  useGetMultipleEscrowBalances
  */
  const { getMultipleBalances, balances, isPending, isError, isSuccess } = useGetMultipleEscrowBalances();
- 
- /*
-  *  useSendTransaction
- */
- const { sendTransaction, isPending, isError, isSuccess } = useSendTransaction();
 
 /*
  * onSubmit function, this could be called by form button

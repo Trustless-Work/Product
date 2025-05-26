@@ -58,8 +58,8 @@ _Argument:_
 
 `GetEscrowParams`: An object containing the required fields to get the escrow.
 
-{% content-ref url="../quickstart/integration-demo-project/entities.md" %}
-[entities.md](../quickstart/integration-demo-project/entities.md)
+{% content-ref url="../types/" %}
+[types](../types/)
 {% endcontent-ref %}
 
 _Return Value:_
@@ -86,11 +86,6 @@ export const useGetEscrowForm = () => {
   *  useGetEscrow
  */
  const { getEscrow, escrow, isPending, isError, isSuccess } = useGetEscrow();
- 
- /*
-  *  useSendTransaction
- */
- const { sendTransaction, isPending, isError, isSuccess } = useSendTransaction();
 
 /*
  * onSubmit function, this could be called by form button

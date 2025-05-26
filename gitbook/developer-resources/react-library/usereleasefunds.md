@@ -57,8 +57,8 @@ _Argument:_
 
 `ReleaseFundsPayload`: An object containing the required fields to release the funds.
 
-{% content-ref url="../quickstart/integration-demo-project/entities.md" %}
-[entities.md](../quickstart/integration-demo-project/entities.md)
+{% content-ref url="../types/" %}
+[types](../types/)
 {% endcontent-ref %}
 
 _Return Value:_

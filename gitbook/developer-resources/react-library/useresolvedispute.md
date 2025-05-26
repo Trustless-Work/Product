@@ -59,8 +59,8 @@ _Argument:_
 
 `ResolveDisputePayload`: An object containing the required fields to resolve the dispute in the escrow.
 
-{% content-ref url="../quickstart/integration-demo-project/entities.md" %}
-[entities.md](../quickstart/integration-demo-project/entities.md)
+{% content-ref url="../types/" %}
+[types](../types/)
 {% endcontent-ref %}
 
 _Return Value:_

@@ -67,8 +67,8 @@ _Argument:_
 
 `SendTransactionPayload`: An object containing the required fields to send a transaction to the network.
 
-{% content-ref url="../quickstart/integration-demo-project/entities.md" %}
-[entities.md](../quickstart/integration-demo-project/entities.md)
+{% content-ref url="../types/" %}
+[types](../types/)
 {% endcontent-ref %}
 
 _Return Value:_

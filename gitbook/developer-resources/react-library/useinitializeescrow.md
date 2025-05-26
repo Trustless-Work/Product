@@ -57,8 +57,8 @@ _Argument:_
 
 `InitializeEscrowPayload`: An object containing the required fields to initialize an escrow.
 
-{% content-ref url="../quickstart/integration-demo-project/entities.md" %}
-[entities.md](../quickstart/integration-demo-project/entities.md)
+{% content-ref url="../types/" %}
+[types](../types/)
 {% endcontent-ref %}
 
 _Return Value:_
