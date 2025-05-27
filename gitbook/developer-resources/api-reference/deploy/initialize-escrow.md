@@ -35,7 +35,7 @@ icon: circle-plus
 | address  | string | Public address establishing permission to accept and use a specific token. |
 | decimals | number | Number of decimals into which the token is divided.                        |
 
-### Open API
+### Initialize Escrow
 
 {% openapi-operation spec="trustless-work-api-dev" path="/deployer/invoke-deployer-contract" method="post" %}
 [Broken link](broken-reference)
