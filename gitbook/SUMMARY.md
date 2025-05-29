@@ -16,7 +16,6 @@
     * [🔮 Future Vision](readme/our-journey-so-far/future-vision.md)
 * [📌 Start Here](getting-started/README.md)
   * [☀️ About Trustless Work](getting-started/about-trustless-work/README.md)
-    * [Vision and Mission](getting-started/about-trustless-work/vision-and-mission.md)
     * [Team](getting-started/about-trustless-work/team.md)
 * [⚒️ Understanding Smart Escrows](technology-overview/README.md)
   * [🥸 Smart Escrow Design](technology-overview/smart-escrow-design/README.md)

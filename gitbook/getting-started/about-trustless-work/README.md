@@ -58,11 +58,3 @@ By reducing the time, cost, and technical barriers traditionally associated with
 
 ***
 
-### **Next Steps**
-
-Learn more about how we’re building trust and innovation in payments:
-
-* **Our Vision and Mission**: Dive deeper into our purpose.
-* **Our Journey So Far**: Explore the milestones that shaped Trustless Work.
-* **Meet the Team**: Get to know the people behind the platform.
-

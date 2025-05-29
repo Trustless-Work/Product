@@ -24,10 +24,6 @@ Each phase plays a crucial role in the lifecycle, and each participating party h
 
 To understand how roles interact accross the lifecycle, visit the [Roles in Trustless Work](roles-in-trustless-work.md)
 
-{% content-ref url="roles-in-trustless-work.md" %}
-[roles-in-trustless-work.md](roles-in-trustless-work.md)
-{% endcontent-ref %}
-
 ### Escrow Design
 
 Start designing your escrow configurations visually using our Excalidraw or Figma (old)  template. Feel free to copy it and accelerate your Go To market by correctly planning your Trustless Work integration!
