@@ -5,18 +5,15 @@ icon: key
 
 # Request Api Key
 
-The first step is to register in our dApp, in order to be able to have an user and get our API Key. Here's the link to our DApp:&#x20;
-
-{% embed url="https://dapp.trustlesswork.com" %}
-
-In order to get registered,  you have to connect with a Stellar wallet. If you do not yet have one, or have never used one, there is more information in the following section:&#x20;
+API keys can be requested in our Dapp. You will require a Stellar wallet. If you do not yet have one, or have never used one, there is more information in the following section:&#x20;
 
 {% content-ref url="../../essential-tools-for-developers/stellar-wallets/" %}
 [stellar-wallets](../../essential-tools-for-developers/stellar-wallets/)
 {% endcontent-ref %}
 
-Once you have a wallet, the login process is straightforward. Just go to dapp.trustlesswork.com, and click login, this should ask for a signature and then you are in! \
+Login with your wallet login to our Dapp. You will have to sign to login. This will create a user profile. Here's the link to our DApp:&#x20;
 
+{% embed url="https://dapp.trustlesswork.com" %}
 
 {% embed url="https://www.loom.com/share/6f026af40ab9494faad1d5dd0c645e3f?sid=af58cfa1-9c5f-48dd-bb41-7a9636055d16" %}
 
