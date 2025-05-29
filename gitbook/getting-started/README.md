@@ -8,9 +8,8 @@ Welcome to **Trustless Work** — your gateway to programmable, secure, and non-
 
 This guide is your launchpad whether you're:
 
-* A **developer** exploring our [API](broken-reference)
-* A **product team** testing use cases via our [no-code dApp](http://dapp.trustlesswork.com/)
-* A **business** aiming to scale global payments with programmable trust
+* A **developer** exploring our [API](../developer-resources/)
+* A **product team** testing our [dApp](http://dapp.trustlesswork.com/)
 
 ***
 
@@ -35,12 +34,7 @@ Trustless Work is a blockchain-powered, **Escrow-as-a-Service** platform. We hel
 
 Before deploying, define the **roles and responsibilities** within your escrow flow.
 
-Use our [**Escrow Desig**](../technology-overview/smart-escrow-design/)**n Framework** to configure:
-
-* Milestone markers
-* Approvers
-* Release signers
-* Receivers
+Use our [**Escrow Desig**](../technology-overview/smart-escrow-design/)**n Framework** to design the flows:
 
 💡 Not sure how to structure it? Check our [use cases](../use-cases-unlocking-the-potential-of-smart-escrows/)
 
@@ -65,7 +59,7 @@ We’ve built a lightweight dApp to help you deploy escrows without writing code
 
 Use our [developer resources](../developer-resources/) to:
 
-* Call the [Trustless Work API](broken-reference)
+* Call the [Trustless Work API](../developer-resources/api-reference/)
 * Reuse open-source templates (React, Soroban)
 * Extend with your own integrations
 
