@@ -1,19 +1,22 @@
 ---
 description: >-
-  Allows users to deposit funds into an existing escrow contract, securing them
-  until the agreed conditions are met.
-icon: sack-dollar
+  Responsible for changing the milestone status of an escrow through the service
+  provider.
+icon: hexagon-check
 ---
 
-# Fund Escrow
+# Change Milestone Status
 
 ### **Headers**
 
-<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>Authorization</td><td><code>Bearer &#x3C;token></code></td></tr></tbody></table>
+| Name          | Value              |
+| ------------- | ------------------ |
+| Content-Type  | `application/json` |
+| Authorization | `Bearer <token>`   |
 
-### **Open API**
+### Open API
 
-{% openapi-operation spec="trustless-work-api-dev" path="/escrow/fund-escrow" method="post" %}
+{% openapi-operation spec="trustless-work-api-dev" path="/escrow/single-release/change-milestone-status" method="post" %}
 [Broken link](broken-reference)
 {% endopenapi-operation %}
 
@@ -21,9 +24,9 @@ icon: sack-dollar
 
 This endpoint returns the transaction unsigned so that the transaction can be signed by means of a customer wallet.
 
-### Use Example:
+### **Use example:**
 
-```typescript
+```javascript
 import axios from "axios";
 
 const http = axios.create({
@@ -40,7 +43,7 @@ export const useExample = async () => {
     const { address } = await kit.getAddress();
 
     const response = await http.post(
-      "/escrow/fund-escrow",
+      "/escrow/single-release/change-milestone-status",
       {
         // body requested for the endpoint
       },
@@ -65,3 +68,6 @@ export const useExample = async () => {
     return data;
 }
 ```
+
+
+

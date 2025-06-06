@@ -1,8 +1,9 @@
 ---
-icon: plane-departure
 description: >-
   The Deploy endpoints allow users to deploy escrows efficiently. These
   endpoints provide the way to initialize escrows in the Stellar's Blockchain.
+hidden: true
+icon: plane-departure
 ---
 
 # Deploy
