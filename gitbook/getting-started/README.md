@@ -1,46 +1,43 @@
 ---
-description: Integrate Smart Escrows in Minutes
+description: >-
+  This guide takes you from zero to escrow in just a few steps — whether you’re
+  prototyping, testing, or preparing for production.
 ---
 
-# 📌 Start Here
+# 🚀 Developer Quickstart
 
-Welcome to **Trustless Work** — your gateway to programmable, secure, and non-custodial escrows powered by blockchain.
+### 🧠 1. Understand the Model (Optional but Recommended)
 
-This guide is your launchpad whether you're:
+Trustless Work is an **Escrow-as-a-Service** platform that lets you securely hold funds in a programmable, non-custodial escrow until milestones are completed and approved.
 
-* A **developer** exploring our [API](../developer-resources/)
-* A **product team** testing our [dApp](http://dapp.trustlesswork.com/)
-
-***
-
-### 🧠 1. Understand the Basics
-
-**What is Trustless Work?**\
-Trustless Work is a blockchain-powered, **Escrow-as-a-Service** platform. We help you integrate milestone-based payments with **zero custodians** and **maximum flexibility**.
-
-**Why use it?**
+✅ Why it matters:
 
 * 🚀 Launch escrow flows in minutes, not months
-* 🔐 Secure, neutral payment infrastructure
-* 💸 Save on dev costs and transaction fees
-* 🌍 Enable global, stablecoin-based payments
+* 🔐 Secure, neutral, role-based fund control
+* 💸 Save on dev effort and avoid smart contract audits
+* 🌍 Enable global, stablecoin-based payments using Stellar + USDC
 
 📚 [Read how it works](../technology-overview/)\
 📖 [Explore use cases](../use-cases-unlocking-the-potential-of-smart-escrows/)
 
 ***
 
-### 🧪 2. Design Your Escrow Lifecycle
+### ✍️ 2. Design Your Escrow Lifecycle
 
-Before deploying, define the **roles and responsibilities** within your escrow flow.
+Before deploying, define:
 
-Use our [**Escrow Desig**](../technology-overview/smart-escrow-design/)**n Framework** to design the flows:
+* Who can **mark milestones** as done
+* Who must **approve work**
+* Who can **release funds**
+* Who can **resolve disputes**
 
-💡 Not sure how to structure it? Check our [use cases](../use-cases-unlocking-the-potential-of-smart-escrows/)
+→ [Escrow Roles & Permissions](../technology-overview/roles-in-trustless-work.md)
+
+Not sure how to structure it? → Check example flows
 
 ***
 
-### 🧰 3. Deploy and Test on Our dApp
+### 🧰 3. Deploy and Test on Our dApps
 
 We’ve built a lightweight dApp to help you deploy escrows without writing code.
 
@@ -55,13 +52,14 @@ We’ve built a lightweight dApp to help you deploy escrows without writing code
 
 ***
 
-### 🛠️ 4. Start Building
+### 🛠️ 4. Build Your Own Integration
 
 Use our [developer resources](../developer-resources/) to:
 
-* Call the [Trustless Work API](../developer-resources/api-reference/)
-* Reuse open-source templates (React, Soroban)
-* Extend with your own integrations
+* 🔑 Request an API Key
+* ⚙️ Call the [Trustless Work API](../api-reference/)
+* 💻 Use the React SDK
+* 🧩 Reuse Open Source Templates
 
 Have a question or want to propose a feature?\
 📩 [Contact](../appendices/contact-and-support.md) the team or [open an issue](https://github.com/Trustless-Work)
@@ -80,7 +78,7 @@ We grow in public — and you can join us:
 
 ### 📈 Next Steps
 
-* ➡️ Understand [roles & permissions](../technology-overview/smart-escrow-design/roles-in-trustless-work.md)
+* ➡️ Understand [roles & permissions](../technology-overview/roles-in-trustless-work.md)
 * ➡️ Explore vertical [use cases](../use-cases-unlocking-the-potential-of-smart-escrows/)
 * ➡️ [Join the community](../community-and-roadmap/community.md)
 

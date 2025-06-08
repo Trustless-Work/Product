@@ -19,7 +19,7 @@
 * **Released:** Set to true when the release transaction has been signed and funds have been released.
 * **Resolved:** Set to true when the dispute resovler has had to interfere.
 
-**Roles:** roles are assigned to parties, represented by Stellar public addresses. Depending on each party's role, they will be allowed to sign and update the escrow status and flags. Learn more about roles [here](roles-in-trustless-work.md)
+**Roles:** roles are assigned to parties, represented by Stellar public addresses. Depending on each party's role, they will be allowed to sign and update the escrow status and flags. Learn more about roles [here](../roles-in-trustless-work.md)
 
 **Milestones:** &#x20;
 

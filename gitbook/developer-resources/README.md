@@ -1,4 +1,4 @@
-# 💻 Developer Resources
+# 💻 Developer Guide
 
 {% content-ref url="../getting-started/" %}
 [getting-started](../getting-started/)
@@ -8,8 +8,8 @@
 [smart-escrow-design](../technology-overview/smart-escrow-design/)
 {% endcontent-ref %}
 
-{% content-ref url="api-reference/" %}
-[api-reference](api-reference/)
+{% content-ref url="../api-reference/" %}
+[api-reference](../api-reference/)
 {% endcontent-ref %}
 
 {% content-ref url="essential-tools-for-developers/stellar-wallets/" %}
