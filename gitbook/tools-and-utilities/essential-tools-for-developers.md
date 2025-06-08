@@ -24,7 +24,7 @@ Recommended wallets:
 | **Albedo**    | Web-based         | Lightweight signing + auth             | [albedo.link](https://albedo.link/)         |
 | **Lobstr**    | Mobile & Web      | User-friendly, great for real usage    | [lobstr.co](https://lobstr.co/)             |
 
-🔗 Learn more in the[ Wallets & Testnet ](stellar-wallets/)Guide
+🔗 Learn more in the[ Wallets & Testnet ](../developer-resources/stellar-wallets/)Guide
 
 ***
 
@@ -46,7 +46,7 @@ Trustless Work is live on Stellar testnet. You can use testnet USDC and XLM to f
 
 💡 Remember: You must establish a trustline before receiving USDC. Most wallets offer this in their UI.
 
-[Learn more.](testnet-tokens.md)
+[Learn more.](../developer-resources/testnet-tokens.md)
 
 ***
 

@@ -7,8 +7,8 @@ icon: key
 
 API keys can be requested in our Dapp. You will require a Stellar wallet. If you do not yet have one, or have never used one, there is more information in the following section:&#x20;
 
-{% content-ref url="../../../technology-overview/stellar-wallets/" %}
-[stellar-wallets](../../../technology-overview/stellar-wallets/)
+{% content-ref url="../../stellar-wallets/" %}
+[stellar-wallets](../../stellar-wallets/)
 {% endcontent-ref %}
 
 Login with your wallet login to our Dapp. You will have to sign to login. This will create a user profile. Here's the link to our DApp:&#x20;
