@@ -1,34 +1,64 @@
-# 🥸 Smart Escrow Design
-
-Welcome to the Smart Escrow Design section.&#x20;
+# Smart Escrow Design
 
 <figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
+A **Smart Escrow** is a programmable contract that defines:
+
+* Who can take action
+* When funds can move
+* Under what conditions milestones are met
+
+Trustless Work escrows are built to be flexible — you define the **roles**, **milestones**, and **release logic**, and we handle the rest.
+
+***
+
+### 🔧 What You Define in Each Escrow
+
+Every escrow requires a few key pieces of data:
+
+| Field             | Description                                     |
+| ----------------- | ----------------------------------------------- |
+| `receiver`        | Final recipient of funds                        |
+| `amount`          | Total value locked in the escrow                |
+| `releaseSigner`   | Who signs off on fund release                   |
+| `milestoneMarker` | Who marks work as done                          |
+| `approver`        | Who approves work                               |
+| `disputeResolver` | Who can resolve disputes                        |
+| `platform`        | address for commission fee                      |
+| `milestones`      | Description, status, amounts per milestone      |
+| `status`          | Current status (draft, funded, in review, etc.) |
+
+→ See the [full schema](../../developer-resources/api-reference/escrows/schema.md)
 
 
-To simplify the design process, we have subdivided the escrow lifecycle into distinct phases. Click on any phase to learn more:
 
-[Initiation phase](../escrow-lifecycle/initiation-phase.md)
+***
 
-[Funding phase](../escrow-lifecycle/funding-phase.md)
+### 🔐 Role-Driven Logic
 
-[Milestone Status Updates](../escrow-lifecycle/milestone-status-update.md)
+Your escrow flow is powered by who has permission to take each action:
 
-[Approval phase](../escrow-lifecycle/approval-phase.md)
+| Action                | Role                         |
+| --------------------- | ---------------------------- |
+| Initialize escrow     | Any user or platform         |
+| Fund escrow           | Client or third-party        |
+| Mark milestone        | `milestoneMarker`            |
+| Approve milestone     | `approver` (optional)        |
+| Release funds         | `releaseSigner`              |
+| Raise/resolve dispute | `disputeResolver` (optional) |
 
-[Release phase](../escrow-lifecycle/release-phase.md)
+→ Learn More About [Roles](../roles-in-trustless-work.md)
 
-[Dispute Resolution phase](../escrow-lifecycle/dispute-resolution.md)
+***
 
-Each phase plays a crucial role in the lifecycle, and each participating party has one or more defined roles.
+### ⚙️ Flexible By Design
 
-To understand how roles interact accross the lifecycle, visit the [Roles in Trustless Work](../roles-in-trustless-work.md)
+This model supports:
 
-### Escrow Design
+* 💼 Platform-controlled flows
+* 🤝 Peer-to-peer agreements
+* 🤖 Agent-based automation
 
-Start designing your escrow configurations visually using our Excalidraw or Figma (old)  template. Feel free to copy it and accelerate your Go To market by correctly planning your Trustless Work integration!
+Escrows can be single or multi-release. Each can have as many milestones as needed.
 
-[https://link.excalidraw.com/readonly/uT289bCBJUCpKK0sTxYr](https://link.excalidraw.com/readonly/uT289bCBJUCpKK0sTxYr)
-
-&#x20;\
-[https://www.figma.com/community/file/1456840320155816764/trustless-design-framework](https://www.figma.com/community/file/1456840320155816764/trustless-design-framework)
+***

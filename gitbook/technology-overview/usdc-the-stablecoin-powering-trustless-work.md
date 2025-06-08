@@ -1,4 +1,4 @@
-# 💵 USDC: The Stablecoin Powering Trustless Work
+# USDC: The Stablecoin Powering Trustless Work
 
 At **Trustless Work**, we use **USDC** to provide a secure and stable medium of exchange for all escrow transactions. **USDC** is a **USD-backed stablecoin** that ensures your funds are safe, predictable, and easy to transact with, providing a reliable bridge between traditional finance and blockchain technology.
 

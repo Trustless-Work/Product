@@ -59,8 +59,8 @@ _Argument:_
 
 `FundEscrowPayload`: An object containing the required fields to fund an escrow.
 
-{% content-ref url="../developer-resources/types/" %}
-[types](../developer-resources/types/)
+{% content-ref url="../api-reference/types/" %}
+[types](../api-reference/types/)
 {% endcontent-ref %}
 
 _Return Value:_

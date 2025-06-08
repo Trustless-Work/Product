@@ -25,7 +25,7 @@ Before using the Dapp, ensure you have the necessary **prerequisites**:
 
 #### **1.1. Stellar Wallet Setup**
 
-To log in, you must connect a **Stellar-compatible wallet**. Read more in the [Stellar wallets section](../../developer-resources/stellar-wallets/).&#x20;
+To log in, you must connect a **Stellar-compatible wallet**. Read more in the [Stellar wallets section](../../technology-overview/stellar-wallets/).&#x20;
 
 #### **1.2. Getting Testnet Tokens**
 

@@ -1,4 +1,4 @@
-# 🌟 Stellar & Soroban: The Backbone of Trustless Work
+# Stellar & Soroban: The Backbone of Trustless Work
 
 **Trustless Work** is powered by the **Stellar blockchain** and its innovative **Soroban** smart contract platform. Together, these technologies form the foundation for **secure**, **scalable**, and **trustless** escrow transactions.
 

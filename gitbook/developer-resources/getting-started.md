@@ -17,8 +17,8 @@ Trustless Work is an **Escrow-as-a-Service** platform that lets you securely hol
 * 💸 Save on dev effort and avoid smart contract audits
 * 🌍 Enable global, stablecoin-based payments using Stellar + USDC
 
-📚 [Read how it works](technology-overview/)\
-📖 [Explore use cases](use-cases-unlocking-the-potential-of-smart-escrows/)
+📚 [Read how it works](../technology-overview/)\
+📖 [Explore use cases](../use-cases-unlocking-the-potential-of-smart-escrows/)
 
 ***
 
@@ -31,7 +31,7 @@ Before deploying, define:
 * Who can **release funds**
 * Who can **resolve disputes**
 
-→ [Escrow Roles & Permissions](technology-overview/roles-in-trustless-work.md)
+→ [Escrow Roles & Permissions](../technology-overview/roles-in-trustless-work.md)
 
 Not sure how to structure it? → Check example flows
 
@@ -45,8 +45,8 @@ We’ve built a lightweight dApp to help you deploy escrows without writing code
 
 **Before you start:**
 
-* Install a [Stellar Wallet](developer-resources/stellar-wallets/) (Freighter, xBull, etc.)
-* Grab testnet[ XLM & USDC](developer-resources/testnet-tokens.md)
+* Install a [Stellar Wallet](../technology-overview/stellar-wallets/) (Freighter, xBull, etc.)
+* Grab testnet[ XLM & USDC](../technology-overview/testnet-tokens.md)
 
 📵 Want a demo flow? [Watch our demo video](https://www.youtube.com/watch?v=wps4iH_qtrA\&list=PLF7UKEodb6OCkEmf__B5zJPiG-ZXs3vNv)
 
@@ -54,15 +54,15 @@ We’ve built a lightweight dApp to help you deploy escrows without writing code
 
 ### 🛠️ 4. Build Your Own Integration
 
-Use our [developer resources](developer-resources/) to:
+Use our [developer resources](./) to:
 
 * 🔑 Request an API Key
-* ⚙️ Call the [Trustless Work API](api-reference/)
-* 💻 Use the React SDK
+* ⚙️ Call the [Trustless Work API](../api-reference/)
+* 💻 Use the [React SDK](../react-library/)
 * 🧩 Reuse Open Source Templates
 
 Have a question or want to propose a feature?\
-📩 [Contact](appendices/contact-and-support.md) the team or [open an issue](https://github.com/Trustless-Work)
+📩 [Contact](../appendices/contact-and-support.md) the team or [open an issue](https://github.com/Trustless-Work)
 
 ***
 
@@ -78,8 +78,8 @@ We grow in public — and you can join us:
 
 ### 📈 Next Steps
 
-* ➡️ Understand [roles & permissions](technology-overview/roles-in-trustless-work.md)
-* ➡️ Explore vertical [use cases](use-cases-unlocking-the-potential-of-smart-escrows/)
-* ➡️ [Join the community](community-and-roadmap/community.md)
+* ➡️ Understand [roles & permissions](../technology-overview/roles-in-trustless-work.md)
+* ➡️ Explore vertical [use cases](../use-cases-unlocking-the-potential-of-smart-escrows/)
+* ➡️ [Join the community](../community-and-roadmap/community.md)
 
 > 💬 _“The world runs on trust. And trust runs on escrow. Let’s build a better future, together.”_

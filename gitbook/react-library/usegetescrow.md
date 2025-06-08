@@ -58,8 +58,8 @@ _Argument:_
 
 `GetEscrowParams`: An object containing the required fields to get the escrow.
 
-{% content-ref url="../developer-resources/types/" %}
-[types](../developer-resources/types/)
+{% content-ref url="../api-reference/types/" %}
+[types](../api-reference/types/)
 {% endcontent-ref %}
 
 _Return Value:_

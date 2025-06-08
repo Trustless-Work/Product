@@ -46,9 +46,9 @@ Roles are assigned to addresses. Anyone can deposit funds into an escrow, but th
 
 {% hint style="info" %}
 Release currently works as following: \
--All milestones need to be approved for payment to be released, since we are setting 1 amount for the whole contract. \
+-All milestones need to be approved for payment to be released, since we are setting 1 amount for the whole contract. (Single-release)\
 \
-This will be changed to: \
+There will be a multi-release, where: \
 Each individual  milestone will have an amount, each amount can be individually released when approved.&#x20;
 {% endhint %}
 

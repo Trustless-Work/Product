@@ -8,7 +8,7 @@ icon: address-card
 
 ### 🧭 Core Docs
 
-* [Quickstart Guide](../getting-started.md)
+* [Quickstart Guide](../developer-resources/getting-started.md)
 * [API Reference](../api-reference/)
 * [React SDK](../react-library/)
 * [Escrow Concepts](../technology-overview/)

@@ -1,7 +1,7 @@
 # 💻 Developer Guide
 
-{% content-ref url="../getting-started.md" %}
-[getting-started.md](../getting-started.md)
+{% content-ref url="getting-started.md" %}
+[getting-started.md](getting-started.md)
 {% endcontent-ref %}
 
 {% content-ref url="../technology-overview/smart-escrow-design/" %}
@@ -12,8 +12,8 @@
 [api-reference](../api-reference/)
 {% endcontent-ref %}
 
-{% content-ref url="stellar-wallets/" %}
-[stellar-wallets](stellar-wallets/)
+{% content-ref url="../technology-overview/stellar-wallets/" %}
+[stellar-wallets](../technology-overview/stellar-wallets/)
 {% endcontent-ref %}
 
 
