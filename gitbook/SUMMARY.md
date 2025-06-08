@@ -125,7 +125,6 @@
       * [Tabs](templates-and-components/integration-demo-project/ui-components/tabs.md)
       * [Utils](templates-and-components/integration-demo-project/ui-components/utils.md)
 * [Tools & Utilities](tools-and-utilities.md)
-  * [🧰 Essential Tools for Developers](technology-overview/essential-tools-for-developers.md)
 * [🌍 Use Cases by Industry](use-cases-unlocking-the-potential-of-smart-escrows/README.md)
   * [Marketplaces & E-commerce](use-cases-unlocking-the-potential-of-smart-escrows/marketplaces-and-e-commerce.md)
   * [Grants, Bounties, and Hackathons](use-cases-unlocking-the-potential-of-smart-escrows/grants-bounties-and-hackathons.md)
