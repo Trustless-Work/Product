@@ -1,6 +1,6 @@
 # Freighter Wallet
 
-![Rabet Wallet Logo](../../stellar-wallets/images/freighter-logo.png)\
+![Rabet Wallet Logo](../../developer-resources/stellar-wallets/images/freighter-logo.png)\
 &#xNAN;_&#x4F;fficial logo of the Freighter Wallet._
 
 Freighter is a browser extension wallet for Stellar. It is a non-custodial wallet extension for your browser.
@@ -25,7 +25,7 @@ Freighter is a browser extension wallet for Stellar. It is a non-custodial walle
 3. Follow the browser prompts to install the extension.
 4. After installation, pin the Freighter extension for easy access.
 
-![Freighter Preview](../../stellar-wallets/images/freighter-install.png)
+![Freighter Preview](../../developer-resources/stellar-wallets/images/freighter-install.png)
 
 ***
 
@@ -39,7 +39,7 @@ Freighter is a browser extension wallet for Stellar. It is a non-custodial walle
 4. Freighter will generate a **Recovery Phrase** (also called a Seed Phrase).
    * Write it down and store it in a safe place. **Do not share it with anyone**.
 
-![Freighter Setup](../../stellar-wallets/images/freighter-create-wallet.png) ![Freighter Setup](../../stellar-wallets/images/freighter-setup.png)
+![Freighter Setup](../../developer-resources/stellar-wallets/images/freighter-create-wallet.png) ![Freighter Setup](../../developer-resources/stellar-wallets/images/freighter-setup.png)
 
 ### **Importing an Existing Wallet**
 
@@ -47,7 +47,7 @@ Freighter is a browser extension wallet for Stellar. It is a non-custodial walle
 2. Click on **"Import Wallet"**.
 3. Enter your existing Seed Phrase and set a password.
 
-![Freighter Setup](../../stellar-wallets/images/freighter-create-wallet.png)
+![Freighter Setup](../../developer-resources/stellar-wallets/images/freighter-create-wallet.png)
 
 ***
 
@@ -60,7 +60,7 @@ Freighter is a browser extension wallet for Stellar. It is a non-custodial walle
 4. A pop-up will appear from Freighter asking for confirmation.
 5. Approve the connection in the wallet extension.
 
-![Trustless Work](../../stellar-wallets/images/trustless-work.png) ![Wallet](../../stellar-wallets/images/wallet-select.png)
+![Trustless Work](../../developer-resources/stellar-wallets/images/trustless-work.png) ![Wallet](../../developer-resources/stellar-wallets/images/wallet-select.png)
 
 ### **Note:**
 

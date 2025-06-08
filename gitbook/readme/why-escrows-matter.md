@@ -51,9 +51,9 @@ Platforms that could greatly benefit from the use of escrows don't use them beca
 
 ### **Next Steps**
 
-* **Get Started:** [Quick Start Guide](../getting-started/)\
+* **Get Started:** [Quick Start Guide](../getting-started.md)\
   Begin integrating Trustless Work today.
-* **Learn More:** [About Trustless Work](../getting-started/about-trustless-work/)\
+* **Learn More:** [About Trustless Work](broken-reference)\
   Explore our mission, vision, and journey so far.
 * **Contact Us:** [Support](../appendices/contact-and-support.md)\
   Need help? Reach out to our team for assistance.

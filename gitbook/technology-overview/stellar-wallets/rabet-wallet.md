@@ -1,6 +1,6 @@
 # Rabet Wallet
 
-![Rabet Wallet Logo](../../stellar-wallets/images/rabet-logo.png)\
+![Rabet Wallet Logo](../../developer-resources/stellar-wallets/images/rabet-logo.png)\
 &#xNAN;_&#x4F;fficial logo of the Rabet Wallet._
 
 Rabet Wallet is a browser extension and desktop wallet that simplifies Stellar account management and enables interactions with Stellar dApps.
@@ -26,7 +26,7 @@ Rabet Wallet is a browser extension and desktop wallet that simplifies Stellar a
     * For **iOS Users**: Go to the [App Store](https://apps.apple.com/app/rabet-wallet).
     * For **Android Users**: Go to the [Google Play Store](https://play.google.com/store/apps/details?id=rabet.wallet).
 
-    ![](../../stellar-wallets/images/rabet-preview.png) ![](../../stellar-wallets/images/rabet-mobile.png)
+    ![](../../developer-resources/stellar-wallets/images/rabet-preview.png) ![](../../developer-resources/stellar-wallets/images/rabet-mobile.png)
 2. **Install the App:**
    * Search for **"Rabet Wallet"** in your app store.
    * Tap the **"Install"** button and wait for the app to download.
@@ -36,7 +36,7 @@ Rabet Wallet is a browser extension and desktop wallet that simplifies Stellar a
     * Follow the instructions to generate a new wallet.
     * Securely save the **Seed Phrase** displayed during setup. This is critical for wallet recovery.
 
-    ![](../../stellar-wallets/images/rabet-setup.png)
+    ![](../../developer-resources/stellar-wallets/images/rabet-setup.png)
 
 ## **2. Installing Rabet Wallet on Desktop**
 
@@ -69,7 +69,7 @@ Rabet Wallet is a browser extension and desktop wallet that simplifies Stellar a
 4. **Secure Your Wallet:**
    * Set a strong password to protect access to your wallet.
 
-![](../../stellar-wallets/images/rabet-desktop.png)
+![](../../developer-resources/stellar-wallets/images/rabet-desktop.png)
 
 ## **3. Installing Rabet Wallet as a Browser Extension**
 
@@ -89,7 +89,7 @@ Rabet Wallet is a browser extension and desktop wallet that simplifies Stellar a
 3. Follow the browser prompts to install the extension.
 4. After installation, pin the Hana extension for easy access.
 
-![Rabet Extension](../../stellar-wallets/images/rabet-ext.png) ![](../../stellar-wallets/images/rabet-setup.png)
+![Rabet Extension](../../developer-resources/stellar-wallets/images/rabet-ext.png) ![](../../developer-resources/stellar-wallets/images/rabet-setup.png)
 
 ***
 
@@ -102,7 +102,7 @@ Rabet Wallet is a browser extension and desktop wallet that simplifies Stellar a
 4. A pop-up will appear from Rabet asking for confirmation.
 5. Approve the connection in the wallet extension.
 
-![Trustless Work](../../stellar-wallets/images/trustless-work.png) ![Wallet](../../stellar-wallets/images/wallet-select.png)
+![Trustless Work](../../developer-resources/stellar-wallets/images/trustless-work.png) ![Wallet](../../developer-resources/stellar-wallets/images/wallet-select.png)
 
 ***
 

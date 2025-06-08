@@ -13,4 +13,4 @@
 * [**Rabet Wallet**](rabet-wallet.md)
 * [**Lobstr Wallet**](lobstr-wallet.md)
 * [**Hana Wallet**](hana-wallet.md)
-* [**Testnet Tokens**](../../testnet-tokens.md)
+* [**Testnet Tokens**](../../developer-resources/testnet-tokens.md)

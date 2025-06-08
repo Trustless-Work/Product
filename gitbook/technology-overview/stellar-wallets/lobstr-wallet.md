@@ -1,6 +1,6 @@
 # Lobstr Wallet
 
-![Rabet Wallet Logo](../../stellar-wallets/images/lobstr-logo.png)\
+![Rabet Wallet Logo](../../developer-resources/stellar-wallets/images/lobstr-logo.png)\
 &#xNAN;_&#x4F;fficial logo of the Lobstr Wallet._
 
 Lobstr Wallet is a user-friendly mobile and web wallet for managing Stellar accounts. It supports advanced features like multisignature accounts and Stellar-powered services.
@@ -26,7 +26,7 @@ Lobstr Wallet is a user-friendly mobile and web wallet for managing Stellar acco
 3. Save your **Recovery Phrase** securely.
 4. Set a PIN or biometric authentication for added security.
 
-![Lobstr Wallet](../../stellar-wallets/images/lobstr-preview.png)
+![Lobstr Wallet](../../developer-resources/stellar-wallets/images/lobstr-preview.png)
 
 ### **Web Wallet Setup:**
 
@@ -34,7 +34,7 @@ Lobstr Wallet is a user-friendly mobile and web wallet for managing Stellar acco
 2. Sign up for an account or log in if you already have one.
 3. Follow the prompts to secure your wallet.
 
-![Lobstr SetUp](../../stellar-wallets/images/lobstr-setup.png)
+![Lobstr SetUp](../../developer-resources/stellar-wallets/images/lobstr-setup.png)
 
 ***
 
@@ -47,7 +47,7 @@ Lobstr Wallet is a user-friendly mobile and web wallet for managing Stellar acco
 4. A pop-up will appear from Lobstr asking for confirmation.
 5. Approve the connection in the wallet extension.
 
-![Trustless Work](../../stellar-wallets/images/trustless-work.png) ![Wallet](../../stellar-wallets/images/wallet-select.png)
+![Trustless Work](../../developer-resources/stellar-wallets/images/trustless-work.png) ![Wallet](../../developer-resources/stellar-wallets/images/wallet-select.png)
 
 ***
 
