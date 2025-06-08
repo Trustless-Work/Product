@@ -1,5 +1,10 @@
 # Why Escrows Matter
 
+Stablecoins move trillions. Stellar and Soroban give us the speed and cost efficiency.\
+But real-world payments don’t run on speed alone — they run on **trust**.
+
+Escrow is the missing layer between “I sent the money” and “I got what I paid for.”
+
 ### **Why Trustless Work?**
 
 *   **Escrows are a great way to solve for trust.**&#x20;
@@ -24,13 +29,25 @@ Platforms that could greatly benefit from the use of escrows don't use them beca
 * **Blockchain obviously solves this, but complexity to built it is still high.**\
   Blockchain and web3 are the perfect solution for this, but we can't expect for every marketplace out there to have a Smart Contract engineer. Getting to experiment, test and scale with this technology is resource intensive and has a steep learning curve.
 
+
+
+### 🧩 What Escrow Solves
+
+* ❌ **Chargebacks** and fraud in marketplaces
+* ❌ **Late or withheld payments** for freelancers
+* ❌ **Unclear fund control** in grants, bounties, or pre-orders
+* ❌ **No dispute path** in P2P or milestone deals
+
 ***
 
-### Trustless Work is building the Escrow Infrastructure for the New Economy.&#x20;
+### ✅ What Trustless Escrow Enables
 
-A simple, scalable solution for anyone to integrate blockchain-based escrows to their payment flow.&#x20;
+* 💸 Payments are only released when work is approved
+* 🔐 Funds are held in secure, neutral smart contracts
+* 🤖 Approval flows can be signed off by users, platforms, or agents
+* 🌍 Works globally with USDC and Stellar’s fast settlement
 
-***
+
 
 ### **Next Steps**
 
