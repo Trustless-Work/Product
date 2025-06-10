@@ -151,3 +151,5 @@ You can now use the Trustless Work React hooks and entities from any component w
 {% endstep %}
 {% endstepper %}
 
+**Important:** This library offers seamless integration and allows flexibility with **single-release** or **multi-release** escrow options. Simply use the appropriate `type` parameter and required `payload` for your needs
+
