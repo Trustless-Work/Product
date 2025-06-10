@@ -13,13 +13,13 @@ The escrow lifecycle represents the structured flow of actions and responsibilit
 1. **Initiation Phase:**\
    The foundation of the process, where roles, responsibilities, and transaction terms are established, and the escrow contract is created. [Learn More](initiation-phase.md)
 2. **Funding Phase:**\
-   The phase where the funds are deposited into the escrow contract, securing the transaction and preparing for the next steps.
+   The phase where the funds are deposited into the escrow contract, securing the transaction and preparing for the next steps. [Learn More](funding-phase.md)
 3. **Milestone Updates Phase:**\
-   As the transaction progresses, milestones are marked as completed by the designated party, providing visibility and enabling reviews.
-4. **Approval Phase:**\
-   The phase where milestones are reviewed and approved (or disputed), moving the transaction closer to resolution.
+   As the transaction progresses, milestones are marked as completed by the designated party, providing visibility and enabling reviews. [Learn More](milestone-status-update.md)
+4. **Approval Phase:** \
+   The phase where milestones are reviewed and approved (or disputed), moving the transaction closer to resolution. [Learn More](approval-phase.md)
 5. **Release Phase:**\
-   Funds are released to the designated recipient based on milestone approvals or dispute resolutions, completing the financial component of the transaction.
+   Funds are released to the designated recipient based on milestone approvals or dispute resolutions, completing the financial component of the transaction. [Lean More](release-phase.md)
 
 ***
 

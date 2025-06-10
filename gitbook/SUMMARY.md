@@ -11,7 +11,7 @@
   * [Escrow Lifecycle](technology-overview/escrow-lifecycle/README.md)
     * [Initiation Phase](technology-overview/escrow-lifecycle/initiation-phase.md)
     * [Funding Phase](technology-overview/escrow-lifecycle/funding-phase.md)
-    * [Complete phase](technology-overview/escrow-lifecycle/milestone-status-update.md)
+    * [Milestone Update phase](technology-overview/escrow-lifecycle/milestone-status-update.md)
     * [Approval phase](technology-overview/escrow-lifecycle/approval-phase.md)
     * [Release phase](technology-overview/escrow-lifecycle/release-phase.md)
     * [Dispute Resolution](technology-overview/escrow-lifecycle/dispute-resolution.md)
