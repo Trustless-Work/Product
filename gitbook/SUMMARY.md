@@ -86,7 +86,7 @@
   * [useInitializeEscrow](react-library/useinitializeescrow.md)
   * [useUpdateEscrow](react-library/useupdateescrow.md)
   * [useFundEscrow](react-library/usefundescrow.md)
-  * [useApproveMilestone](react-library/useapprovemilestone.md)
+  * [useApproveMilestone](react-library/usechangemilestoneapprovedflag.md)
   * [useChangeMilestoneStatus](react-library/usechangemilestonestatus.md)
   * [useReleaseFunds](react-library/usereleasefunds.md)
   * [useStartDispute](react-library/usestartdispute.md)
