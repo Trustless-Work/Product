@@ -28,7 +28,7 @@ import { useApproveMilestone } from "@trustless-work/escrow/hooks";
 import { ApproveMilestonePayload } from "@trustless-work/escrow/types";
 
 /*
- *  useChangeMilestoneApprovedFlag
+ *  useApproveMilestone
 */
 const { approveMilestone, isPending, isError, isSuccess } = useApproveMilestone();
 
