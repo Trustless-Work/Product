@@ -16,7 +16,7 @@ layout:
     visible: true
 ---
 
-# useChangeMilestoneApprovedFlag
+# useApproveMilestone
 
 ## Usage
 
@@ -24,19 +24,19 @@ This custom hook exposes a mutation function along with status flags to manage t
 
 {% code overflow="wrap" %}
 ```typescript
-import { useChangeMilestoneApprovedFlag } from "@trustless-work/escrow/hooks";
-import { ChangeMilestoneApprovedFlagPayload } from "@trustless-work/escrow/types";
+import { useApproveMilestone } from "@trustless-work/escrow/hooks";
+import { ApproveMilestonePayload } from "@trustless-work/escrow/types";
 
 /*
  *  useChangeMilestoneApprovedFlag
 */
-const { changeMilestoneApprovedFlag, isPending, isError, isSuccess } = useChangeMilestoneApprovedFlag();
+const { approveMilestone, isPending, isError, isSuccess } = useApproveMilestone();
 
 /* 
  * It returns an unsigned transaction
- * payload should be of type `ChangeMilestoneApprovedFlagPayload`
+ * payload should be of type `ApproveMilestonePayload`
 */
-const { unsignedTransaction } = await changeMilestoneApprovedFlag(payload);
+const { unsignedTransaction } = await approveMilestone(payload);
 
 ```
 {% endcode %}
@@ -50,14 +50,23 @@ const { unsignedTransaction } = await changeMilestoneApprovedFlag(payload);
 * **`isSuccess`**\
   A boolean status flag that becomes `true` once the mutation completes successfully.
 
-### Mutation Function
+***
 
-* **`changeMilestoneApprovedFlag`**\
-  This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning an unsigned transaction based on the provided payload.
+`approveMilestone`
 
-_Argument:_
+This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and handles building and returning an unsigned transaction based on the provided payload.
 
-`ChangeMilestoneApprovedFlagPayload`: An object containing the required fields to approve a milestone.
+**EscrowType**: Specifies the type of escrow. It accepts the following values:
+
+* **multi-release**: Allows for multiple releases of funds.
+* **single-release**: Funds are released in a single transaction.
+
+**ApproveMilestonePayload**: An object with fields necessary to approve a milestone. It is applicable for both single-release and multi-release escrow types.
+
+**Parameters**:
+
+* **type**: Describes the escrow type to be used. Options are "multi-release" or "single-release".
+* **approveMilestonePayload**: Contains the data required for milestone approval, relevant for both escrow release types.
 
 {% content-ref url="../api-reference/types/" %}
 [types](../api-reference/types/)
@@ -71,22 +80,22 @@ _Return Value:_
 
 ## Usage Example
 
-{% code title="src/hooks/useChangeMilestoneApprovedFlagForm.ts" overflow="wrap" %}
+{% code title="src/hooks/useApproveMilestoneForm.ts" overflow="wrap" %}
 ```typescript
 import {
-  useChangeMilestoneApprovedFlag,
+  useApproveMilestone,
   useSendTransaction,
 } from "@trustless-work/escrow/hooks";
 import {
-  ChangeMilestoneApprovedFlagPayload
+  ApproveMilestonePayload
 } from "@trustless-work/escrow/types";
 
-export const useChangeMilestoneApprovedFlagForm = () => {
+export const useApproveMilestoneForm = () => {
 
  /*
-  *  useChangeMilestoneApprovedFlag
+  *  useApproveMilestone
  */
- const { changeMilestoneApprovedFlag, isPending, isError, isSuccess } = useChangeMilestoneApprovedFlag();
+ const { approveMilestone, isPending, isError, isSuccess } = useApproveMilestone();
  
  /*
   *  useSendTransaction
@@ -96,22 +105,25 @@ export const useChangeMilestoneApprovedFlagForm = () => {
 /*
  * onSubmit function, this could be called by form button
 */
- const onSubmit = async (payload: ChangeMilestoneApprovedFlagPayload) => {
+ const onSubmit = async (payload: ApproveMilestonePayload) => {
 
     try {
       /**
        * API call by using the trustless work hooks
        * @Note:
-       * - We need to pass the payload to the changeMilestoneApprovedFlag function
+       * - We need to pass the payload to the approveMilestone function
        * - The result will be an unsigned transaction
        */
-      const { unsignedTransaction } = await changeMilestoneApprovedFlag(
-        payload
+      const { unsignedTransaction } = await approveMilestone(
+        payload,
+        type: "multi-release"
+        // or ...
+        type: "single-release"
       );
 
       if (!unsignedTransaction) {
         throw new Error(
-          "Unsigned transaction is missing from changeMilestoneApprovedFlag response."
+          "Unsigned transaction is missing from approveMilestone response."
         );
       }
 
