@@ -50,7 +50,7 @@ const { unsignedTransaction } = await approveMilestone(payload);
 * **`isSuccess`**\
   A boolean status flag that becomes `true` once the mutation completes successfully.
 
-***
+### Mutation Function
 
 `approveMilestone`
 
@@ -65,8 +65,10 @@ This is the main mutation function. Internally, it wraps `mutate` or `mutateAsyn
 
 **Parameters**:
 
+Ensure they match: if you choose a "multi-release" type, you must also use a "multi-release" payload.
+
 * **type**: Describes the escrow type to be used. Options are "multi-release" or "single-release".
-* **approveMilestonePayload**: Contains the data required for milestone approval, relevant for both escrow release types.
+* **payload**: Contains the data required for milestone approval.
 
 {% content-ref url="../api-reference/types/" %}
 [types](../api-reference/types/)
@@ -114,12 +116,12 @@ export const useApproveMilestoneForm = () => {
        * - We need to pass the payload to the approveMilestone function
        * - The result will be an unsigned transaction
        */
-      const { unsignedTransaction } = await approveMilestone(
+      const { unsignedTransaction } = await approveMilestone({
         payload,
         type: "multi-release"
         // or ...
         type: "single-release"
-      );
+      });
 
       if (!unsignedTransaction) {
         throw new Error(

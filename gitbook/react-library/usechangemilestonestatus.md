@@ -52,12 +52,23 @@ const { unsignedTransaction } = await changeMilestoneStatus(payload);
 
 ### Mutation Function
 
-* `changeMilestoneStatus`\
-  This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning an unsigned transaction based on the provided payload.
+`changeMilestoneStatus`
 
-_Argument:_
+This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and handles building and returning an unsigned transaction based on the provided payload.
 
-`ChangeMilestoneStatusPayload`: An object containing the required fields to change the status a milestone.
+**EscrowType**: Specifies the type of escrow. It accepts the following values:
+
+* **multi-release**: Allows for multiple releases of funds.
+* **single-release**: Funds are released in a single transaction.
+
+**ChangeMilestoneStatusPayload:** An object with fields necessary to change the milestone status. It is applicable for both single-release and multi-release escrow types.
+
+**Parameters**:
+
+Ensure they match: if you choose a "multi-release" type, you must also use a "multi-release" payload.
+
+* **type**: Describes the escrow type to be used. Options are "multi-release" or "single-release".
+* **payload**: Contains the data required for change milestone status.
 
 {% content-ref url="../api-reference/types/" %}
 [types](../api-reference/types/)
@@ -105,9 +116,12 @@ export const useChangeMilestoneStatusForm = () => {
        * - We need to pass the payload to the useChangeMilestoneStatus function
        * - The result will be an unsigned transaction
        */
-      const { unsignedTransaction } = await useChangeMilestoneStatus(
-        payload
-      );
+      const { unsignedTransaction } = await useChangeMilestoneStatus({
+        payload,
+        type: "multi-release"
+        // or ...
+        type: "single-release"
+      });
 
       if (!unsignedTransaction) {
         throw new Error(
@@ -134,10 +148,7 @@ export const useChangeMilestoneStatusForm = () => {
        * - We need to send the signed transaction to the API
        * - The data will be an SendTransactionResponse
        */
-      const data = await sendTransaction({
-        signedXdr,
-        returnEscrowDataIsRequired: false,
-      });
+      const data = await sendTransaction(signedXdr);
 
       /**
        * @Responses:

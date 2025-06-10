@@ -51,12 +51,23 @@ await getEscrow(payload);
 
 ### Mutation Function
 
-* `getEscrow`\
-  This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning data based on the provided payload.
+`getEscrow`
 
-_Argument:_
+This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and handles building and returning an unsigned transaction based on the provided payload.
 
-`GetEscrowParams`: An object containing the required fields to get the escrow.
+**EscrowType**: Specifies the type of escrow. It accepts the following values:
+
+* **multi-release**: Allows for multiple releases of funds.
+* **single-release**: Funds are released in a single transaction.
+
+**GetEscrowParams:** An object containing the required fields to get the escrow.
+
+**Parameters**:
+
+Ensure they match: if you choose a "multi-release" type, you must also use a "multi-release" payload.
+
+* **type**: Describes the escrow type to be used. Options are "multi-release" or "single-release".
+* **payload**: Contains the data required to get an escrow.
 
 {% content-ref url="../api-reference/types/" %}
 [types](../api-reference/types/)
@@ -64,7 +75,7 @@ _Argument:_
 
 _Return Value:_
 
-`escrow`: The escrow that you are looking for.
+`escrow`: The escrow that you are looking for. It could be a single-release or multi-release escrow.
 
 ***
 
@@ -77,7 +88,8 @@ import {
 } from "@trustless-work/escrow/hooks";
 import {
   GetEscrowParams, 
-  Escrow
+  SingleReleaseEscrow,
+  MultiReleaseEscrow
 } from "@trustless-work/escrow/types";
 
 export const useGetEscrowForm = () => {
@@ -99,7 +111,12 @@ export const useGetEscrowForm = () => {
        * - We need to pass the payload to the getEscrow function
        * - The result will be an Escrow
       */
-      await getEscrow(payload);
+      await getEscrow({
+        payload,
+        type: "multi-release"
+        // or ...
+        type: "single-release"
+      });
       
       if (!escrow) {
         throw new Error("Escrow not found");
@@ -115,7 +132,7 @@ export const useGetEscrowForm = () => {
        * escrow === null
        * - Show an error toast
        */
-      if (escrow: Escrow) {
+      if (escrow: SingleReleaseEscrow | MultiReleaseEscrow) {
         toast.success("Escrow Received");
       }
     } catch (error: unknown) {

@@ -22,10 +22,8 @@ layout:
 
 This custom hook exposes a mutation function to resolve a dispute in an escrow.
 
-{% code overflow="wrap" %}
-```typescript
-import { useResolveDispute } from "@trustless-work/escrow/hooks";
-import { ResolveDisputePayload } from "@trustless-work/escrow/types";
+<pre class="language-typescript" data-overflow="wrap"><code class="lang-typescript">import { useResolveDispute } from "@trustless-work/escrow/hooks";
+import { MultiReleaseResolveDisputePayload, SingleReleaseResolveDisputePayload } from "@trustless-work/escrow/types";
 
 /*
  *  useResolveDispute
@@ -34,12 +32,11 @@ const { resolveDispute, isPending, isError, isSuccess } = useResolveDispute();
 
 /* 
  * It returns an unsigned transaction
- * payload should be of type `ResolveDisputePayload`
-*/
+<strong> * payload should be of type `MultiReleaseResolveDisputePayload` or `SingleReleaseResolveDisputePayload`
+</strong>*/
 const { unsignedTransaction } = await resolveDispute(payload);
 
-```
-{% endcode %}
+</code></pre>
 
 ### Description of Return Values
 
@@ -52,12 +49,25 @@ const { unsignedTransaction } = await resolveDispute(payload);
 
 ### Mutation Function
 
-* `resolveDispute`\
-  This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning an unsigned transaction based on the provided payload.
+`resolveDispute`
 
-_Argument:_
+This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning an unsigned transaction based on the provided payload.
 
-`ResolveDisputePayload`: An object containing the required fields to resolve the dispute in the escrow.
+**EscrowType**: Specifies the type of escrow. It accepts the following values:
+
+* **multi-release**: Allows for multiple releases of funds.
+* **single-release**: Funds are released in a single transaction.
+
+**SingleReleaseResolveDisputePayload:** An object with fields necessary to resolve a **single-release** escrow.
+
+**MultiReleaseResolveDisputePayload:** An object with fields necessary to resolve a **multi-release** escrow by milestone.
+
+**Parameters**:
+
+Ensure they match: if you choose a "multi-release" type, you must also use a "multi-release" payload.
+
+* **type**: Describes the escrow type to be used. Options are "multi-release" or "single-release".
+* **payload**: An object containing the required fields to resolve a dispute.
 
 {% content-ref url="../api-reference/types/" %}
 [types](../api-reference/types/)
@@ -78,7 +88,7 @@ import {
   useSendTransaction,
 } from "@trustless-work/escrow/hooks";
 import {
-  ResolveDisputePayload
+  MultiReleaseResolveDisputePayload, SingleReleaseResolveDisputePayload
 } from "@trustless-work/escrow/types";
 
 export const useStartDisputeForm = () => {
@@ -96,7 +106,7 @@ export const useStartDisputeForm = () => {
 /*
  * onSubmit function, this could be called by form button
 */
- const onSubmit = async (payload: ResolveDisputePayload) => {
+ const onSubmit = async (payload: MultiReleaseResolveDisputePayload | SingleReleaseResolveDisputePayload) => {
 
     try {
       /**
@@ -105,9 +115,12 @@ export const useStartDisputeForm = () => {
        * - We need to pass the payload to the resolveDispute function
        * - The result will be an unsigned transaction
        */
-      const { unsignedTransaction } = await resolveDispute(
-        payload
-      );
+      const { unsignedTransaction } = await resolveDispute({
+        payload,
+        type: "multi-release"
+        // or ...
+        type: "single-release"
+      });
 
       if (!unsignedTransaction) {
         throw new Error(
@@ -134,10 +147,7 @@ export const useStartDisputeForm = () => {
        * - We need to send the signed transaction to the API
        * - The data will be an SendTransactionResponse
        */
-      const data = await sendTransaction({
-        signedXdr,
-        returnEscrowDataIsRequired: false,
-      });
+      const data = await sendTransaction(signedXdr);
 
       /**
        * @Responses:

@@ -30,7 +30,6 @@ This custom hook exposes a mutation function to send a signed transaction to the
 {% code overflow="wrap" %}
 ```typescript
 import { useSendTransaction} from "@trustless-work/escrow/hooks";
-import { SendTransactionPayload } from "@trustless-work/escrow/types";
 
 /*
  *  useSendTransaction
@@ -39,12 +38,9 @@ const { sendTransaction, isPending, isError, isSuccess } = useSendTransaction();
 
 /* 
  * It returns a SendTransactionResponse
- * payload should be of type `SendTransactionPayload`
+ * payload should be of type string
 */
-const data = await sendTransaction({
-  signedXdr,
-  returnEscrowDataIsRequired: false, // Should be true only for these endpoints: Initialize Escrow and Update Escrow
-});
+const data = await sendTransaction(signedXdr);
 
 ```
 {% endcode %}
@@ -65,7 +61,7 @@ const data = await sendTransaction({
 
 _Argument:_
 
-`SendTransactionPayload`: An object containing the required fields to send a transaction to the network.
+`payload`: An string containing the required fields to send a transaction to the network.
 
 {% content-ref url="../api-reference/types/" %}
 [types](../api-reference/types/)
@@ -138,10 +134,7 @@ export const useSomeEndpointForm= () => {
        * - We need to send the signed transaction to the API
        * - The data will be an SendTransactionResponse
        */
-      const data = await sendTransaction({
-        signedXdr,
-        returnEscrowDataIsRequired: false, // Should be true only for these endpoints: Initialize Escrow and Update Escrow
-      });
+      const data = await sendTransaction(signedXdr);
 
     } catch (error: unknown) {
       // catch error logic

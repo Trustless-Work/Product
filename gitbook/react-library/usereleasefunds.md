@@ -23,7 +23,7 @@ This custom hook exposes a mutation function to release the funds of an escrow.
 {% code overflow="wrap" %}
 ```typescript
 import { useReleaseFunds } from "@trustless-work/escrow/hooks";
-import { ReleaseFundsPayload } from "@trustless-work/escrow/types";
+import { SingleReleaseReleaseFundsPayload, MultiReleaseReleaseFundsPayload } from "@trustless-work/escrow/types";
 
 /*
  *  useReleaseFunds
@@ -32,7 +32,7 @@ const { releaseFunds, isPending, isError, isSuccess } = useReleaseFunds();
 
 /* 
  * It returns an unsigned transaction
- * payload should be of type `ReleaseFundsPayload`
+ * payload should be of type `MultiReleaseReleaseFundsPayload` or `SingleReleaseReleaseFundsPayload`
 */
 const { unsignedTransaction } = await releaseFunds(payload);
 
@@ -50,12 +50,25 @@ const { unsignedTransaction } = await releaseFunds(payload);
 
 ### Mutation Function
 
-* `releaseFunds`\
-  This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning an unsigned transaction based on the provided payload.
+`releaseFunds`
 
-_Argument:_
+This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning an unsigned transaction based on the provided payload.
 
-`ReleaseFundsPayload`: An object containing the required fields to release the funds.
+**EscrowType**: Specifies the type of escrow. It accepts the following values:
+
+* **multi-release**: Allows for multiple releases of funds.
+* **single-release**: Funds are released in a single transaction.
+
+**SingleReleaseReleaseFundsPayload:** An object with fields necessary to release a **single-release** escrow.
+
+**MultiReleaseReleaseFundsPayload:** An object with fields necessary to release a **multi-release** escrow by a specific milestone.
+
+**Parameters**:
+
+Ensure they match: if you choose a "multi-release" type, you must also use a "multi-release" payload.
+
+* **type**: Describes the escrow type to be used. Options are "multi-release" or "single-release".
+* **payload**: An object containing the required fields to release an escrow or milestone.
 
 {% content-ref url="../api-reference/types/" %}
 [types](../api-reference/types/)
@@ -76,7 +89,7 @@ import {
   useSendTransaction,
 } from "@trustless-work/escrow/hooks";
 import {
-  ReleaseFundsPayload
+  SingleReleaseReleaseFundsPayload, MultiReleaseReleaseFundsPayload
 } from "@trustless-work/escrow/types";
 
 export const useReleaseFundsForm = () => {
@@ -94,7 +107,7 @@ export const useReleaseFundsForm = () => {
 /*
  * onSubmit function, this could be called by form button
 */
- const onSubmit = async (payload: ReleaseFundsPayload) => {
+ const onSubmit = async (payload: MultiReleaseReleaseFundsPayload | SingleReleaseReleaseFundsPayload) => {
 
     try {
       /**
@@ -103,9 +116,12 @@ export const useReleaseFundsForm = () => {
        * - We need to pass the payload to the releaseFunds function
        * - The result will be an unsigned transaction
        */
-      const { unsignedTransaction } = await releaseFunds(
-        payload
-      );
+      const { unsignedTransaction } = await releaseFunds({
+        payload,
+        type: "multi-release"
+        // or ...
+        type: "single-release"
+      });
 
       if (!unsignedTransaction) {
         throw new Error(
@@ -132,10 +148,7 @@ export const useReleaseFundsForm = () => {
        * - We need to send the signed transaction to the API
        * - The data will be an SendTransactionResponse
        */
-      const data = await sendTransaction({
-        signedXdr,
-        returnEscrowDataIsRequired: false,
-      });
+      const data = await sendTransaction(signedXdr);
 
       /**
        * @Responses:

@@ -52,12 +52,21 @@ const { unsignedTransaction } = await fundEscrow(payload);
 
 ### Mutation Function
 
-* **`fundEscrow`**\
-  This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning an unsigned transaction based on the provided payload.
+**`fundEscrow`**
 
-_Argument:_
+This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and handles building and returning an unsigned transaction based on the provided payload.
 
-`FundEscrowPayload`: An object containing the required fields to fund an escrow.
+**EscrowType**: Specifies the type of escrow. It accepts the following values:
+
+* **multi-release**: Allows for multiple releases of funds.
+* **single-release**: Funds are released in a single transaction.
+
+**FundEscrowPayload:** An object with fields necessary to fund an escrow. It is applicable for both single-release and multi-release escrow types.
+
+**Parameters**:
+
+* **type**: Describes the escrow type to be used. Options are "multi-release" or "single-release".
+* **payload**: Contains the data required for fund escrow.
 
 {% content-ref url="../api-reference/types/" %}
 [types](../api-reference/types/)
@@ -81,7 +90,7 @@ import {
   FundEscrowPayload
 } from "@trustless-work/escrow/types";
 
-export const useFundEscrowForm= () => {
+export const useFundEscrowForm = () => {
 
  /*
   *  useFundEscrow
@@ -105,9 +114,12 @@ export const useFundEscrowForm= () => {
        * - We need to pass the payload to the fundEscrow function
        * - The result will be an unsigned transaction
        */
-      const { unsignedTransaction } = await fundEscrow(
-        payload
-      );
+      const { unsignedTransaction } = await fundEscrow({
+        payload,
+        type: "multi-release"
+        // or ...
+        type: "single-release"
+      });
 
       if (!unsignedTransaction) {
         throw new Error(
@@ -134,10 +146,7 @@ export const useFundEscrowForm= () => {
        * - We need to send the signed transaction to the API
        * - The data will be an SendTransactionResponse
        */
-      const data = await sendTransaction({
-        signedXdr,
-        returnEscrowDataIsRequired: false,
-      });
+      const data = await sendTransaction(signedXdr);
 
       /**
        * @Responses:
