@@ -1,7 +1,7 @@
 ---
 description: >-
   Responsible for setting the escrow in dispute state. Changes the value of the
-  escrow's "dispute_flag" property to true.
+  escrow's "disputed" flag property to true.
 icon: face-angry
 layout:
   title:

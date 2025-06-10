@@ -61,9 +61,9 @@ This is the main mutation function. Internally, it wraps `mutate` or `mutateAsyn
 * **multi-release**: Allows for multiple releases of funds.
 * **single-release**: Funds are released in a single transaction.
 
-**UpdateSingleReleaseEscrowPayload:** An object with fields necessary to initialize a **single-release** escrow.
+**UpdateSingleReleaseEscrowPayload:** An object with fields necessary to update a **single-release** escrow.
 
-**UpdateMultiReleaseEscrowPayload:** An object with fields necessary to initialize a **multi-release** escrow.
+**UpdateMultiReleaseEscrowPayload:** An object with fields necessary to update a **multi-release** escrow.
 
 **Parameters**:
 
