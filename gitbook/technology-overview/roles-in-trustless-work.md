@@ -1,10 +1,10 @@
 ---
-description: Before we begin designing, let's understand what each role represents!
+description: Let's understand what each role represents!
 ---
 
 # Roles in Trustless Work
 
-Roles are assigned to addresses. Anyone can deposit funds into an escrow, but the status while only changed by predetermined steps, which are initiated and signed by the corresponding roles.
+Escrows involve multiple parties, which in our case are addresses. Each address is assigned one or more roles, which define which actions this party can do in the Escrow Lifecycle.  Anyone can deposit funds into an escrow, but the escrow status is changed by predetermined steps, which are initiated and signed by the corresponding roles.
 
 <figure><img src="../.gitbook/assets/image (1) (2) (1).png" alt=""><figcaption><p>Roles are marked in black</p></figcaption></figure>
 
@@ -19,7 +19,7 @@ Roles are assigned to addresses. Anyone can deposit funds into an escrow, but th
 
 ## Roles:
 
-**1. Milestone Approver**
+**1.  Approver**
 
 * **Function:** Approves or disputes milestones marked as completed.
 * **Examples:**
