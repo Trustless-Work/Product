@@ -1,4 +1,4 @@
-# Tools & Utilities
+# 🛠️ Tools & Utilities
 
 This guide walks you through the key tools you’ll need to experiment with and integrate Trustless Work into your platform or product.Whether you're testing on testnet or preparing for a production launch, these tools will streamline your experience.​
 

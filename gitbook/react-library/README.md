@@ -1,5 +1,4 @@
 ---
-icon: books
 layout:
   title:
     visible: true
@@ -13,7 +12,7 @@ layout:
     visible: true
 ---
 
-# React Library
+# 📚 React Library
 
 ## Overview
 

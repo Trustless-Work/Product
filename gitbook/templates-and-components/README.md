@@ -1,4 +1,4 @@
-# Templates & Components
+# 🕍 Templates & Components
 
 Our 2 main templates are the following: \
 \
