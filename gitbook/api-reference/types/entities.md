@@ -17,11 +17,13 @@ layout:
 
 ### Escrow
 
+Contains both single-release and multiple-release types.
+
 ```typescript
 /**
- * Escrow
+ * Single Release Escrow
  */
-export interface Escrow {
+export type SingleReleaseEscrow = {
   /**
    * Address of the user signing the contract transaction
    */
@@ -70,7 +72,7 @@ export interface Escrow {
   /**
    * Objectives to be completed to define the escrow as completed
    */
-  milestones: Milestone[];
+  milestones: SingleReleaseMilestone[];
 
   /**
    * Flags validating certain escrow life states
@@ -86,16 +88,28 @@ export interface Escrow {
    * Field used to identify the recipient's address in transactions through an intermediary account. This value is included as a memo in the transaction and allows the funds to be correctly routed to the wallet of the specified recipient
    */
   receiverMemo: number;
-}
+};
+
+/**
+ * Multi Release Escrow
+ */
+export type MultiReleaseEscrow = Omit<
+  SingleReleaseEscrow,
+  "milestones" | "flags" | "amount"
+> & {
+  milestones: MultiReleaseMilestone[];
+};
 ```
 
 ### Milestone
+
+Contains both single-release and multiple-release types. Both of them based on the BaseMilestone.
 
 ```typescript
 /**
  * Milestone
  */
-export type Milestone = {
+type BaseMilestone = {
   /**
    * Text describing the function of the milestone.
    */
@@ -104,19 +118,38 @@ export type Milestone = {
   /**
    * Milestone status. Ex: Approved, In dispute, etc...
    */
-  status: string;
+  status?: string;
 
   /**
    * Evidence of work performed by the service provider.
    */
-  evidence: string;
-
-  /**
-   * Flag indicating whether a milestone has been approved by the approver.
-   */
-  approvedFlag: boolean;
+  evidence?: string;
 };
 
+/**
+ * Single Release Milestone
+ */
+export type SingleReleaseMilestone = BaseMilestone & {
+  /**
+   * Approved flag, only if the escrow is single-release
+   */
+  approved?: boolean;
+};
+
+/**
+ * Multi Release Milestone
+ */
+export type MultiReleaseMilestone = BaseMilestone & {
+  /**
+   * Amount to be transferred upon completion of this milestone
+   */
+  amount: string;
+
+  /**
+   * Flags validating certain milestone life states, only if the escrow is multi-release
+   */
+  flags?: Flags;
+};
 ```
 
 ### Trustline
@@ -140,6 +173,8 @@ export interface Trustline {
 
 ### Flags
 
+All the possible flags **only in multi-release escrow.**
+
 ```typescript
 /**
  * Flags
@@ -148,18 +183,24 @@ export type Flags = {
   /**
    * Flag indicating that an escrow is in dispute.
    */
-  disputeFlag?: boolean;
+  disputed?: boolean;
 
   /**
    * Flag indicating that escrow funds have already been released.
    */
-  releaseFlag?: boolean;
+  released?: boolean;
 
   /**
    * Flag indicating that a disputed escrow has already been resolved.
    */
-  resolvedFlag?: boolean;
+  resolved?: boolean;
+
+  /**
+   * Flag indicating whether a milestone has been approved by the approver.
+   */
+  approved?: boolean;
 };
+
 ```
 
 ### Roles

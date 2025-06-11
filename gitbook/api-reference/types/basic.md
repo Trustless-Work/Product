@@ -26,6 +26,11 @@ export type baseURL =
   | "https://dev.api.trustlesswork.com";
 
 /**
+ * Escrow Type
+ */
+export type EscrowType = "single-release" | "multi-release";
+
+/**
  * Http Method
  */
 export type HttpMethod = "get" | "post" | "put" | "delete";

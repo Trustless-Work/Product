@@ -15,11 +15,11 @@ layout:
 
 # Responses
 
-## Escrow's Response Entity
+### Escrow's Response Entity
 
 ```typescript
 import { Status } from "./types";
-import { EscrowPayload } from "./types.payload";
+import { MultiReleaseEscrow, SingleReleaseEscrow } from "./types.entity";
 
 /**
  * Escrow's Response like fund, release, change, etc ...
@@ -54,7 +54,7 @@ export type SendTransactionResponse = {
 /**
  * Initialize Escrow Response
  */
-export type InitializeEscrowResponse = EscrowRequestResponse & {
+export type InitializeSingleReleaseEscrowResponse = EscrowRequestResponse & {
   /**
    * ID (address) that identifies the escrow contract
    */
@@ -63,7 +63,7 @@ export type InitializeEscrowResponse = EscrowRequestResponse & {
   /**
    * Escrow data
    */
-  escrow: EscrowPayload;
+  escrow: SingleReleaseEscrow;
 
   /**
    * Message of the request
@@ -72,9 +72,27 @@ export type InitializeEscrowResponse = EscrowRequestResponse & {
 };
 
 /**
+ * Initialize Multi Release Escrow Response
+ */
+export type InitializeMultiReleaseEscrowResponse =
+  InitializeSingleReleaseEscrowResponse & {
+    /**
+     * Escrow data
+     */
+    escrow: MultiReleaseEscrow;
+  };
+
+/**
  * Update Escrow Response
  */
-export type UpdateEscrowResponse = InitializeEscrowResponse;
+export type UpdateSingleReleaseEscrowResponse =
+  InitializeSingleReleaseEscrowResponse;
+
+/**
+ * Update Multi Release Escrow Response
+ */
+export type UpdateMultiReleaseEscrowResponse =
+  InitializeMultiReleaseEscrowResponse;
 
 /**
  * Get Balances Response
@@ -90,6 +108,7 @@ export type GetEscrowBalancesResponse = {
    */
   balance: number;
 };
+
 
 ```
 
