@@ -69,8 +69,8 @@ Ensure they match: if you choose a "multi-release" type, you must also use a "mu
 * **type**: Describes the escrow type to be used. Options are "multi-release" or "single-release".
 * **payload**: An object containing the required fields to initialize an escrow.
 
-{% content-ref url="../api-reference/types/" %}
-[types](../api-reference/types/)
+{% content-ref url="../developer-resources/types/" %}
+[types](../developer-resources/types/)
 {% endcontent-ref %}
 
 _Return Value:_

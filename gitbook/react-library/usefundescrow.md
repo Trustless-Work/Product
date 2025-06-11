@@ -68,8 +68,8 @@ This is the main mutation function. Internally, it wraps `mutate` or `mutateAsyn
 * **type**: Describes the escrow type to be used. Options are "multi-release" or "single-release".
 * **payload**: Contains the data required for fund escrow.
 
-{% content-ref url="../api-reference/types/" %}
-[types](../api-reference/types/)
+{% content-ref url="../developer-resources/types/" %}
+[types](../developer-resources/types/)
 {% endcontent-ref %}
 
 _Return Value:_

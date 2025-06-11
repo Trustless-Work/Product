@@ -1,5 +1,6 @@
 ---
 description: A Comprehensive Developer's Guide to Stellar Wallet Integrations
+icon: wallet
 ---
 
 # Stellar Wallets

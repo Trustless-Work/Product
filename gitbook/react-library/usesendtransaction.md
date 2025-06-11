@@ -63,8 +63,8 @@ _Argument:_
 
 `payload`: An string containing the required fields to send a transaction to the network.
 
-{% content-ref url="../api-reference/types/" %}
-[types](../api-reference/types/)
+{% content-ref url="../developer-resources/types/" %}
+[types](../developer-resources/types/)
 {% endcontent-ref %}
 
 _Return Value:_

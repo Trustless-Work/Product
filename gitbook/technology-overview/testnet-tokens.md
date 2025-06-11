@@ -1,3 +1,7 @@
+---
+icon: arrow-trend-up
+---
+
 # How to Get Testnet Tokens
 
 Testnet tokens are a great way to experiment with Stellar wallets and blockchain operations without risking real assets. This guide explains how to obtain testnet tokens, their purpose, and how to use them effectively.
