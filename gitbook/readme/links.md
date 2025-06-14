@@ -12,7 +12,7 @@ icon: address-card
 * [API Reference](../api-reference/)
 * [React SDK](../react-library/)
 * [Escrow Concepts](../technology-overview/)
-* [Templates & Examples](../templates-and-components/)
+* [Templates & Examples](../open-source-templates/)
 
 ***
 
