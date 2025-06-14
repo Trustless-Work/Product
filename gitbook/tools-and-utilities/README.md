@@ -39,6 +39,6 @@ Trustless Work is live on Stellar testnet. You can use testnet USDC and XLM to f
 * 🔗 [Stellar Laboratory: Friendbot (for XLM)](https://laboratory.stellar.org/#account-creator?network=test)​
 * 🔗 USDC Faucet (for USDC)
 
-💡 Remember: You must establish a trustline before receiving USDC. Most wallets offer this in their UI.[Learn more.](https://app.gitbook.com/o/Yz8cTm8PUHaF0g65hQIq/s/Dg2e2YCRmNlhCnxxmEb6/~/changes/307/developer-resources/testnet-tokens)​​
+💡 Remember: You must establish a trustline before receiving USDC. Most wallets offer this in their UI.[Learn more.](testnet-tokens.md)​​
 
 \
