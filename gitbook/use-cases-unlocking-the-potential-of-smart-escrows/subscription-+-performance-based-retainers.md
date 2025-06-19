@@ -14,7 +14,7 @@ Trustless Work's Smart Escrow infrastructure provides a secure, transparent, and
 * **Service Provider:** Delivers ongoing services and marks milestones as complete.
 * **Platform/Trustless Work Escrow:** Securely holds funds and facilitates transparent payment releases based on performance.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Escrow Lifecycle:
 

@@ -12,7 +12,7 @@ Trustless Work provides a decentralized, transparent escrow solution to streamli
 
 **How It Works**
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 1. **Course Enrollment (Initiation & Funding Phase):**
    * Learners enroll in a course and deposit payment into a Trustless Work escrow.
