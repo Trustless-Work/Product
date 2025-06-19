@@ -17,6 +17,7 @@
     * [Dispute Resolution](technology-overview/escrow-lifecycle/dispute-resolution.md)
   * [USDC: The Stablecoin Powering Trustless Work](technology-overview/usdc-the-stablecoin-powering-trustless-work.md)
   * [Stellar & Soroban: The Backbone of Trustless Work](technology-overview/stellar-and-soroban-the-backbone-of-trustless-work.md)
+  * [Escrow Types](technology-overview/escrow-types.md)
 * [💻 Developer Guide](developer-resources/README.md)
   * [🚀 Developer Quickstart](developer-resources/getting-started.md)
   * [Authentication](developer-resources/api-reference/authentication/README.md)
