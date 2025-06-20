@@ -46,7 +46,7 @@ export type MultiReleaseMilestonePayload = {
   /**
    * Amount to be transferred upon completion of this milestone
    */
-  amount: string;
+  amount: number;
 };
 
 // ----------------- Initialize Escrow -----------------
@@ -239,7 +239,7 @@ export type FundEscrowPayload = {
   /**
    * Amount to be transferred upon completion of escrow milestones
    */
-  amount: string;
+  amount: number;
 
   /**
    * ID (address) that identifies the escrow contract
