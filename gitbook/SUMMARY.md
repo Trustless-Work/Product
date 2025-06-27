@@ -66,6 +66,8 @@
     * [Get Escrow](api-reference/deploy-2/get-escrow-by-contract-id.md)
     * [Get Multiple Escrow Balance](api-reference/deploy-2/get-multiple-escrow-balance.md)
   * [Helpers](api-reference/helpers/README.md)
+    * [Get Escrows By Signer](api-reference/helpers/get-escrow-by-contract-id.md)
+    * [Get Escrows By Role](api-reference/helpers/get-escrow-by-contract-id-1.md)
     * [Set Trustline](api-reference/helpers/set-trustline.md)
     * [Send Transaction](api-reference/helpers/send-transaction.md)
     * [Get Multiple Escrow Balance](api-reference/helpers/get-multiple-escrow-balance.md)
