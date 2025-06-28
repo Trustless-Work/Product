@@ -241,4 +241,15 @@ export type Roles = {
   receiver: string;
 };
 
+/**
+ * Role
+ */
+export type Role =
+  | "approver"
+  | "serviceProvider"
+  | "platformAddress"
+  | "releaseSigner"
+  | "disputeResolver"
+  | "receiver"
+  | "signer";
 ```

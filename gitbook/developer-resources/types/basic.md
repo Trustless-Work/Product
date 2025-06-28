@@ -40,4 +40,12 @@ export type HttpMethod = "get" | "post" | "put" | "delete";
  */
 export type Status = "SUCCESS" | "FAILED";
 
+/**
+ * Date
+ */
+export type Date = {
+  _seconds: number;
+  _nanoseconds: number;
+};
+
 ```

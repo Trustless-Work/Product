@@ -18,11 +18,13 @@ layout:
 ### Escrow's Payload Entity
 
 ```typescript
-import { MultiReleaseEscrow, SingleReleaseEscrow } from "./types.entity";
-
-/**
- * Documentation: https://docs.trustlesswork.com/trustless-work/developer-resources/quickstart/integration-demo-project/entities
- */
+import { EscrowType, SingleReleaseEscrowStatus } from "./types";
+import {
+  MultiReleaseEscrow,
+  Role,
+  Roles,
+  SingleReleaseEscrow,
+} from "./types.entity";
 
 // ----------------- Milestone Payloads -----------------
 /**
@@ -212,12 +214,12 @@ export type SingleReleaseResolveDisputePayload = {
   /**
    * Amount of funds to be returned to the approver based on the global amount.
    */
-  approverFunds: string;
+  approverFunds: number;
 
   /**
    * Amount of funds to be returned to the receiver based on the global amount.
    */
-  receiverFunds: string;
+  receiverFunds: number;
 };
 
 /**
@@ -268,6 +270,92 @@ export type GetEscrowParams = {
   signer: string;
 };
 
+// ----------------- Get Escrows From Indexer -----------------
+/**
+ * Get Escrows From Indexer Params
+ */
+export type GetEscrowsFromIndexerParams = {
+  /**
+   * Page number. Pagination
+   */
+  page?: number;
+
+  /**
+   * Sorting direction. Sorting
+   */
+  orderDirection?: "asc" | "desc";
+
+  /**
+   * Order by property. Sorting
+   */
+  orderBy?: "createdAt" | "updatedAt" | "amount";
+
+  /**
+   * Created at = start date. Filtering
+   */
+  startDate?: string;
+
+  /**
+   * Created at = end date. Filtering
+   */
+  endDate?: string;
+
+  /**
+   * Max amount. Filtering
+   */
+  maxAmount?: number;
+
+  /**
+   * Min amount. Filtering
+   */
+  minAmount?: number;
+
+  /**
+   * Is active. Filtering
+   */
+  isActive?: boolean;
+
+  /**
+   * Escrow that you are looking for. Filtering
+   */
+  title?: string;
+
+  /**
+   * Engagement ID. Filtering
+   */
+  engagementId?: string;
+
+  /**
+   * Status of the single-release escrow. Filtering
+   */
+  status?: SingleReleaseEscrowStatus;
+
+  /**
+   * Type of the escrow. Filtering
+   */
+  type?: EscrowType;
+};
+
+export type GetEscrowsFromIndexerBySignerParams =
+  GetEscrowsFromIndexerParams & {
+    /**
+     * Address of the user signing the contract transaction.
+     */
+    signer: string;
+  };
+
+export type GetEscrowsFromIndexerByRoleParams = GetEscrowsFromIndexerParams & {
+  /**
+   * Role of the user. Required
+   */
+  role: Role;
+
+  /**
+   * Address of the owner of the escrows. If you want to get all escrows from a specific role, you can use this parameter. But with this parameter, you can't use the signer parameter.
+   */
+  roleAddress: string;
+};
+
 // ----------------- Release Funds -----------------
 /**
  * Single Release Release Funds Payload
@@ -315,5 +403,6 @@ export type GetBalanceParams = {
    */
   addresses: string[];
 };
+
 
 ```
