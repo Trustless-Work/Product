@@ -4,10 +4,6 @@ description: 'High-level architecture: Smart contracts, APIs, and escrow workflo
 
 # ⚒️ Core Concepts
 
-Trustless Work enables **programmable, non-custodial escrows** tailored to your specific workflow. This section gives you the **mental model and primitives** to design, deploy, and scale smart escrow integrations.
-
-***
-
 ### 🔍 What Is a Smart Escrow?
 
 A **Smart Escrow** is a smart contract that securely holds funds and only releases them when predefined conditions are met — like a milestone being completed or approved.
@@ -23,32 +19,54 @@ Escrows on Trustless Work are:
 
 ***
 
-### 🛠️ How It Works (In 3 Phases)
+**🧩 Escrow Types**
 
-1. **Set Up**\
-   Define roles, amount, and milestone rules
-2. **Fund**\
-   Lock stablecoins into the escrow contract
-3. **Execute**\
-   Mark, approve, and release funds based on logic
+* **Single-Release** — One payout, one approval, done.
+* **Multi-Release** — Break it into milestones. Pay over time.
+
+***
+
+**🔄 Escrow Lifecycle**
+
+Every escrow follows a flow:
+
+1. **Initiate** the rules
+2. **Fund** it with stablecoins
+3. **Mark** progress
+4. **Approve** the work
+5. **Release** the funds\
+   (6. **Dispute**, if needed)
+
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 → Dive into the [Escrow Lifecycle](escrow-lifecycle/)
 
 ***
 
-### **How It All Works Together** 🏗️
+**🧑‍⚖️ Roles & Permissions**
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+Each action is signed by a wallet:
 
-### 👥 Key Roles in an Escrow
-
-Roles determine who can:
-
-* Mark work as complete
-* Approve it
-* Release or dispute funds
+* Marker → says work is done
+* Approver → confirms it
+* Releaser → sends funds
+* Resolver → handles disputes
+* Receiver → gets paid
 
 → See [Roles & Responsibilities](roles-in-trustless-work.md)
+
+***
+
+**📦 Escrow as Data**
+
+Every escrow is just a **JSON config**. You define:
+
+* Roles
+* Milestones
+* Token to use
+* Fees (optional)
+
+Then deploy it via API or dApp. Done.
 
 ***
 
