@@ -54,7 +54,7 @@ This section walks through the structured process of managing a transaction usin
 * Set **milestones** and **funding conditions**.
 * Deploy the **smart escrow contract**.
 
-➡️ Step-by-step guide for Initiation
+[➡️ Step-by-step guide for Initiation](step-3-creating-an-escrow.md)
 
 ***
 
@@ -66,7 +66,7 @@ This section walks through the structured process of managing a transaction usin
 * The escrow **status updates** to reflect the deposit.
 * The **contract balance** is displayed in the UI.
 
-➡️ Step-by-step guide for Funding
+[➡️ Step-by-step guide for Funding](step-4-funding-an-escrow.md)
 
 ***
 
@@ -77,7 +77,7 @@ This section walks through the structured process of managing a transaction usin
 * The **service provider** updates milestone completion.
 * Status changes to **"Pending Approval"**.
 
-➡️ Step-by-step guide for Milestone Updates
+[➡️ Step-by-step guide for Milestone Updates](step-5-marking-a-milestone-as-done.md)
 
 ***
 
@@ -89,7 +89,7 @@ This section walks through the structured process of managing a transaction usin
 * If approved, funds move to **pending release**.
 * If disputed, the transaction enters the **Dispute Resolution Phase**.
 
-➡️ Step-by-step guide for Approvals
+[➡️ Step-by-step guide for Approvals](step-6-approving-the-milestone.md)
 
 ***
 
@@ -101,7 +101,7 @@ This section walks through the structured process of managing a transaction usin
 * The escrow **status updates** to "Completed."
 * The transaction is finalized.
 
-➡️ Step-by-step guide for Releasing Funds
+[➡️ Step-by-step guide for Releasing Funds](step-7-releasing-the-payment.md)
 
 ***
 
@@ -117,7 +117,7 @@ Some transactions require additional steps:
 * Adjustments are made based on the ruling.
 * Funds are either **released, partially released, or refunded**.
 
-➡️ Step-by-step guide for Dispute Resolution
+[➡️ Step-by-step guide for Dispute Resolution](resolving-disputes.md)
 
 ***
 
@@ -130,9 +130,4 @@ Some transactions require additional steps:
 * Understanding Escrow Roles
 
 ***
-
-#### **Next Steps**
-
-🔹 **Ready to start?** Access the [Dapp](https://dapp.trustlesswork.com)\
-🔹 Need support? Join our **Telegram** or Ask our AI.
 
