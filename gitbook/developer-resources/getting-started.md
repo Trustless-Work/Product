@@ -9,6 +9,10 @@ coverY: 0
 
 # 🚀 Developer Quickstart
 
+{% hint style="success" %}
+Hello! This page is optimized to be exported and loaded to your AI Agent of choice! you can also use ours in the Search Bar!
+{% endhint %}
+
 ### 🚀 What Is Trustless Work?
 
 Trustless Work is an Escrow-as-a-Service (EaaS) platform designed for the stablecoin economy. It lets you securely hold funds in non-custodial smart contracts until milestones are completed and approved.
