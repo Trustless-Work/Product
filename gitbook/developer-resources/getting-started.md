@@ -2,7 +2,9 @@
 description: >-
   This guide is your all-in-one resource to integrate, deploy, and extend
   Trustless Work. Whether you’re a developer, a product team, or seeding an AI
-  agent — this page gives you everything: API, SDK, c
+  agent — this page gives you everything.
+cover: ../.gitbook/assets/TW Blog Images (Twitch Banner).png
+coverY: 0
 ---
 
 # 🚀 Developer Quickstart
