@@ -4,10 +4,6 @@ icon: arrow-trend-up
 
 # How to Get Testnet Tokens
 
-Testnet tokens are a great way to experiment with Stellar wallets and blockchain operations without risking real assets. This guide explains how to obtain testnet tokens, their purpose, and how to use them effectively.
-
-***
-
 ## **What Are Testnet Tokens?**
 
 Testnet tokens are virtual assets used on Stellar's test network (testnet) to:
@@ -84,26 +80,6 @@ Testnet tokens are virtual assets used on Stellar's test network (testnet) to:
 * Use your testnet wallet with Stellar-based dApps like **Trustless Work** to test integrations.
 
 ***
-
-## **Switching Your Wallet to Testnet**
-
-Most Stellar wallets allow you to switch between the mainnet and testnet. Here's how:
-
-### **General Steps:**
-
-1. Open your wallet settings.
-2. Look for the **"Network"** option.
-3. Switch from **Mainnet** to **Testnet**.
-4. Save your settings and restart the wallet if required.
-
-### **Examples for Popular Wallets:**
-
-* **Freighter Wallet:**
-  * Click on **Settings** > **Network** > **Testnet**.
-* **Rabet Wallet:**
-  * Select **"Network"** in the main menu and toggle to **Testnet**.
-* **Albedo Wallet:**
-  * Adjust the network via the settings or during the transaction prompt.
 
 ***
 
