@@ -1,5 +1,4 @@
 ---
-description: Your gateway to revolutionizing payment flows in the digital economy.
 icon: hand-wave
 cover: .gitbook/assets/Banner (1).png
 coverY: 0
@@ -22,7 +21,11 @@ layout:
 # Welcome
 
 {% hint style="success" %}
-We've enabled AI on this Gitbook! Feel free to make questions on the search bar to access this feature!
+Export the docs and paste them on any AI agent to get full context!
+
+We've also enabled AI on this Gitbook! Use the search bar to access this feature.
+
+Pura Vida!
 {% endhint %}
 
 ## Welcome to Trustless Work Documentation!
