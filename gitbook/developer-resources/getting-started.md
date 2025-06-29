@@ -263,22 +263,11 @@ Supported wallets:
 
 ***
 
-### 📦 Use Case Templates
-
-| Use Case            | Description                                       | Template Repo / Docs                                  |
-| ------------------- | ------------------------------------------------- | ----------------------------------------------------- |
-| Crowdfunding Escrow | Multi-milestone payouts for campaign creators     | [starter](https://github.com/trustlesswork/templates) |
-| DAO Bounty Releases | Pay contributors once work is approved            | [starter](https://github.com/trustlesswork/templates) |
-| Gig Work Milestones | Trustless Upwork-style flows                      | Coming Soon                                           |
-| Rental Deposits     | Hold and release funds based on move-out approval | [example](https://escrowtimes.trustlesswork.com/)     |
-
-***
-
 ### 🛠 Developer Tools & Links
 
 * 🔗 [API Docs](https://api.trustlesswork.com/docs)
 * 🧪 [Demo dApp](https://demo.trustlesswork.com/)
-* Github
+* Github [https://github.com/Trustless-Work](https://github.com/Trustless-Work)
 * 📦 [React SDK (NPM)](https://www.npmjs.com/package/@trustless-work/escrow)
 * 📖 [Wallet Setup Guide](https://docs.trustlesswork.com/tools-and-utilities/stellar-wallets)
 
@@ -287,8 +276,6 @@ Supported wallets:
 ### 🤝 Join the Ecosystem
 
 * 🧵 Twitter/X: [@trustlesswork](https://x.com/trustlesswork)
-* 💬 Discord: [discord.gg/trustlesswork](https://discord.gg/trustlesswork)
-* 📬 Contact: [founders@trustlesswork.com](mailto:founders@trustlesswork.com)
 * 🌐 Docs Hub: [docs.trustlesswork.com](https://docs.trustlesswork.com/)
 
 ***
