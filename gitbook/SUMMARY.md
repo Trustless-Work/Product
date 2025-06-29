@@ -121,6 +121,7 @@
       * [Tabs](open-source-templates/demo-overview/ui-components/tabs.md)
       * [Utils](open-source-templates/demo-overview/ui-components/utils.md)
 * [🛠️ Tools & Utilities](tools-and-utilities/README.md)
+  * [Trustlines](tools-and-utilities/trustlines.md)
   * [Stellar Wallets](tools-and-utilities/stellar-wallets/README.md)
     * [Freighter Wallet](tools-and-utilities/stellar-wallets/freighter-wallet.md)
     * [Albedo Wallet](tools-and-utilities/stellar-wallets/albedo-wallet.md)
