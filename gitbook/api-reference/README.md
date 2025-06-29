@@ -116,7 +116,7 @@ The **Trustless Work REST API** is a developer interface for creating and managi
 
 ### 📌 Dev Resources
 
-www.trustlesswork.com/developers
+
 
 **Dev Map:** [https://www.trustlesswork.com/developers](https://www.trustlesswork.com/developers)
 
