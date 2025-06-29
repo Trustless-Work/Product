@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # xBull Wallet
 
 ![Rabet Wallet Logo](../../developer-resources/stellar-wallets/images/xbull-logo.png)\

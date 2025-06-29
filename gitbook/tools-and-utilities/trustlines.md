@@ -54,13 +54,3 @@ Soroban smart contracts integrate tightly with Stellar assets via the **Stellar 
 4. Base-reserve costs accumulate—factor in reserve XLM when onboarding users across multiple assets.
 
 ***
-
-### 💬 Insight from the community
-
-One Reddit comment sums it up simply:
-
-> “Trustlines are entries that persist in the Stellar ledger. They track the limit for which your account trusts the issuing account and the amount of credit.” ([reddit.com](https://www.reddit.com/r/Stellar/comments/7u47av/can_someone_explain_what_this_means_what_exactly/?utm_source=chatgpt.com))
-
-***
-
-Would you like example code for verifying trustlines via Soroban RPC, or showing SDK checks in `soroban-client`? I can pull snippets into Typescript or Java as needed.

@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Hana Wallet
 
 ![Rabet Wallet Logo](../../developer-resources/stellar-wallets/images/hana-logo.png)\

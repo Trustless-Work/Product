@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Albedo Wallet
 
 ![Rabet Wallet Logo](../../developer-resources/stellar-wallets/images/albedo-logo.png)\

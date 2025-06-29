@@ -1,4 +1,4 @@
-# 📂 Open-Source Templates & Developer Tools
+# 📂 Interesting Links
 
 **Freighter SDK:**
 
@@ -7,3 +7,5 @@
 **KindFi:**
 
 Stellar Expert:&#x20;
+
+Token Playground: [https://token-playground.gitbook.io/guide](https://token-playground.gitbook.io/guide)

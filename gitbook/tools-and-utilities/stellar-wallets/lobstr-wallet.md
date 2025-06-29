@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Lobstr Wallet
 
 ![Rabet Wallet Logo](../../developer-resources/stellar-wallets/images/lobstr-logo.png)\

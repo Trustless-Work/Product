@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Rabet Wallet
 
 ![Rabet Wallet Logo](../../developer-resources/stellar-wallets/images/rabet-logo.png)\
