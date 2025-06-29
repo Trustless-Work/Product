@@ -4,7 +4,7 @@ hidden: true
 
 # xBull Wallet
 
-![Rabet Wallet Logo](../../developer-resources/stellar-wallets/images/xbull-logo.png)\
+![Rabet Wallet Logo](../../../developer-resources/stellar-wallets/images/xbull-logo.png)\
 &#xNAN;_&#x4F;fficial logo of the xBull Wallet._
 
 xBull Wallet is a secure and fast web-based wallet designed for Stellar users. It provides a seamless experience for managing Stellar accounts and interacting with Stellar dApps.
@@ -28,7 +28,7 @@ xBull Wallet is a secure and fast web-based wallet designed for Stellar users. I
    * Ensure you download only from the official website to avoid scams.
 3. After installation, pin the xBull extension for easy access.
 
-![xBull SetUp](../../developer-resources/stellar-wallets/images/xbull_preview.png)
+![xBull SetUp](../../../developer-resources/stellar-wallets/images/xbull_preview.png)
 
 ***
 
@@ -42,7 +42,7 @@ xBull Wallet is a secure and fast web-based wallet designed for Stellar users. I
 4. xBull will generate a **Recovery Phrase** (also called a Seed Phrase).
    * Write it down and store it in a safe place. **Do not share it with anyone**.
 
-![xBull Create Wallet](../../developer-resources/stellar-wallets/images/xbull-create-wallet.png)
+![xBull Create Wallet](../../../developer-resources/stellar-wallets/images/xbull-create-wallet.png)
 
 ### **Importing an Existing Wallet**
 
@@ -61,7 +61,7 @@ xBull Wallet is a secure and fast web-based wallet designed for Stellar users. I
 4. A pop-up will appear from xBull asking for confirmation.
 5. Approve the connection in the wallet extension.
 
-![Trustless Work](../../developer-resources/stellar-wallets/images/trustless-work.png) ![Wallet](../../developer-resources/stellar-wallets/images/wallet-select.png)
+![Trustless Work](../../../developer-resources/stellar-wallets/images/trustless-work.png) ![Wallet](../../../developer-resources/stellar-wallets/images/wallet-select.png)
 
 ### **Note:**
 

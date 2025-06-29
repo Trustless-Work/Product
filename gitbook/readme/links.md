@@ -10,7 +10,7 @@ icon: address-card
 * [API Reference](../api-reference/)
 * [React SDK](../react-library/)
 * [Escrow Concepts](../technology-overview/)
-* [Templates & Examples](../open-source-templates/)
+* [Templates & Examples](../open-source-dapps/)
 
 ***
 

@@ -12,8 +12,8 @@
 [api-reference](../api-reference/)
 {% endcontent-ref %}
 
-{% content-ref url="../tools-and-utilities/stellar-wallets/" %}
-[stellar-wallets](../tools-and-utilities/stellar-wallets/)
+{% content-ref url="../technology-overview/tools-and-utilities/stellar-wallets/" %}
+[stellar-wallets](../technology-overview/tools-and-utilities/stellar-wallets/)
 {% endcontent-ref %}
 
 

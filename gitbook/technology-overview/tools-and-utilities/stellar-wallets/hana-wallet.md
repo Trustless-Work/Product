@@ -4,7 +4,7 @@ hidden: true
 
 # Hana Wallet
 
-![Rabet Wallet Logo](../../developer-resources/stellar-wallets/images/hana-logo.png)\
+![Rabet Wallet Logo](../../../developer-resources/stellar-wallets/images/hana-logo.png)\
 &#xNAN;_&#x4F;fficial logo of the Hana Wallet._
 
 Hana Wallet is a lightweight browser extension wallet for Stellar, offering an easy and secure way to manage accounts and sign transactions.
@@ -27,7 +27,7 @@ Hana Wallet is a lightweight browser extension wallet for Stellar, offering an e
 2. Download and install the browser extension for your preferred browser (Chrome or Brave).
 3. Pin the Hana extension for quick access.
 
-![Hana Preview](../../developer-resources/stellar-wallets/images/hana-preview.png)
+![Hana Preview](../../../developer-resources/stellar-wallets/images/hana-preview.png)
 
 ***
 
@@ -41,7 +41,7 @@ Hana Wallet is a lightweight browser extension wallet for Stellar, offering an e
 4. Hana will generate a **Recovery Phrase** (also called a Seed Phrase).
    * Write it down and store it in a safe place. **Do not share it with anyone**.
 
-![Hana SetUp](../../developer-resources/stellar-wallets/images/hana-setup.png)
+![Hana SetUp](../../../developer-resources/stellar-wallets/images/hana-setup.png)
 
 ### **Importing an Existing Wallet**
 
@@ -60,7 +60,7 @@ Hana Wallet is a lightweight browser extension wallet for Stellar, offering an e
 4. A pop-up will appear from Hana asking for confirmation.
 5. Approve the connection in the wallet extension.
 
-![Trustless Work](../../developer-resources/stellar-wallets/images/trustless-work.png) ![Wallet](../../developer-resources/stellar-wallets/images/wallet-select.png)
+![Trustless Work](../../../developer-resources/stellar-wallets/images/trustless-work.png) ![Wallet](../../../developer-resources/stellar-wallets/images/wallet-select.png)
 
 ### **Note:**
 
