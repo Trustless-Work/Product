@@ -4,8 +4,6 @@ icon: address-card
 
 # Links
 
-## 🔗 Important Links
-
 ### 🧭 Core Docs
 
 * [Quickstart Guide](../developer-resources/getting-started.md)
@@ -18,9 +16,9 @@ icon: address-card
 
 ### 🛠️ Tools
 
-* Trustless Work Backoffice dApp
-* Trustless Work demo dApp
-* Escrow Viewer
+* [Trustless Work Backoffice dApp](https://dapp.trustlesswork.com/)
+* [Trustless Work demo dApp](https://demo.trustlesswork.com/)
+* [Escrow Viewer](https://viewer.trustlesswork.com/)
 * [Swagger API Docs](https://api.trustlesswork.com/swagger)
 
 ***

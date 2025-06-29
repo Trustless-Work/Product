@@ -1,11 +1,6 @@
 # Why Escrows Matter
 
-Stablecoins move trillions. Stellar and Soroban give us the speed and cost efficiency.\
-But real-world payments don’t run on speed alone — they run on **trust**.
 
-Escrow is the missing layer between “I sent the money” and “I got what I paid for.”
-
-### **Why Trustless Work?**
 
 *   **Escrows are a great way to solve for trust.**&#x20;
 
@@ -53,7 +48,3 @@ Platforms that could greatly benefit from the use of escrows don't use them beca
 
 * **Get Started:** [Quick Start Guide](../developer-resources/getting-started.md)\
   Begin integrating Trustless Work today.
-* **Learn More:** [About Trustless Work](broken-reference)\
-  Explore our mission, vision, and journey so far.
-* **Contact Us:** [Support](../appendices/contact-and-support.md)\
-  Need help? Reach out to our team for assistance.

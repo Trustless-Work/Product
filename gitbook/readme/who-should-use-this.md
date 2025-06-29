@@ -1,7 +1,5 @@
 # Who Should Use This
 
-## 🎯 Who Should Use Trustless Work?
-
 Trustless Work is built for developers, platforms, and agents who want **more control and automation** over when funds are released.
 
 ***
