@@ -6,7 +6,7 @@
   * [Links](readme/links.md)
 * [⚒️ Core Concepts](technology-overview/README.md)
   * [Smart Escrow Design](technology-overview/smart-escrow-design/README.md)
-    * [What does a Smart Escrow "look like"?](technology-overview/smart-escrow-design/what-does-a-smart-escrow-look-like.md)
+    * [How does a Smart Escrow "look like"?](technology-overview/smart-escrow-design/what-does-a-smart-escrow-look-like.md)
   * [Roles in Trustless Work](technology-overview/roles-in-trustless-work.md)
   * [Escrow Lifecycle](technology-overview/escrow-lifecycle/README.md)
     * [Initiation Phase](technology-overview/escrow-lifecycle/initiation-phase.md)

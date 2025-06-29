@@ -52,15 +52,6 @@ Roles determine who can:
 
 ***
 
-#### 🧱 Use Case Examples
-
-* **Freelance Marketplace**
-* **DAO Grant Program**
-
-Explore full breakdowns in the [Use Case Gallery](https://dots.trustlesswork.com/use-cases).
-
-***
-
 #### ⬇️ Next Steps
 
 * ✏️ [Customize your roles](roles-in-trustless-work.md)
