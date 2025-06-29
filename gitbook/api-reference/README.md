@@ -15,56 +15,116 @@ layout:
 
 # API Reference
 
-## Introduction to the Trustless Work REST API
+### What is the Trustless Work API?
 
-The Trustless Work REST API is designed to offer decentralized escrow solutions by leveraging the power of smart contracts on the Stellar blockchain through Soroban. This API enables platforms and businesses to integrate secure, fast, and transparent escrow services, eliminating the need to rely on centralized intermediaries.
+The **Trustless Work REST API** is a developer interface for creating and managing **decentralized escrow contracts** on the **Stellar blockchain** using **Soroban smart contracts**. It simplifies the escrow lifecycle and integrates seamlessly into any platform that needs conditional payments or trust-minimized fund release.
 
-### What is the API for?
+***
 
-The Trustless Work API is a key component for any platform that requires secure conditional payments. It allows the creation, management, and automation of escrow contracts, providing security for both payers and payees. This API can be used across various industries including e-commerce, SaaS, real estate, freelance marketplaces, and more.
+### 🚀 Core Capabilities
 
-### Key API Functions:
+* **Deploy Smart Escrows**: Initialize smart contracts with defined roles, milestones, and conditions.
+* **Fund Escrows**: Lock funds into escrow accounts with Stellar-native assets (e.g., USDC).
+* **Update & Approve Milestones**: Collaborate on progress tracking and delivery verification.
+* **Dispute Handling**: Programmatically raise or resolve disputes.
+* **Release Funds**: Release escrowed amounts only when predefined conditions are fulfilled.
+* **Real-Time Status Tracking**: Query escrow status, milestones, and balances.
+* **Cross-Chain Compatibility**: USDC support via Circle’s cross-chain transfer protocol.
 
-* **Create and manage escrow contracts:** Users can set up payment agreements with specific conditions that must be met before funds are released.
-* **Real-time status updates:** The API provides real-time access to escrow statuses, allowing users to verify the state of funds at any time. (Working)
+***
 
-### REST API Advantages:
+### 🧩 Escrow Types
 
-* **Transparency:** Every transaction is recorded on the blockchain, making it auditable and ensuring that all parties can track the flow of funds.
-* **Low Costs:** Built on Stellar, the API benefits from minimal transaction fees compared to traditional solutions or even other blockchain platforms.
-* **Speed:** Stellar's fast transaction finality ensures that payments are processed almost in real-time.
-* **Cross-chain compatibility:** With USDC and Circle’s cross-chain transfer protocol, the API can operate across multiple blockchains, offering flexibility to businesses.
+1. **Single-Release Escrow**
+   * One-time fund release after milestone approval or dispute resolution.
+   * Roles: Service Provider, Approver, Receiver, Dispute Resolver.
+2. **Multi-Release Escrow**
+   * Multiple milestone-based payouts.
+   * Each milestone is independently approved and released.
 
-### API Use Cases
+***
 
-1. **Freelance marketplaces:** Freelance platforms can use the API to manage milestone-based payments, enhancing trust and reducing disputes between clients and freelancers.
-2. **High-value e-commerce:** In peer-to-peer transactions, escrow ensures that payment is only released once the product has been received and verified.
-3. **SaaS providers:** Platforms managing recurring payments can leverage the API to release payments upon successful service delivery.
-4. **International real estate:** Trustless Work helps secure funds in cross-border real estate transactions by releasing them only when all legal and contractual obligations are met.
-5. **Legal services:** Law firms can manage complex multi-party agreements or settlements without needing manual escrow services.
+### 📘 Key API Endpoints (Grouped)
 
-In summary, the Trustless Work REST API provides a robust, transparent, and cost-effective solution for managing escrowed funds, catering to a wide range of industries and promoting security and trust in digital transactions.
+#### 🔨 Deployment
 
+* `/deployer/single-release`
+* `/deployer/multi-release`
 
+#### 💸 Funding
 
-Production API
+* `/escrow/{type}/fund-escrow`
 
-> https://api.trustlesswork.com
+#### ✅ Milestone Handling
 
-Dev API
+* `/escrow/{type}/approve-milestone`
+* `/escrow/{type}/change-milestone-status`
 
-> https://dev.api.trustlesswork.com
+#### 🏁 Finalization
 
-## <mark style="color:orange;">Warning!</mark>
+* `/escrow/{type}/release-funds` (single)
+* `/escrow/{type}/release-milestone-funds` (multi)
 
-> You'll have <mark style="color:red;">**50**</mark> as a request rate limit per client in the API every 60 seconds.
+#### ⚠️ Disputes
 
-## GitHub Repository
+* `/escrow/{type}/dispute-escrow`
+* `/escrow/{type}/resolve-dispute`
+* `/escrow/{type}/dispute-milestone` (multi)
+* `/escrow/{type}/resolve-milestone-dispute` (multi)
 
-{% embed url="https://github.com/Trustless-Work" %}
+#### 🔄 Escrow Updates
 
-## API Swagger
+* `/escrow/{type}/update-escrow`
 
-{% embed url="https://dev.api.trustlesswork.com/docs" %}
+#### 📊 Query / Tracking
+
+* `/escrow/{type}/get-escrow`
+* `/escrow/{type}/get-multiple-escrow-balance`
+* `/helper/get-escrows-by-signer`
+* `/helper/get-escrows-by-role`
+
+***
+
+### 🧰 Helper Utilities
+
+* `/helper/set-trustline`: Set trustline to receive specific tokens like USDC.
+* `/helper/send-transaction`: Submit signed XDR transactions to Stellar.
+* `/helper/get-multiple-escrow-balance`: Batch query of escrow balances.
+
+***
+
+### 🛡️ Security & Constraints
+
+* **Unsigned Transactions**: All operations return unsigned XDRs requiring client-side signing.
+* **Role-Based Permissions**: Specific actions (e.g., approve, dispute) require the correct role.
+* **Rate Limits**: 50 requests/minute per client.
+* **Fee Model**: A 0.3% mainnet fee is taken by Trustless Work, with platforms able to add their own fee.
+
+***
+
+### 🎯 Use Cases
+
+* Freelance platforms
+* High-value e-commerce
+* SaaS billing
+* Cross-border real estate
+* Legal & professional services
+* Crowdfunding and grants
+* Security deposits
+
+***
+
+### 📌 Dev Resources
+
+www.trustlesswork.com/developers
+
+**Dev Map:** [https://www.trustlesswork.com/developers](https://www.trustlesswork.com/developers)
+
+* **Swagger**: [https://dev.api.trustlesswork.com/docs](https://dev.api.trustlesswork.com/docs)
+* **GitHub**: [https://github.com/Trustless-Work](https://github.com/Trustless-Work)
+
+***
+
+##
 
 ##

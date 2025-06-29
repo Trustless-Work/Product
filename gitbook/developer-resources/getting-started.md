@@ -1,24 +1,38 @@
 ---
 description: >-
-  This guide takes you from zero to escrow in just a few steps — whether you’re
-  prototyping, testing, or preparing for production.
+  This guide is your all-in-one resource to integrate, deploy, and extend
+  Trustless Work. Whether you’re a developer, a product team, or seeding an AI
+  agent — this page gives you everything: API, SDK, c
 ---
 
 # 🚀 Developer Quickstart
 
-### 🧠 1. Understand the Model (Optional but Recommended)
+### 🚀 What Is Trustless Work?
 
-Trustless Work is an **Escrow-as-a-Service** platform that lets you securely hold funds in a programmable, non-custodial escrow until milestones are completed and approved.
+Trustless Work is an Escrow-as-a-Service (EaaS) platform designed for the stablecoin economy. It lets you securely hold funds in non-custodial smart contracts until milestones are completed and approved.
 
-✅ Why it matters:
+Use it to:
 
-* 🚀 Launch escrow flows in minutes, not months
-* 🔐 Secure, neutral, role-based fund control
-* 💸 Save on dev effort and avoid smart contract audits
-* 🌍 Enable global, stablecoin-based payments using Stellar + USDC
+* Lock funds with programmable milestone logic
+* Enable transparent fund releases for services, grants, rentals, etc.
+* Automate fund flows using signer-based roles
 
-📚 [Read how it works](../technology-overview/)\
-📖 [Explore use cases](../use-cases-unlocking-the-potential-of-smart-escrows/)
+### 🧪 Quickstart — Deploy Your First Escrow
+
+▶ [Try the Demo](https://demo.trustlesswork.com/) — No code required
+
+#### Pre-requisites
+
+* [Freighter](https://www.freighter.app/) wallet
+* Testnet USDC + XLM ([Get test tokens](https://docs.trustlesswork.com/tools-and-utilities/testnet-tokens))
+
+#### Step-by-Step
+
+1. Open the [demo app](https://demo.trustlesswork.com/)
+2. Fill in escrow details (roles, milestones)
+3. Click deploy → sign the transaction
+4. Send testmet USDC to the escrow contract address
+5. Mark, approve, and release milestones from the UI
 
 ***
 
