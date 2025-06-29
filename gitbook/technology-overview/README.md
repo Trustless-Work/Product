@@ -24,6 +24,8 @@ Escrows on Trustless Work are:
 * **Single-Release** — One payout, one approval, done.
 * **Multi-Release** — Break it into milestones. Pay over time.
 
+→ Learn more about [Escrow Types](escrow-types.md)
+
 ***
 
 **🔄 Escrow Lifecycle**
@@ -37,9 +39,9 @@ Every escrow follows a flow:
 5. **Release** the funds\
    (6. **Dispute**, if needed)
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
 → Dive into the [Escrow Lifecycle](escrow-lifecycle/)
+
+<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -66,7 +68,7 @@ Every escrow is just a **JSON config**. You define:
 * Token to use
 * Fees (optional)
 
-Then deploy it via API or dApp. Done.
+Then deploy it via API or SDK. Done.
 
 ***
 

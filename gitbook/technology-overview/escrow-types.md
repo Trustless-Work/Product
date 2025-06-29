@@ -1,15 +1,6 @@
 # Escrow Types
 
-Here’s a GitBook-ready draft for the **Escrow Types** page:
-
-***
-
-### 🧱 Escrow Types
-
 Trustless Work supports multiple escrow types, each tailored for different workflows. Whether you're building a marketplace, a grant platform, or a gig app, choosing the right escrow logic helps you balance simplicity, flexibility, and trust.
-
-> 🔎 Looking for schemas and technical configs?\
-> [Explore the schemas directory →](https://docs.trustlesswork.com/trustless-work/developer-resources/schema)
 
 ***
 
