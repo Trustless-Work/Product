@@ -11,30 +11,30 @@ This custom hook exposes a function to get the balances that you are looking obt
 
 {% code overflow="wrap" %}
 ```typescript
-import { useGetMultipleEscrowBalances } from "@trustless-work/escrow/hooks";
-import { GetBalanceParams } from "@trustless-work/escrow/types";
+import { useGetEscrowFromIndexerByContractId } from "@trustless-work/escrow/hooks";
+import { GetEscrowFromIndexerByContractIdParams } from "@trustless-work/escrow/types";
 
 /*
- *  useGetEscrow
+ *  useGetMultipleEscrowBalances
 */
-const { getMultipleBalances } = useGetMultipleEscrowBalances();
+const { getEscrowByContractId } = useGetEscrowFromIndexerByContractId();
 
 /* 
- * It returns the balances of the escrows
- * payload should be of type `GetBalanceParams`
+ * It returns the escrow that you are looking for
+ * payload should be of type `GetEscrowFromIndexerByContractIdParams`
 */
-await getMultipleBalances(payload);
+await getEscrowByContractId(payload);
 ```
 {% endcode %}
 
 ### Function
 
-* `getMultipleBalances`\
+* `getEscrowByContractId` \
   Responsible for building and returning data based on the provided payload.
 
 _Argument:_
 
-`GetBalanceParams` : An object containing the required fields to get the balances.
+`GetEscrowFromIndexerByContractIdParams`: An object containing the required fields to get the escrow.
 
 {% content-ref url="../developer-resources/types/" %}
 [types](../developer-resources/types/)
@@ -42,57 +42,57 @@ _Argument:_
 
 _Return Value:_
 
-`balances`: The balances that you are looking for.
+`escrow`: The escrow that you are looking for.
 
 ***
 
 ## Usage ExampleForm
 
-{% code title="src/hooks/useGetMultipleEscrowBalances.ts" overflow="wrap" %}
+{% code title="src/hooks/useGetEscrowFromIndexerByContractId.ts" overflow="wrap" %}
 ```typescript
 import {
-  useGetMultipleEscrowBalances,
+  useGetEscrowFromIndexerByContractId,
 } from "@trustless-work/escrow/hooks";
 import {
-  GetBalanceParams, 
+  GetEscrowFromIndexerByContractIdParams, 
 } from "@trustless-work/escrow/types";
 
-export const useGetMultipleEscrowBalancesForm = () => {
+export const useGetEscrowFromIndexerByContractIdForm = () => {
 
  /*
   *  useGetMultipleEscrowBalances
  */
- const { getMultipleBalances } = useGetMultipleEscrowBalances();
+ const { getEscrowByContractId } = useGetEscrowFromIndexerByContractId();
 
 /*
  * onSubmit function, this could be called by form button
 */
- const onSubmit = async (payload: GetBalanceParams) => {
+ const onSubmit = async (payload: GetEscrowFromIndexerByContractIdParams) => {
 
     try {
       /**
        * API call by using the trustless work hooks
        * @Note:
-       * - We need to pass the payload to the getMultipleBalances function
-       * - The result will be balances
+       * - We need to pass the payload to the getEscrowByContractId function
+       * - The result will be an escrow
       */
-      const { balances } = await getMultipleBalances(payload);
+      const escrow = await getEscrowByContractId(payload);
       
-      if (!balances) {
-        throw new Error("Balances not found");
+      if (!escrow) {
+        throw new Error("Escrow not found");
       }
 
       /**
        * @Responses:
-       * balances !== null
-       * - Balances received successfully
+       * escrow !== null
+       * - Escrow received successfully
        * - Show a success toast
        *
-       * balances === null
+       * escrow === null
        * - Show an error toast
        */
       if (balances) {
-        toast.success("Balances Received");
+        toast.success("Escrow Received");
       }
     } catch (error: unknown) {
       // catch error logic
