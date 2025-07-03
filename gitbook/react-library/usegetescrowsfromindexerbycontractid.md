@@ -1,5 +1,5 @@
 ---
-description: Returns all the information of an escrow requested through the contractId.
+description: Returns all
 icon: dollar-sign
 ---
 
