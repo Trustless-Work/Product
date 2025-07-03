@@ -1,17 +1,6 @@
 ---
 description: Returns all the information of an escrow requested through the contractId.
 icon: square-list
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Get Escrow
@@ -26,7 +15,7 @@ layout:
 ### Open API
 
 {% openapi-operation spec="trustless-work-api-dev" path="/escrow/multi-release/get-escrow" method="get" %}
-[Broken link](broken-reference)
+[OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
 ### Use Example:

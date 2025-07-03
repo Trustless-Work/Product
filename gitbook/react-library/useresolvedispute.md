@@ -3,17 +3,6 @@ description: >-
   Resolves escrow disputes by distributing funds to the approver and service
   provider as determined by the dispute resolver.
 icon: handshake-simple
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # useResolveDispute

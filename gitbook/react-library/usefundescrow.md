@@ -3,17 +3,6 @@ description: >-
   Allows users to deposit funds into an existing escrow contract, securing them
   until the agreed conditions are met.
 icon: sack-dollar
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # useFundEscrow

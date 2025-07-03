@@ -1,17 +1,6 @@
 ---
 description: Returns all the information of an escrow requested through the contractId.
 icon: dollar-sign
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # useGetMultipleEscrowBalances

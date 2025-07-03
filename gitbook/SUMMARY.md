@@ -81,7 +81,6 @@
 * [📚 React Library](react-library/README.md)
   * [Getting Started](react-library/getting-started.md)
   * [useSendTransaction](react-library/usesendtransaction.md)
-  * [useGetEscrow](react-library/usegetescrow.md)
   * [useGetMultipleEscrowBalances](react-library/usegetmultipleescrowbalances.md)
   * [useInitializeEscrow](react-library/useinitializeescrow.md)
   * [useUpdateEscrow](react-library/useupdateescrow.md)

@@ -1,17 +1,6 @@
 ---
 description: Deploy the escrow contract and define the escrow properties.
 icon: circle-plus
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # useInitializeEscrow

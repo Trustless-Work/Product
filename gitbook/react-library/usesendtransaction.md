@@ -4,28 +4,17 @@ description: >-
   This endpoint is used to sign such unsigned transactions and send them to the
   Stellar network.
 icon: comment-arrow-up-right
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # useSendTransaction
 
 {% hint style="info" %}
-This endpoint must be used for all the endpoints after we execute it. Except getEscrow and getEscrowBalances.
+This endpoint must be used for all the endpoints after we execute it. Except getEscrowBalances, getEscrowsByContractId, getEscrowsByRole and getEscrowsBySigner .
 {% endhint %}
 
 ## Usage
 
-This custom hook exposes a mutation function to send a signed transaction to the network.&#x20;
+This custom hook exposes a function to send a signed transaction to the network.&#x20;
 
 {% code overflow="wrap" %}
 ```typescript
@@ -34,7 +23,7 @@ import { useSendTransaction} from "@trustless-work/escrow/hooks";
 /*
  *  useSendTransaction
 */
-const { sendTransaction, isPending, isError, isSuccess } = useSendTransaction();
+const { sendTransaction } = useSendTransaction();
 
 /* 
  * It returns a SendTransactionResponse
@@ -45,19 +34,10 @@ const data = await sendTransaction(signedXdr);
 ```
 {% endcode %}
 
-### Description of Return Values
-
-* **`isPending`**\
-  A boolean status flag indicating whether the mutation is currently in progress. Useful for showing loaders or disabling UI elements during the process.
-* **`isError`**\
-  A boolean status flag that becomes `true` if the mutation fails.
-* **`isSuccess`**\
-  A boolean status flag that becomes `true` once the mutation completes successfully.
-
-### Mutation Function
+### Function
 
 * `sendTransaction`\
-  This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning data based on the provided payload.
+  Responsible for building and returning data based on the provided payload.
 
 _Argument:_
 
@@ -100,12 +80,12 @@ export const useSomeEndpointForm= () => {
  /*
   *  useSomeEndpoint
  */
- const { someFunction, isPending, isError, isSuccess } = useSomeEndpoint();
+ const { someFunction } = useSomeEndpoint();
  
  /*
   *  useSendTransaction
  */
- const { sendTransaction, isPending, isError, isSuccess } = useSendTransaction();
+ const { sendTransaction } = useSendTransaction();
 
 /*
  * onSubmit function, this could be called by form button

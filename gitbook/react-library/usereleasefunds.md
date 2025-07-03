@@ -1,17 +1,6 @@
 ---
 description: You release the escrow funds to the service provider through the approver.
 icon: square-dollar
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # useReleaseFunds

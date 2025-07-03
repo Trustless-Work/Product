@@ -3,17 +3,6 @@ description: >-
   This endpoint allows you to change the properties of an escrow as long as a
   series of requirements are met, which will be mentioned in this section.
 icon: pencil
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # useUpdateEscrow

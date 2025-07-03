@@ -3,17 +3,6 @@ description: >-
   Responsible for modifying the "flag" property of a specific milestone in the
   escrow to approve that milestone.
 icon: thumbs-up
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # useApproveMilestone

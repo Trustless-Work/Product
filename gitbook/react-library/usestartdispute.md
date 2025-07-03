@@ -3,17 +3,6 @@ description: >-
   Responsible for setting the escrow in dispute state. Changes the value of the
   escrow's "disputed" flag property to true.
 icon: face-angry
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # useStartDispute

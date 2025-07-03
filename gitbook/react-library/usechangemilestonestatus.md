@@ -3,17 +3,6 @@ description: >-
   Responsible for modifying the "status" property of a specific milestone in the
   escrow.
 icon: octagon-check
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # useChangeMilestoneStatus
