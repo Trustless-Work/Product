@@ -9,7 +9,7 @@ icon: thumbs-up
 
 ## Usage
 
-This custom hook exposes a mutation function along with status flags to manage the approval of a milestone.
+This custom hook exposes a function along with status flags to manage the approval of a milestone.
 
 {% code overflow="wrap" %}
 ```typescript
@@ -30,20 +30,11 @@ const { unsignedTransaction } = await approveMilestone(payload);
 ```
 {% endcode %}
 
-### Description of Return Values
-
-* **`isPending`**\
-  A boolean status flag indicating whether the mutation is currently in progress. Useful for showing loaders or disabling UI elements during the process.
-* **`isError`**\
-  A boolean status flag that becomes `true` if the mutation fails.
-* **`isSuccess`**\
-  A boolean status flag that becomes `true` once the mutation completes successfully.
-
 ### Mutation Function
 
 `approveMilestone`
 
-This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and handles building and returning an unsigned transaction based on the provided payload.
+Returning an unsigned transaction based on the provided payload.
 
 **EscrowType**: Specifies the type of escrow. It accepts the following values:
 
@@ -86,12 +77,12 @@ export const useApproveMilestoneForm = () => {
  /*
   *  useApproveMilestone
  */
- const { approveMilestone, isPending, isError, isSuccess } = useApproveMilestone();
+ const { approveMilestone } = useApproveMilestone();
  
  /*
   *  useSendTransaction
  */
- const { sendTransaction, isPending, isError, isSuccess } = useSendTransaction();
+ const { sendTransaction } = useSendTransaction();
 
 /*
  * onSubmit function, this could be called by form button

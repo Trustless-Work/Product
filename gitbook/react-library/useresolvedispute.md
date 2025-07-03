@@ -9,7 +9,7 @@ icon: handshake-simple
 
 ## Usage
 
-This custom hook exposes a mutation function to resolve a dispute in an escrow.
+This custom hook exposes a function to resolve a dispute in an escrow.
 
 <pre class="language-typescript" data-overflow="wrap"><code class="lang-typescript">import { useResolveDispute } from "@trustless-work/escrow/hooks";
 import { MultiReleaseResolveDisputePayload, SingleReleaseResolveDisputePayload } from "@trustless-work/escrow/types";
@@ -17,7 +17,7 @@ import { MultiReleaseResolveDisputePayload, SingleReleaseResolveDisputePayload }
 /*
  *  useResolveDispute
 */
-const { resolveDispute, isPending, isError, isSuccess } = useResolveDispute();
+const { resolveDispute } = useResolveDispute();
 
 /* 
  * It returns an unsigned transaction
@@ -27,20 +27,11 @@ const { unsignedTransaction } = await resolveDispute(payload);
 
 </code></pre>
 
-### Description of Return Values
-
-* **`isPending`**\
-  A boolean status flag indicating whether the mutation is currently in progress. Useful for showing loaders or disabling UI elements during the process.
-* **`isError`**\
-  A boolean status flag that becomes `true` if the mutation fails.
-* **`isSuccess`**\
-  A boolean status flag that becomes `true` once the mutation completes successfully.
-
 ### Mutation Function
 
 `resolveDispute`
 
-This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning an unsigned transaction based on the provided payload.
+Responsible for building and returning an unsigned transaction based on the provided payload.
 
 **EscrowType**: Specifies the type of escrow. It accepts the following values:
 
@@ -85,12 +76,12 @@ export const useStartDisputeForm = () => {
  /*
   *  useResolveDispute
  */
- const { resolveDispute, isPending, isError, isSuccess } = useResolveDispute();
+ const { resolveDispute } = useResolveDispute();
  
  /*
   *  useSendTransaction
  */
- const { sendTransaction, isPending, isError, isSuccess } = useSendTransaction();
+ const { sendTransaction } = useSendTransaction();
 
 /*
  * onSubmit function, this could be called by form button

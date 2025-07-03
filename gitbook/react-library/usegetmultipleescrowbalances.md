@@ -7,7 +7,7 @@ icon: dollar-sign
 
 ## Usage
 
-This custom hook exposes a mutation function to get the balances that you are looking obtain.
+This custom hook exposes a function to get the balances that you are looking obtain.
 
 {% code overflow="wrap" %}
 ```typescript
@@ -17,7 +17,7 @@ import { GetBalanceParams } from "@trustless-work/escrow/types";
 /*
  *  useGetEscrow
 */
-const { getMultipleBalances, balances, isPending, isError, isSuccess } = useGetMultipleEscrowBalances();
+const { getMultipleBalances } = useGetMultipleEscrowBalances();
 
 /* 
  * It returns the balances of the escrows
@@ -27,21 +27,10 @@ await getMultipleBalances(payload);
 ```
 {% endcode %}
 
-### Description of Return Values
-
-* **`balances`**\
-  The balances you are looking to obtain.
-* **`isPending`**\
-  A boolean status flag indicating whether the mutation is currently in progress. Useful for showing loaders or disabling UI elements during the process.
-* **`isError`**\
-  A boolean status flag that becomes `true` if the mutation fails.
-* **`isSuccess`**\
-  A boolean status flag that becomes `true` once the mutation completes successfully.
-
-### Mutation Function
+### Function
 
 * `getMultipleBalances`\
-  This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning data based on the provided payload.
+  Responsible for building and returning data based on the provided payload.
 
 _Argument:_
 
@@ -73,7 +62,7 @@ export const useGetMultipleEscrowBalancesForm = () => {
  /*
   *  useGetMultipleEscrowBalances
  */
- const { getMultipleBalances, balances, isPending, isError, isSuccess } = useGetMultipleEscrowBalances();
+ const { getMultipleBalances } = useGetMultipleEscrowBalances();
 
 /*
  * onSubmit function, this could be called by form button
@@ -87,7 +76,7 @@ export const useGetMultipleEscrowBalancesForm = () => {
        * - We need to pass the payload to the getMultipleBalances function
        * - The result will be balances
       */
-      await getMultipleBalances(payload);
+      const { balances } = await getMultipleBalances(payload);
       
       if (!balances) {
         throw new Error("Balances not found");

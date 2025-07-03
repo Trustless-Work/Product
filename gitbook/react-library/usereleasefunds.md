@@ -7,7 +7,7 @@ icon: square-dollar
 
 ## Usage
 
-This custom hook exposes a mutation function to release the funds of an escrow.
+This custom hook exposes a function to release the funds of an escrow.
 
 {% code overflow="wrap" %}
 ```typescript
@@ -17,7 +17,7 @@ import { SingleReleaseReleaseFundsPayload, MultiReleaseReleaseFundsPayload } fro
 /*
  *  useReleaseFunds
 */
-const { releaseFunds, isPending, isError, isSuccess } = useReleaseFunds();
+const { releaseFunds } = useReleaseFunds();
 
 /* 
  * It returns an unsigned transaction
@@ -28,20 +28,11 @@ const { unsignedTransaction } = await releaseFunds(payload);
 ```
 {% endcode %}
 
-### Description of Return Values
-
-* **`isPending`**\
-  A boolean status flag indicating whether the mutation is currently in progress. Useful for showing loaders or disabling UI elements during the process.
-* **`isError`**\
-  A boolean status flag that becomes `true` if the mutation fails.
-* **`isSuccess`**\
-  A boolean status flag that becomes `true` once the mutation completes successfully.
-
 ### Mutation Function
 
 `releaseFunds`
 
-This is the main mutation function. Internally, it wraps `mutate` or `mutateAsync` and is responsible for building and returning an unsigned transaction based on the provided payload.
+Responsible for building and returning an unsigned transaction based on the provided payload.
 
 **EscrowType**: Specifies the type of escrow. It accepts the following values:
 
@@ -86,12 +77,12 @@ export const useReleaseFundsForm = () => {
  /*
   *  useReleaseFunds
  */
- const { releaseFunds, isPending, isError, isSuccess } = useReleaseFunds();
+ const { releaseFunds } = useReleaseFunds();
  
  /*
   *  useSendTransaction
  */
- const { sendTransaction, isPending, isError, isSuccess } = useSendTransaction();
+ const { sendTransaction } = useSendTransaction();
 
 /*
  * onSubmit function, this could be called by form button
