@@ -38,6 +38,8 @@
     * [Errors](developer-resources/types/errors.md)
   * [Changelog — Escrow Update](developer-resources/changelog-escrow-update.md)
 * [API Reference](api-reference/README.md)
+  * [Indexer](api-reference/indexer/README.md)
+    * [Update From Tx Hash](api-reference/indexer/update-escrow-properties.md)
   * [Introduction](api-reference/introduction.md)
   * [Deploy](api-reference/deploy/README.md)
     * [Initialize Escrow](api-reference/deploy/initialize-escrow.md)
