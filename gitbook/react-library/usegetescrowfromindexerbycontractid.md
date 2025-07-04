@@ -1,13 +1,15 @@
 ---
-description: Returns all
-icon: dollar-sign
+description: >-
+  Returns the escrow that you're looking for. It comes from our indexer
+  (database) synchronizer with the blockchain.
+icon: table
 ---
 
-# useGetEscrowsFromIndexerByContractId
+# useGetEscrowFromIndexerByContractId
 
 ## Usage
 
-This custom hook exposes a function to get the balances that you are looking obtain.
+This custom hook exposes a function to get the escrow that you are looking obtain.
 
 {% code overflow="wrap" %}
 ```typescript
@@ -15,7 +17,7 @@ import { useGetEscrowFromIndexerByContractId } from "@trustless-work/escrow/hook
 import { GetEscrowFromIndexerByContractIdParams } from "@trustless-work/escrow/types";
 
 /*
- *  useGetMultipleEscrowBalances
+ *  useGetEscrowFromIndexerByContractId
 */
 const { getEscrowByContractId } = useGetEscrowFromIndexerByContractId();
 
@@ -60,7 +62,7 @@ import {
 export const useGetEscrowFromIndexerByContractIdForm = () => {
 
  /*
-  *  useGetMultipleEscrowBalances
+  *  useGetEscrowFromIndexerByContractId
  */
  const { getEscrowByContractId } = useGetEscrowFromIndexerByContractId();
 
@@ -91,7 +93,7 @@ export const useGetEscrowFromIndexerByContractIdForm = () => {
        * escrow === null
        * - Show an error toast
        */
-      if (balances) {
+      if (escrow) {
         toast.success("Escrow Received");
       }
     } catch (error: unknown) {
