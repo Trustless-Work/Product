@@ -48,3 +48,5 @@ The information associated with the provided `txHash` is successfully stored in 
 * Ensures secure and accurate storage in Firebase using the transaction hash.
 
 This endpoint enhances the system's flexibility and robustness, ensuring all transactions, regardless of the method used, are adequately recorded in Firebase.
+
+<figure><img src="../../.gitbook/assets/Index Diagram.png" alt=""><figcaption></figcaption></figure>
