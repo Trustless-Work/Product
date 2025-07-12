@@ -390,11 +390,6 @@ export type SingleReleaseReleaseFundsPayload = {
    * Address of the user in charge of releasing the escrow funds to the service provider.
    */
   releaseSigner: string;
-
-  /**
-   * Address of the user signing the contract transaction
-   */
-  signer: string;
 };
 
 /**
