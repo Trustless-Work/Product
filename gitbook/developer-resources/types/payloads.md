@@ -333,6 +333,15 @@ export type GetEscrowsFromIndexerParams = {
    * Type of the escrow. Filtering
    */
   type?: EscrowType;
+  
+  /**
+   * If true, the escrows will be validated on the blockchain to ensure data consistency.
+   * This performs an additional verification step to confirm that the escrow data
+   * returned from the indexer matches the current state on the blockchain.
+   * Use this when you need to ensure the most up-to-date and accurate escrow information.
+   * If you active this param, your request will take longer to complete.
+   */
+  validateOnChain?: boolean;
 };
 
 export type GetEscrowsFromIndexerBySignerParams =
@@ -365,15 +374,6 @@ export type GetEscrowFromIndexerByContractIdsParams = {
    * Address of the user signing the contract transaction.
    */
   signer: string;
-
-  /**
-   * If true, the escrows will be validated on the blockchain to ensure data consistency.
-   * This performs an additional verification step to confirm that the escrow data
-   * returned from the indexer matches the current state on the blockchain.
-   * Use this when you need to ensure the most up-to-date and accurate escrow information.
-   * If you active this param, your request will take longer to complete.
-   */
-  validateOnChain?: boolean;
 };
 
 // ----------------- Release Funds -----------------
