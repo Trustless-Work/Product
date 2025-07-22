@@ -85,7 +85,7 @@
   * [Getting Started](react-library/getting-started.md)
   * [useSendTransaction](react-library/usesendtransaction.md)
   * [useGetMultipleEscrowBalances](react-library/usegetmultipleescrowbalances.md)
-  * [useGetEscrowFromIndexerByContractId](react-library/usegetescrowfromindexerbycontractid.md)
+  * [useGetEscrowFromIndexerByContractIds](react-library/usegetescrowfromindexerbycontractids.md)
   * [useGetEscrowsFromIndexerBySigner](react-library/usegetescrowsfromindexerbysigner.md)
   * [useGetEscrowsFromIndexerByRole](react-library/usegetescrowsfromindexerbyrole.md)
   * [useInitializeEscrow](react-library/useinitializeescrow.md)
