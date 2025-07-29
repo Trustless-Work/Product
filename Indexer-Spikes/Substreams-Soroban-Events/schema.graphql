@@ -1,0 +1,9 @@
+type EscrowEvent @entity {
+  id: ID!
+  type: String!
+  engagementId: String!
+  contractAddress: String!
+  payload: String!
+  ledger: BigInt!
+  timestamp: BigInt!
+}
