@@ -1,4 +1,4 @@
-# What does a Smart Escrow "look like"?
+# How does a Smart Escrow "look like"?
 
 <figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
@@ -32,7 +32,7 @@
 We are also working on this type of escrow contract: multi-release\
 
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="Multi-Release escrow"><figcaption></figcaption></figure>
 
 Main difference being that the amount and flags are moved to the milestone, therefore you can have independent fund releases per milestone. I will reference this type of contract in our docs too as it is currently being built.
 

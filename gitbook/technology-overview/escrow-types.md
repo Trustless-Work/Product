@@ -14,6 +14,10 @@ A Single-Release Escrow holds funds until _all_ milestones (verifiable checkpoin
 2. **Milestone Completion:** The Service Provider (e.g., a freelancer) marks each milestone complete (e.g., "Logo delivered," "Site live").
 3. **Approval & Release:** The Approver (e.g., the client) verifies _all_ milestones. Once all are signed off, the Release Signer (e.g., the platform) releases the full amount to the Receiver, minus any Platform fee.
 
+
+
+<figure><img src="../.gitbook/assets/image (33).png" alt="single-release"><figcaption></figcaption></figure>
+
 **Example:** A freelancer on a marketplace delivers a website (milestones: wireframe, design, launch). The buyer (Approver) confirms all are done, and the platform (Release Signer) releases the full payment.
 
 ***
@@ -27,6 +31,8 @@ A Multi-Release Escrow releases funds incrementally as each milestone is complet
 1. **Deposit:** Funds are deposited upfront or in parts via Stellar wallets.
 2. **Milestone Completion & Review:** The Service Provider (e.g., a DAO contributor) marks each milestone complete (e.g., "Prototype built"). The Approver (e.g., DAO voters) reviews each.
 3. **Incremental Release:** For each approved milestone, the Release Signer (e.g., the platform) releases that milestone’s portion of funds to the Receiver. Dispute Resolvers handle conflicts, adjusting amounts or canceling if needed. (Note: Per-milestone payouts are coming, per doc.)
+
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="Multi-Release escrow"><figcaption></figcaption></figure>
 
 **Example:** A DAO funds a developer for a project (milestones: code v1, v2, v3). Each milestone’s approval releases a portion of stablecoins, with a Dispute Resolver stepping in if voters contest progress.
 
