@@ -96,12 +96,12 @@ export const useApproveMilestoneForm = () => {
        * - We need to pass the payload to the approveMilestone function
        * - The result will be an unsigned transaction
        */
-      const { unsignedTransaction } = await approveMilestone({
+      const { unsignedTransaction } = await approveMilestone(
         payload,
-        type: "multi-release"
+        "multi-release"
         // or ...
-        type: "single-release"
-      });
+        // "single-release"
+      );
 
       if (!unsignedTransaction) {
         throw new Error(

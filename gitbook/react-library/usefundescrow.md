@@ -94,12 +94,12 @@ export const useFundEscrowForm = () => {
        * - We need to pass the payload to the fundEscrow function
        * - The result will be an unsigned transaction
        */
-      const { unsignedTransaction } = await fundEscrow({
+      const { unsignedTransaction } = await fundEscrow(
         payload,
-        type: "multi-release"
+        "multi-release"
         // or ...
-        type: "single-release"
-      });
+        // "single-release"
+      );
 
       if (!unsignedTransaction) {
         throw new Error(
