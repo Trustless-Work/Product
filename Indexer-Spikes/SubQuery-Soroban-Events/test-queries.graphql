@@ -1,0 +1,117 @@
+# Test Queries for Escrow Events SubQuery Indexer
+
+# 1. Get all escrow events (latest first)
+query AllEscrowEvents {
+  escrowEvents(first: 10, orderBy: TIMESTAMP_DESC) {
+    nodes {
+      id
+      type
+      contractId
+      engagementId
+      payload
+      ledger
+      timestamp
+    }
+    totalCount
+  }
+}
+
+# 2. Get only initialization events
+query InitializationEvents {
+  escrowEvents(filter: { type: { equalTo: "init_esc" } }) {
+    nodes {
+      id
+      type
+      contractId
+      payload
+      ledger
+      timestamp
+    }
+  }
+}
+
+# 3. Get only funding events
+query FundingEvents {
+  escrowEvents(filter: { type: { equalTo: "fund_esc" } }) {
+    nodes {
+      id
+      type
+      contractId
+      payload
+      ledger
+      timestamp
+    }
+  }
+}
+
+# 4. Get only release events
+query ReleaseEvents {
+  escrowEvents(filter: { type: { equalTo: "dis_esc" } }) {
+    nodes {
+      id
+      type
+      contractId
+      payload
+      ledger
+      timestamp
+    }
+  }
+}
+
+# 5. Get only update events
+query UpdateEvents {
+  escrowEvents(filter: { type: { equalTo: "chg_esc" } }) {
+    nodes {
+      id
+      type
+      contractId
+      engagementId
+      payload
+      ledger
+      timestamp
+    }
+  }
+}
+
+# 6. Get events by specific contract ID (replace with actual contract ID)
+query EventsByContract {
+  escrowEvents(filter: { contractId: { equalTo: "REPLACE_WITH_ACTUAL_CONTRACT_ID" } }) {
+    nodes {
+      id
+      type
+      contractId
+      engagementId
+      payload
+      ledger
+      timestamp
+    }
+  }
+}
+
+# 7. Get recent events from last hour
+query RecentEvents {
+  escrowEvents(
+    filter: { 
+      timestamp: { 
+        greaterThan: "REPLACE_WITH_TIMESTAMP_1_HOUR_AGO" 
+      } 
+    }
+    orderBy: TIMESTAMP_DESC
+  ) {
+    nodes {
+      id
+      type
+      contractId
+      payload
+      ledger
+      timestamp
+    }
+  }
+}
+
+# 8. Check if indexer is working - simple health check
+query HealthCheck {
+  escrowEvents(first: 1) {
+    totalCount
+  }
+}
