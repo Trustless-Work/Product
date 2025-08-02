@@ -4,12 +4,12 @@
 
 Trustless Work is the Escrow Ecosystem for Stellar. We're building tools to integrate escrows into any payment flow using Soroban smart contracts and stablecoins like USDC.
 
-# Maintainers | [Telegram](https://t.me/+kmr8tGegxLU0NTA5)
+# Maintainers | 
 
-- Tech Rebel | Product Manager [techrebelgit](https://github.com/techrebelgit) [Telegram](https://t.me/Tech_Rebel)
-- Joel Vargas | Frontend Developer [JoelVR17](https://github.com/JoelVR17) [Telegram](https://t.me/joelvr20)
-- Armando Murillo | Full Stack Developer [armandocodecr](https://github.com/armandocodecr) [Telegram](https://t.me/armandocode)
-- Caleb Loría | Smart Contract Developer [zkCaleb-dev](https://github.com/zkCaleb-dev) [Telegram](https://t.me/zkCaleb_dev)
+- Tech Rebel | Product Manager [techrebelgit](https://github.com/techrebelgit) 
+- Joel Vargas | Frontend Developer [JoelVR17](https://github.com/JoelVR17)
+- Armando Murillo | Full Stack Developer [armandocodecr](https://github.com/armandocodecr)
+- Caleb Loría | Smart Contract Developer [zkCaleb-dev](https://github.com/zkCaleb-dev) 
 
 # Welcome to the Trustless Work Product Repository 🚀
 
