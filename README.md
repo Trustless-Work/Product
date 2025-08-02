@@ -1,100 +1,72 @@
 <p align="center"> <img src="https://github.com/user-attachments/assets/5b182044-dceb-41f5-acf0-da22dea7c98a" alt="CLR-S (2)"> </p>
 
 # Trustless Work | [API Documentation](https://docs.trustlesswork.com/trustless-work)
-Trustless work is set to become the Escrow Escosystem of Stellar. We are building the tools to enable any platform to integrate escrows to their payment flow. 
+
+Trustless Work is the Escrow Ecosystem for Stellar. We're building tools to integrate escrows into any payment flow using Soroban smart contracts and stablecoins like USDC.
 
 # Maintainers | [Telegram](https://t.me/+kmr8tGegxLU0NTA5)
 
-<table align="center">
-  <tr>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/6b97e15f-9954-47d0-81b5-49f83bed5e4b" alt="Owner 1" width="150" />
-      <br /><br />
-      <strong>Tech Rebel | Product Manager</strong>
-      <br /><br />
-      <a href="https://github.com/techrebelgit" target="_blank">techrebelgit</a>
-      <br />
-      <a href="https://t.me/Tech_Rebel" target="_blank">Telegram</a>
-    </td>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/e245e8af-6f6f-4a0a-a37f-df132e9b4986" alt="Owner 2" width="150" />
-      <br /><br />
-      <strong>Joel Vargas | Frontend Developer</strong>
-      <br /><br />
-      <a href="https://github.com/JoelVR17" target="_blank">JoelVR17</a>
-      <br />
-      <a href="https://t.me/joelvr20" target="_blank">Telegram</a>
-    </td>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/53d65ea1-007e-40aa-b9b5-e7a10d7bea84" alt="Owner 3" width="150" />
-      <br /><br />
-      <strong>Armando Murillo | Full Stack Developer</strong>
-      <br /><br />
-      <a href="https://github.com/armandocodecr" target="_blank">armandocodecr</a>
-      <br />
-      <a href="https://t.me/armandocode" target="_blank">Telegram</a>
-    </td>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/851273f6-2f91-413d-bd2d-d8dc1f3c2d28" alt="Owner 4" width="150" />
-      <br /><br />
-      <strong>Caleb Loría | Smart Contract Developer</strong>
-      <br /><br />
-      <a href="https://github.com/zkCaleb-dev" target="_blank">zkCaleb-dev</a>
-      <br />
-      <a href="https://t.me/zkCaleb_dev" target="_blank">Telegram</a>
-    </td>
-  </tr>
-</table>
+- Tech Rebel | Product Manager [techrebelgit](https://github.com/techrebelgit) [Telegram](https://t.me/Tech_Rebel)
+- Joel Vargas | Frontend Developer [JoelVR17](https://github.com/JoelVR17) [Telegram](https://t.me/joelvr20)
+- Armando Murillo | Full Stack Developer [armandocodecr](https://github.com/armandocodecr) [Telegram](https://t.me/armandocode)
+- Caleb Loría | Smart Contract Developer [zkCaleb-dev](https://github.com/zkCaleb-dev) [Telegram](https://t.me/zkCaleb_dev)
 
 # Welcome to the Trustless Work Product Repository 🚀
 
-This repository is your gateway to the world of **spikes, proof-of-concepts (POCs), and open-source research** conducted to advance the Trustless Work platform. Our mission is to build the escrow infrastructure for the new economy, making secure, transparent, and efficient transactions accessible for everyone.
-
----
+This repo is the hub for spikes, POCs, docs, and research advancing our EaaS platform on Stellar/Soroban. Explore integrations for our suite: Next.js dApps (backoffice, demoLad, Escrow Viewer, Pacto p2p) and the website.
 
 ## 📂 Folder Structure
 
-Each folder represents a specific project or research area related to Trustless Work. Below is a breakdown of the structure:
+Each folder focuses on a research/POC area. Add/update via PRs. Table below (sorted alphabetically):
 
-### **1. Escrow Viewer**
-- **Description:** Early-stage technical exploration for using Stellar RPC to create an Open Source Escrow Viewer.Like a block explorer, but for our escrows. 
-- **Pull Request / Issue Link:** [See PR](https://github.com/Tico4Chain-Coders/Product/pull/23)
-- **Issue Link:** [See Issue](https://github.com/Tico4Chain-Coders/Product/issues/1)
+| Folder | Description | Key Tech/Notes | Last Activity |
+|--------|-------------|---------------|---------------|
+| allbridge-poc | POC for Allbridge cross-chain bridges to fund escrows. | Stellar SDK, dependabot security. | Last week |
+| dashboard-tw-wallet | Wallet dashboard with safe transaction calculations. | Number.isFinite, Next.js. | 5 months ago |
+| eliza-plugin-stellar | Eliza plugin for handling Stellar transactions. | Stellar tx processing. | 6 months ago |
+| escrow-api | API for escrow operations and management. | Backend updates, integrates with Soroban. | 5 months ago |
+| escrow-viewer | Tool to view escrows via Stellar RPC. | Next.js (v15.2.4), like a custom explorer. | 4 months ago |
+| EventResearch | Research on Soroban events for funding/status changes. | Event emissions in contracts. | 6 months ago |
+| faucet | Testnet faucet for tokens like $TRUST/USDC. | Next.js (v15.2.4), for demo testing. | 2 months ago |
+| gitbook | Gitbook integrations for docs syncing. | GITBOOK-375 changes. | 2 days ago |
+| Indexer-Spikes | Spikes integrating Soroban events with subquery indexers. | Subquery for efficient queries (#114). | 20 minutes ago |
+| MoonPay | POC integrating MoonPay for fiat-to-escrow funding. | form-data deps, Next.js UI. | 18 minutes ago |
+| NestJs Stress Test | Stress tests for Nest.js backends in escrow flows. | Dependabot merges, scalability focus. | Last week |
+| Price-Oracle-Contract | Soroban contract for price oracles in asset pricing. | Dynamic pricing for multi-asset escrows. | 5 months ago |
+| RAG AI Gitbook Knowledge | RAG AI trained on Gitbooks for knowledge transfer. | @supabase deps, AI for ecosystem growth. | 2 weeks ago |
+| reclaim-protocol-integration | Integration with Reclaim for ZK proofs in escrows. | on-headers/compression deps, privacy enhancements. | 2 weeks ago |
+| Research | General research on org, features, and updates. | Foundational spikes. | 7 months ago |
+| Timebased Escrows | Integrations/docs for time-locked escrows on Soroban. | Release mechanisms explained. | 5 months ago |
+| XDR Transaction Signer | Tool for signing XDR transactions on Stellar. | multer/@nestjs deps, secure signing. | 3 months ago |
 
-### **2. MoonPay**
-- **Description:** POC for integrating Moonpay for funding Trustless Work escrows
-- **Pull Request** [See PR](https://github.com/Tico4Chain-Coders/Product/pull/18)
-- **Issue Link:** [See Issue](https://github.com/Tico4Chain-Coders/Product/issues/4)
+## 🛠️ Product Suite Overview
 
-### **3. RAG AI Gitbook**
-- **Description:** RAG that is trained on multiple gitbooks. Can be used for growing our ecosystem and facilitating cross-product knowledge transfer
-- **Pull Request** [See PR](https://github.com/Tico4Chain-Coders/Product/pull/10)
-- **Issue Link:** [Issue](https://github.com/Tico4Chain-Coders/Product/issues/2)
+| Product | Description | Tech Stack | Repo Link |
+|---------|-------------|------------|-----------|
+| Backoffice dApp | Admin dashboard for escrow management. | Next.js, Soroban Client, Freighter. | [dApp-Trustless-Work](https://github.com/Trustless-Work/dApp-Trustless-Work) |
+| demoLad dApp | Demo for escrow testing/signing. | Next.js, @stellar/stellar-sdk v12+. | [demo-Trustless-Work](https://github.com/Trustless-Work/demo-Trustless-Work) |
+| Escrow Viewer | Viewer for live escrows. | TypeScript, Stellar RPC. | [escrow-viewer](https://github.com/Trustless-Work/escrow-viewer) |
+| Pacto p2p | P2P escrow platform. | Next.js, Soroban contracts. | In dev—track issues |
+| Trustless Work Website | Onboarding/docs site. | Next.js, Firebase. | [Website](https://github.com/Trustless-Work/Trustless-Work-Website) |
 
----
+## 🚀 Getting Started
+
+1. Clone: `git clone https://github.com/Trustless-Work/Product.git`
+2. Prerequisites: Node v20+, Rust/Soroban SDK v20+, Freighter wallet, Stellar Testnet setup.
+3. Build/Run: For Soroban folders, `cargo build --target wasm32-unknown-unknown`; for Next.js, `npm i && npm run dev`.
 
 ## 🙌 How to Contribute
 
-Trustless Work thrives on collaboration! Here are some ways you can get involved:
-
-1. **Join the Discussions:** Share your thoughts, ideas, and feedback in our [Discussions](https://github.com/orgs/Tico4Chain-Coders/discussions).
-2. **Explore Only Dust:** Check out our [Only Dust Profile](https://app.onlydust.com/p/trustless-work-) to discover open tasks and contribute to Trustless Work projects.
-
----
+- **Issues/PRs**: Use templates; branch as `spike/your-folder-update`; test on Testnet.
+- **Style**: Prettier/ESLint for Next.js; rustfmt for Soroban.
+- **Bounties**: [OnlyDust](https://app.onlydust.com/p/trustless-work-).
+- Join [Discussions](https://github.com/Trustless-Work/Product/discussions) or Telegram.
 
 ## 💡 About Trustless Work
 
-Trustless Work is an **Escrow-as-a-Service (EaaS)** platform designed to provide secure, transparent, and efficient transactions for the modern economy. By leveraging blockchain technology, we eliminate intermediaries, minimize costs, and empower platforms to deploy trustless smart escrows with ease. 
+EaaS on Stellar: Secure, programmable escrows eliminating intermediaries. Aligned with Stellar Core v21+ (2025).
 
-Our open-source philosophy ensures developers and enterprises can explore, test, and integrate our technology quickly and seamlessly, enabling new business models and use cases in industries like e-commerce, real estate, legal tech, and more.
-
----
-
-## 💡 Inspiration and Innovation
-
-Every project here is a step toward building the future of decentralized payments and secure transactions. Whether you're a developer, researcher, or enthusiast, this repository is a sandbox for exploring new possibilities with Trustless Work.
-
-Thank you for being a part of our journey. Together, we can create something extraordinary! 🌟
+Thanks to contributors—let's scale the escrow ecosystem! 🌟
 
 
 
