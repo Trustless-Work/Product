@@ -1,0 +1,53 @@
+specVersion: v0.1.0
+package:
+  name: 'trustless_work_soroban_events'
+  version: v0.1.0
+  url: https://github.com/Trustless-Work/Product
+  doc: |
+    Substreams package for indexing Trustless Work escrow events from Stellar Soroban contracts.
+    
+    This package extracts the following events:
+    - init_esc: Escrow initialization events
+    - fund_esc: Escrow funding events  
+    - dis_esc: Escrow fund distribution events
+    - chg_esc: Escrow property change events
+
+protobuf:
+  files:
+    - sf/stellar/type/v1/type.proto
+  importPaths:
+    - ./proto
+
+binaries:
+  default:
+    type: wasm/rust-v1
+    file: target/wasm32-unknown-unknown/release/trustless_work_soroban_events.wasm
+
+modules:
+  - name: map_soroban_events
+    kind: map
+    inputs:
+      - source: sf.stellar.type.v1.Block
+    output:
+      type: proto:trustless.work.v1.EscrowEvents
+
+  - name: store_escrow_events
+    kind: store
+    inputs:
+      - map: map_soroban_events
+    valueType: proto:trustless.work.v1.EscrowEvent
+    updatePolicy: set
+
+network: stellar-testnet
+
+params:
+  # Known Trustless Work contract addresses from the existing event listener
+  map_soroban_events: |
+    {
+      "contract_ids": [
+        "CBAZK4CXB7LQYUNIIX4RO2LMBJBTCO64FQRNETAJPRKPPQMG6OY2AZVC",
+        "CC6XXJ76J3BAMQUXBJ6MI35NSIDW5LQWLWSGKRSO375IFLIZBC5ABRB7", 
+        "CBO6GUJ5UXSJEAEB3ADB36Z3YTMRNGSL5M7DPXQQOZLHLWQC3SO4LHDF"
+      ],
+      "event_topics": ["init_esc", "fund_esc", "dis_esc", "chg_esc"]
+    }
