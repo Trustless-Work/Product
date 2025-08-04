@@ -7,8 +7,7 @@ dataSources:
       type: account_credited
       # Filter for known escrow contract addresses (to be updated with actual addresses)
       account:
-        - "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KMCT"
-        - "CBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3K3A"
+        - "CDT6K35SFQTWS3XQX5RJK6LWRHRUNUZIQMASQAUCRRURCRV4NFHVK3ES"
         # Add more escrow contract addresses as needed
 entities:
   - name: EscrowFundingEvent
