@@ -6,7 +6,8 @@ dataSources:
     filter:
       type: account_credited
       # Filter for known escrow contract addresses (extracting from environment variable)
-      account: ${ESCROW_ADDRESSES?:"CDT6K35SFQTWS3XQX5RJK6LWRHRUNUZIQMASQAUCRRURCRV4NFHVK3ES"}
+      account:
++        - ${ESCROW_ADDRESSES:-"CDT6K35SFQTWS3XQX5RJK6LWRHRUNUZIQMASQAUCRRURCRV4NFHVK3ES"}
         
 entities:
   - name: EscrowFundingEvent
