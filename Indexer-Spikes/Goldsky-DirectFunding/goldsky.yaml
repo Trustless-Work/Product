@@ -5,10 +5,9 @@ dataSources:
   - kind: effects
     filter:
       type: account_credited
-      # Filter for known escrow contract addresses (to be updated with actual addresses)
-      account:
-        - "CDT6K35SFQTWS3XQX5RJK6LWRHRUNUZIQMASQAUCRRURCRV4NFHVK3ES"
-        # Add more escrow contract addresses as needed
+      # Filter for known escrow contract addresses (extracting from environment variable)
+      account: ${ESCROW_ADDRESSES?:"CDT6K35SFQTWS3XQX5RJK6LWRHRUNUZIQMASQAUCRRURCRV4NFHVK3ES"}
+        
 entities:
   - name: EscrowFundingEvent
     fields:
