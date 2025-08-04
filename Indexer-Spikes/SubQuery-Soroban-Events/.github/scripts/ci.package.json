@@ -1,0 +1,9 @@
+{
+  "name": "cosmos-subql-starters",
+  "private": true,
+  "workspaces": ["Stellar/*"],
+  "scripts": {
+    "codegen": "yarn workspaces run codegen",
+    "build": "yarn workspaces run build"
+  }
+}

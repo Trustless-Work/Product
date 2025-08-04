@@ -141,4 +141,4 @@
   * [🌎 Spotlight: Kindfi](community/spotlight-kindifi.md)
   * [Contributor's Guide](community-and-roadmap/get-involved.md)
   * [📂 Interesting Links](community/open-source-templates-and-developer-tools.md)
-* [Contact and Support](contact-and-support.md)
+* [☎️ Contact and Support](contact-and-support.md)

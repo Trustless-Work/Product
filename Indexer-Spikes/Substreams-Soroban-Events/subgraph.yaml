@@ -1,0 +1,47 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+
+dataSources:
+  - kind: substreams
+    name: TrustlessWorkEvents
+    network: stellar-testnet
+    source:
+      package:
+        moduleName: map_soroban_events
+        file: ./trustless-work-soroban-events-v0.1.0.spkg
+      startBlock: 1000000  # Adjust based on when contracts were deployed
+    mapping:
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      file: ./src/mapping.ts
+      handler: handleEscrowEvents
+      entities:
+        - EscrowEvent
+        - EscrowEngagement
+        - DailyEscrowStats
+        - ContractStats
+
+features:
+  - nonFatalErrors
+  - fullTextSearch
+
+description: |
+  Trustless Work Escrow Events Subgraph
+  
+  This subgraph indexes Soroban events from Trustless Work escrow contracts on Stellar,
+  providing queryable access to escrow lifecycle data including:
+  
+  - Escrow initialization (init_esc)
+  - Escrow funding (fund_esc) 
+  - Fund distribution (dis_esc)
+  - Escrow property changes (chg_esc)
+  
+  The subgraph aggregates events by engagement ID and provides summary statistics
+  for analytics and monitoring purposes.
+
+repository: https://github.com/Trustless-Work/Product
+
+graft:
+  base: QmPreviousSubgraphHash  # Replace with actual hash if grafting from existing subgraph
+  block: 1500000  # Block number to graft from
