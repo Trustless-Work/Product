@@ -18,31 +18,110 @@ Trustless Work Integration Checklist (v1 — Developer Edition)
 
 **1. Understand Your Use Case**
 
-* \[ ] Define the parties involved and map the flow of funds and requirements to release. (Who is paying who? for what? why are the funds on escrow? what triggers the release(s)?
-* \[ ] Map your transaction lifecycle: Initiation → Funding → Milestone Updates → Approval → Release (→ Dispute if needed).
-  * 📄 [escrow-lifecycle](../technology-overview/escrow-lifecycle/ "mention")
+* [ ] Define your escrow workflow: single-release (full payout at end) or multi-release (payout per milestone).
+* [ ] Map your transaction lifecycle: Initiation → Funding → Milestone Updates → Approval → Release (→ Dispute if needed).
+
+📄 [escrow-lifecycle](../technology-overview/escrow-lifecycle/ "mention")
 
 **2. Choose the Correct Escrow Type**
 
-* \[ ] **Single-Release** — full payout after all milestones approved.
-* \[ ] **Multi-Release** — staged payouts per milestone.
-  * 📄 [escrow-types.md](../technology-overview/escrow-types.md "mention")
+* [ ] 📄 [escrow-types.md](../technology-overview/escrow-types.md "mention")
+* [ ] **Single-Release** — full payout after all milestones approved.
+* [ ] **Multi-Release** — staged payouts per milestone.
 
 **3. Define Roles**
 
-Assign the parties' Stellar addresses to each role in your escrow:
+Assign the parties' Stellar addresses to each role in your escrow:📄 [roles-in-trustless-work.md](../technology-overview/roles-in-trustless-work.md "mention")
 
-* \[ ] **Approver** — approves or disputes milestones.
-* \[ ] **Service Provider** — delivers work, marks milestones complete.
-* \[ ] **Release Signer** — releases funds once approvals are complete.
-* \[ ] **Dispute Resolver** — resolves disputes.
-* \[ ] **Platform Address** — receives platform fees.
-* \[ ] **Receiver** — final recipient of funds.
-  * 📄 [roles-in-trustless-work.md](../technology-overview/roles-in-trustless-work.md "mention")
+* [ ] **Approver** — approves or disputes milestones.
+* [ ] **Service Provider** — delivers work, marks milestones complete.
+* [ ] **Release Signer** — releases funds once approvals are complete.
+* [ ] **Dispute Resolver** — resolves disputes.
+* [ ] **Platform Address** — receives platform fees.
+* [ ] **Receiver** — final recipient of funds.
 
 **4. Define Escrow Properties**
 
-* \[ ] Asset & trustline setup
-* \[ ] Amount & platform fee
-* \[ ] Engagement ID (invoice/order ref)
-* \[ ] Milestones (title, description, acceptance criteria)
+[what-does-a-smart-escrow-look-like.md](../technology-overview/smart-escrow-design/what-does-a-smart-escrow-look-like.md "mention")
+
+* [ ] Asset & trustline setup
+* [ ] Amount & platform fee
+* [ ] Engagement ID (invoice/order ref)
+* [ ] Milestones (title, description, acceptance criteria)
+
+***
+
+### **Phase 2 – Integration (Core Setup)**
+
+**5. Get Access**
+
+* [ ] Sign up at [dapp.trustlesswork.com](https://dapp.trustlesswork.com/)
+* [ ] Request **API Key** (testnet; mainnet post-audit) [request-api-key.md](api-reference/authentication/request-api-key.md "mention")
+
+**6. Install SDK / Tools** [getting-started.md](../react-library/getting-started.md "mention")
+
+*   [ ] Install NPM package:
+
+    ```bash
+    npm i @trustless-work/escrow
+    ```
+*   [ ] Import SDK into your project:
+
+    ```javascript
+    import { 
+    // development environment = "https://dev.api.trustlesswork.com"
+      development,
+
+      // mainnet environment = "https://api.trustlesswork.com"
+      mainNet,
+      TrustlessWorkConfig,
+       } from "@trustless-work/escrow";
+    ```
+* [ ] Clone or reference open-source templates for your vertical (e.g., P2P, marketplace, grant platform).
+
+
+
+**7. Configure Your Escrow**
+
+* [ ] Set roles, addresses, amount, fees, and milestones.
+* [ ] Choose single-release or multi-release logic.
+* [ ] Use testnet asset for initial integration.
+
+***
+
+### **Phase 3 – Testing (Validation & Debugging)**
+
+**8. Deploy on Testnet**
+
+* [ ] Create your first escrow via API or SDK.
+* [ ] Fund it using a testnet wallet (e.g., Freighter, Albedo).
+* [ ] Walk through milestone completion and approval flow.
+
+**9. Simulate Edge Cases**
+
+* [ ] Dispute handling
+* [ ] Partial funding
+* [ ] Timeout or cancellation flows
+
+**10. Run Compliance & UX Review**
+
+* [ ] KYC/AML readiness (if needed for your vertical).
+* [ ] Test wallet connection & signing UX.
+
+***
+
+### **Phase 4 – Launch (Go Live)**
+
+**11. Migrate to Mainnet**
+
+* [ ] Move env to Mainnet
+* [ ] Deploy Mainnet contracts using SDK or API.
+* [ ] Fund first live escrows with stablecoins.
+
+**12. Monitor & Optimize**
+
+* [ ] Use viewer or dApp backoffice to track escrow status, funding, and release.
+
+***
+
+***
