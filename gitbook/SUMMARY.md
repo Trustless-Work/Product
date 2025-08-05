@@ -26,6 +26,7 @@
     * [How to Get Testnet Tokens](technology-overview/tools-and-utilities/testnet-tokens.md)
 * [💻 Developer Guide](developer-resources/README.md)
   * [🚀 Developer Quickstart](developer-resources/getting-started.md)
+  * [Integration checklist](developer-resources/integration-checklist.md)
   * [Authentication](developer-resources/api-reference/authentication/README.md)
     * [Request Api Key](developer-resources/api-reference/authentication/request-api-key.md)
   * [Schema](developer-resources/api-reference/escrows/schema.md)
