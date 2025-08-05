@@ -18,7 +18,7 @@ Trustless Work Integration Checklist (v1 — Developer Edition)
 
 **1. Understand Your Use Case**
 
-* \[ ] Define your escrow workflow: single-release (full payout at end) or multi-release (payout per milestone).
+* \[ ] Define the parties involved and map the flow of funds and requirements to release. (Who is paying who? for what? why are the funds on escrow? what triggers the release(s)?
 * \[ ] Map your transaction lifecycle: Initiation → Funding → Milestone Updates → Approval → Release (→ Dispute if needed).
   * 📄 [escrow-lifecycle](../technology-overview/escrow-lifecycle/ "mention")
 
@@ -26,11 +26,11 @@ Trustless Work Integration Checklist (v1 — Developer Edition)
 
 * \[ ] **Single-Release** — full payout after all milestones approved.
 * \[ ] **Multi-Release** — staged payouts per milestone.
-  * 📄 [Escrow Types Docs](https://docs.trustlesswork.com/trustless-work/technology-overview/escrow-types)
+  * 📄 [escrow-types.md](../technology-overview/escrow-types.md "mention")
 
 **3. Define Roles**
 
-Assign Stellar addresses to each role in your escrow:
+Assign the parties' Stellar addresses to each role in your escrow:
 
 * \[ ] **Approver** — approves or disputes milestones.
 * \[ ] **Service Provider** — delivers work, marks milestones complete.
@@ -38,7 +38,7 @@ Assign Stellar addresses to each role in your escrow:
 * \[ ] **Dispute Resolver** — resolves disputes.
 * \[ ] **Platform Address** — receives platform fees.
 * \[ ] **Receiver** — final recipient of funds.
-  * 📄 [Roles in Trustless Work](https://docs.trustlesswork.com/trustless-work/technology-overview/roles-in-trustless-work)
+  * 📄 [roles-in-trustless-work.md](../technology-overview/roles-in-trustless-work.md "mention")
 
 **4. Define Escrow Properties**
 
