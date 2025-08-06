@@ -1,3 +1,21 @@
+---
+icon: list-ol
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Integration checklist
 
 Trustless Work Integration Checklist (v1 — Developer Edition)
@@ -55,31 +73,15 @@ Assign the parties' Stellar addresses to each role in your escrow:📄 [roles-in
 
 **5. Get Access**
 
-* [ ] Sign up at [dapp.trustlesswork.com](https://dapp.trustlesswork.com/)
-* [ ] Request **API Key** (testnet; mainnet post-audit) [request-api-key.md](api-reference/authentication/request-api-key.md "mention")
+* [ ] Sign up at [dApp](https://dapp.trustlesswork.com) for mainnet.
+* [ ] Sign up at [dApp](https://dapp.dev.trustlesswork.com) for testnet.
+* [ ] Request **API Key** (testnet; mainnet post-audit) [request-api-key.md](api-reference/authentication/request-api-key.md "mention") -> you can see the videos on the dApp landing.
 
 **6. Install SDK / Tools** [getting-started.md](../react-library/getting-started.md "mention")
 
-*   [ ] Install NPM package:
-
-    ```bash
-    npm i @trustless-work/escrow
-    ```
-*   [ ] Import SDK into your project:
-
-    ```javascript
-    import { 
-    // development environment = "https://dev.api.trustlesswork.com"
-      development,
-
-      // mainnet environment = "https://api.trustlesswork.com"
-      mainNet,
-      TrustlessWorkConfig,
-       } from "@trustless-work/escrow";
-    ```
+* [ ] Install NPM package.
+* [ ] Import SDK into your project.
 * [ ] Clone or reference open-source templates for your vertical (e.g., P2P, marketplace, grant platform).
-
-
 
 **7. Configure Your Escrow**
 
@@ -114,7 +116,7 @@ Assign the parties' Stellar addresses to each role in your escrow:📄 [roles-in
 
 **11. Migrate to Mainnet**
 
-* [ ] Move env to Mainnet
+* [ ] Move Trustless Work to Mainnet
 * [ ] Deploy Mainnet contracts using SDK or API.
 * [ ] Fund first live escrows with stablecoins.
 
