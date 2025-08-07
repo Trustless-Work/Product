@@ -253,22 +253,6 @@ export type FundEscrowPayload = {
   signer: string;
 };
 
-// ----------------- Get Escrow -----------------
-/**
- * Get Escrow Params
- */
-export type GetEscrowParams = {
-  /**
-   * ID (address) that identifies the escrow contract
-   */
-  contractId: string;
-
-  /**
-   * Address of the user signing the contract transaction
-   */
-  signer: string;
-};
-
 // ----------------- Get Escrows From Indexer -----------------
 /**
  * Get Escrows From Indexer Params
