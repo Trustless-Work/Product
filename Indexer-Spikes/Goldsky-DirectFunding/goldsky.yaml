@@ -1,0 +1,21 @@
+# Goldsky Indexer Configuration for Trustless Work Direct Escrow Funding Detection
+name: trustlesswork-direct-funding
+network: stellar-testnet
+dataSources:
+  - kind: effects
+    filter:
+      type: account_credited
+      # Filter for known escrow contract addresses (extracting from environment variable)
+      account:
++        - ${ESCROW_ADDRESSES:-"CDT6K35SFQTWS3XQX5RJK6LWRHRUNUZIQMASQAUCRRURCRV4NFHVK3ES"}
+        
+entities:
+  - name: EscrowFundingEvent
+    fields:
+      id: ID!
+      escrowAddress: String!
+      from: String!
+      amount: String!
+      asset: String!
+      ledger: BigInt!
+      timestamp: BigInt!

@@ -1,0 +1,9 @@
+type EscrowFundingEvent {
+  id: ID!
+  escrowAddress: String!
+  from: String!
+  amount: String!
+  asset: String!
+  ledger: BigInt!
+  timestamp: BigInt!
+}
