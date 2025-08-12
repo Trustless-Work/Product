@@ -98,6 +98,7 @@
   * [useReleaseFunds](react-library/usereleasefunds.md)
   * [useStartDispute](react-library/usestartdispute.md)
   * [useResolveDispute](react-library/useresolvedispute.md)
+* [👾 Vibe Coding](vibe-coding.md)
 * [🕍 Open Source dApps](open-source-dapps/README.md)
   * [🤖 dApp Overview](open-source-dapps/dapp-overview/README.md)
     * [Step 1: Accessing the Trustless Work Dapp and Logging In](open-source-dapps/dapp-overview/step-1-accessing-the-trustless-work-dapp-and-logging-in.md)
