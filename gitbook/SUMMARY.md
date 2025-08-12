@@ -38,6 +38,7 @@
     * [Responses](developer-resources/types/responses.md)
     * [Errors](developer-resources/types/errors.md)
   * [Changelog — Escrow Update](developer-resources/changelog-escrow-update.md)
+  * [Stellar Wallet Kit - Quick Integration](developer-resources/stellar-wallet-kit-quick-integration.md)
 * [API Reference](api-reference/README.md)
   * [Introduction](api-reference/introduction.md)
   * [Deploy](api-reference/deploy/README.md)
