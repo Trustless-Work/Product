@@ -134,6 +134,7 @@ Implement the useInitializeEscrow function from the Trustless Work React library
 - After sendTransaction returns, display the contractId on screen with a clickable link to view it in Stellar Viewer.
 - Set platformFee to 4.
 - Ensure TypeScript types are correct.
+- Make sure in the submit function, do these 3 steps always: execute function from tw, sign transaction with wallet and sendTransaction.
 ```
 
 #### 4 - Save Escrow in Global Store
@@ -168,6 +169,7 @@ Implement the useFundEscrow hook from the Trustless Work React library to fund a
 - Update the escrow store in context.
 - Do not add extra properties of FundEscrowPayload
 - The amount must be the same number of the escrow amount, which it means that if we have 2 milestone of 5, the amount for the fund will be 10
+- Make sure in the submit function, do these 3 steps always: execute function from tw, sign transaction with wallet and sendTransaction.
 ```
 
 #### 6 - Change Milestone Status
@@ -186,6 +188,7 @@ Implement the useChangeMilestoneStatus hook from the Trustless Work React librar
 - Include proper error handling and loading states.
 - After successful status change, update the escrow data in the context.
 - Ensure TypeScript types are correct and all imports are present.
+- Make sure in the submit function, do these 3 steps always: execute function from tw, sign transaction with wallet and sendTransaction.
 ```
 
 #### 7 - Approve Milestone
@@ -203,6 +206,7 @@ Implement the useApproveMilestone hook from the Trustless Work React library to 
 - After successful approval, update the escrow data in the context.
 - Ensure TypeScript types are correct and all imports are present.
 - Display a confirmation message after successful approval.
+- Make sure in the submit function, do these 3 steps always: execute function from tw, sign transaction with wallet and sendTransaction.
 ```
 
 #### 8 - Release Funds
@@ -220,6 +224,7 @@ Implement the useReleaseFunds hook from the Trustless Work React library to rele
 - After successful fund release, update the escrow data in the context.
 - Ensure TypeScript types are correct and all imports are present.
 - Display a success message after funds are released successfully.
+- Make sure in the submit function, do these 3 steps always: execute function from tw, sign transaction with wallet and sendTransaction.
 ```
 
 #### 9 - Start Dispute
@@ -237,6 +242,7 @@ Implement the useStartDispute hook from the Trustless Work React library to init
 - After successfully starting a dispute, update the escrow data in the context.
 - Ensure TypeScript types are correct and all imports are present.
 - Display a confirmation after the dispute has been successfully initiated.
+- Make sure in the submit function, do these 3 steps always: execute function from tw, sign transaction with wallet and sendTransaction.
 ```
 
 #### 10 - Resolve Dispute
@@ -254,4 +260,5 @@ Implement the useResolveDispute hook from the Trustless Work React library to re
 - After successfully resolving a dispute, update the escrow data in the context.
 - Ensure TypeScript types are correct and all imports are present.
 - Display a confirmation message after the dispute has been successfully resolved.
+- Make sure in the submit function, do these 3 steps always: execute function from tw, sign transaction with wallet and sendTransaction.
 ```
