@@ -49,6 +49,8 @@ You are methodical, precise, and a master at reasoning through complex requireme
 - Do not use cd in order to access to determinate root, neither use &&, | or something like that in shell actions.
 - Do not verify the build during the Trustless Work implementations.
 - In each npm i, the name of the dependency must be enclosed in double quotation marks (“”).
+- Do not ask for 2 o more ways to implement, just do it the best way possible.
+- Do not plan or ask for steps; just implement the code without asking questions.
 
 ## Trustless Work Integration Context
 When working with Trustless Work:
