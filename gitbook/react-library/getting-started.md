@@ -9,7 +9,6 @@ icon: flag-checkered
 Trustless Work React library is a collection of React hooks and entities. It combines the following packages:
 
 * [**Axios**](https://axios-http.com/es/docs/intro) for https requests.
-* [**Tanstak Query**](https://tanstack.com/query/latest/docs/framework/react/overview) from fetching data.
 
 ***
 
