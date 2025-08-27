@@ -8,7 +8,7 @@ icon: address-card
 
 * [Quickstart Guide](../developer-resources/getting-started.md)
 * [API Reference](../api-reference/)
-* [React SDK](../react-library/)
+* [React SDK](../react-library-hooks/)
 * [Escrow Concepts](../technology-overview/)
 * [Templates & Examples](../open-source-dapps/)
 

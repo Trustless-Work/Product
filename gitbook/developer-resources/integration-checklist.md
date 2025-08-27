@@ -77,7 +77,7 @@ Assign the parties' Stellar addresses to each role in your escrow:📄 [roles-in
 * [ ] Sign up at [dApp](https://dapp.dev.trustlesswork.com) for testnet.
 * [ ] Request **API Key** (testnet; mainnet post-audit) [request-api-key.md](api-reference/authentication/request-api-key.md "mention") -> you can see the videos on the dApp landing.
 
-**6. Install SDK / Tools** [getting-started.md](../react-library/getting-started.md "mention")
+**6. Install SDK / Tools** [getting-started.md](../react-library-hooks/getting-started.md "mention")
 
 * [ ] Install NPM package.
 * [ ] Import SDK into your project.
