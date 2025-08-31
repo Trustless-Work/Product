@@ -48,8 +48,102 @@ A Multi-Release Escrow releases funds incrementally as each milestone is complet
 | Use Case   | Freelance with staged checks              | Grant disbursements    |
 | Complexity | Medium (multiple milestones, one release) | High (staged releases) |
 
-### 🧪 Quickstart Tips
+### Quick Tips:
 
 * Use **Single-Release** to get started fast.
 * Use **Multi-Release** when you need milestone-based control.
 * All escrows are **non-custodial**, programmable, and stablecoin-native.
+
+***
+
+### JSON Examples
+
+Here are two minimal JSON snippets that highlight the structural difference between **Single-Release** and **Multi-Release** escrows. These aren’t full schemas, just the essentials so a builder can “see it” at a glance.
+
+***
+
+### 📝 Example: Single-Release (with multiple milestones)
+
+```json
+{
+  "escrowId": "G...ESCROWADDRESS",
+  "engagementId": "order-123",
+  "title": "Website Development",
+  "description": "Build and deliver a marketing website",
+  "roles": {
+    "approver": "G...CLIENT",
+    "serviceProvider": "G...FREELANCER",
+    "releaseSigner": "G...SIGNER",
+    "platformAddress": "G...PLATFORM",
+    "disputeResolver": "G...RESOLVER",
+    "receiver": "G...FREELANCER"
+  },
+  "amount": 1000,
+  "platformFee": 0.5,
+  "milestones": [
+    {
+      "description": "Deliver homepage design",
+      "status": "Approved",
+      "approvedFlag": true
+    },
+    {
+      "description": "Deploy full website",
+      "status": "Pending",
+      "approvedFlag": false
+    }
+  ],
+  "flags": {
+    "disputed": false,
+    "released": false,
+    "resolved": false
+  },
+  "trustline": {
+    "address": "G...USDCISSUER",
+    "decimals": 6
+  }
+}
+```
+
+👉 Even with multiple milestones, **all must be approved** before the single payout of `1000` USDC is released.
+
+***
+
+### 📝 Example: Multi-Release
+
+```json
+{
+  "escrowId": "G...ESCROWADDRESS",
+  "engagementId": "grant-456",
+  "title": "Research Grant",
+  "description": "Funding project in two phases",
+  "roles": {
+    "approver": "G...FUNDER",
+    "serviceProvider": "G...RESEARCHER",
+    "releaseSigner": "G...SIGNER",
+    "platformAddress": "G...PLATFORM",
+    "disputeResolver": "G...RESOLVER",
+    "receiver": "G...RESEARCHER"
+  },
+  "platformFee": 0.5,
+  "milestones": [
+    {
+      "description": "Submit interim report",
+      "amount": 500,
+      "status": "Approved",
+      "flags": { "approved": true, "released": true, "disputed": false, "resolved": false }
+    },
+    {
+      "description": "Publish final report",
+      "amount": 500,
+      "status": "Pending",
+      "flags": { "approved": false, "released": false, "disputed": false, "resolved": false }
+    }
+  ],
+  "trustline": {
+    "address": "G...USDCISSUER",
+    "decimals": 6
+  }
+}
+```
+
+👉 Here, each milestone has its own **amount** and **flags**. Funds are released milestone-by-milestone (`500` + `500`).

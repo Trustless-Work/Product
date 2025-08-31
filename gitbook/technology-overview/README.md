@@ -1,82 +1,100 @@
 ---
-description: 'High-level architecture: Smart contracts, APIs, and escrow workflows.'
+description: We don’t hold your money—we hold the logic.
 ---
 
-# ⚒️ Core Concepts
+# ⚒️ Escrow Design
 
-### 🔍 What Is a Smart Escrow?
+Every escrow on Trustless Work is just a **structured contract**: a set of keys and values that define **who does what, when funds move, and under which conditions.**
 
-A **Smart Escrow** is a smart contract that securely holds funds and only releases them when predefined conditions are met — like a milestone being completed or approved.
-
-Escrows on Trustless Work are:
-
-* 🔒 **Non-Custodial** — no third-party control
-* ⚙️ **Programmable** — define roles and rules
-* 💵 **Stablecoin-native** — supports USDC and XLM
-* ⚡ **Fast & Cheap** — runs on Stellar + Soroban
-
-→ Explore [Smart Escrow Design](smart-escrow-design/)
+This page gives you the **mental model** for designing escrows before you ever touch code.\
+The schema defines the _shape of an escrow_; you decide the logic.
 
 ***
 
-**🧩 Escrow Types**
+### Escrow structure
 
-* **Single-Release** — One payout, one approval, done.
-* **Multi-Release** — Break it into milestones. Pay over time.
+An escrow is a **JSON body** with these core parts:
 
-→ Learn more about [Escrow Types](escrow-types.md)
+* **Escrow ID:** On-chain identifier of the contract. Deposit Address.&#x20;
+* **Engagement ID & Title** → configurable strongs, help identify the contract.&#x20;
+* **Roles** → who marks, approves, releases, resolves, and receives
+* **Description** → why the escrow exists
+* **Milestones** → what must be completed to unlock funds
+* **Amount & Fees** → how much is locked, how much the platform earns
+* **Trustline** → which asset is used (USDC, or any Stellar-issued token)
+* **Flags** → state indicators (disputed, released, resolved)
 
-***
-
-**🔄 Escrow Lifecycle**
-
-Every escrow follows a flow:
-
-1. **Initiate** the rules
-2. **Fund** it with stablecoins
-3. **Mark** progress
-4. **Approve** the work
-5. **Release** the funds\
-   (6. **Dispute**, if needed)
-
-→ Dive into the [Escrow Lifecycle](escrow-lifecycle/)
-
-<figure><img src="../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+{% content-ref url="what-does-a-smart-escrow-look-like.md" %}
+[what-does-a-smart-escrow-look-like.md](what-does-a-smart-escrow-look-like.md)
+{% endcontent-ref %}
 
 ***
 
-**🧑‍⚖️ Roles & Permissions**
+### Two Escrow Types
 
-Each action is signed by a wallet:
+Trustless Work supports **two escrow types**:
 
-* Marker → says work is done
-* Approver → confirms it
-* Releaser → sends funds
-* Resolver → handles disputes
-* Receiver → gets paid
+1. **Single-Release Escrow**\
+   Multiple milestones, one payout.\
+   Useful for deposits, one-off jobs, or simple deliveries.\
 
-→ See [Roles & Responsibilities](roles-in-trustless-work.md)
+2. **Multi-Release Escrow**\
+   Multiple milestones, multiple payouts (one per milestone).\
+   Perfect for projects, grants, or milestone-based funding.
 
-***
-
-**📦 Escrow as Data**
-
-Every escrow is just a **JSON config**. You define:
-
-* Roles
-* Milestones
-* Token to use
-* Fees (optional)
-
-Then deploy it via API or SDK. Done.
+{% content-ref url="escrow-types.md" %}
+[escrow-types.md](escrow-types.md)
+{% endcontent-ref %}
 
 ***
 
-#### ⬇️ Next Steps
+### Roles in Context
 
-* ✏️ [Customize your roles](roles-in-trustless-work.md)
-* 🔄 [Test in our dApp](http://dapp.trustlesswork.com/)
-* 🌐 [Deploy via API](https://github.com/Trustless-Work)
-* 🎓 [Explore vertical use cases](https://dots.trustlesswork.com/use-cases)
+Every schema includes a **roles object**. Roles are:
+
+* **Approver** → validates milestone completion.
+* **Service Provider** → delivers work, provides status updates.
+* **Platform Address** → can make chanes before escrow is funded. Optional: can earn fees (platform fee).
+* **Release Signer** → executes fund release.
+* **Dispute Resolver** → arbitrates when things go wrong, can re-route funds if dispute is raised.
+* **Receiver** → final destination of funds
+
+{% content-ref url="roles-in-trustless-work.md" %}
+[roles-in-trustless-work.md](roles-in-trustless-work.md)
+{% endcontent-ref %}
+
+***
+
+### Lifecycle Integration
+
+Schemas map directly into the **escrow lifecycle**:
+
+1. Initiation → define schema
+2. Funding → lock assets via trustline
+3. Milestone updates → service provider adds progress
+4. Approvals → approver signs off
+5. Release → release signer triggers transfer
+6. (Optional) Dispute & Resolution
+
+{% content-ref url="escrow-lifecycle/" %}
+[escrow-lifecycle](escrow-lifecycle/)
+{% endcontent-ref %}
+
+***
+
+### 🚀 Next Steps
+
+* Define [Escrow Properties](what-does-a-smart-escrow-look-like.md)
+* Choose Your[ Escrow Type](escrow-types.md)
+* Assign [Roles](roles-in-trustless-work.md)
+* Follow the [Lifecycle](escrow-lifecycle/)
+
+Then:\
+[ **Test it in our dApp** ](https://dapp.trustlesswork.com)\
+&#x20;[**Integrate Trustless Work into your platform** ](../developer-resources/getting-started.md)\
+[**Try out our Vibe-Coding Guide**](../vibe-coding.md)\
+[**Use our escrow-blocks**](../escrow-blocks.md)
+
+
 
 ***

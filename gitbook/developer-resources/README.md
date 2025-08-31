@@ -4,16 +4,16 @@
 [getting-started.md](getting-started.md)
 {% endcontent-ref %}
 
-{% content-ref url="../technology-overview/smart-escrow-design/" %}
-[smart-escrow-design](../technology-overview/smart-escrow-design/)
+{% content-ref url="../technology-overview/smart-escrow-design.md" %}
+[smart-escrow-design.md](../technology-overview/smart-escrow-design.md)
 {% endcontent-ref %}
 
 {% content-ref url="../api-reference/" %}
 [api-reference](../api-reference/)
 {% endcontent-ref %}
 
-{% content-ref url="../technology-overview/tools-and-utilities/stellar-wallets/" %}
-[stellar-wallets](../technology-overview/tools-and-utilities/stellar-wallets/)
+{% content-ref url="../stellar-and-soroban-the-backbone-of-trustless-work/stellar-wallets/" %}
+[stellar-wallets](../stellar-and-soroban-the-backbone-of-trustless-work/stellar-wallets/)
 {% endcontent-ref %}
 
 

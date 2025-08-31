@@ -4,86 +4,119 @@ description: Let's understand what each role represents!
 
 # Roles in Trustless Work
 
-Escrows involve multiple parties, which in our case are addresses. Each address is assigned one or more roles, which define which actions this party can do in the Escrow Lifecycle.  Anyone can deposit funds into an escrow, but the escrow status is changed by predetermined steps, which are initiated and signed by the corresponding roles.
+Anyone can deposit funds into an escrow.\
+But only **addresses with assigned roles** can update milestones, approve work, release funds, or resolve disputes.
+
+***
 
 <figure><img src="../.gitbook/assets/image (1) (2) (1).png" alt=""><figcaption><p>Roles are marked in black</p></figcaption></figure>
 
 ***
 
-### Roles, Parties, and Their Functions
+### Escrow Roles and Their Actions
 
-* **Roles:** Each role has a distinct function within the escrow process, such as approving milestones or releasing payments.
-* **Parties:** These are the entities or individuals assigned to one or more roles, such as buyers, sellers, or platforms. They interact through a Stellar wallet for signing any interactions with the escrow. Only addresses with assigned roles can interact with the escrow.
+### 1. Service Provider
 
-***
+**Purpose:** Delivers the product, service, or outcome defined in the escrow.\
+**Can perform:**
 
-## Roles:
+* Mark a milestone as complete
+* Add evidence or proof of delivery
+* Raise a dispute
 
-**1.  Approver**
+**Examples:**
 
-* **Function:** Approves or disputes milestones marked as completed.
-* **Examples:**
-  * Buyer in a freelance marketplace **approves** the deliverable **marked as done** by the freelancer.
-  * Host in a security deposit scenario **approves** the checkout **marked as done** by the turist.
-  * Platform in a crowdfunding campaign **approves** milestone **marked as done** by the company.
-
-***
-
-**2. Service Provider**
-
-* **Function:** Delivers the product, service, or objective set on milestine. Marks milestones as completed and ready for approval.
-* **Examples:**
-  * Freelancer delivering a service and marking it as complete.
-  * Company updating crowdfunding milestones and marking as complete.
-  * Compliance department marking a withdraw complaince check as complete.
-  * Real Estate inspector marks the house inispections as complete.&#x20;
+* Freelancer delivering work and marking it as done
+* Company updating crowdfunding milestones
+* Compliance team marking a “withdrawal check” milestone complete
 
 ***
 
-**3. Release Signer**
+### 2. Approver
 
-* **Function:** Approves the release of funds for the amount set.
+**Purpose:** Validates that the milestone has indeed been completed and signs the approval.\
+**Can perform:**
 
-{% hint style="info" %}
-Release currently works as following: \
--All milestones need to be approved for payment to be released, since we are setting 1 amount for the whole contract. (Single-release)\
-\
-There will be a multi-release, where: \
-Each individual  milestone will have an amount, each amount can be individually released when approved.&#x20;
-{% endhint %}
+* Sign the approval of a milestone
+* Raise a dispute if work is not satisfactory
 
+**Examples:**
 
-
-* **Examples:**
-  * Airbnb (platform) releasing a deposit.
-  * eBay (platform) releasing payment to a seller.
-  * DAO releasing a payment to a contributor
+* Buyer approving a freelancer’s deliverable
+* Host approving a checkout in a rental deposit
+* Platform approving milestones in a crowdfunding campaign
 
 ***
 
-**4. Dispute Resolver**
+### 3. Release Signer
 
-* **Function:** Resolves disputes by adjusting milestone amounts, updating status, or canceling the contract.
-* **Examples:**
-  * Platform (eBay, Airbnb) acting as arbiter for a deposit because turist broke something redirecting deposit to host.
-  * Independent third-party arbitrator setting a new milestone price for an project milestone.
-  * Cenceling an escrow amount and redirecting funds back to Client.
+**Purpose:** Triggers the actual release of funds once approvals are in place.\
+**Can perform:**
 
-***
+* Release funds after all milestones are approved (Single-Release)
+* Release funds for each approved milestone (Multi-Release)
+* Can raise a dispute if there’s disagreement at release stage.
 
-**5. Platform Address**
+**Examples:**
 
-* **Function:** An address designated to receive the **platform fee**, a percentage or fixed amount of the total funds processed through escrow. Platform can also update a milestone while it's status is still pending.&#x20;
-* **Examples:**
-  * Airbnb collecting platform fees.
-  * Crowdfunding platform taking a fee from funds raised.
+* Airbnb releasing a deposit to the host
+* DAO releasing a bounty payment to a contributor
 
 ***
 
-**6. Receiver - Final Recipient**
+#### 4. Receiver (Final Recipient)
 
-* **Function:** The final recipient of funds after conditions are met or disputes are resolved.
-* **Examples:**
-  * Freelancer receiving payment.
-  * Turist receiving a security deposit.
-  * Company receiving funds
+**Purpose:** The end destination of funds.\
+**Can perform:**
+
+* Receive funds once release is triggered
+
+**Examples:**
+
+* Freelancer wallet receiving payment
+* Company receiving milestone-based funding
+* Tourist receiving their deposit back
+
+***
+
+#### 5. Dispute Resolver
+
+**Purpose:** Steps in when parties disagree.\
+**Can perform:**
+
+* Resolve disputes by redirecting funds&#x20;
+
+**Examples:**
+
+* Platform deciding how to split a disputed deposit
+* Arbitrator updating milestone pricing in a project
+* Escrow canceled and funds returned to buyer
+
+***
+
+#### 6. Platform Address
+
+**Purpose:** Represents the platform itself.\
+**Can perform:**
+
+* Collect platform fees automatically
+* Update milestone details while escrow has not been funded
+
+**Examples:**
+
+* Airbnb collecting service fees
+* Crowdfunding platform applying a percentage fee
+* Marketplace updating a milestone description before it’s funded
+
+***
+
+### 🧭 How Roles Interact
+
+1. **Service Provider** marks milestones as complete
+2. **Approver** validates or disputes them
+3. **Release Signer** authorizes payout
+4. **Receiver** gets funds
+5. **Platform Address** takes its fee
+6. If there’s a conflict, the **Dispute Resolver** steps in
+
+📎 See it in action: [Escrow Lifecycle](escrow-lifecycle/)

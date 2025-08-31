@@ -60,7 +60,7 @@ Assign the parties' Stellar addresses to each role in your escrow:📄 [roles-in
 
 **4. Define Escrow Properties**
 
-[what-does-a-smart-escrow-look-like.md](../technology-overview/smart-escrow-design/what-does-a-smart-escrow-look-like.md "mention")
+[what-does-a-smart-escrow-look-like.md](../technology-overview/what-does-a-smart-escrow-look-like.md "mention")
 
 * [ ] Asset & trustline setup
 * [ ] Amount & platform fee

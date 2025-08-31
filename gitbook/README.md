@@ -7,29 +7,25 @@ coverY: 0
 # Welcome
 
 {% hint style="success" %}
-Export the docs and paste them on any AI agent to get full context!
-
-We've also enabled AI on this Gitbook! Use the search bar to access this feature.
-
-Pura Vida!
+Our docs are optimized to be exported as context for any AI! You can also ask on the search bar!
 {% endhint %}
 
 ## Welcome to Trustless Work Documentation!
 
-**Trustless Work** is the escrow infrastructure for the new economy — a developer-first platform to integrate programmable, milestone-based fund releases into your product using stablecoins and smart contracts.
+**Trustless Work** is the escrow infrastructure for the new economy — a developer-first platform to integrate programmable, milestone-based escrows into products.&#x20;
 
 ***
 
-### 🧠 What You Can Do Here
+### What You Can Do Here
 
-With Trustless Work, you can:
+With Trustless Work, you can integrate smart escrows in minutes, this means you can:
 
-* 💸 Hold funds securely in smart escrows
-* ✅ Define who can mark milestones, approve work, or release funds
-* ⚙️ Automate transactions using our API and React hooks
-* 🔐 Stay non-custodial and audit-friendly
+* Hold funds securely in non-custodial smart contracts.
+* Configure the roles to adapt to your business needs. &#x20;
+* Launch way faster, without developing the smart contracts from scratch.&#x20;
+* Not worry about audits, or time-consuming implementations.&#x20;
 
-We abstract away the complexity of blockchain so you can focus on building.
+We abstract away the complexity of blockchain so you can focus on building great products.
 
 ***
 
