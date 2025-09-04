@@ -20,7 +20,7 @@ But only **addresses with assigned roles** can update milestones, approve work, 
 **Purpose:** Delivers the product, service, or outcome defined in the escrow.\
 **Can perform:**
 
-* Mark a milestone as complete
+* Change milestone status
 * Add evidence or proof of delivery
 * Raise a dispute
 
@@ -100,7 +100,7 @@ But only **addresses with assigned roles** can update milestones, approve work, 
 **Can perform:**
 
 * Collect platform fees automatically
-* Update milestone details while escrow has not been funded
+* Update escrow details while escrow has not been funded
 
 **Examples:**
 
