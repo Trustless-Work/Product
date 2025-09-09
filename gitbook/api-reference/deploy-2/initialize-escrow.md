@@ -11,12 +11,12 @@ icon: circle-plus
 
 ### Milestone
 
-| Name         | Type                             | Description                                                           |
-| ------------ | -------------------------------- | --------------------------------------------------------------------- |
-| description  | string                           | Text describing the function of the milestone                         |
-| status       | string (Default value: "peding") | Milestone status. Ex: Approved, In dispute, etc...                    |
-| approvedFlag | boolean (Default value: false)   | Flag indicating whether a milestone has been approved by the approver |
-| amount       | string                           | Amount of the milestone                                               |
+| Name        | Type                             | Description                                                           |
+| ----------- | -------------------------------- | --------------------------------------------------------------------- |
+| description | string                           | Text describing the function of the milestone                         |
+| status      | string (Default value: "peding") | Milestone status. Ex: Approved, In dispute, etc...                    |
+| approved    | boolean (Default value: false)   | Flag indicating whether a milestone has been approved by the approver |
+| amount      | string                           | Amount of the milestone                                               |
 
 ### Roles:
 
@@ -39,7 +39,7 @@ icon: circle-plus
 ### Initialize Escrow
 
 {% openapi-operation spec="trustless-work-api-dev" path="/deployer/multi-release" method="post" %}
-[Broken link](broken-reference)
+[OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
 ### **What this Endpoint returns?**
