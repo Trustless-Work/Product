@@ -13,7 +13,7 @@ API keys can be requested in our dApp. You will require a Stellar wallet. If you
 
 Login with your wallet login to our dApp. You will have to sign to login. This will create a user profile. Here's the link to our dApp:&#x20;
 
-In the dApp landing, you'll find a section called **"API Key for Authentication"**. Here you'll see the best explanation in order tog et the API Key.
+In the dApp landing, you'll find a section called **"API Key for Authentication"**. Here you'll see the best explanation in order to get the API Key.
 
 
 
