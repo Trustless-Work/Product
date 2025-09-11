@@ -17,7 +17,7 @@ In the dApp landing, you'll find a section called **"API Key for Authentication"
 
 
 
-If you are using api.trustlesswork.com (mainnet)
+If you are using api.trustlesswork.com (mainnet) -> Make sure that you have the "mainnet" switch activated.
 
 {% embed url="https://dapp.trustlesswork.com" %}
 
