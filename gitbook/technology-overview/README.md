@@ -93,7 +93,7 @@ Then:\
 [ **Test it in our dApp** ](https://dapp.trustlesswork.com)\
 &#x20;[**Integrate Trustless Work into your platform** ](../developer-resources/getting-started.md)\
 [**Try out our Vibe-Coding Guide**](../vibe-coding.md)\
-[**Use our escrow-blocks**](../escrow-blocks.md)
+[**Use our escrow-blocks**](../escrow-blocks/)
 
 
 
