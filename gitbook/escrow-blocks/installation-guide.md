@@ -37,10 +37,9 @@ Create a `.env` file in your project root:
 
 .env
 
-```
-# Required: Your Trustless Work API key 
-NEXT_PUBLIC_API_KEY=your_api_key_here
-```
+<pre><code># Required: Your Trustless Work API key 
+<strong>NEXT_PUBLIC_API_KEY=your_api_key_here
+</strong></code></pre>
 
 ### Configuration Files(Optional)# <a href="#configuration-files" id="configuration-files"></a>
 
