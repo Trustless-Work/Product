@@ -31,10 +31,9 @@ icon: circle-plus
 
 ### Trustline:
 
-| Name     | Type   | Description                                                                |
-| -------- | ------ | -------------------------------------------------------------------------- |
-| address  | string | Public address establishing permission to accept and use a specific token. |
-| decimals | number | Number of decimals into which the token is divided.                        |
+| Name    | Type   | Description                                                                |
+| ------- | ------ | -------------------------------------------------------------------------- |
+| address | string | Public address establishing permission to accept and use a specific token. |
 
 ### Initialize Escrow
 

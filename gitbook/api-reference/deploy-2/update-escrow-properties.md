@@ -39,15 +39,14 @@ icon: pencil
 
 ### Trustline
 
-| Name     | Type   | Description                                                                |
-| -------- | ------ | -------------------------------------------------------------------------- |
-| address  | string | Public address establishing permission to accept and use a specific token. |
-| decimals | number | Number of decimals into which the token is divided.                        |
+| Name    | Type   | Description                                                                |
+| ------- | ------ | -------------------------------------------------------------------------- |
+| address | string | Public address establishing permission to accept and use a specific token. |
 
 ### Open API
 
 {% openapi-operation spec="trustless-work-api-dev" path="/escrow/multi-release/update-escrow" method="put" %}
-[Broken link](broken-reference)
+[OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
 ### **What this Endpoint returns?**
