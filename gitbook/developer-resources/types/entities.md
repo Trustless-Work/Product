@@ -152,11 +152,6 @@ export interface Trustline {
    * Public address establishing permission to accept and use a specific token.
    */
   address: string;
-
-  /**
-   * Number of decimals into which the token is divided.
-   */
-  decimals: number;
 }
 ```
 

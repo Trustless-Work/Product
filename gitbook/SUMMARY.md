@@ -93,6 +93,7 @@
   * [useReleaseFunds](react-library-hooks/usereleasefunds.md)
   * [useStartDispute](react-library-hooks/usestartdispute.md)
   * [useResolveDispute](react-library-hooks/useresolvedispute.md)
+  * [useWithdrawRemainingFunds](react-library-hooks/usewithdrawremainingfunds.md)
 * [📓 Escrow Blocks](escrow-blocks/README.md)
   * [Installation Guide](escrow-blocks/installation-guide.md)
   * [Escrow's Single Release Lifecycle](escrow-blocks/escrows-single-release-lifecycle.md)

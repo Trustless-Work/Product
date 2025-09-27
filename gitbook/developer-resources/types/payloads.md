@@ -6,8 +6,7 @@ icon: table
 
 ### Escrow's Payload Entity
 
-```typescript
-import { EscrowType, SingleReleaseEscrowStatus } from "./types";
+<pre class="language-typescript"><code class="lang-typescript">import { EscrowType, SingleReleaseEscrowStatus } from "./types";
 import {
   MultiReleaseEscrow,
   Role,
@@ -44,10 +43,10 @@ export type MultiReleaseMilestonePayload = {
 /**
  * Single Release Initialize Escrow Payload
  */
-export type InitializeSingleReleaseEscrowPayload = Omit<
+export type InitializeSingleReleaseEscrowPayload = Omit&#x3C;
   SingleReleaseEscrow,
   "contractId" | "balance" | "milestones"
-> & {
+> &#x26; {
   /**
    * Objectives to be completed to define the escrow as completed
    */
@@ -57,10 +56,10 @@ export type InitializeSingleReleaseEscrowPayload = Omit<
 /**
  * Multi Release Initialize Escrow Payload
  */
-export type InitializeMultiReleaseEscrowPayload = Omit<
+export type InitializeMultiReleaseEscrowPayload = Omit&#x3C;
   MultiReleaseEscrow,
   "contractId" | "balance" | "milestones"
-> & {
+> &#x26; {
   /**
    * Objectives to be completed to define the escrow as completed
    */
@@ -80,7 +79,7 @@ export type UpdateSingleReleaseEscrowPayload = {
   /**
    * Escrow data
    */
-  escrow: Omit<SingleReleaseEscrow, "contractId" | "signer" | "balance"> & {
+  escrow: Omit&#x3C;SingleReleaseEscrow, "contractId" | "signer" | "balance"> &#x26; {
     /**
      * Whether the escrow is active. This comes from DB, not from the blockchain.
      */
@@ -105,7 +104,7 @@ export type UpdateMultiReleaseEscrowPayload = {
   /**
    * Escrow data
    */
-  escrow: Omit<MultiReleaseEscrow, "contractId" | "signer" | "balance"> & {
+  escrow: Omit&#x3C;MultiReleaseEscrow, "contractId" | "signer" | "balance"> &#x26; {
     /**
      * Whether the escrow is active. This comes from DB, not from the blockchain.
      */
@@ -153,19 +152,14 @@ export type ChangeMilestoneStatusPayload = {
 /**
  * Approve Milestone Payload, this can be a single-release or multi-release
  */
-export type ApproveMilestonePayload = Omit<
+export type ApproveMilestonePayload = Omit&#x3C;
   ChangeMilestoneStatusPayload,
   "serviceProvider" | "newStatus"
-> & {
+> &#x26; {
   /**
    * Address of the entity requiring the service.
    */
   approver: string;
-
-  /**
-   * New flag value of the milestone
-   */
-  newFlag: boolean;
 };
 
 // ----------------- Start Dispute -----------------
@@ -188,7 +182,7 @@ export type SingleReleaseStartDisputePayload = {
  * Multi Release Start Dispute Payload. This starts a dispute for a specific milestone.
  */
 export type MultiReleaseStartDisputePayload =
-  SingleReleaseStartDisputePayload & {
+  SingleReleaseStartDisputePayload &#x26; {
     /**
      * Index of the milestone to be disputed
      */
@@ -211,26 +205,39 @@ export type SingleReleaseResolveDisputePayload = {
   disputeResolver: string;
 
   /**
-   * Amount of funds to be returned to the approver based on the global amount.
+   * Distributions of the escrow amount to the receivers.
    */
-  approverFunds: number;
-
-  /**
-   * Amount of funds to be returned to the receiver based on the global amount.
-   */
-  receiverFunds: number;
+  distributions: [
+    {
+      /**
+       * Address of the receiver
+       */
+      address: string;
+      /**
+       * Amount to be transferred to the receiver. All the amount must be equal to the total amount of the escrow.
+       */
+      amount: number;
+    },
+  ];
 };
 
-/**
- * Multi Release Resolve Dispute Payload
+<strong>
+</strong><strong>/**
+</strong> * Multi Release Resolve Dispute Payload
  */
 export type MultiReleaseResolveDisputePayload =
-  SingleReleaseResolveDisputePayload & {
+  SingleReleaseResolveDisputePayload &#x26; {
     /**
      * Index of the milestone to be resolved
      */
     milestoneIndex: string;
-  };
+  }
+
+// ----------------- Withdraw Remaining Funds -----------------
+/**
+ * Withdraw remaining funds
+ */
+export type WithdrawRemainingFundsPayload = SingleReleaseResolveDisputePayload;
 
 // ----------------- Fund Escrow -----------------
 /**
@@ -329,14 +336,14 @@ export type GetEscrowsFromIndexerParams = {
 };
 
 export type GetEscrowsFromIndexerBySignerParams =
-  GetEscrowsFromIndexerParams & {
+  GetEscrowsFromIndexerParams &#x26; {
     /**
      * Address of the user signing the contract transaction.
      */
     signer: string;
   };
 
-export type GetEscrowsFromIndexerByRoleParams = GetEscrowsFromIndexerParams & {
+export type GetEscrowsFromIndexerByRoleParams = GetEscrowsFromIndexerParams &#x26; {
   /**
    * Role of the user. Required
    */
@@ -380,7 +387,7 @@ export type SingleReleaseReleaseFundsPayload = {
  * Multi Release Release Funds Payload
  */
 export type MultiReleaseReleaseFundsPayload =
-  SingleReleaseReleaseFundsPayload & {
+  SingleReleaseReleaseFundsPayload &#x26; {
     /**
      * Index of the milestone to be released
      */
@@ -404,4 +411,4 @@ export type GetBalanceParams = {
 };
 
 
-```
+</code></pre>
