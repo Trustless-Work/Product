@@ -1,17 +1,17 @@
 ---
-description: Returns all the information of an escrow requested through the signer.
-icon: square-list
+description: Get the balance of multiple escrows.
+icon: dollar-sign
 ---
 
-# Get Escrows By Signer
+# Get Multiple Escrow Balance
 
 ### **Headers**
 
 <table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>x-api-key</td><td><code>&#x3C;token></code></td></tr></tbody></table>
 
-### Open API
+### **Open API**
 
-{% openapi-operation spec="trustless-work-api-dev" path="/helper/get-escrows-by-signer" method="get" %}
+{% openapi-operation spec="trustless-work-api-dev" path="/escrow/single-release/get-multiple-escrow-balance" method="get" %}
 [OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
@@ -29,12 +29,12 @@ const http = axios.create({
   },
 });
 
-export const useExample = async () => {
+export const useExample = async (signer: string, addresses: string[]) => {
+  const response = await http.get("/escrow/single-release/get-multiple-escrow-balance", {
+    params: { addresses, signer },
+  });
 
-    const data = await http.get(
-      "/escrow/single-release/get-escrows-by-signer?signer=GPUACN...." 👈🏼 // All required parameters are passed at the query level.
-    ); 
-  
-    return data;
-}
+  return response;
+};
+
 ```

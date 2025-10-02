@@ -1,23 +1,20 @@
 ---
 description: >-
-  Responsible for setting the escrow in dispute state. Changes the value of the
-  escrow's "dispute_flag" property to true.
-icon: face-pouting
+  Allows users to deposit funds into an existing escrow contract, securing them
+  until the agreed conditions are met.
+icon: sack-dollar
 ---
 
-# Change Dispute Flag
+# Fund Escrow
 
 ### **Headers**
 
-| Name          | Value              |
-| ------------- | ------------------ |
-| Content-Type  | `application/json` |
-| Authorization | `Bearer <token>`   |
+<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>x-api-key</td><td><code>&#x3C;token></code></td></tr></tbody></table>
 
 ### **Open API**
 
-{% openapi-operation spec="trustless-work-api-dev" path="/escrow/change-dispute-flag" method="post" %}
-[Broken link](broken-reference)
+{% openapi-operation spec="trustless-work-api-dev" path="/escrow/single-release/fund-escrow" method="post" %}
+[OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
 ### **What this Endpoint returns?**
@@ -34,7 +31,7 @@ const http = axios.create({
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer your_api_key`,
+    "x-api-key": your_api_key,
   },
 });
 
@@ -42,9 +39,8 @@ export const useExample = async () => {
     // Get the signer address
     const { address } = await kit.getAddress();
 
-    // Execute the endpoint
     const response = await http.post(
-      "/escrow/change-dispute-flag",
+      "/escrow/single-release/fund-escrow",
       {
         // body requested for the endpoint
       },

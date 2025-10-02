@@ -7,14 +7,11 @@ icon: square-list
 
 ### **Headers**
 
-| Name          | Value              |
-| ------------- | ------------------ |
-| Content-Type  | `application/json` |
-| Authorization | `Bearer <token>`   |
+<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>x-api-key</td><td><code>&#x3C;token></code></td></tr></tbody></table>
 
 ### Open API
 
-{% openapi-operation spec="trustless-work-api-dev" path="/escrow/single-release/get-escrow" method="get" %}
+{% openapi-operation spec="trustless-work-api-dev" path="/escrow/multi-release/get-escrow" method="get" %}
 [OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
@@ -28,14 +25,14 @@ const http = axios.create({
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer your_api_key`,
+    "x-api-key": your_api_key,
   },
 });
 
 export const useExample = async () => {
 
     const data = await http.get(
-      "/escrow/single-release/get-escrow",
+      "/escrow/multi-release/get-escrow",
       {
         // body requested for the endpoint
       },

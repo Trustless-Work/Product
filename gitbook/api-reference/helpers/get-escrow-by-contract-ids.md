@@ -9,10 +9,7 @@ icon: memo-circle-check
 
 ### **Headers**
 
-| Name          | Value              |
-| ------------- | ------------------ |
-| Content-Type  | `application/json` |
-| Authorization | `Bearer <token>`   |
+<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>x-api-key</td><td><code>&#x3C;token></code></td></tr></tbody></table>
 
 ### Open API
 
@@ -30,7 +27,7 @@ const http = axios.create({
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer your_api_key`,
+    "x-api-key": your_api_key,
   },
 });
 

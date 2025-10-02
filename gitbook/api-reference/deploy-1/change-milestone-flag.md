@@ -1,5 +1,7 @@
 ---
-description: Responsible for approving the milestone through the escrow approver.
+description: >-
+  Responsible for modifying the "flag" property of a specific milestone in the
+  escrow to approve that milestone.
 icon: thumbs-up
 ---
 
@@ -7,15 +9,12 @@ icon: thumbs-up
 
 ### **Headers**
 
-| Name          | Value              |
-| ------------- | ------------------ |
-| Content-Type  | `application/json` |
-| Authorization | `Bearer <token>`   |
+<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>x-api-key</td><td><code>&#x3C;token></code></td></tr></tbody></table>
 
 ### Open API
 
-{% openapi-operation spec="trustless-work-api-dev" path="/escrow/single-release/approve-milestone" method="post" %}
-[Broken link](broken-reference)
+{% openapi-operation spec="trustless-work-api-dev" path="/escrow/multi-release/approve-milestone" method="post" %}
+[OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
 ### **What this Endpoint returns?**
@@ -32,7 +31,7 @@ const http = axios.create({
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer your_api_key`,
+    "x-api-key": your_api_key,
   },
 });
 
@@ -41,7 +40,7 @@ export const useExample = async () => {
     const { address } = await kit.getAddress();
 
     const response = await http.post(
-      "/escrow/single-release/approve-milestone",
+      "/escrow/multi-release/approve-milestone",
       {
         // body requested for the endpoint
       },

@@ -1,18 +1,20 @@
 ---
-description: You release the escrow funds to the service provider through the approver.
+description: >-
+  You release the milestone escrow funds to the service provider through the
+  approver.
 icon: square-dollar
 ---
 
-# Release Funds
+# Release Milestone Funds
 
 ### Headers
 
-<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>Authorization</td><td><code>Bearer &#x3C;token></code></td></tr></tbody></table>
+<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>x-api-key</td><td><code>&#x3C;token></code></td></tr></tbody></table>
 
 ### Open API
 
-{% openapi-operation spec="trustless-work-api-dev" path="/escrow/single-release/release-funds" method="post" %}
-[Broken link](broken-reference)
+{% openapi-operation spec="trustless-work-api-dev" path="/escrow/multi-release/release-milestone-funds" method="post" %}
+[OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
 ### **What this Endpoint returns?**
@@ -29,7 +31,7 @@ const http = axios.create({
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer your_api_key`,
+    "x-api-key": your_api_key,
   },
 });
 
@@ -38,7 +40,7 @@ export const useExample = async () => {
     const { address } = await kit.getAddress();
 
     const response = await http.post(
-      "/escrow/single-release/release-funds",
+      "/escrow/multi-release/release-milestone-funds",
       {
         // body requested for the endpoint
       },

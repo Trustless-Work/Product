@@ -1,18 +1,20 @@
 ---
-description: You release the escrow funds to the service provider through the approver.
-icon: square-dollar
+description: >-
+  Responsible for initiating a dispute in an escrow. Change the value of the
+  flag “disputed” from “disputed” to true.
+icon: face-pouting
 ---
 
-# Release Funds
+# Dispute Escrow
 
-### Headers
+### **Headers**
 
-<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>Authorization</td><td><code>Bearer &#x3C;token></code></td></tr></tbody></table>
+<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>x-api-key</td><td><code>&#x3C;token></code></td></tr></tbody></table>
 
-### Open API
+### **Open API**
 
-{% openapi-operation spec="trustless-work-api-dev" path="/escrow/release-funds" method="post" %}
-[Broken link](broken-reference)
+{% openapi-operation spec="trustless-work-api-dev" path="/escrow/single-release/dispute-escrow" method="post" %}
+[OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
 ### **What this Endpoint returns?**
@@ -29,7 +31,7 @@ const http = axios.create({
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer your_api_key`,
+    "x-api-key": your_api_key,
   },
 });
 
@@ -37,8 +39,9 @@ export const useExample = async () => {
     // Get the signer address
     const { address } = await kit.getAddress();
 
+    // Execute the endpoint
     const response = await http.post(
-      "/escrow/distribute-escrow-earnings",
+      "/escrow/single-release/dispute-escrow",
       {
         // body requested for the endpoint
       },

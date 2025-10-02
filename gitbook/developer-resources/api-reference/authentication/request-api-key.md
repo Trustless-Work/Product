@@ -15,20 +15,10 @@ Login with your wallet login to our dApp. You will have to sign to login. This w
 
 In the dApp landing, you'll find a section called **"API Key for Authentication"**. Here you'll see the best explanation in order to get the API Key.
 
-
-
-If you are using api.trustlesswork.com (mainnet) -> Make sure that you have the "mainnet" switch activated.
-
 {% embed url="https://dapp.trustlesswork.com" %}
-
-If you are using api.dev.trustlesswork.com (testnet)
-
-{% embed url="https://dapp.dev.trustlesswork.com" %}
 
 Once logged in, you should complete your profile, and then request the API Key.
 
 {% hint style="warning" %}
 You must have at least the **use case** filled, if not, the system won't give you the API Key.
 {% endhint %}
-
-And that's it. If you have any issue, please fill the form of "Report and Issue".

@@ -7,11 +7,11 @@ icon: play
 
 ## <mark style="color:orange;">Base URL</mark>
 
-Production API
+Mainnet API
 
 > https://api.trustlesswork.com
 
-Dev API
+Testnet API
 
 > https://dev.api.trustlesswork.com
 
@@ -24,6 +24,8 @@ Dev API
 {% embed url="https://github.com/Trustless-Work" %}
 
 ## API Swagger
+
+{% embed url="https://api.trustlesswork.com/docs" %}
 
 {% embed url="https://dev.api.trustlesswork.com/docs" %}
 

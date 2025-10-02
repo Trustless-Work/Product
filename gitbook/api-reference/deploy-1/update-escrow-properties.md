@@ -16,7 +16,7 @@ icon: pencil
 
 ### Headers
 
-<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>Authorization</td><td><code>Bearer &#x3C;token></code></td></tr></tbody></table>
+<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>x-api-key</td><td><code>&#x3C;token></code></td></tr></tbody></table>
 
 ### Roles:
 
@@ -31,19 +31,11 @@ icon: pencil
 
 ### Milestone:
 
-| Name         | Type    | Description                                                            |
-| ------------ | ------- | ---------------------------------------------------------------------- |
-| description  | string  | Text describing the function of the milestone.                         |
-| status       | string  | Milestone status. Ex: Approved, In dispute, etc...                     |
-| approvedFlag | boolean | Flag indicating whether a milestone has been approved by the approver. |
-
-### Flags
-
-| Name     | Type    | Description                                                       |
-| -------- | ------- | ----------------------------------------------------------------- |
-| disputed | boolean | Flag indicating that an escrow is in dispute.                     |
-| released | boolean | Flag indicating that escrow funds have already been released.     |
-| resolved | boolean | Flag indicating that a disputed escrow has already been resolved. |
+| Name        | Type    | Description                                        |
+| ----------- | ------- | -------------------------------------------------- |
+| description | string  | Text describing the function of the milestone.     |
+| status      | string  | Milestone status. Ex: Approved, In dispute, etc... |
+| amount      | boolean | Amount of the milestone                            |
 
 ### Trustline
 
@@ -53,7 +45,7 @@ icon: pencil
 
 ### Open API
 
-{% openapi-operation spec="trustless-work-api-dev" path="/escrow/single-release/update-escrow" method="put" %}
+{% openapi-operation spec="trustless-work-api-dev" path="/escrow/multi-release/update-escrow" method="put" %}
 [OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
@@ -71,7 +63,7 @@ const http = axios.create({
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer your_api_key`,
+    "x-api-key": your_api_key,
   },
 });
 
@@ -80,7 +72,7 @@ export const useExample = async () => {
     const { address } = await kit.getAddress();
 
     const response = await http.put(
-      "/escrow/single-release/update-escrow",
+      "/escrow/multi-release/update-escrow",
       {
         // body requested for the endpoint
       },

@@ -1,19 +1,15 @@
 ---
-description: >-
-  Single-Release Escrow is a type in which all your funds are released only
-  once, either with the resolution of a dispute or by completing all the
-  milestones defined for it.
 icon: plane-departure
 ---
 
-# Single Release Escrow
+# Multi Release Escrow
 
-The Deploy endpoints allow users to deploy escrows efficiently. These endpoints provide the way to initialize escrows in the Stellar's Blockchain.
+A Multi-Release Contract is an escrow agreement on the Stellar blockchain that divides the total payment of a project into multiple deliveries (“milestones”). Each milestone is released only upon verification of its completion, ensuring that funds remain secure until the associated work is validated.
 
 **Key Components**
 
-* **Initial Fund Lockup**: Upon contract initiation, the escrow amoun plus the platform fee (“platformFee”) is deposited into an escrow account.
-* **Flags**: The escrow status is interpreted by means of these flags: (`approved`, `dispute`, `released`, `resolved`).
+* **Initial Fund Lockup**: Upon contract initiation, the total of all milestone amounts plus the platform fee (“platformFee”) is deposited into an escrow account.
+* **Milestones**: Each stage includes a description, a specific amount, and status flags (`approved`, `dispute`, `released`, `resolved`).
 * **Primary Roles**:
   * **Service Provider**: Delivers the deliverable corresponding to each milestone.
   * **Approver**: Verifies and approves a milestone before authorizing the release of funds.
@@ -22,10 +18,9 @@ The Deploy endpoints allow users to deploy escrows efficiently. These endpoints 
 
 **Brief Workflow**
 
-1. An escrow is initialized by defining all the necessary escrow properties.
-2. The Service Provider completes a milestone and requests approval.
-3. The approver reviews the deliverable; if approved, signs a transaction that releases the amount allocated as escrow reward (minus the platform and Trustless Work fee).
-4. The Stellar network executes the transaction and transfers the payment to the Service Provider or the configured Receiver.
-5. If a dispute arises, the Dispute Resolver evaluates the evidence and, upon signing their decision, marks the escrow as resolved to release or refund the corresponding funds.
+1. The Service Provider completes a milestone and requests approval.
+2. The Approver reviews the deliverable; if approved, they sign a transaction that releases only the amount allocated to that milestone (minus the platform and Trustless Work fee).
+3. The Stellar network executes the transaction and transfers the payment to the Service Provider or the configured Receiver.
+4. If a dispute arises, the Dispute Resolver evaluates the evidence and, upon signing their decision, marks the milestone as `resolved` to release or refund the corresponding funds.
 
-This model protects all parties: the client knows that funds are available but cannot be released without validation, and the service provider receives payment upon completion of all milestones and the milestones themselves being approved by the approver, leveraging Stellar's transparency and immutability.
+This model protects all parties: the client knows that funds are available but cannot be released without validation, and the Service Provider receives payment for each verified delivery—leveraging Stellar’s transparency and immutability.

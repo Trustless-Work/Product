@@ -1,22 +1,22 @@
 ---
-description: Deploy the escrow contract and define the escrow properties.
-icon: circle-plus
+description: >-
+  This endpoint allows you to change the properties of an escrow as long as a
+  series of requirements are met, which will be mentioned in this section.
+icon: pencil
 ---
 
-# Deploy
+# Update Escrow
+
+### Requirements to use:
+
+1. Only the entity with the platform role has permissions to execute this endpoint
+2. You cannot change the properties of an escrow which already has an approved milestone
+3. You cannot change the properties of an escrow which already has funds
+4. You cannot change the properties of an escrow which is in dispute.
 
 ### Headers
 
-<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>Authorization</td><td><code>Bearer &#x3C;token></code></td></tr></tbody></table>
-
-### Milestone
-
-| Name        | Type                             | Description                                                           |
-| ----------- | -------------------------------- | --------------------------------------------------------------------- |
-| description | string                           | Text describing the function of the milestone                         |
-| status      | string (Default value: "peding") | Milestone status. Ex: Approved, In dispute, etc...                    |
-| approved    | boolean (Default value: false)   | Flag indicating whether a milestone has been approved by the approver |
-| amount      | string                           | Amount of the milestone                                               |
+<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>x-api-key</td><td><code>&#x3C;token></code></td></tr></tbody></table>
 
 ### Roles:
 
@@ -29,15 +29,31 @@ icon: circle-plus
 | disputeResolver  | string | Address in charge of resolving disputes within the escrow.                           |
 | receiver         | string | Address where escrow proceeds will be sent to                                        |
 
-### Trustline:
+### Milestone:
+
+| Name        | Type    | Description                                                            |
+| ----------- | ------- | ---------------------------------------------------------------------- |
+| description | string  | Text describing the function of the milestone.                         |
+| status      | string  | Milestone status. Ex: Approved, In dispute, etc...                     |
+| approved    | boolean | Flag indicating whether a milestone has been approved by the approver. |
+
+### Flags
+
+| Name     | Type    | Description                                                       |
+| -------- | ------- | ----------------------------------------------------------------- |
+| disputed | boolean | Flag indicating that an escrow is in dispute.                     |
+| released | boolean | Flag indicating that escrow funds have already been released.     |
+| resolved | boolean | Flag indicating that a disputed escrow has already been resolved. |
+
+### Trustline
 
 | Name    | Type   | Description                                                                |
 | ------- | ------ | -------------------------------------------------------------------------- |
 | address | string | Public address establishing permission to accept and use a specific token. |
 
-### Initialize Escrow
+### Open API
 
-{% openapi-operation spec="trustless-work-api-dev" path="/deployer/multi-release" method="post" %}
+{% openapi-operation spec="trustless-work-api-dev" path="/escrow/single-release/update-escrow" method="put" %}
 [OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
@@ -47,14 +63,15 @@ This endpoint returns the transaction unsigned so that the transaction can be si
 
 ### Use Example:
 
-<pre class="language-typescript"><code class="lang-typescript">import axios from "axios";
+```typescript
+import axios from "axios";
 
 const http = axios.create({
   baseURL: "https://dev.api.trustlesswork.com",
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer your_api_key`,
+    "x-api-key": your_api_key,
   },
 });
 
@@ -62,13 +79,12 @@ export const useExample = async () => {
     // Get the signer address
     const { address } = await kit.getAddress();
 
-    // Execute the endpoint
-<strong>    const response = await http.post(
-</strong>      "/deployer/multi-release",
+    const response = await http.put(
+      "/escrow/single-release/update-escrow",
       {
         // body requested for the endpoint
       },
-    );
+    ); 
     
     // Get the unsigned transaction hash
     const { unsignedTransaction } = response.data;
@@ -82,11 +98,10 @@ export const useExample = async () => {
     // Send the transaction to Stellar Network
     const tx = await http.post("/helper/send-transaction", {
       signedXdr: signedTxXdr,
-      returnEscrowDataIsRequired: true,
     });
 
     const { data } = tx;
 
-    return data; 
+    return data;
 }
-</code></pre>
+```

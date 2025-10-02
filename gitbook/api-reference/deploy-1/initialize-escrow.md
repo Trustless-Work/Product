@@ -7,7 +7,7 @@ icon: circle-plus
 
 ### Headers
 
-<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>Authorization</td><td><code>Bearer &#x3C;token></code></td></tr></tbody></table>
+<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>x-api-key</td><td><code>&#x3C;token></code></td></tr></tbody></table>
 
 ### Milestone
 
@@ -16,6 +16,7 @@ icon: circle-plus
 | description | string                           | Text describing the function of the milestone                         |
 | status      | string (Default value: "peding") | Milestone status. Ex: Approved, In dispute, etc...                    |
 | approved    | boolean (Default value: false)   | Flag indicating whether a milestone has been approved by the approver |
+| amount      | string                           | Amount of the milestone                                               |
 
 ### Roles:
 
@@ -36,7 +37,7 @@ icon: circle-plus
 
 ### Initialize Escrow
 
-{% openapi-operation spec="trustless-work-api-dev" path="/deployer/single-release" method="post" %}
+{% openapi-operation spec="trustless-work-api-dev" path="/deployer/multi-release" method="post" %}
 [OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
@@ -53,7 +54,7 @@ const http = axios.create({
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer your_api_key`,
+    "x-api-key": your_api_key,
   },
 });
 
@@ -63,7 +64,7 @@ export const useExample = async () => {
 
     // Execute the endpoint
 <strong>    const response = await http.post(
-</strong>      "/deployer/single-release",
+</strong>      "/deployer/multi-release",
       {
         // body requested for the endpoint
       },

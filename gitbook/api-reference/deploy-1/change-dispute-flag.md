@@ -1,23 +1,20 @@
 ---
 description: >-
-  Responsible for initiating a dispute in an escrow. Change the value of the
-  flag “disputed” from “disputed” to true.
+  Responsible for setting the milestone in dispute state. Changes the value of
+  the milestone's "flags.disputed" property to true.
 icon: face-pouting
 ---
 
-# Dispute Escrow
+# Dispute Milestone
 
 ### **Headers**
 
-| Name          | Value              |
-| ------------- | ------------------ |
-| Content-Type  | `application/json` |
-| Authorization | `Bearer <token>`   |
+<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>x-api-key</td><td><code>&#x3C;token></code></td></tr></tbody></table>
 
 ### **Open API**
 
-{% openapi-operation spec="trustless-work-api-dev" path="/escrow/single-release/dispute-escrow" method="post" %}
-[Broken link](broken-reference)
+{% openapi-operation spec="trustless-work-api-dev" path="/escrow/multi-release/dispute-milestone" method="post" %}
+[OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
 ### **What this Endpoint returns?**
@@ -34,7 +31,7 @@ const http = axios.create({
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer your_api_key`,
+    "x-api-key": your_api_key,
   },
 });
 
@@ -44,7 +41,7 @@ export const useExample = async () => {
 
     // Execute the endpoint
     const response = await http.post(
-      "/escrow/single-release/dispute-escrow",
+      "/escrow/multi-release/dispute-milestone",
       {
         // body requested for the endpoint
       },

@@ -3,19 +3,19 @@ description: Deploy the escrow contract and define the escrow properties.
 icon: circle-plus
 ---
 
-# Initialize Escrow
+# Deploy
 
 ### Headers
 
-<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>Authorization</td><td><code>Bearer &#x3C;token></code></td></tr></tbody></table>
+<table><thead><tr><th width="366">Name</th><th>Value</th></tr></thead><tbody><tr><td>Content-Type</td><td><code>application/json</code></td></tr><tr><td>x-api-key</td><td><code>&#x3C;token></code></td></tr></tbody></table>
 
 ### Milestone
 
-| Name         | Type                             | Description                                                           |
-| ------------ | -------------------------------- | --------------------------------------------------------------------- |
-| description  | string                           | Text describing the function of the milestone                         |
-| status       | string (Default value: "peding") | Milestone status. Ex: Approved, In dispute, etc...                    |
-| approvedFlag | boolean (Default value: false)   | Flag indicating whether a milestone has been approved by the approver |
+| Name        | Type                             | Description                                                           |
+| ----------- | -------------------------------- | --------------------------------------------------------------------- |
+| description | string                           | Text describing the function of the milestone                         |
+| status      | string (Default value: "peding") | Milestone status. Ex: Approved, In dispute, etc...                    |
+| approved    | boolean (Default value: false)   | Flag indicating whether a milestone has been approved by the approver |
 
 ### Roles:
 
@@ -30,15 +30,14 @@ icon: circle-plus
 
 ### Trustline:
 
-| Name     | Type   | Description                                                                |
-| -------- | ------ | -------------------------------------------------------------------------- |
-| address  | string | Public address establishing permission to accept and use a specific token. |
-| decimals | number | Number of decimals into which the token is divided.                        |
+| Name    | Type   | Description                                                                |
+| ------- | ------ | -------------------------------------------------------------------------- |
+| address | string | Public address establishing permission to accept and use a specific token. |
 
 ### Initialize Escrow
 
-{% openapi-operation spec="trustless-work-api-dev" path="/deployer/invoke-deployer-contract" method="post" %}
-[Broken link](broken-reference)
+{% openapi-operation spec="trustless-work-api-dev" path="/deployer/single-release" method="post" %}
+[OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
 ### **What this Endpoint returns?**
@@ -54,7 +53,7 @@ const http = axios.create({
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer your_api_key`,
+    "x-api-key": your_api_key,
   },
 });
 
@@ -64,7 +63,7 @@ export const useExample = async () => {
 
     // Execute the endpoint
 <strong>    const response = await http.post(
-</strong>      "/deployer/invoke-deployer-contract",
+</strong>      "/deployer/single-release",
       {
         // body requested for the endpoint
       },
