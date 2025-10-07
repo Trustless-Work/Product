@@ -29,9 +29,9 @@ const http = axios.create({
   },
 });
 
-export const useExample = async (signer: string, addresses: string[]) => {
+export const useExample = async (addresses: string[]) => {
   const response = await http.get("/escrow/multi-release/get-multiple-escrow-balance", {
-    params: { addresses, signer },
+    params: { addresses },
   });
 
   return response;

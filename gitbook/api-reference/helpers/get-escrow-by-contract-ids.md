@@ -36,7 +36,6 @@ export const useExample = async () => {
     "CCR6HLU3LQMXOESNA6TOS2RZKGEBWQG3EN5FMZNC43RVXZWTTDCZ...",
     "CCA7WTCVCQ5JPKNIFSHPSJLJ3FJ3GKPNEVAIHP6T..."
   ];
-  const signer = "GBPUACN7QETR4TCYTKINBDHTYTFXD3BQQV7VSM...";
   const validateOnChain = true;
 
   const params = new URLSearchParams();
