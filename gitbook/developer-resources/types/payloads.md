@@ -6,13 +6,13 @@ icon: table
 
 ### Escrow's Payload Entity
 
-<pre class="language-typescript"><code class="lang-typescript">import { EscrowType, SingleReleaseEscrowStatus } from "./types";
-import {
-  MultiReleaseEscrow,
-  Role,
-  Roles,
-  SingleReleaseEscrow,
-} from "./types.entity";
+```typescript
+import { EscrowType, SingleReleaseEscrowStatus } from "./types";
+import { MultiReleaseEscrow, Role, SingleReleaseEscrow } from "./types.entity";
+
+/**
+ * Documentation: https://docs.trustlesswork.com/trustless-work/developer-resources/quickstart/integration-demo-project/entities
+ */
 
 // ----------------- Milestone Payloads -----------------
 /**
@@ -43,10 +43,10 @@ export type MultiReleaseMilestonePayload = {
 /**
  * Single Release Initialize Escrow Payload
  */
-export type InitializeSingleReleaseEscrowPayload = Omit&#x3C;
+export type InitializeSingleReleaseEscrowPayload = Omit<
   SingleReleaseEscrow,
   "contractId" | "balance" | "milestones"
-> &#x26; {
+> & {
   /**
    * Objectives to be completed to define the escrow as completed
    */
@@ -56,10 +56,10 @@ export type InitializeSingleReleaseEscrowPayload = Omit&#x3C;
 /**
  * Multi Release Initialize Escrow Payload
  */
-export type InitializeMultiReleaseEscrowPayload = Omit&#x3C;
+export type InitializeMultiReleaseEscrowPayload = Omit<
   MultiReleaseEscrow,
   "contractId" | "balance" | "milestones"
-> &#x26; {
+> & {
   /**
    * Objectives to be completed to define the escrow as completed
    */
@@ -79,7 +79,7 @@ export type UpdateSingleReleaseEscrowPayload = {
   /**
    * Escrow data
    */
-  escrow: Omit&#x3C;SingleReleaseEscrow, "contractId" | "signer" | "balance"> &#x26; {
+  escrow: Omit<SingleReleaseEscrow, "contractId" | "signer" | "balance"> & {
     /**
      * Whether the escrow is active. This comes from DB, not from the blockchain.
      */
@@ -104,7 +104,7 @@ export type UpdateMultiReleaseEscrowPayload = {
   /**
    * Escrow data
    */
-  escrow: Omit&#x3C;MultiReleaseEscrow, "contractId" | "signer" | "balance"> &#x26; {
+  escrow: Omit<MultiReleaseEscrow, "contractId" | "signer" | "balance"> & {
     /**
      * Whether the escrow is active. This comes from DB, not from the blockchain.
      */
@@ -152,10 +152,10 @@ export type ChangeMilestoneStatusPayload = {
 /**
  * Approve Milestone Payload, this can be a single-release or multi-release
  */
-export type ApproveMilestonePayload = Omit&#x3C;
+export type ApproveMilestonePayload = Omit<
   ChangeMilestoneStatusPayload,
   "serviceProvider" | "newStatus"
-> &#x26; {
+> & {
   /**
    * Address of the entity requiring the service.
    */
@@ -182,7 +182,7 @@ export type SingleReleaseStartDisputePayload = {
  * Multi Release Start Dispute Payload. This starts a dispute for a specific milestone.
  */
 export type MultiReleaseStartDisputePayload =
-  SingleReleaseStartDisputePayload &#x26; {
+  SingleReleaseStartDisputePayload & {
     /**
      * Index of the milestone to be disputed
      */
@@ -221,17 +221,16 @@ export type SingleReleaseResolveDisputePayload = {
   ];
 };
 
-<strong>
-</strong><strong>/**
-</strong> * Multi Release Resolve Dispute Payload
+/**
+ * Multi Release Resolve Dispute Payload
  */
 export type MultiReleaseResolveDisputePayload =
-  SingleReleaseResolveDisputePayload &#x26; {
+  SingleReleaseResolveDisputePayload & {
     /**
      * Index of the milestone to be resolved
      */
     milestoneIndex: string;
-  }
+  };
 
 // ----------------- Withdraw Remaining Funds -----------------
 /**
@@ -324,7 +323,7 @@ export type GetEscrowsFromIndexerParams = {
    * Type of the escrow. Filtering
    */
   type?: EscrowType;
-  
+
   /**
    * If true, the escrows will be validated on the blockchain to ensure data consistency.
    * This performs an additional verification step to confirm that the escrow data
@@ -336,14 +335,14 @@ export type GetEscrowsFromIndexerParams = {
 };
 
 export type GetEscrowsFromIndexerBySignerParams =
-  GetEscrowsFromIndexerParams &#x26; {
+  GetEscrowsFromIndexerParams & {
     /**
      * Address of the user signing the contract transaction.
      */
     signer: string;
   };
 
-export type GetEscrowsFromIndexerByRoleParams = GetEscrowsFromIndexerParams &#x26; {
+export type GetEscrowsFromIndexerByRoleParams = GetEscrowsFromIndexerParams & {
   /**
    * Role of the user. Required
    */
@@ -357,14 +356,18 @@ export type GetEscrowsFromIndexerByRoleParams = GetEscrowsFromIndexerParams &#x2
 
 export type GetEscrowFromIndexerByContractIdsParams = {
   /**
-   * ID (addressess) that identifies the escrow contract.
+   * IDs (addresses) that identifies the escrow contracts.
    */
-  contractId: string[];
+  contractIds: string[];
 
   /**
-   * Address of the user signing the contract transaction.
+   * If true, the escrows will be validated on the blockchain to ensure data consistency.
+   * This performs an additional verification step to confirm that the escrow data
+   * returned from the indexer matches the current state on the blockchain.
+   * Use this when you need to ensure the most up-to-date and accurate escrow information.
+   * If you active this param, your request will take longer to complete.
    */
-  signer: string;
+  validateOnChain?: boolean;
 };
 
 // ----------------- Release Funds -----------------
@@ -387,7 +390,7 @@ export type SingleReleaseReleaseFundsPayload = {
  * Multi Release Release Funds Payload
  */
 export type MultiReleaseReleaseFundsPayload =
-  SingleReleaseReleaseFundsPayload &#x26; {
+  SingleReleaseReleaseFundsPayload & {
     /**
      * Index of the milestone to be released
      */
@@ -400,15 +403,19 @@ export type MultiReleaseReleaseFundsPayload =
  */
 export type GetBalanceParams = {
   /**
-   * Address of the user signing the contract transaction
-   */
-  signer: string;
-
-  /**
    * Addresses of the escrows to get the balance
    */
   addresses: string[];
 };
 
-
-</code></pre>
+// ----------------- Update From Transaction Hash -----------------
+/**
+ * Payload for updating escrow data from a transaction hash.
+ */
+export type UpdateFromTxHashPayload = {
+  /**
+   * Transaction hash to be used for the update.
+   */
+  txHash: string;
+};
+```
