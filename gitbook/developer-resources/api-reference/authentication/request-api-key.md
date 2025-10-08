@@ -17,7 +17,7 @@ In the dApp landing, you'll find a section called **"API Key for Authentication"
 
 {% embed url="https://dapp.trustlesswork.com" %}
 
-Once logged in, you should complete your profile, and then request the API Key.
+Once logged in, you should complete your profile, and then request the API Key. You can do this in the “settings” section of the dApp. Please note that the API key you generate can only be viewed once. Once you leave the “settings” section, you will no longer be able to see it. So be sure to copy it and save it carefully.
 
 {% hint style="warning" %}
 You must have at least the **use case** filled, if not, the system won't give you the API Key.
