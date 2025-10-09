@@ -11,7 +11,7 @@ icon: dollar-sign
 
 ### **Open API**
 
-{% openapi-operation spec="trustless-work-api-dev" path="/escrow/multi-release/get-multiple-escrow-balance" method="get" %}
+{% openapi-operation spec="trustless-work-api-dev" path="/helper/get-multiple-escrow-balance" method="get" %}
 [OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
@@ -30,7 +30,7 @@ const http = axios.create({
 });
 
 export const useExample = async (addresses: string[]) => {
-  const response = await http.get("/escrow/multi-release/get-multiple-escrow-balance", {
+  const response = await http.get("/helper/get-multiple-escrow-balance", {
     params: { addresses },
   });
 
