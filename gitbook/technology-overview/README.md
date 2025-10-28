@@ -4,23 +4,45 @@ description: We don’t hold your money—we hold the logic.
 
 # ⚒️ Escrow Design
 
-Every escrow on Trustless Work is just a **structured contract**: a set of keys and values that define **who does what, when funds move, and under which conditions.**
-
-This page gives you the **mental model** for designing escrows before you ever touch code.\
-The schema defines the _shape of an escrow_; you decide the logic.
+Trustless Work escrows are role-based. It is important to understand the roles to be able to correctly configure the escrows. Updates to the contract status have to be signed by addresses, and only the addresses which have a role assigned can perfom the functions that only that role can sign.&#x20;
 
 ***
 
+### Roles&#x20;
+
+Every escrow includes a **roles object**. These are the available roles:
+
+* **Service Provider** → Can update milestone status, can raise a dispute.
+* **Approver** → validates milestone completion, can raise a dispute.
+* **Platform Address** → can make changes before escrow is funded. Is the platform fee receiver (optional configurable %fee)&#x20;
+* **Release Signer** → executes funds release.
+* **Dispute Resolver** → arbitrates when things go wrong, can re-route funds if dispute is raised.
+* **Receiver** → final destination of funds.&#x20;
+
+Other roles which play no role:&#x20;
+
+**Issuer:** has no powers over the contract.&#x20;
+
+**Depositor:** Every incoming transaction to the escrow is indexed. But depositors play no role.
+
+**Observer (coming in next version):** Addreses that want to be observe a escrow. They play no role, but are indexed as an observer, which facilitates tracking of escrows by role.&#x20;
+
+{% content-ref url="roles-in-trustless-work.md" %}
+[roles-in-trustless-work.md](roles-in-trustless-work.md)
+{% endcontent-ref %}
+
 ### Escrow structure
 
-An escrow is a **JSON body** with these core parts:
+But Roles are only the beginning, here are more properties you should know about:
 
-* **Escrow ID:** On-chain identifier of the contract. Deposit Address.&#x20;
-* **Engagement ID & Title** → configurable strongs, help identify the contract.&#x20;
+* **Escrow ID:** On-chain identifier of the contract. Deposit Address. We call it like this, but it is we also reference to it as Contract Address.&#x20;
+* **Engagement ID** → configurable string, Is meant to be used to connect the escrow with an invoice number or an external secuencer. Facilitates indexation.&#x20;
+* **Title** → configurable string, Title of the contract.&#x20;
 * **Roles** → who marks, approves, releases, resolves, and receives
 * **Description** → why the escrow exists
-* **Milestones** → what must be completed to unlock funds
+* **Milestones** → Action that must be completed to unlock funds
 * **Amount & Fees** → how much is locked, how much the platform earns
+* **Platform Fee** → optional,  how much the platform (marketplace, app, etc) earns
 * **Trustline** → which asset is used (USDC, or any Stellar-issued token)
 * **Flags** → state indicators (disputed, released, resolved)
 
@@ -32,7 +54,7 @@ An escrow is a **JSON body** with these core parts:
 
 ### Two Escrow Types
 
-Trustless Work supports **two escrow types**:
+We currently support **two escrow types**:
 
 1. **Single-Release Escrow**\
    Multiple milestones, one payout.\
@@ -42,32 +64,19 @@ Trustless Work supports **two escrow types**:
    Multiple milestones, multiple payouts (one per milestone).\
    Perfect for projects, grants, or milestone-based funding.
 
+More iterations are coming as we learn from your requirements! Feel free to reach out!
+
 {% content-ref url="escrow-types.md" %}
 [escrow-types.md](escrow-types.md)
 {% endcontent-ref %}
 
 ***
 
-### Roles in Context
-
-Every schema includes a **roles object**. Roles are:
-
-* **Approver** → validates milestone completion.
-* **Service Provider** → delivers work, provides status updates.
-* **Platform Address** → can make chanes before escrow is funded. Optional: can earn fees (platform fee).
-* **Release Signer** → executes fund release.
-* **Dispute Resolver** → arbitrates when things go wrong, can re-route funds if dispute is raised.
-* **Receiver** → final destination of funds
-
-{% content-ref url="roles-in-trustless-work.md" %}
-[roles-in-trustless-work.md](roles-in-trustless-work.md)
-{% endcontent-ref %}
-
 ***
 
 ### Lifecycle Integration
 
-Schemas map directly into the **escrow lifecycle**:
+We constantly talk about the escrow lifecycle, which follows this path.&#x20;
 
 1. Initiation → define schema
 2. Funding → lock assets via trustline
