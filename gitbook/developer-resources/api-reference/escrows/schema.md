@@ -83,7 +83,6 @@ In this section you will be able to see the outline of the types of escrow's tha
 | plataformAddress | string | Address of the entity that owns the escrow                                           |
 | releaseSigner    | string | Address of the user in charge of releasing the escrow funds to the service provider. |
 | disputeResolver  | string | Address in charge of resolving disputes within the escrow.                           |
-| receiver         | string | Address where escrow proceeds will be sent to                                        |
 
 #### Milestone:
 
@@ -94,6 +93,7 @@ In this section you will be able to see the outline of the types of escrow's tha
 | flags       | Flags Object      | Flags validating certain escrow life states.                   |
 | evidence    | string (optional) | Evidence of work performed by the service provider.            |
 | amount      | number            | Amount to be transferred upon completion of escrow milestones. |
+| receiver    | string            | Address where escrow proceeds will be sent to                  |
 
 #### Flags:
 
