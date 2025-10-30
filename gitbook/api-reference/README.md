@@ -111,9 +111,3 @@ The **Trustless Work REST API** is a developer interface for creating and managi
 
 * **Swagger**: [https://dev.api.trustlesswork.com/docs](https://dev.api.trustlesswork.com/docs)
 * **GitHub**: [https://github.com/Trustless-Work](https://github.com/Trustless-Work)
-
-***
-
-##
-
-##

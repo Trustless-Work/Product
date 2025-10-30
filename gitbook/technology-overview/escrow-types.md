@@ -66,7 +66,7 @@ Here are two minimal JSON snippets that highlight the structural difference betw
 
 ```json
 {
-  "escrowId": "G...ESCROWADDRESS",
+  "contractId": "C...ESCROWADDRESS",
   "engagementId": "order-123",
   "title": "Website Development",
   "description": "Build and deliver a marketing website",
@@ -84,12 +84,12 @@ Here are two minimal JSON snippets that highlight the structural difference betw
     {
       "description": "Deliver homepage design",
       "status": "Approved",
-      "approvedFlag": true
+      "approved": true
     },
     {
       "description": "Deploy full website",
       "status": "Pending",
-      "approvedFlag": false
+      "approved": false
     }
   ],
   "flags": {
@@ -99,7 +99,6 @@ Here are two minimal JSON snippets that highlight the structural difference betw
   },
   "trustline": {
     "address": "G...USDCISSUER",
-    "decimals": 6
   }
 }
 ```
@@ -112,7 +111,7 @@ Here are two minimal JSON snippets that highlight the structural difference betw
 
 ```json
 {
-  "escrowId": "G...ESCROWADDRESS",
+  "contractId": "C...ESCROWADDRESS",
   "engagementId": "grant-456",
   "title": "Research Grant",
   "description": "Funding project in two phases",
@@ -141,7 +140,6 @@ Here are two minimal JSON snippets that highlight the structural difference betw
   ],
   "trustline": {
     "address": "G...USDCISSUER",
-    "decimals": 6
   }
 }
 ```

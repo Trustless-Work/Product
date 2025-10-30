@@ -36,12 +36,12 @@ In this section you will be able to see the outline of the types of escrow's tha
 
 #### Milestone:
 
-| Name         | Type              | Description                                                            |
-| ------------ | ----------------- | ---------------------------------------------------------------------- |
-| description  | string            | Text describing the function of the milestone.                         |
-| status       | string            | Milestone status. Ex: Approved, In dispute, etc...                     |
-| evidence     | string (optional) | Evidence of work performed by the service provider.                    |
-| approvedFlag | boolean           | Flag indicating whether a milestone has been approved by the approver. |
+| Name        | Type              | Description                                                            |
+| ----------- | ----------------- | ---------------------------------------------------------------------- |
+| description | string            | Text describing the function of the milestone.                         |
+| status      | string            | Milestone status. Ex: Approved, In dispute, etc...                     |
+| evidence    | string (optional) | Evidence of work performed by the service provider.                    |
+| approved    | boolean           | Flag indicating whether a milestone has been approved by the approver. |
 
 #### Flags:
 
