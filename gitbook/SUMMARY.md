@@ -121,6 +121,7 @@
       * [Cards](open-source-dapps/demo-overview/ui-components/cards.md)
       * [Tabs](open-source-dapps/demo-overview/ui-components/tabs.md)
       * [Utils](open-source-dapps/demo-overview/ui-components/utils.md)
+  * [👁️ Escrow Viewer](open-source-dapps/escrow-viewer.md)
 * [🌍 Use Cases by Industry](use-cases-unlocking-the-potential-of-smart-escrows/README.md)
   * [Marketplaces & E-commerce](use-cases-unlocking-the-potential-of-smart-escrows/marketplaces-and-e-commerce.md)
   * [P2P Exchanges and OTC Desks](use-cases-unlocking-the-potential-of-smart-escrows/p2p-exchanges-and-otc-desks.md)
