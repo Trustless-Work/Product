@@ -121,7 +121,6 @@ Here are two minimal JSON snippets that highlight the structural difference betw
     "releaseSigner": "G...SIGNER",
     "platformAddress": "G...PLATFORM",
     "disputeResolver": "G...RESOLVER",
-    "receiver": "G...RESEARCHER"
   },
   "platformFee": 0.5,
   "milestones": [
@@ -129,13 +128,15 @@ Here are two minimal JSON snippets that highlight the structural difference betw
       "description": "Submit interim report",
       "amount": 500,
       "status": "Approved",
-      "flags": { "approved": true, "released": true, "disputed": false, "resolved": false }
+      "flags": { "approved": true, "released": true, "disputed": false, "resolved": false },
+      "receiver": "G...RESEARCHER"
     },
     {
       "description": "Publish final report",
       "amount": 500,
       "status": "Pending",
-      "flags": { "approved": false, "released": false, "disputed": false, "resolved": false }
+      "flags": { "approved": false, "released": false, "disputed": false, "resolved": false },
+      "receiver": "G...RESEARCHER"
     }
   ],
   "trustline": {
