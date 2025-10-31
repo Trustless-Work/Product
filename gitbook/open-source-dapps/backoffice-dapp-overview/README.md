@@ -2,13 +2,13 @@
 description: Interact with Escrows Seamlessly
 ---
 
-# 🤖 dApp Overview
+# 🤖 Backoffice dApp Overview
 
 ### **Introduction**
 
 {% embed url="https://youtu.be/wps4iH_qtrA" %}
 
-The **Trustless Work Dapp** is the visual interface for interacting with the **Trustless Work Escrow API**. It serves as a **back-office for the escrow lifecycle**, allowing users, developers, and platforms to:\
+The Backoffice dApp  is the visual interface for interacting with the **Trustless Work Escrow API**. It serves as a **back-office for the escrow lifecycle**, allowing users, developers, and platforms to:\
 ✅ **Deploy** an escrow\
 ✅ **Sign** transactions\
 ✅ **Approve** milestones\
@@ -38,7 +38,7 @@ Learn more at. [Get Testnet Tokens](./#id-1.2.-getting-testnet-tokens)
 
 ***
 
-### **2. Full Escrow Lifecycle in the Dapp**
+### **2. Full Escrow Lifecycle in the dApp**
 
 {% embed url="https://youtu.be/Dv7ZEmZPxBc" %}
 
