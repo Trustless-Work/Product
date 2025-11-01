@@ -16,6 +16,7 @@
     * [Release phase](technology-overview/escrow-lifecycle/release-phase.md)
     * [Dispute Resolution](technology-overview/escrow-lifecycle/dispute-resolution.md)
   * [Escrow products Mix & Match Guide](technology-overview/smart-escrow-design.md)
+  * [Architecture & Design Strategy](technology-overview/architecture-and-design-strategy.md)
 * [✴️ Stellar Network](stellar-and-soroban-the-backbone-of-trustless-work/README.md)
   * [Trustlines](stellar-and-soroban-the-backbone-of-trustless-work/trustlines.md)
   * [Testnet Tokens](stellar-and-soroban-the-backbone-of-trustless-work/testnet-tokens.md)
