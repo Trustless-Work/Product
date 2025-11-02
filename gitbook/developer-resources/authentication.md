@@ -6,8 +6,8 @@ icon: user
 
 In order to get registered,  you have to connect with a Stellar wallet. If you do not yet have one, or have never used one, there is more information in the following section:&#x20;
 
-{% content-ref url="../../../stellar-and-soroban-the-backbone-of-trustless-work/stellar-wallets/" %}
-[stellar-wallets](../../../stellar-and-soroban-the-backbone-of-trustless-work/stellar-wallets/)
+{% content-ref url="../stellar-and-soroban-the-backbone-of-trustless-work/stellar-wallets/" %}
+[stellar-wallets](../stellar-and-soroban-the-backbone-of-trustless-work/stellar-wallets/)
 {% endcontent-ref %}
 
 To authenticate you will need to login to our Dapp with a Stellar Wallet and Request an API key. Here are the steps to achieve that:&#x20;

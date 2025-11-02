@@ -58,7 +58,7 @@ Before deploying, define:
 ### 📬 API Overview
 
 Get your API key in our dApp: \
-[request-api-key.md](api-reference/authentication/request-api-key.md "mention")
+[request-api-key.md](request-api-key.md "mention")
 
 The Trustless Work API is your gateway to deploy and manage decentralized smart escrows on the Stellar blockchain using Soroban smart contracts. All interactions return unsigned XDRs, which must be signed client-side using the wallet associated with the correct role.
 
