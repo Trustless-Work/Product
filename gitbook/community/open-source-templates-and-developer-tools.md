@@ -1,11 +1,5 @@
 # 📂 Interesting Links
 
-**Freighter SDK:**
-
-**Passkey-kit:**
-
-**KindFi:**
-
-Stellar Expert:&#x20;
+**Stellar Expert:** Block Explorer for the Stellar network. [https://stellar.expert/explorer/public](https://stellar.expert/explorer/public)
 
 Token Playground: [https://token-playground.gitbook.io/guide](https://token-playground.gitbook.io/guide)
