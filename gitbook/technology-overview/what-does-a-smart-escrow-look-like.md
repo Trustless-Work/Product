@@ -65,10 +65,11 @@ Milestones define _what must be completed to unlock funds._
   * Milestones include:
     * `amount` → how much is unlocked upon approval
     * `flags` → released, disputed, resolved
+    * `Receiver` → final destination of the funds
 
 This structure allows a project to fund and release in **phases**, not all at once.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="Multi-Release escrow"><figcaption><p>Multi-release escrow properties</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-11-04 at 2.29.59 PM.png" alt=""><figcaption></figcaption></figure>
 
 ***
 
