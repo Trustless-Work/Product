@@ -1,7 +1,7 @@
 # 💻 Developer Guide
 
-{% content-ref url="getting-started.md" %}
-[getting-started.md](getting-started.md)
+{% content-ref url="../api-reference/getting-started.md" %}
+[getting-started.md](../api-reference/getting-started.md)
 {% endcontent-ref %}
 
 {% content-ref url="../technology-overview/smart-escrow-design.md" %}

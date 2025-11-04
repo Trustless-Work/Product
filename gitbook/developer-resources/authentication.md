@@ -16,3 +16,7 @@ To authenticate you will need to login to our Dapp with a Stellar Wallet and Req
 [request-api-key.md](request-api-key.md)
 {% endcontent-ref %}
 
+\
+**Coming:** \
+We are figuring out how this can work with passkeys and send to addresses with Memo. \
+WE do this in the open, so feel free to crontribute. [community.md](../community-and-roadmap/community.md "mention")

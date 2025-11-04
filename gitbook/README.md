@@ -55,7 +55,7 @@ We abstract away the complexity of blockchain so you can focus on building great
 
 We’ve organized everything you need into clear sections tailored to your role:
 
-1. [**Getting Started**](developer-resources/getting-started.md)\
+1. [**Getting Started**](api-reference/getting-started.md)\
    A quick-start guide to help you onboard with Trustless Work. Perfect for developers and businesses looking to explore the platform.
 2. [**API Reference**](api-reference/)\
    Complete technical documentation for developers, including endpoints, code examples, and troubleshooting tips.

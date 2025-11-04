@@ -6,9 +6,9 @@ icon: address-card
 
 ### 🧭 Core Docs
 
-* [Quickstart Guide](../developer-resources/getting-started.md)
+* [Quickstart Guide](../api-reference/getting-started.md)
 * [API Reference](../api-reference/)
-* [React SDK](../react-library-hooks/)
+* [React SDK](../trustless-work-sdk/)
 * [Escrow Concepts](../technology-overview/)
 * [Templates & Examples](../open-source-dapps/)
 

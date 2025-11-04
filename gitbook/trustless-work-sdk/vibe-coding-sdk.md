@@ -15,7 +15,7 @@ layout:
     visible: true
 ---
 
-# 👾 Vibe Coding
+# 👾 Vibe Coding - SDK
 
 In all of your chat prompts, you should provide the agent with specific document references, including the global content rules and the complete code project. _**GPT 5 gives the best result**_
 

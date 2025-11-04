@@ -18,8 +18,6 @@ layout:
 
 # Integration checklist
 
-Trustless Work Integration Checklist (v1 — Developer Edition)
-
 **Goal:** Go from idea to live escrows in **under 1 week**.
 
 **Time Estimate:** 4–8 hours of implementation (plus testing).
@@ -75,12 +73,14 @@ Assign the parties' Stellar addresses to each role in your escrow:📄 [roles-in
 
 * [ ] Sign up at [dApp](https://dapp.trustlesswork.com).
 * [ ] Request **API Key** (testnet; mainnet post-audit) [request-api-key.md](request-api-key.md "mention") -> you can see the videos on the dApp landing.
+* [ ] You can deploy testney & Mainnet escrows on the backoffice. Great for testing and integrating.&#x20;
 
-**6. Install SDK / Tools** [getting-started.md](../react-library-hooks/getting-started.md "mention")
+**6. Install SDK / Tools** [getting-started-sdk.md](../trustless-work-sdk/getting-started-sdk.md "mention")
 
 * [ ] Install NPM package.
 * [ ] Import SDK into your project.
 * [ ] Clone or reference open-source templates for your vertical (e.g., P2P, marketplace, grant platform).
+* [ ] OR: Use escrow blocks&#x20;
 
 **7. Configure Your Escrow**
 

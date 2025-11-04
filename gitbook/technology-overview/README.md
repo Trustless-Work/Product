@@ -100,8 +100,8 @@ We constantly talk about the escrow lifecycle, which follows this path.&#x20;
 
 Then:\
 [ **Test it in our dApp** ](https://dapp.trustlesswork.com)\
-&#x20;[**Integrate Trustless Work into your platform** ](../developer-resources/getting-started.md)\
-[**Try out our Vibe-Coding Guide**](../vibe-coding.md)\
+&#x20;[**Integrate Trustless Work into your platform** ](../api-reference/getting-started.md)\
+[**Try out our Vibe-Coding Guide**](../readme/ai-optimized-docs.md)\
 [**Use our escrow-blocks**](../escrow-blocks/)
 
 
