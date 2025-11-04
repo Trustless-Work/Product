@@ -32,7 +32,7 @@ A Multi-Release Escrow releases funds incrementally as each milestone is complet
 2. **Milestone Completion & Review:** The Service Provider (e.g., a DAO contributor) marks each milestone complete (e.g., "Prototype built"). The Approver (e.g., DAO voters) reviews each.
 3. **Incremental Release:** For each approved milestone, the Release Signer (e.g., the platform) releases that milestone’s portion of funds to the Receiver. Dispute Resolvers handle conflicts, adjusting amounts or canceling if needed. (Note: Per-milestone payouts are coming, per doc.)
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="Multi-Release escrow"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-11-04 at 2.50.40 PM.png" alt=""><figcaption></figcaption></figure>
 
 **Example:** A DAO funds a developer for a project (milestones: code v1, v2, v3). Each milestone’s approval releases a portion of stablecoins, with a Dispute Resolver stepping in if voters contest progress.
 
