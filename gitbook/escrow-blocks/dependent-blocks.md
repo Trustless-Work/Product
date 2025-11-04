@@ -1,3 +1,21 @@
+---
+icon: codepen
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Dependent Blocks
 
 Some blocks require other blocks to work properly. Make sure to add their dependencies before using them.

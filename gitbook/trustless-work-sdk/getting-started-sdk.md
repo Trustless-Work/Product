@@ -2,7 +2,7 @@
 icon: flag-checkered
 ---
 
-# Getting Started
+# Getting Started - SDK
 
 ## Overview
 
@@ -15,8 +15,6 @@ Trustless Work React library is a collection of React hooks and entities. It com
 ## Links
 
 {% embed url="https://www.npmjs.com/package/@trustless-work/escrow" %}
-
-{% embed url="https://github.com/Trustless-Work/react-library-trustless-work" %}
 
 ## Setup
 
