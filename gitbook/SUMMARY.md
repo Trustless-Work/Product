@@ -131,7 +131,7 @@
   * [Milestone-based Freelance & Contract Work](use-cases-unlocking-the-potential-of-smart-escrows/milestone-based-freelance-and-contract-work.md)
   * [Crowdfunding & Pre-orders](use-cases-unlocking-the-potential-of-smart-escrows/crowdfunding-and-pre-orders.md)
 * [🏴‍☠️ Community & Contribution](community-and-roadmap/community.md)
-  * [🌎 Spotlight: Kindfi](community/spotlight-kindifi.md)
+  * [Ecosystem](community/ecosystem.md)
   * [Contributor's Guide](community-and-roadmap/get-involved.md)
   * [📂 Interesting Links](community/open-source-templates-and-developer-tools.md)
 * [☎️ Contact and Support](contact-and-support/README.md)
