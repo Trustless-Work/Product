@@ -122,12 +122,12 @@ The Trustless Work API is your gateway to deploy and manage decentralized smart 
 
 #### 📊 Query & Tracking
 
-| Method | Endpoint                                     | Description                            |
-| ------ | -------------------------------------------- | -------------------------------------- |
-| GET    | `/escrow/{type}/get-escrow`                  | Retrieve full escrow state             |
-| GET    | `/escrow/{type}/get-multiple-escrow-balance` | Batch balances for many escrows        |
-| GET    | `/helper/get-escrows-by-signer`              | Query escrows associated with a signer |
-| GET    | `/helper/get-escrows-by-role`                | Query escrows by role assignment       |
+| Method | Endpoint                              | Description                            |
+| ------ | ------------------------------------- | -------------------------------------- |
+| GET    | `/escrow/{type}/get-escrow`           | Retrieve full escrow state             |
+| GET    | `/escrow/get-multiple-escrow-balance` | Batch balances for many escrows        |
+| GET    | `/helper/get-escrows-by-signer`       | Query escrows associated with a signer |
+| GET    | `/helper/get-escrows-by-role`         | Query escrows by role assignment       |
 
 ***
 
