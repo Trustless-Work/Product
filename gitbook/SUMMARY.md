@@ -55,6 +55,7 @@
     * [Approve Milestone](api-reference/deploy-1/change-milestone-flag.md)
     * [Change Milestone Status](api-reference/deploy-1/change-milestone-status.md)
     * [Release Milestone Funds](api-reference/deploy-1/release-funds.md)
+    * [Withdraw Remaining Funds](api-reference/deploy-1/withdraw-remaining-funds.md)
     * [Dispute Milestone](api-reference/deploy-1/change-dispute-flag.md)
     * [Resolve Milestone Dispute](api-reference/deploy-1/resolving-disputes.md)
     * [Update Escrow](api-reference/deploy-1/update-escrow-properties.md)
