@@ -36,8 +36,6 @@ Trustless Work React library is a collection of React hooks and entities. It com
 
 ***
 
-***
-
 ## Links
 
 {% embed url="https://www.npmjs.com/package/@trustless-work/blocks" %}

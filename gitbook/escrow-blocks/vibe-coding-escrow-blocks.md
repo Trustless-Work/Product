@@ -1,4 +1,4 @@
-# 👾 Vibe Coding - Escrow Blocks
+# 👾 Vibe Coding - Blocks
 
 ***
 
