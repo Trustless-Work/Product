@@ -2,7 +2,7 @@
 icon: code
 ---
 
-# API Reference
+# Trustless Work API
 
 ### What is the Trustless Work API?
 
@@ -67,8 +67,7 @@ The **Trustless Work REST API** is a developer interface for creating and managi
 
 #### 📊 Query / Tracking
 
-* `/escrow/{type}/get-escrow`
-* `/escrow/{type}/get-multiple-escrow-balance`
+* `/escrow/get-multiple-escrow-balance`
 * `/helper/get-escrows-by-signer`
 * `/helper/get-escrows-by-role`
 
