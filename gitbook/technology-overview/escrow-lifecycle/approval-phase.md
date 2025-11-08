@@ -2,55 +2,103 @@
 
 <figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
-The Approval Phase is where the **Milestone Approver** evaluates the milestone marked as **For Review** by the **Milestone Marker**. This critical step determines whether the milestone is approved or disputed, dictating the next steps in the escrow process and transitioning the transaction toward completion or resolution.
+## Phase 4 — Approval (Validating Progress and Unlocking Readiness)
+
+After the Service Provider updates a milestone’s status, the **Approver** steps in.\
+This is the phase where intent meets validation — the moment a platform or client officially confirms that progress is satisfactory.
+
+Approval is the **green light** that tells the escrow:
+
+> “This milestone has met the conditions. It can now move toward payment.”
 
 ***
 
-#### **Key Actions**
+### 🧾 What Approval Means
 
-**1. Milestone Approver Reviews the Milestone**
+Approving a milestone doesn’t move funds yet — it simply updates the milestone’s internal flag:\
+`approved: true`
 
-* The **Milestone Approver** evaluates the deliverable or service associated with the milestone, referencing any supporting evidence or details provided by the **Milestone Marker**.
+That single flag transforms the milestone from _in progress_ to _ready for release_.
 
-**2. Decision: Approve or Dispute**
-
-* **Approve:**
-  * If satisfied, the **Milestone Approver** approves the milestone.
-  * The **Approved Flag** is updated to `True`, signaling that the transaction can proceed toward the **Release Phase**.
-* **Dispute:**
-  * If concerns arise, the **Milestone Approver** disputes the milestone.
-  * The **Approved Flag** is updated to `On Dispute`, pausing the transaction and escalating it to the **Dispute Resolver**.
-
-Next Steps:\
-\
-the approved / dispute flag determines what Next step on the excrow lifecycle is enabled.&#x20;
-
-If the milestone is approved, the Release is possible,
-
-If a dispute is raised, the dispute resolver must set a resolution and either update the amount, or cancel the milestone.&#x20;
+It’s a lightweight change in data but a heavy one in meaning — because once approved, the milestone is permanently recorded as validated.\
+There’s no “unapprove” function.\
+The decision becomes part of the escrow’s history.
 
 ***
 
-#### **Key Metadata**
+### 👤 Who Approves
 
-**1. Milestone Status**
+Only the **Approver** — the wallet assigned to that role — can sign the approval.\
+This address is often:
 
-* **For Review:** Indicates the milestone is under review by the **Milestone Approver**.
-* **On Dispute:** Set when the milestone is disputed, triggering resolution by the **Dispute Resolver**.
+* The **buyer** in a freelance contract,
+* The **sponsor** in a grant,
+* Or the **platform logic** in automated or multi-party flows.
 
-**2. Approved Flag**
+The Approver’s signature confirms that:
 
-* **True:** Set when the **Milestone Approver** approves the milestone.
+1. The milestone has been delivered satisfactorily, and
+2. The platform can now safely move toward release.
 
 ***
 
-#### **Key Notes**
+### 🔁 How Approval Works Across Escrow Types
 
-* **Milestone Approver Authority:**\
-  The **Milestone Approver** has sole authority to approve or dispute milestones, ensuring their satisfaction with the deliverable.
-* **Platform's Role:**\
-  The platform facilitates the review process by providing tools and notifications to assist the **Milestone Approver**.
-* **On-Chain Transparency:**\
-  All participants, including the **Milestone Marker**, **Release Signer**, and **Platform Address**, can track the milestone’s status and associated decisions on-chain.
-* **Dispute Escalation:**\
-  Disputes trigger the transaction to enter the **Dispute Resolution Phase**, ensuring fair and transparent resolution before proceeding.
+#### **Single-Release Escrow**
+
+* All milestones must be approved before any funds can move.
+* Once every milestone carries the `approved: true` flag, the escrow becomes “ready for release.”
+* The Release Signer can then execute the payout in one transaction.
+
+#### **Multi-Release Escrow**
+
+* Each milestone has its own approval and release logic.
+* Approving one milestone makes _that milestone’s funds_ eligible for release, regardless of others.
+* This allows multiple, independent approval-release cycles within the same escrow.
+
+> 🧩 **In short:**
+>
+> * **Single-Release** → approval is collective (all or nothing).
+> * **Multi-Release** → approval is modular (one milestone at a time).
+
+***
+
+### 🪶 The Freedom of Approval Timing
+
+Approvals can happen at any moment, regardless of the milestone’s current “status” text.
+
+Even if the Service Provider used a custom status like _“Under Review”_ or _“In Transit”_,\
+the Approver can sign approval immediately if they’re satisfied.
+
+That flexibility allows each platform to define its own logic — maybe auto-approving after a timer, or requiring manual review before payment.
+
+Once approved:
+
+* The milestone’s `approved` flag turns **true**,
+* The escrow recognizes that milestone as complete,
+* And it remains approved for the rest of its lifecycle.
+
+***
+
+### 🧩 Relation to Disputes and Release
+
+Approval is also what separates smooth transactions from disputes.\
+If the Approver signs, the flow advances to **Release**.\
+If they refuse or challenge, the same milestone can instead move into **Dispute Resolution**.
+
+> 🧭 Approval is the fork in the road —\
+> One path leads to payment, the other to mediation.
+
+***
+
+### 📦 Outcome of the Approval Phase
+
+By the end of this phase:
+
+* The milestone’s `approved` flag is set to **true**.
+* The escrow recognizes that milestone as _ready for release_.
+* The approval event is permanently logged on-chain.
+* Participants can view the approval in real time through the [**Escrow Viewer**](https://viewer.trustlesswork.com).
+
+> 💡 Approval doesn’t release funds — it unlocks the ability to.\
+> It’s the signal that work is accepted, and the escrow can now fulfill its purpose.
