@@ -2,92 +2,124 @@
 
 <figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-The Initiation Phase is the foundation of the escrow process. It ensures that all necessary details are captured, roles are assigned, and conditions are clearly defined. This phase lays the groundwork for a secure, transparent, and efficient transaction.
+The **Initiation Phase** is where the escrow takes shape.
+
+You’re not moving money yet — you’re defining the logic that will _govern_ how it moves later.
+
+Think of this as the **architecture of trust**: setting the rules, actors, and conditions before anything hits the chain.
 
 &#x20;**Participants and Roles**
 
 In the initiation phase key roles are assigned to specific parties. These roles determine responsibilities and actions throughout the transaction.
 
-{% hint style="info" %}
-We are currently on the process of updating from client to milestone approver and from service provider to milestone marker. \
-Receiver will be added too (For now, it assumes service provider will be the receiver)
-{% endhint %}
+***
 
-**The roles are:**
+### 🎭 Define the Roles
 
-1. **Client/Milestone Approver:** Approves or disputes milestones.
-2. **Service Provider / Milestone Marker:** Marks milestones as completed and ready for approval.
-3. **Release Signer:** Approves the release of funds for completed milestones.
-4. **Dispute Resolver:** Resolves disputes and adjusts milestone statuses if necessary.
-5. **Receiver:** The final recipient of funds once conditions are met.
-6. **Platform Address:** An address designated to receive the platform fee.
+Every escrow is role-based — meaning only specific addresses can perform specific actions.
 
-**Parties:**\
-&#x20;Parties are entities (e.g., buyer, seller, platform) assigned to fulfill one or more roles based on the use case. You can learn more about how this can work for different use cases later on.&#x20;
+You can [read more about roles here → Roles in Trustless Work](https://chatgpt.com/g/g-p-6849f5b035a88191b0faae5593cab5e8-tw-content/c/690d2534-f8b8-832d-bcc2-dc3108a4f1a3).
 
-**Other escrow properties configuredin this phase:**
+During initiation, you assign which addresses will act as:
 
-* **Engagement ID**
-  * **Definition:** A customizable identifier that links the escrow to an external system or reference, such as a UUID, Order ID, or Invoice ID.
-* **Amount:** The total funds to be held in escrow.
-* **Platform Fee:** A fixed or percentage-based fee for the platform’s services, in bps.
-* **Milestones:** Defined deliverables or outcomes that are tracked and verified throughout the process.
-* **Trustline:** The Contract address of the Token used for the escrow.&#x20;
+* **Milestone Marker (Service Provider)** — delivers work and marks milestones as done
+* **Approver** — validates each milestone and can raise disputes
+* **Release Signer** — triggers the release of funds once conditions are met
+* **Dispute Resolver** — resolves conflicts and reallocates funds
+* **Receiver** — the final destination of funds
+* **Platform Address** — the address of the platform itself (receives a percentage fee and can adjust configuration before funding)
+
+> 🔑 Roles are permissions, not identities.
+>
+> The same wallet can hold more than one role, depending on your workflow.
 
 ***
 
-#### **Process Steps**
+### 💰 Decide the Amounts and Milestones
 
-**Step 1: Configuring Terms**
+This is where you define **what gets paid, and when**.
 
-* Parties and Address are configured at a platform level. All parties agree on the transaction terms, including:
-  * Deliverables or milestones.
-  * Payment amounts and structure.
-  * Roles and responsibilities.
+* For a **Single-Release escrow**, you’ll have **one total amount** and **one receiver**.
+  * The payment only happens once, after all milestones are approved.
+  * Example: a one-off design project or security deposit.
+* For a **Multi-Release escrow**, you’ll define **multiple milestones**, each with:
+  * Its **own amount**
+  * Its **own receiver**
+  * Its **own flags and status**
 
-**Step 2: Recording Metadata**
+This structure allows you to fund once and pay multiple parties or stages over time.
 
-* The platform records escrow details, assigns an **Engagement ID** for their own tracking, platform fee, platform address, trustline, and prepares to deploy the escrow contract.
-
-**Step 3: Initializing the Escrow**
-
-* Using the Trustless Work API, the platform deploys the escrow contract with the configured terms.
-* Upon deployment:
-  * A unique **Escrow ID (Contract ID)** is generated and returned to all parties for reference. Funds of the approved trustline can be deposited to the escrow ID.
+> 💡 You can even add milestones later — turning one escrow into an ongoing contract.
 
 ***
 
-#### **Example Scenario: Freelance Marketplace (e.g., Upwork)**
+### 🪙 Select the Trustline (Asset Configuration)
 
-* **Engagement ID:** `Order_12345` links the escrow to the platform's order system.
-* **Escrow ID:** Generated by the Soroban network as `0xABC123...`.
-* **Roles Assigned:**
-  * **Milestone Approver:** Client.
-  * **Milestone Marker:** Freelancer.
-  * **Release Signer:** Upwork.
-  * **Dispute Resolver:** Upwork.
-  * **Receiver:** Freelancer.
-  * **Platform Address:** Upwork (receiving platform fees).
-* **Outcome:**\
-  The escrow contract is initialized with:
-  * Clear roles and responsibilities.
-  * Transparent milestone and payment structures.
-  * A shared understanding among all parties.
+On Stellar, every token (like USDC) is identified by its **issuer address**.
+
+To hold that token, your wallet must explicitly “trust” that issuer — this is called a **Trustline**.
+
+*   When you create an escrow, you must define which **trustline** (asset) it will hold.
+
+    Example: `GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5` = USDC.
+*   All participating addresses (Approver, Marker, Release Signer, etc.) must have that trustline enabled in their wallet.
+
+    Otherwise, they won’t be able to receive or send that asset.
+
+> ⚠️ Without the trustline set, the transaction will fail — so ensure every role wallet is ready before deployment.
 
 ***
 
-#### **Outcome of the Initiation Phase**
+### 🧾 Assign the Engagement ID (Reference Tracking)
 
-1. A smart escrow contract is successfully created and ready for the transaction.
-2. Roles, parties, and conditions are clearly defined and documented.
-3. Engagement and Escrow IDs provide traceability and clarity.
-4. All participants have full visibility, fostering trust and reducing potential disputes.
+Every escrow includes an **Engagement ID**, which acts like your external reference number.
 
-**Escrow ID (Contract ID)**
+It’s a human-readable tag that connects the on-chain escrow to your off-chain logic.
 
-The escrow ID is what we are going to use as address to deposit funds in the next phas&#x65;**. Anyone** can send funds to an escrow, as long as it is the accepted token (Trustline is set).
+Examples:
 
-* **Definition:** A unique identifier automatically generated by the Soroban network when the escrow smart contract is deployed.
-* **Purpose:** Serves as the primary identifier for the escrow contract on the blockchain.
+* `ORDER_2025_00234`
+* `INVOICE_98B-13`
+* `DAO_GRANT_ROUND2`
+
+> The Engagement ID is optional for blockchain logic, but essential for indexing and analytics.
+>
+> It lets platforms query, group, and monitor escrows easily through the API or the viewer.
+
+***
+
+### ⚙️ Configure Platform Fee
+
+Platforms can earn a **Platform Fee** on each escrow.
+
+This fee is taken at release, alongside the protocol’s **0.3% Trustless Work fee**.
+
+* Example:
+  * Platform Fee = 1%
+  * Trustless Fee = 0.3%
+  * Total deduction = 1.3% (automatically split between platform and protocol)
+
+The platform fee is sent to the **Platform Address** defined in the roles.
+
+> 💡 For marketplaces and SaaS platforms, this is a native monetization layer built into the escrow logic — no separate billing flow required.
+
+***
+
+### 📦 Output of the Initiation Phase
+
+At the end of Initiation, you have:
+
+* A **complete schema** defining every role, milestone, fee, and asset
+* A **trustline** selected and validated for all participants
+* An **engagement ID** linking your escrow to external records
+* A **clear understanding** of what needs to happen before any money moves
+
+This is the blueprint.
+
+Once finalized, it’s deployed to the blockchain as an immutable contract.
+
+From here on, every signature, approval, or release event happens _on-chain_.
+
+Also, you should be able to view the escrow and it’s configuration on the escrow viewer or on Stellar expert.
 
 ***
