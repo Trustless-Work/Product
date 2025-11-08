@@ -1,10 +1,11 @@
 # Contributor's Guide
 
+{% hint style="info" %}
+We recently moved from Only Dust to GrantFox: \
+[https://www.grantfox.xyz/](https://www.grantfox.xyz/)
+{% endhint %}
+
 Welcome to the Trustless Work open-source community! 🚀 We appreciate your interest in contributing and helping us build **Escrow Infrastructure for the New Economy**. This guide will walk you through the process of contributing effectively.
-
-If you want to contribute and get rewarded, apply through on Only Dust. Only Dust makes life easier for maintainers since it handles rewards for us. You might (or might not :(  ) get rewarded and it is not in our hands. Stellar sponsors OD Campaigns and the rewards come from them. Thanks Stellar!&#x20;
-
-[Trustless Work on OnlyDust](https://app.onlydust.com/p/trustless-work-)
 
 Once assigned a task, please follow these guidelines:&#x20;
 
