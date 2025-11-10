@@ -10,9 +10,7 @@ icon: pencil
 ### Requirements to use:
 
 1. Only the entity with the platform role has permissions to execute this endpoint
-2. You cannot change the properties of an escrow which already has an approved milestone
-3. You cannot change the properties of an escrow which already has funds
-4. You cannot change the properties of an escrow which is in dispute.
+2. If an escrow has funds, the only thing the platform can do is add more milestones. The other properties cannot be modified under any circumstances.
 
 ### Headers
 
@@ -20,14 +18,14 @@ icon: pencil
 
 ### Roles:
 
-| Name             | Type   | Description                                                                          |
-| ---------------- | ------ | ------------------------------------------------------------------------------------ |
-| approver         | string | Address of the entity requiring the service.                                         |
-| serviceProvider  | string | Address of the entity providing the service.                                         |
-| plataformAddress | string | Address of the entity that owns the escrow                                           |
-| releaseSigner    | string | Address of the user in charge of releasing the escrow funds to the service provider. |
-| disputeResolver  | string | Address in charge of resolving disputes within the escrow.                           |
-| receiver         | string | Address where escrow proceeds will be sent to                                        |
+| Name            | Type   | Description                                                                          |
+| --------------- | ------ | ------------------------------------------------------------------------------------ |
+| approver        | string | Address of the entity requiring the service.                                         |
+| serviceProvider | string | Address of the entity providing the service.                                         |
+| platformAddress | string | Address of the entity that owns the escrow                                           |
+| releaseSigner   | string | Address of the user in charge of releasing the escrow funds to the service provider. |
+| disputeResolver | string | Address in charge of resolving disputes within the escrow.                           |
+| receiver        | string | Address where escrow proceeds will be sent to                                        |
 
 ### Milestone:
 
