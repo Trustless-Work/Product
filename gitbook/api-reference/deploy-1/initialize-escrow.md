@@ -17,6 +17,7 @@ icon: circle-plus
 | status      | string (Default value: "peding") | Milestone status. Ex: Approved, In dispute, etc...                    |
 | approved    | boolean (Default value: false)   | Flag indicating whether a milestone has been approved by the approver |
 | amount      | string                           | Amount of the milestone                                               |
+| receiver    | string                           | Address where escrow proceeds will be sent to                         |
 
 ### Roles:
 
@@ -27,7 +28,6 @@ icon: circle-plus
 | plataformAddress | string | Address of the entity that owns the escrow                                           |
 | releaseSigner    | string | Address of the user in charge of releasing the escrow funds to the service provider. |
 | disputeResolver  | string | Address in charge of resolving disputes within the escrow.                           |
-| receiver         | string | Address where escrow proceeds will be sent to                                        |
 
 ### Trustline:
 
