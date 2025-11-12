@@ -1,9 +1,10 @@
 ---
 description: In this section, we built a demo project using the TW API.
+hidden: true
 icon: fire
 ---
 
-# Integration Demo Project
+# demo Overview
 
 {% hint style="warning" %}
 Trustless Work v3 is currently in preview. If you experience any issue, feel free to open an issue on GitHub or in our dApp.

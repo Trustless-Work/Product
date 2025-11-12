@@ -233,15 +233,14 @@ Supported wallets:
 
 #### Shared Fields
 
-| Key            | Type   | Description                                |
-| -------------- | ------ | ------------------------------------------ |
-| `engagementId` | string | Unique identifier for the escrow           |
-| `title`        | string | Name of the escrow                         |
-| `description`  | string | Description of the escrow's function       |
-| `roles`        | object | Role assignments: marker, approver, etc.   |
-| `platformFee`  | number | % fee for the platform                     |
-| `trustline`    | object | Token type (e.g., USDC, XLM) and decimals  |
-| `receiverMemo` | number | Optional memo for custodial wallet routing |
+| Key            | Type   | Description                               |
+| -------------- | ------ | ----------------------------------------- |
+| `engagementId` | string | Unique identifier for the escrow          |
+| `title`        | string | Name of the escrow                        |
+| `description`  | string | Description of the escrow's function      |
+| `roles`        | object | Role assignments: marker, approver, etc.  |
+| `platformFee`  | number | % fee for the platform                    |
+| `trustline`    | object | Token type (e.g., USDC, XLM) and decimals |
 
 #### Milestone Object (for multi-release only)
 
@@ -255,10 +254,9 @@ Supported wallets:
 
 #### Trustline Object
 
-| Field      | Type   | Description                          |
-| ---------- | ------ | ------------------------------------ |
-| `address`  | string | Token issuer or address              |
-| `decimals` | number | Number of decimals in the token unit |
+| Field     | Type   | Description             |
+| --------- | ------ | ----------------------- |
+| `address` | string | Token issuer or address |
 
 ***
 
