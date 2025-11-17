@@ -10,18 +10,17 @@ In this section you will be able to see the outline of the types of escrow's tha
 
 #### Escrow body:
 
-| Key          | Type              | Description                                                                                                                                                                                                                              |
-| ------------ | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| engagementId | string            | Unique identifier for the escrow                                                                                                                                                                                                         |
-| title        | string            | Name of the escrow                                                                                                                                                                                                                       |
-| roles        | Roles Object      | Roles that make up the escrow structure                                                                                                                                                                                                  |
-| description  | string            | Text describing the function of the escrow                                                                                                                                                                                               |
-| amount       | number            | Amount to be transferred upon completion of escrow milestones                                                                                                                                                                            |
-| plataformFee | number            | Commission that the platform will receive when the escrow is completed                                                                                                                                                                   |
-| milestones   | Milestone\<Array> | Objectives to be completed to define the escrow as completed                                                                                                                                                                             |
-| flags        | Flags Object      | Flags validating certain escrow life states                                                                                                                                                                                              |
-| trustline    | Trustline Object  | Information on the trustline that will manage the movement of funds in escrow                                                                                                                                                            |
-| receiverMemo | number (optional) | Field used to identify the recipient's address in transactions through an intermediary account. This value is included as a memo in the transaction and allows the funds to be correctly routed to the wallet of the specified recipient |
+| Key          | Type              | Description                                                                   |
+| ------------ | ----------------- | ----------------------------------------------------------------------------- |
+| engagementId | string            | Unique identifier for the escrow                                              |
+| title        | string            | Name of the escrow                                                            |
+| roles        | Roles Object      | Roles that make up the escrow structure                                       |
+| description  | string            | Text describing the function of the escrow                                    |
+| amount       | number            | Amount to be transferred upon completion of escrow milestones                 |
+| plataformFee | number            | Commission that the platform will receive when the escrow is completed        |
+| milestones   | Milestone\<Array> | Objectives to be completed to define the escrow as completed                  |
+| flags        | Flags Object      | Flags validating certain escrow life states                                   |
+| trustline    | Trustline Object  | Information on the trustline that will manage the movement of funds in escrow |
 
 #### Roles:
 
@@ -63,16 +62,15 @@ In this section you will be able to see the outline of the types of escrow's tha
 
 ## Multi Release Escrow Schema
 
-| Key          | Type              | Description                                                                                                                                                                                                                              |
-| ------------ | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| engagementId | string            | Unique identifier for the escrow                                                                                                                                                                                                         |
-| title        | string            | Name of the escrow                                                                                                                                                                                                                       |
-| description  | string            | Text describing the function of the escrow                                                                                                                                                                                               |
-| roles        | Roles Object      | Roles that make up the escrow structure                                                                                                                                                                                                  |
-| plataformFee | number            | Commission that the platform will receive when the escrow is completed                                                                                                                                                                   |
-| milestones   | Milestone\<Array> | Objectives to be completed to define the escrow as completed                                                                                                                                                                             |
-| trustline    | Trustline Object  | Information on the trustline that will manage the movement of funds in escrow                                                                                                                                                            |
-| receiverMemo | number (optional) | Field used to identify the recipient's address in transactions through an intermediary account. This value is included as a memo in the transaction and allows the funds to be correctly routed to the wallet of the specified recipient |
+| Key          | Type              | Description                                                                   |
+| ------------ | ----------------- | ----------------------------------------------------------------------------- |
+| engagementId | string            | Unique identifier for the escrow                                              |
+| title        | string            | Name of the escrow                                                            |
+| description  | string            | Text describing the function of the escrow                                    |
+| roles        | Roles Object      | Roles that make up the escrow structure                                       |
+| plataformFee | number            | Commission that the platform will receive when the escrow is completed        |
+| milestones   | Milestone\<Array> | Objectives to be completed to define the escrow as completed                  |
+| trustline    | Trustline Object  | Information on the trustline that will manage the movement of funds in escrow |
 
 #### Roles:
 
