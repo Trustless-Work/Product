@@ -84,6 +84,7 @@
   * [useStartDispute](trustless-work-sdk/usestartdispute.md)
   * [useResolveDispute](trustless-work-sdk/useresolvedispute.md)
   * [useWithdrawRemainingFunds](trustless-work-sdk/usewithdrawremainingfunds.md)
+  * [Configure the Trustless Work SDK MCP](trustless-work-sdk/configure-the-trustless-work-sdk-mcp.md)
 * [📓 Escrow Blocks](escrow-blocks/README.md)
   * [Getting Started - Blocks](escrow-blocks/installation-guide.md)
   * [👾 Vibe Coding - Blocks](escrow-blocks/vibe-coding-escrow-blocks.md)
