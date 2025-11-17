@@ -2,6 +2,8 @@
 
 ## **Configure the Trustless Work SDK MCP on Cursor**
 
+{% embed url="https://youtu.be/0a4QE2d9zHg" %}
+
 _Give your AI agent full power to build, update, and execute escrow actions automatically._
 
 The **Model Context Protocol (MCP)** allows Cursor’s AI agent to call external tools and APIs autonomously. By adding the **Trustless Work MCP Server**, developers can interact with the Trustless Work SDK through Cursor—making escrow creation, milestone updates, approvals, releases, and analysis executable directly from the editor.
@@ -161,3 +163,4 @@ You’ve effectively enabled **AI-native escrow development**.\
 Agents can now build, update, and maintain escrow logic—end to end.
 
 ***
+
