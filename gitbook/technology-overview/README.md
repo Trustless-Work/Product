@@ -58,8 +58,7 @@ We currently support **two escrow types**:
 
 1. **Single-Release Escrow**\
    Multiple milestones, one payout.\
-   Useful for deposits, one-off jobs, or simple deliveries.\
-
+   Useful for deposits, one-off jobs, or simple deliveries.<br>
 2. **Multi-Release Escrow**\
    Multiple milestones, multiple payouts (one per milestone).\
    Perfect for projects, grants, or milestone-based funding.
