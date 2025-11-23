@@ -7,12 +7,3 @@ description: >-
 # Tokenization Hackathon
 
 {% embed url="https://www.loom.com/share/08e5ef97f94f42d1b80bebac733a6383" %}
-
-**Overview page** explaining:
-
-* What we built
-* Why we built it
-* How it expands Trustless Work
-* What this module enables for tokenization platforms
-* Diagram of the full lifecycle
-* Links to demo & repos
