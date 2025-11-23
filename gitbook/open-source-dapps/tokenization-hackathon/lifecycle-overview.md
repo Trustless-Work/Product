@@ -1,241 +1,121 @@
 # Lifecycle Overview
 
-Trustless Work enables a complete lifecycle for tokenized private credit without intermediaries.\
-Funds are raised, held, released, and redeemed through a sequence of **transparent, auditable, on-chain stages**.
+The tokenized private credit flow built on top of Trustless Work consists of **six sequential stages**, each representing a clear handoff of responsibility and capital state.
 
 The entire lifecycle consists of:
 
-1. **Token Sale → Fundraising**
-2. **Escrow Funding → Capital enters milestone-controlled escrow**
-3. **Project Execution → Milestones & releases via Trustless Work**
-4. **ROI Deposit → Vault setup for investor payout**
-5. **Investor Claims → Token burn + payout**
+1. **Project Configuration -> Contracts deployment**
+2. **Token Sale → Fundraising**
+3. **Escrow Funding → Capital enters milestone-controlled escrow**
+4. **Project Execution → Milestones & releases via Trustless Work**
+5. **ROI Deposit → Vault setup for investor payout**
+6. **Investor Claims → Token burn + payout**
 
 The diagram below illustrates this end-to-end flow.
 
 ***
 
-## **3.1 Full Lifecycle Diagram (Text Version)**
+***
 
-#### **High-Level Flow**
+### **1. Project Configuration → Contract Deployment**
 
-```
-┌────────────────────────────────────┐
-│            TOKEN SALE              │
-│  Investors swap USDC for PT token  │
-└───────────────┬────────────────────┘
-                │ USDC
-                ▼
-        ┌──────────────────┐
-        │     ESCROW        │
-        │ TW milestone-based│
-        │ fund release       │
-        └───────┬───────────┘
-                │ releases
-                ▼
-        ┌──────────────────┐
-        │ PROJECT EXECUTION│
-        │ Milestones +      │
-        │ Evidence + Roles  │
-        └───────┬───────────┘
-                │ After completion
-                ▼
-        ┌──────────────────┐
-        │      VAULT        │
-        │ ROI deposit +      │
-        │ Set price/token    │
-        └───────┬───────────┘
-                │ claims
-                ▼
-        ┌──────────────────┐
-        │   INVESTOR CLAIM │
-        │ Burn PT → Get USDC│
-        └──────────────────┘
-```
+**Objective:**\
+The project creator sets up the full structure of the investment round.
 
-#### **Roles & Actors Layer (Overlay)**
+**Key Actions:**
 
-```
-Investor  → buys token → claims ROI
-Project Creator → deploys escrow, token, sale
-Project Manager → updates milestones, submits evidence
-Approver/Signer → unlocks milestone releases
-Vault Operator → deposits ROI + opens claim
-```
+* Configure the project in the **Backoffice**
+* Deploy:
+  * **Escrow Contract** (milestones + roles)
+  * **Participation Token** (via Token Factory)
+  * **Token Sale Contract** (price, cap, deadlines)
 
 ***
 
-## **3.2 Phase Breakdown**
+### **2. Token Sale → Fundraising**
 
-Below is the full lifecycle broken into the **three functional phases** you requested: Funding, Execution, Redemption.
+**Objective:**\
+Investors swap USDC for participation tokens representing their share of the investment.
 
-Each phase includes:
+**Key Actions:**
 
-* Key actors
-* Jobs to be done
-* System interactions
-* Suggested UI screens (for your hackathon dApps)
+* Investor uses the **Investor Portal**
+* Calls `buy()` on the **Token Sale Contract**
+* Token Sale Contract:
+  * Receives USDC
+  * Mints Participation Tokens (PT)
+  * Sends PT to investor
 
-***
-
-### **PHASE 1 — FUNDING**
-
-**(Token Sale → Escrow Deposit)**
-
-#### **Objective:**
-
-Raise capital and ensure all investor funds flow _directly_ into a milestone-controlled escrow for transparency.
+**Outcome:**\
+Investors hold PT, and the Token Sale Contract holds all contributed USDC.
 
 ***
 
-#### **Key Actors**
+### **3. Escrow Funding → Capital Enters Controlled Escrow**
 
-* **Investor**
-* **Token Sale Contract**
-* **Escrow Contract (Trustless Work)**
-* **Backoffice / Creator dApp**
+**Objective:**\
+Swap proceeds are automatically deposited into a milestone-based escrow for transparency and control.
 
-***
+**Key Actions:**
 
-#### **Jobs-To-Be-Done**
+* Token Sale Contract deposits accumulated USDC into the **Escrow Contract**
+* Trustless Work:
+  * Locks funds
+  * Records deposits
+  * Exposes full transparency through the **Escrow Viewer** and API
 
-**Investor**
-
-* Connect wallet
-* Select amount of USDC to invest
-* Swap USDC → Participation Token (PT)
-* View transaction status + purchased tokens
-* See escrow information and trust signals
-
-**Token Sale Contract**
-
-* Accept USDC
-* Mint/send participation tokens
-* Deposit received USDC into the **escrow contract**
-
-**Escrow Contract (Trustless Work)**
-
-* Lock funds
-* Track deposits
-* Provide transparency (viewer, API, indexer)
-
-**Project Creator**
-
-* Deploy escrow using Trustless Work Backoffice
-* Configure milestones and roles
-* Deploy participation token via Token Factory
-* Configure Token Sale contract (price, cap, end date)
+**Outcome:**\
+Capital is secured in a programmable, auditable escrow governed by milestones.
 
 ***
 
-#### **System Flow**
+### **4. Project Execution → Milestones & Releases**
 
-```
-Investor → TokenSale.buy() 
-    → USDC sent to TokenSale 
-        → TokenSale deposits USDC into ESCROW 
-            → TokenFactory mints PT → sends PT to investor
-```
+**Objective:**\
+Real-world work progresses while fund releases remain tied to on-chain verifications.
 
-***
+**Key Actions:**
 
-### **PHASE 2 — EXECUTION**
+* Project Manager updates milestones (evidence, status)
+* Approver signs milestone verification
+* Release Signer executes release
+* Escrow releases milestone amounts to the Project Owner
 
-**(Milestones → Releases)**
-
-#### **Objective:**
-
-Allow the real-world project to progress while maintaining investor trust through full transparency and role-controlled fund release.
+**Outcome:**\
+Funds are released progressively as the project advances, with full transparency for investors.
 
 ***
 
-#### **Key Actors**
+### **5. ROI Deposit → Vault Setup**
 
-* **Project Manager**
-* **Approver**
-* **Release Signer**
-* **Escrow Contract**
-* **Project Dashboard dApp**
+**Objective:**\
+When the project completes, the project creator deposits principal + yield into a redemption vault.
 
-***
+**Key Actions:**
 
-#### **Jobs-To-Be-Done**
+* Deploy **Vault Contract**
+* Deposit USDC (ROI pool)
+* Set `price_per_token`
+* Open the Vault for claims
 
-**Project Manager**
-
-* Upload milestone evidence (images, invoices, documents)
-* Mark milestones as completed
-* Add commentary, updates, progress reports
-
-**Approver**
-
-* Review milestone evidence
-* Validate milestone completion
-* Approve progression
-
-**Release Signer**
-
-* Execute signature on release transaction
-* Trigger USDC payout to project owner
-
-**Escrow Contract**
-
-* Release milestone amounts only with correct role signatures
-* Record all state transitions on-chain
-* Feed indexer → viewer → investor portal
+**Outcome:**\
+A fixed redemption rate is defined and the ROI pool becomes claimable.
 
 ***
 
-#### **System Flow**
+### **6. Investor Claims → Token Burn + Payout**
 
-```
-Manager updates milestone → Approver signs → ReleaseSigner signs
-    → Escrow releases USDC (partial) → Project Owner receives funds
-```
+**Objective:**\
+Investors redeem their participation tokens for USDC.
 
-***
+**Key Actions:**
 
-### **PHASE 3 — REDEMPTION**
+* Investor connects wallet to **Claim Portal**
+* Calls `claim()`
+* Vault Contract:
+  * Burns PT
+  * Sends `balance × price_per_token` in USDC
+  * Tracks redemption progress
 
-**(Vault → Investor Claims)**
-
-#### **Objective:**
-
-Once the project finishes and generates revenue, distribute returns to token holders proportionally and transparently.
-
-***
-
-#### **Key Actors**
-
-* **Project Creator / Vault Operator**
-* **Vault Contract**
-* **Investor**
-* **Investor Portal (Claim UI)**
-
-***
-
-#### **Jobs-To-Be-Done**
-
-**Vault Operator**
-
-* Deploy Vault contract (links participation token + escrow ID)
-* Deposit ROI USDC (principal + interest)
-* Set final **price\_per\_token**
-* Enable claim mode (“open for claims”)
-
-**Investor**
-
-* Connect wallet
-* View PT balance
-* Preview payout (balance × price\_per\_token)
-* Claim USDC
-* Burn PT during redemption
-
-**Vault Contract**
-
-* Hold ROI pool safely
-* Burn PT when claimed
-* Transfer USDC to investor
-* Track claim status + remaining balance
-
-***
+**Outcome:**\
+Tokens are burned, investors receive payouts, and the vault settles until empty.
