@@ -13,7 +13,7 @@ icon: handshake
 
 ### Open API
 
-{% openapi-operation spec="trustless-work-api-dev" path="/escrow/multi-release/dispute-milestone" method="post" %}
+{% openapi-operation spec="trustless-work-api-dev" path="/escrow/multi-release/resolve-milestone-dispute" method="post" %}
 [OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
