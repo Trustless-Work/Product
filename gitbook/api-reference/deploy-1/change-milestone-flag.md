@@ -17,6 +17,8 @@ icon: thumbs-up
 [OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
+<figure><img src="../../.gitbook/assets/Screenshot 2025-11-27 at 3.31.30 PM.png" alt=""><figcaption></figcaption></figure>
+
 ### **What this Endpoint returns?**
 
 This endpoint returns the transaction unsigned so that the transaction can be signed by means of a customer wallet.
