@@ -17,7 +17,7 @@ icon: face-pouting
 [OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-11-27 at 3.32.16 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2025-11-27 at 3.53.15 PM.png" alt=""><figcaption></figcaption></figure>
 
 
 

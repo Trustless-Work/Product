@@ -17,7 +17,7 @@ icon: sack-dollar
 [OpenAPI trustless-work-api-dev](https://dev.api.trustlesswork.com/api-yaml)
 {% endopenapi-operation %}
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-11-27 at 3.31.15 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2025-11-27 at 3.52.41 PM.png" alt=""><figcaption></figcaption></figure>
 
 ### **What this Endpoint returns?**
 
