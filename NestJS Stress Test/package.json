@@ -23,7 +23,7 @@
     "@nestjs/common": "^11.0.20",
     "@nestjs/config": "^4.0.0",
     "@nestjs/core": "^11.0.1",
-    "@nestjs/platform-express": "^11.0.1",
+    "@nestjs/platform-express": "^11.1.9",
     "@stellar/stellar-sdk": "^13.1.0",
     "axios": "^1.7.9",
     "class-transformer": "^0.5.1",
