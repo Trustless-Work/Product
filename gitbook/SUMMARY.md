@@ -68,7 +68,7 @@
   * [Indexer](api-reference/indexer/README.md)
     * [Update From Tx Hash](api-reference/indexer/update-escrow-properties.md)
 * [📚 Trustless Work SDK](trustless-work-sdk/README.md)
-  * [Configure the Trustless Work SDK MCP](trustless-work-sdk/configure-the-trustless-work-sdk-mcp.md)
+  * [🛠️ MCP - SDK](trustless-work-sdk/mcp-sdk.md)
   * [👾 Vibe Coding - SDK](trustless-work-sdk/vibe-coding-sdk.md)
   * [Getting Started - SDK](trustless-work-sdk/getting-started-sdk.md)
   * [useSendTransaction](trustless-work-sdk/usesendtransaction.md)

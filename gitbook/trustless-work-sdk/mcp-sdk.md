@@ -1,4 +1,4 @@
-# Configure the Trustless Work SDK MCP
+# 🛠️ MCP - SDK
 
 ## **Configure the Trustless Work SDK MCP on Cursor**
 
