@@ -136,5 +136,19 @@ export type GetEscrowsFromIndexerResponse = {
   type: EscrowType;
 };
 
+/**
+ * Response for updating escrow from transaction hash
+ */
+export type UpdateFromTxHashResponse = {
+  /**
+   * Status of the request
+   */
+  status: "SUCCESS" | "FAILED";
+
+  /**
+   * Message describing the result
+   */
+  message: string;
+};
 ```
 
