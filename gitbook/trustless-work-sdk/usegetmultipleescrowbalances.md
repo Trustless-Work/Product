@@ -36,8 +36,8 @@ _Argument:_
 
 `GetBalanceParams` : An object containing the required fields to get the balances.
 
-{% content-ref url="../developer-resources/types/" %}
-[types](../developer-resources/types/)
+{% content-ref url="../developer-resources/types/payloads/get-balances.md" %}
+[get-balances.md](../developer-resources/types/payloads/get-balances.md)
 {% endcontent-ref %}
 
 _Return Value:_

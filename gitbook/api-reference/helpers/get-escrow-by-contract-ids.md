@@ -2,7 +2,7 @@
 description: >-
   Returns all the information of a security deposit requested through one or
   more requested contract ids.
-icon: memo-circle-check
+icon: table
 ---
 
 # Get Escrows By Contract Ids

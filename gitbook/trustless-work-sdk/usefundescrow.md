@@ -48,8 +48,8 @@ Returning an unsigned transaction based on the provided payload.
 * **type**: Describes the escrow type to be used. Options are "multi-release" or "single-release".
 * **payload**: Contains the data required for fund escrow.
 
-{% content-ref url="../developer-resources/types/" %}
-[types](../developer-resources/types/)
+{% content-ref url="../developer-resources/types/payloads/release-funds.md" %}
+[release-funds.md](../developer-resources/types/payloads/release-funds.md)
 {% endcontent-ref %}
 
 _Return Value:_

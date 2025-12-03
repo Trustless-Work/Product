@@ -1,6 +1,6 @@
 ---
 description: Returns all the information of an escrow requested through the role.
-icon: square-list
+icon: head-side-gear
 ---
 
 # Get Escrows By Role

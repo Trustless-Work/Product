@@ -2,7 +2,7 @@
 description: >-
   Returns the escrows that you're looking for. It comes from our indexer
   (database) synchronizer with the blockchain.
-icon: line-height
+icon: rectangle-list
 ---
 
 # useGetEscrowsFromIndexerBySigner
@@ -38,8 +38,8 @@ _Argument:_
 
 `GetEscrowsFromIndexerBySignerParams`: An object containing the required fields to get the escrows by signer.
 
-{% content-ref url="../developer-resources/types/" %}
-[types](../developer-resources/types/)
+{% content-ref url="../developer-resources/types/payloads/get-escrows-by-signer.md" %}
+[get-escrows-by-signer.md](../developer-resources/types/payloads/get-escrows-by-signer.md)
 {% endcontent-ref %}
 
 _Return Value:_

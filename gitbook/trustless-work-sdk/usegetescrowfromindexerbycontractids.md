@@ -38,8 +38,8 @@ _Argument:_
 
 `GetEscrowFromIndexerByContractIdsParams`: An object containing the required fields to get the escrows.
 
-{% content-ref url="../developer-resources/types/" %}
-[types](../developer-resources/types/)
+{% content-ref url="../developer-resources/types/payloads/get-escrows-by-contract-id.md" %}
+[get-escrows-by-contract-id.md](../developer-resources/types/payloads/get-escrows-by-contract-id.md)
 {% endcontent-ref %}
 
 _Return Value:_

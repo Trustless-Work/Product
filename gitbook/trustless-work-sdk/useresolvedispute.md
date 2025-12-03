@@ -49,8 +49,8 @@ Ensure they match: if you choose a "multi-release" type, you must also use a "mu
 * **type**: Describes the escrow type to be used. Options are "multi-release" or "single-release".
 * **payload**: An object containing the required fields to resolve a dispute.
 
-{% content-ref url="../developer-resources/types/" %}
-[types](../developer-resources/types/)
+{% content-ref url="../developer-resources/types/payloads/resolve-dispute.md" %}
+[resolve-dispute.md](../developer-resources/types/payloads/resolve-dispute.md)
 {% endcontent-ref %}
 
 _Return Value:_

@@ -1,6 +1,6 @@
 ---
 description: Returns all the information of an escrow requested through the signer.
-icon: square-list
+icon: rectangle-list
 ---
 
 # Get Escrows By Signer

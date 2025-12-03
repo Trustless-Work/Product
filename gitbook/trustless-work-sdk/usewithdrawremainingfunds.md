@@ -45,8 +45,8 @@ Only allows multi-release escrows..
 
 * **payload**: An object containing the required fields to resolve a dispute.
 
-{% content-ref url="../developer-resources/types/" %}
-[types](../developer-resources/types/)
+{% content-ref url="../developer-resources/types/payloads/withdraw-remaining-funds.md" %}
+[withdraw-remaining-funds.md](../developer-resources/types/payloads/withdraw-remaining-funds.md)
 {% endcontent-ref %}
 
 _Return Value:_

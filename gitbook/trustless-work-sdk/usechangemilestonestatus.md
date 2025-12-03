@@ -50,8 +50,8 @@ Ensure they match: if you choose a "multi-release" type, you must also use a "mu
 * **type**: Describes the escrow type to be used. Options are "multi-release" or "single-release".
 * **payload**: Contains the data required for change milestone status.
 
-{% content-ref url="../developer-resources/types/" %}
-[types](../developer-resources/types/)
+{% content-ref url="../developer-resources/types/payloads/change-milestone-status.md" %}
+[change-milestone-status.md](../developer-resources/types/payloads/change-milestone-status.md)
 {% endcontent-ref %}
 
 _Return Value:_
