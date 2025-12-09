@@ -30,9 +30,10 @@ icon: circle-plus
 
 ### Trustline:
 
-| Name    | Type   | Description                                                                |
-| ------- | ------ | -------------------------------------------------------------------------- |
-| address | string | Public address establishing permission to accept and use a specific token. |
+| Name    | Type   | Description                                                                            |
+| ------- | ------ | -------------------------------------------------------------------------------------- |
+| address | string | Public address establishing permission to accept and use a specific token.             |
+| symbol  | string | Official abbreviation representing the token in wallets, exchanges, and documentation. |
 
 ### Initialize Escrow
 
