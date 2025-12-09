@@ -56,4 +56,6 @@ Mainnet: [`GDHU6WRG4IEQXM5NZ4BMPKOXHW76MZM4Y2IEMFDVXBSDP6SJY4ITNPP2`](https://st
 
 {% embed url="https://developers.circle.com/stablecoins/eurc-contract-addresses" %}
 
+{% embed url="https://stablecoin.stellarlight.xyz/" %}
+
 ***
