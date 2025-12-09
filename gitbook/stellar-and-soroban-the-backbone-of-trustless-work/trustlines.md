@@ -33,6 +33,27 @@ Our escrows can be configured for ANY trustline on Stellar. But all roles must h
 
 * **Practical impact:** All participants must have the proper trustline set up first.
 
+### ✍🏼 USDC/EURC Trustline
 
+USDC/EURC is the most functional and widely used trustline for escrow. I am attaching the issuer addresses for these so that you can use them when initializing an escrow and defining your trustline:
+
+#### USDC
+
+Testnet: [`GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5`](https://stellar.expert/explorer/testnet/asset/USDC-GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5)
+
+Mainnet: [`GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN`](https://stellar.expert/explorer/public/asset/USDC-GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN)
+
+#### EURC
+
+Testnet: [`GB3Q6QDZYTHWT7E5PVS3W7FUT5GVAFC5KSZFFLPU25GO7VTC3NM2ZTVO`](https://stellar.expert/explorer/testnet/asset/EURC-GB3Q6QDZYTHWT7E5PVS3W7FUT5GVAFC5KSZFFLPU25GO7VTC3NM2ZTVO?asset%5B%5D=EURC-GB3Q6QDZYTHWT7E5PVS3W7FUT5GVAFC5KSZFFLPU25GO7VTC3NM2ZTVO-1)
+
+Mainnet: [`GDHU6WRG4IEQXM5NZ4BMPKOXHW76MZM4Y2IEMFDVXBSDP6SJY4ITNPP2`](https://stellar.expert/explorer/public/asset/EURC-GDHU6WRG4IEQXM5NZ4BMPKOXHW76MZM4Y2IEMFDVXBSDP6SJY4ITNPP2)
+
+\
+**References:**
+
+{% embed url="https://developers.circle.com/stablecoins/usdc-contract-addresses" %}
+
+{% embed url="https://developers.circle.com/stablecoins/eurc-contract-addresses" %}
 
 ***
