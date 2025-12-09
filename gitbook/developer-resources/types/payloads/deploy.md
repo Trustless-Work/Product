@@ -123,6 +123,11 @@ export type InitializeSingleReleaseEscrowPayload = {
      * Public address establishing permission to accept and use a specific token.
      */
     address: string;
+    
+    /**
+     * Official abbreviation representing the token in wallets, exchanges, and documentation.
+     */
+    symbol: string;
   };
 
   /**
@@ -207,6 +212,11 @@ export type InitializeMultiReleaseEscrowPayload = {
      * Public address establishing permission to accept and use a specific token.
      */
     address: string;
+    
+    /**
+     * Official abbreviation representing the token in wallets, exchanges, and documentation.
+     */
+    symbol: string;
   };
 
   /**

@@ -104,10 +104,11 @@ In this section you will be able to see the outline of the types of escrow's tha
 
 #### Trustline:
 
-| Name     | Type   | Description                                                                |
-| -------- | ------ | -------------------------------------------------------------------------- |
-| address  | string | Public address establishing permission to accept and use a specific token. |
-| decimals | number | Number of decimals into which the token is divided.                        |
+| Name     | Type   | Description                                                                            |
+| -------- | ------ | -------------------------------------------------------------------------------------- |
+| address  | string | Public address establishing permission to accept and use a specific token.             |
+| decimals | number | Number of decimals into which the token is divided.                                    |
+| symbol   | string | Official abbreviation representing the token in wallets, exchanges, and documentation. |
 
 ### Multi Release Escrow Flow:
 
