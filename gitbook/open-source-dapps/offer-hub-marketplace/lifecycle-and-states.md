@@ -21,9 +21,8 @@ OfferHub maintains an off-chain **Order** lifecycle that mirrors the on-chain es
 
 * Created
 * Funded
-* Milestone Done
+* Delivery Done (Milestone Update)
 * Approved or Disputed
 * Released or Refunded
-* Closed
 
 OfferHub treats the escrow contract as the source of truth for funds movement.

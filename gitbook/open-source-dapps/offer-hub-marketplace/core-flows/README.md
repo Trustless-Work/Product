@@ -8,4 +8,4 @@ These flows describe the end-to-end lifecycle of a marketplace transaction.
 * [Purchase & Escrow Funding](purchase-and-escrow-funding.md)
 * [Delivery & Approval](delivery-and-approval.md)
 * [Disputes](disputes.md)
-* [Payouts](payouts.md)
+* [Payouts](release-and-payouts.md)

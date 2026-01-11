@@ -2,9 +2,9 @@
 description: Stablecoin-powered marketplace
 ---
 
-# Offer Hub (proposal)
+# Offer Hub Marketplace
 
-OfferHub is an open-source reference implementation for building stablecoin-powered marketplaces on Stellar with a fully abstracted, Web2-like UX.
+OfferHub is an open-source reference implementation for building stablecoin-powered marketplaces on Stellar with a fully abstracted, Web2-like UX. This initiative aims to&#x20;
 
 OfferHub composes three systems:
 
@@ -21,7 +21,7 @@ This documentation explains how OfferHub works so builders can fork it, deploy i
 * **Abstract stablecoins completely** from end users.
 * **Non-custodial escrow enforcement** on Stellar.
 * **User-level accounts** (no pooled platform treasury for user funds).
-* **Explicit dispute workflow** with platform customer support as resolver.
+* **Explicit dispute workflow** with platform customer support as resolver (using the Bakcoffice dApp)
 * **Open-source reference** that others can copy and modify.
 
 ***
@@ -58,6 +58,15 @@ OfferHub separates concerns into three layers:
 * dispute case management (support workflow)
 * events/webhooks processing
 * audit log and backoffice controls
+
+4. **Backoffice Operations and Auditing (backoffice dApp)**
+
+* Dispute resolving
+* Manual releases
+
+5. **Escrow Viewer dApp**
+
+* Decentralized Escrow Status viewer
 
 ***
 
