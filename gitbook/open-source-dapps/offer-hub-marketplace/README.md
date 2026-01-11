@@ -2,7 +2,7 @@
 description: Stablecoin-powered marketplace
 ---
 
-# Offer Hub Marketplace
+# 🤝 Offer Hub Marketplace
 
 OfferHub is an open-source reference implementation for building stablecoin-powered marketplaces on Stellar with a fully abstracted, Web2-like UX. This initiative aims to&#x20;
 

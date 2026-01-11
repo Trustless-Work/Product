@@ -1,7 +1,11 @@
 # 🏴‍☠️ Community & Contribution
 
 Notice: \
-Only Dust, the platform we were using for managing OS contributions sunset their web3 programs. We are currently publishing issues on Grantfox.xyz: [https://contribute.grantfox.xyz/campaigns/org/Trustless-Work](https://contribute.grantfox.xyz/campaigns/org/Trustless-Work)\
+Only Dust, the platform we were using for managing OS contributions sunset their web3 programs.&#x20;
+
+We are currently publishing issues on Grantfox.xyz and Drips: [https://contribute.grantfox.xyz/campaigns/org/Trustless-Work](https://contribute.grantfox.xyz/campaigns/org/Trustless-Work)\
+Drips Link coming soon!
+
 \
 &#x20;join us in TG!&#x20;
 

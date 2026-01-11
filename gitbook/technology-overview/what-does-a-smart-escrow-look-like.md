@@ -93,5 +93,5 @@ The difference is:
 * Choose [Escrow Type](escrow-types.md)
 * Assign [Roles](roles-in-trustless-work.md)
 * Follow [Lifecycle Phases](escrow-lifecycle/)
-* Test configs in [deploy in dApp](../open-source-dapps/backoffice-dapp-overview/)
+* Test configs in [deploy in dApp](../open-source-dapps/backoffice-dapp/)
 

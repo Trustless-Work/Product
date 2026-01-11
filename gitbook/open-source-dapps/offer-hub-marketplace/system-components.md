@@ -31,7 +31,7 @@
 
 ### Backoffice&#x20;
 
-For this prototype it is expected that the dispute resolving and manual releases through our [Bakcoffice dApp](../backoffice-dapp-overview/). We will also leverage the [escrow viewer](../escrow-viewer.md).
+For this prototype it is expected that the dispute resolving and manual releases through our [Bakcoffice dApp](../backoffice-dapp/). We will also leverage the [escrow viewer](../escrow-viewer.md).
 
 * Dispute case management
 * Manual overrides and retries
