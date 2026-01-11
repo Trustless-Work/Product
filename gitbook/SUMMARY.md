@@ -175,6 +175,7 @@
     * [Project Manager Flow (Dashboard dApp)](open-source-dapps/tokenization-private-credit/project-manager-flow-dashboard-dapp.md)
     * [Investor Flow (Investor Portal dApp)](open-source-dapps/tokenization-private-credit/investor-flow-investor-portal-dapp.md)
     * [Future Roadmap](open-source-dapps/tokenization-private-credit/future-roadmap.md)
+  * [GrantFox](open-source-dapps/grantfox.md)
 * [🌍 Use Cases by Industry](use-cases-unlocking-the-potential-of-smart-escrows/README.md)
   * [Marketplaces & E-commerce](use-cases-unlocking-the-potential-of-smart-escrows/marketplaces-and-e-commerce.md)
   * [P2P Exchanges and OTC Desks](use-cases-unlocking-the-potential-of-smart-escrows/p2p-exchanges-and-otc-desks.md)
