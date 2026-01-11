@@ -8,7 +8,7 @@ OfferHub is an open-source reference implementation for building stablecoin-powe
 
 OfferHub composes three systems:
 
-* **Airtm**: user accounts, deposits, withdrawals, compliance-aware rails
+* **Airtm**: user accounts, deposits, withdrawals, compliance-aware rails. [Learn more. ](https://api.enterprise.airtm.com/docs#v2/)
 * **Trustless Work**: non-custodial escrow engine + disputes
 * **Stellar (USDC)**: settlement and enforcement layer
 
