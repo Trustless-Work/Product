@@ -4,7 +4,7 @@ description: >-
   Pura Vida.
 ---
 
-# Tokenization Hackathon
+# 💥 Tokenization - Private Credit
 
 {% embed url="https://www.loom.com/share/08e5ef97f94f42d1b80bebac733a6383" %}
 

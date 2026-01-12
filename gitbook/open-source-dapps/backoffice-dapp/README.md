@@ -2,39 +2,33 @@
 description: Interact with Escrows Seamlessly
 ---
 
-# 🤖 Backoffice dApp Overview
+# 🤖 Backoffice dApp
 
 ### **Introduction**
 
 {% embed url="https://youtu.be/wps4iH_qtrA" %}
 
-The Backoffice dApp  is the visual interface for interacting with the **Trustless Work Escrow API**. It serves as a **back-office for the escrow lifecycle**, allowing users, developers, and platforms to:\
-✅ **Deploy** an escrow\
-✅ **Sign** transactions\
-✅ **Approve** milestones\
-✅ **Release** funds\
-✅ **Resolve disputes**
+The Backoffice dApp  is a visual interface for interacting with **Trustless Work Escrows**. It serves as a **back-office for the complete escrow lifecycle**, allowing users, developers, and platforms to:
 
-This tutorial will guide you through the **full escrow lifecycle** using the **Dapp UI**, breaking it into structured **phases** for clarity.
+* **Deploy** an escrow
+* **Sign** transactions
+* **Approve** milestones
+* **Release** funds
+* **Resolve disputes**
+
+This tutorial will guide you through the **full** [**escrow lifecycle**](../../technology-overview/escrow-lifecycle/) using it.&#x20;
 
 ***
 
-### **1. Getting Started**
+### **1. Prerequisite**
 
-Before using the Dapp, ensure you have the necessary **prerequisites**:
+This is a web3 dApp, which mean you must connect a **Stellar-compatible wallet**. Learn how to get one in the [Stellar wallets section](../../stellar-and-soroban-the-backbone-of-trustless-work/stellar-wallets/).&#x20;
 
-#### **1.1. Stellar Wallet Setup**
+#### **1.2.  Tokens & Trustlines**
 
-To log in, you must connect a **Stellar-compatible wallet**. Read more in the [Stellar wallets section](../../stellar-and-soroban-the-backbone-of-trustless-work/stellar-wallets/).&#x20;
+The Dapp currently works both on Mainnet and Testnet.&#x20;
 
-#### **1.2. Getting Testnet Tokens**
-
-The Dapp currently operates on **Stellar Testnet**, so you’ll need:
-
-* **XLM** (for transaction fees)
-* **USDC** (to test escrow functionality)
-
-Learn more at. [Get Testnet Tokens](./#id-1.2.-getting-testnet-tokens)
+You will need xlm, and an approved [Trustline](../../stellar-and-soroban-the-backbone-of-trustless-work/trustlines.md) to the asset you will use for this to work (for the   network you are going to use it). We limited the&#x20;
 
 ***
 
@@ -48,9 +42,9 @@ This section walks through the structured process of managing a transaction usin
 
 #### **2.1. Initiation Phase**
 
-📌 **Goal:** Define the escrow agreement and configure its parameters.
+**Goal:** Define the escrow agreement and configure its parameters.
 
-* Select **parties involved** (payer, receiver, approver, etc.).
+* Assign [**roles**](../../technology-overview/roles-in-trustless-work.md) (payer, receiver, approver, etc.).
 * Set **milestones** and **funding conditions**.
 * Deploy the **smart escrow contract**.
 
@@ -60,7 +54,7 @@ This section walks through the structured process of managing a transaction usin
 
 #### **2.2. Funding Phase**
 
-📌 **Goal:** Deposit funds into the escrow, securing the transaction.
+**Goal:** Deposit funds into the escrow, securing the transaction.
 
 * The **payer** deposits funds (USDC/XLM).
 * The escrow **status updates** to reflect the deposit.
@@ -72,7 +66,7 @@ This section walks through the structured process of managing a transaction usin
 
 #### **2.3. Milestone Updates Phase**
 
-📌 **Goal:** Track progress and mark work as completed.
+**Goal:** Track progress and mark work as completed.
 
 * The **service provider** updates milestone completion.
 * Status changes to **"Pending Approval"**.
@@ -83,7 +77,7 @@ This section walks through the structured process of managing a transaction usin
 
 #### **2.4. Approval Phase**
 
-📌 **Goal:** Approve or dispute completed milestones.
+**Goal:** Approve or dispute completed milestones.
 
 * The **payer or designated approver** reviews milestone progress.
 * If approved, funds move to **pending release**.
@@ -95,7 +89,7 @@ This section walks through the structured process of managing a transaction usin
 
 #### **2.5. Release Phase**
 
-📌 **Goal:** Finalize the escrow transaction by releasing funds.
+**Goal:** Finalize the escrow transaction by releasing funds.
 
 * Upon milestone approval, funds are **automatically released** to the service provider.
 * The escrow **status updates** to "Completed."
@@ -111,23 +105,10 @@ Some transactions require additional steps:
 
 #### **3.1. Dispute Resolution Phase**
 
-📌 **Goal:** Resolve conflicts when a milestone is disputed.
+**Goal:** Resolve conflicts when a milestone is disputed.
 
 * The **dispute resolver** evaluates the case.
 * Adjustments are made based on the ruling.
 * Funds are either **released, partially released, or refunded**.
 
 [➡️ Step-by-step guide for Dispute Resolution](resolving-disputes.md)
-
-***
-
-### **4. Additional Resources**
-
-📖 **Guides & Tutorials**
-
-* How to Set Up a Stellar Wallet
-* How to Get Testnet Tokens
-* Understanding Escrow Roles
-
-***
-
