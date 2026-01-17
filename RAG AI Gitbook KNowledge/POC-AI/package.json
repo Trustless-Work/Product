@@ -43,7 +43,7 @@
     "react-hook-form": "^7.54.1",
     "react-markdown": "^9.0.1",
     "react-syntax-highlighter": "^15.6.1",
-    "supabase": "^2.0.0",
+    "supabase": "^2.72.8",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.24.1"
