@@ -148,12 +148,17 @@ export type MultiReleaseMilestone = BaseMilestone & {
 /**
  * Trustline
  */
-export interface Trustline {
+export type Trustline = {
+  /**
+   * Symbol of the token, example: USDC, EURC, etc...
+   */
+  symbol: string;
+
   /**
    * Public address establishing permission to accept and use a specific token.
    */
   address: string;
-}
+};
 ```
 
 ### Flags
