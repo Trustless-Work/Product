@@ -2,43 +2,44 @@
 
 Trustless Work is built for developers, platforms, and agents who want **more control and automation** over when funds are released.
 
-***
-
-### 🧱 Platforms Using Stablecoins
+### Platforms using stablecoins
 
 Examples:
 
-* Gig and freelance platforms (e.g. milestone payments)
-* B2B tools using USDC for global payouts
+* Gig and freelance platforms (milestone payouts)
+* B2B tools using USDC for global settlement
 * Rental and booking platforms (security deposits)
 
-Value:
+Why it fits:
 
-* Reduce fraud, automate disbursements, lower cost
+* Reduce fraud
+* Automate releases and disbursements
+* Lower operational cost
 
-***
-
-### 🧑‍💻 Builders & Product Teams
+### Builders and product teams
 
 Examples:
 
-* Solo devs or teams prototyping dApps
-* DAO tools, donation platforms, web3 marketplaces
+* Solo devs or small teams prototyping dApps
+* DAO tooling, donation platforms, on-chain marketplaces
 
-Value:
+Why it fits:
 
 * Plug-and-play escrow logic
-* Start on testnet, go live without audit headaches
+* Start on testnet, then go live without re-architecting
 
-***
-
-### 🏢 Enterprise Use
+### Enterprise use
 
 Examples:
 
-* Platforms with escrow-like flows (but no infrastructure)
-* Projects looking to replace costly custodial services
+* Platforms with escrow-like flows but no escrow infrastructure
+* Teams replacing costly custodial services with on-chain escrow
 
-Value:
+Why it fits:
 
-* Save time and legal risk by using programmable, auditable escrows
+* Less legal and operational risk than custody
+* Programmable, auditable escrow behavior
+
+### Next steps
+
+* Build your first flow: [Developer Quickstart](../api-reference/getting-started.md)

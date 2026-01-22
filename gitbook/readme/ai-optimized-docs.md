@@ -17,52 +17,43 @@ layout:
 
 # AI optimized docs
 
-Trustless Work documentation isn’t just written for humans.\
-It’s **structured for agents, copilots, and AI models** to understand, remix, and build on top of.
+Trustless Work docs are written for humans **and** for machines.
 
-***
+Humans get clarity, precision, and examples. Agents get structure, consistency, and predictable semantics.
 
-Every page in our documentation is written for both:
+### Why this matters
 
-* **Humans** who want clarity, precision, and examples.
-* **Machines** that need structure, consistency, and semantics.
+The next generation of builders won’t just code. They’ll prompt, automate, and delegate work to agents.
 
-***
+An AI-ready doc set lets you:
 
-#### Why It Matters
+* Export content for training and internal copilots.
+* Feed pages into your LLM memory or RAG pipeline.
+* Let agents reason through flows and generate SDK/API calls.
 
-The next generation of builders won’t just code — they’ll **prompt**.\
-Trustless Work is optimized for that.\
-Our docs follow an **AI-ready format**, meaning you can:
+{% hint style="info" %}
+Goal: make the documentation itself a building block for automation.
+{% endhint %}
 
-* Export any page in **Markdown or PDF** for training datasets.
-* Feed it directly into your **custom copilot or LLM memory**.
-* Let your AI agents read the docs, **reason through flows**, and even **execute API calls** using your keys and roles.
+### Export formats
 
-> 🧠 Our goal: make the documentation itself a building block for automation.
-
-***
-
-#### Export & Train
-
-You can export any section of this documentation into:
+You can export any section of the docs as PDF or Markdown.
 
 <figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
 
-* **PDF** – for reference and onboarding manuals
-* **Markdown (.md)** – for AI ingestion or context injection
-* **Prompt blocks** – pre-formatted snippets that can be pasted into GPT, Cursor, or v0.dev
+* **PDF** for onboarding manuals and reference packs.
+* **Markdown (.md)** for ingestion and context injection.
+* **Prompt blocks** for pasting into GPT, Cursor, or v0.dev.
 
-> 💡 Use the SDK subpage under VibeCoding to see live examples of AI prompts generating, debugging, and deploying escrow flows automatically.
+{% hint style="success" %}
+Check the SDK pages for prompt-first workflows that generate and debug escrow flows.
+{% endhint %}
 
-***
+### Ask the docs (search)
 
-#### Ask the Docs
+Search is optimized for natural language. Use intent-focused prompts, not just keywords.
 
-The docs themselves are **AI-trained and search-optimized**.\
-That means the search bar understands **natural language and intent** — not just keywords.
-
-Try prompts like:
+Example prompts:
 
 ```
 fund a multi-release escrow with testnet USDC
@@ -70,7 +61,6 @@ create an SDK snippet to mark milestone as done
 explain the difference between approver and release signer
 ```
 
-> The system will reformat your question into a structured query, returning optimized snippets, SDK calls, or workflow examples.
-
-***
-
+{% hint style="info" %}
+Search rewrites your question into a structured query and returns the best snippets.
+{% endhint %}
