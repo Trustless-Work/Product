@@ -1,7 +1,7 @@
 # Table of contents
 
-* [Untitled](README.md)
-  * [👾 AI optimized docs](readme/ai-optimized-docs.md)
+* [👋 Welcome](README.md)
+  * [AI optimized docs](readme/ai-optimized-docs.md)
   * [Why Escrows Matter](readme/why-escrows-matter.md)
   * [Who Should Use This](readme/who-should-use-this.md)
   * [Links](readme/links.md)

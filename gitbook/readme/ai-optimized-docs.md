@@ -15,7 +15,7 @@ layout:
     visible: true
 ---
 
-# 👾 AI optimized docs
+# AI optimized docs
 
 Trustless Work documentation isn’t just written for humans.\
 It’s **structured for agents, copilots, and AI models** to understand, remix, and build on top of.
