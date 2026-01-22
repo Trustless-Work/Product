@@ -1,14 +1,28 @@
 ---
 icon: hand-wave
 cover: .gitbook/assets/Banner (1).png
-coverY: 0
+coverY: 58.30186448874322
+coverHeight: 243
+layout:
+  width: default
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: false
+  description:
+    visible: false
+  tableOfContents:
+    visible: false
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: false
 ---
 
-# Welcome
-
-{% hint style="success" %}
-Our docs are optimized to be exported as context for any AI! You can also ask on the search bar!
-{% endhint %}
+# Untitled
 
 ## Welcome to Trustless Work Documentation!
 
