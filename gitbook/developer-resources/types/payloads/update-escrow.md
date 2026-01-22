@@ -144,10 +144,15 @@ export type UpdateSingleReleaseEscrowPayload = {
       approved?: boolean;
     };
 
-    /**
+   /**
      * Information on the trustline that will manage the movement of funds in escrow
      */
-    trustline: {
+    trustline: {   
+     /**
+       * Symbol of the token, example: USDC, EURC, etc...
+       */
+      symbol: string;
+  
       /**
        * Public address establishing permission to accept and use a specific token.
        */
