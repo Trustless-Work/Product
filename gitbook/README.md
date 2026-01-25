@@ -18,45 +18,34 @@ layout:
 
 # 👋 Welcome
 
-Trustless Work is **Escrow-as-a-Service (EaaS)** for **stablecoin escrow** (including **USDC escrow**). It lets you build **non-custodial escrow** flows with **milestone-based payments**.
+Trustless Work is **Escrow-as-a-Service (EaaS)** for **stablecoin escrow**. Build **non-custodial** flows with **milestones**, approvals, and disputes. Contracts run on **Stellar (Soroban)**. Your app drives them via API or SDK.
 
-You deploy and manage escrow smart contracts on **Stellar (Soroban)**. You integrate via the **Trustless Work API** and optional **React SDK**.
+### Start here
 
-***
+<table data-view="cards"><thead><tr><th>Topic</th><th data-card-target data-type="content-ref">Link</th></tr></thead><tbody><tr><td>Developer Quickstart</td><td><a href="/broken/spaces/Dg2e2YCRmNlhCnxxmEb6/pages/bknsGrFeT0G5xw1ebl4u">Broken link</a></td></tr><tr><td>Request an API key</td><td><a href="introduction/developer-resources/request-api-key.md">request-api-key.md</a></td></tr><tr><td>REST API basics (base URLs, limits, Swagger)</td><td><a href="api-rest/introduction.md">introduction.md</a></td></tr><tr><td>React SDK (hooks)</td><td><a href="escrow-react-sdk/getting-started.md">getting-started.md</a></td></tr><tr><td>Escrow Blocks SDK (UI blocks)</td><td><a href="escrow-blocks-sdk/getting-started.md">getting-started.md</a></td></tr><tr><td>Escrow concepts (roles, lifecycle, types)</td><td><a href="introduction/technology-overview/">technology-overview</a></td></tr><tr><td>Stellar rails (trustlines, wallets)</td><td><a href="introduction/stellar-and-soroban-the-backbone-of-trustless-work/">stellar-and-soroban-the-backbone-of-trustless-work</a></td></tr><tr><td>Use cases by industry</td><td><a href="use-cases-by-indutry/introduction.md">introduction.md</a></td></tr><tr><td>All links (docs, tools, external)</td><td><a href="introduction/readme/links.md">links.md</a></td></tr></tbody></table>
 
-### What you can do with the Trustless Work escrow API
+### What you can build
 
 * Hold funds in escrow using **non-custodial smart contracts**.
-* Add **programmable escrow logic** to your app or marketplace.
-* Support **milestones**, approvals, releases, and **dispute resolution**.
-* Configure **roles and permissions** for each signer.
-* Ship faster without building escrow contracts from scratch.
-
-***
-
-### What’s inside these docs
-
-* [Developer Quickstart](/broken/spaces/Dg2e2YCRmNlhCnxxmEb6/pages/bknsGrFeT0G5xw1ebl4u) for your first escrow flow.
-* [Trustless Work API](/broken/spaces/Dg2e2YCRmNlhCnxxmEb6/pages/ZzuxcJ2Y0YqqSIjhhxFP) for endpoints, schemas, and helpers.
-* [Escrow Design](introduction/technology-overview/) for roles, lifecycle, and escrow types.
-* [Trustless Work SDK](/broken/spaces/Dg2e2YCRmNlhCnxxmEb6/pages/JAPmazRMghvqRWwnUHBB) for React hooks and integration patterns.
-* [Stellar Network](introduction/stellar-and-soroban-the-backbone-of-trustless-work/) for trustlines, wallets, and token rails.
-* [Use Cases by Industry](/broken/spaces/Dg2e2YCRmNlhCnxxmEb6/pages/duJdirIwIDpc71qO8Df9) for real-world escrow products.
-
-***
+* Add **programmable release logic** to your app or marketplace.
+* Support **milestones**, approvals, partial releases, and disputes.
+* Configure **roles and permissions** per signer.
+* Launch faster without writing escrow contracts from scratch.
 
 ### Common escrow use cases
 
-* **Marketplace escrow** for e-commerce and service marketplaces.
-* **Freelance and contract escrow** with milestone approvals and partial releases.
-* **Security deposits** for rentals and reservations.
-* **Crowdfunding and pre-orders** with conditional payout rules.
-* **Grant payouts** and programmatic disbursements.
-
-***
+* Marketplace escrow for e-commerce and services.
+* Freelance and contract escrow with milestone payouts.
+* Security deposits for rentals and reservations.
+* Crowdfunding and pre-orders with conditional payouts.
+* Grants and programmatic disbursements.
 
 ### Try it in minutes
 
-* Get credentials: [Request API Key](introduction/developer-resources/request-api-key.md)
-* Explore the demo dApp: [demo.trustlesswork.com](https://demo.trustlesswork.com/)
-* Clone the starter repo: [github.com/Trustless-Work](https://github.com/Trustless-Work)
+<a href="https://dapp.trustlesswork.com/" class="button primary">Open Backoffice dApp</a>
+
+<a href="https://demo.trustlesswork.com/" class="button secondary">Open demo dApp</a>
+
+<a href="https://api.trustlesswork.com/docs" class="button secondary">Open Swagger (Mainnet)</a>
+
+<a href="https://github.com/Trustless-Work" class="button secondary">View GitHub</a>
