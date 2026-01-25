@@ -1,13 +1,21 @@
-# 📚 React Library
+# 📚 Trustless Work SDK
 
-## Overview
+### Quick links
 
-Welcome to the our React Library Reference. This documentation provides details on how to interact with our API by using our library in the simplest way.
+<table data-view="cards"><thead><tr><th>Title</th><th data-card-target data-type="content-ref">Link</th></tr></thead><tbody><tr><td>Getting started</td><td><a href="getting-started-sdk.md">getting-started-sdk.md</a></td></tr><tr><td>Request an API key</td><td><a href="../developer-resources/request-api-key.md">request-api-key.md</a></td></tr><tr><td>API basics (base URLs, Swagger, limits)</td><td><a href="../api-reference/introduction.md">introduction.md</a></td></tr><tr><td>NPM package</td><td><a href="https://www.npmjs.com/package/@trustless-work/escrow">https://www.npmjs.com/package/@trustless-work/escrow</a></td></tr><tr><td>GitHub repo</td><td><a href="https://github.com/Trustless-Work/react-library-trustless-work">https://github.com/Trustless-Work/react-library-trustless-work</a></td></tr></tbody></table>
 
-***
+### Overview
 
-## Links
+This SDK is a React/TypeScript client for Trustless Work.
 
-{% embed url="https://www.npmjs.com/package/@trustless-work/escrow" %}
+It wraps the Trustless Work API with hooks and typed payloads.
 
-{% embed url="https://github.com/Trustless-Work/react-library-trustless-work" %}
+{% hint style="info" %}
+Most write calls return an **unsigned XDR**. Your app must sign it client-side.
+{% endhint %}
+
+### What you’ll do with the SDK
+
+* Initialize escrows (single-release or multi-release).
+* Fund, approve, change milestone status, release, dispute, resolve.
+* Query and index escrows with helper endpoints.

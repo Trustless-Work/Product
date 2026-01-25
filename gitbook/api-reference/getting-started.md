@@ -9,11 +9,11 @@ coverY: 0
 
 # 🚀 Developer Quickstart
 
-{% hint style="success" %}
-Hello! This page is optimized to be exported and loaded to your AI Agent of choice! you can also use ours in the Search Bar!
-{% endhint %}
+### Quick links
 
-### 🚀 What Is Trustless Work?
+<table data-view="cards"><thead><tr><th>Title</th><th data-card-target data-type="content-ref">Link</th></tr></thead><tbody><tr><td>Try the Demo (no code)</td><td><a href="https://demo.trustlesswork.com/">https://demo.trustlesswork.com/</a></td></tr><tr><td>API basics (base URLs, Swagger, limits)</td><td><a href="introduction.md">introduction.md</a></td></tr><tr><td>Request an API key</td><td><a href="../developer-resources/request-api-key.md">request-api-key.md</a></td></tr><tr><td>Escrow roles</td><td><a href="../technology-overview/roles-in-trustless-work.md">roles-in-trustless-work.md</a></td></tr><tr><td>GitHub</td><td><a href="https://github.com/Trustless-Work">https://github.com/Trustless-Work</a></td></tr></tbody></table>
+
+### What is Trustless Work?
 
 Trustless Work is an Escrow-as-a-Service (EaaS) platform designed for the stablecoin economy. It lets you securely hold funds in non-custodial smart contracts until milestones are completed and approved.
 
@@ -23,137 +23,134 @@ Use it to:
 * Enable transparent fund releases for services, grants, rentals, etc.
 * Automate fund flows using signer-based roles
 
-### 🧪 Quickstart — Deploy Your First Escrow
+{% hint style="info" %}
+Most write calls return an **unsigned XDR**. Your client signs it with the wallet for the role.
+{% endhint %}
 
-▶ [Try the Demo](https://demo.trustlesswork.com/) — No code required
+### Quickstart (demo): deploy your first escrow
 
-#### Pre-requisites
+Use this if you want to see the full lifecycle end-to-end.
+
+#### Prerequisites
 
 * [Freighter](https://www.freighter.app/) wallet
-* Testnet USDC + XLM ([Get test tokens](https://docs.trustlesswork.com/tools-and-utilities/testnet-tokens))
+* Testnet USDC + XLM ([Testnet tokens](../stellar-and-soroban-the-backbone-of-trustless-work/testnet-tokens.md))
 
-#### Step-by-Step
+{% stepper %}
+{% step %}
+### Open the demo
 
-1. Open the [demo app](https://demo.trustlesswork.com/)
-2. Fill in escrow details (roles, milestones)
-3. Click deploy → sign the transaction
-4. Send testmet USDC to the escrow contract address
-5. Mark, approve, and release milestones from the UI
+Go to [demo.trustlesswork.com](https://demo.trustlesswork.com/) and connect your wallet.
+{% endstep %}
 
-***
+{% step %}
+### Configure the escrow
 
-### ✍️ 2. Design Your Escrow Lifecycle
+Set roles and milestones.
+{% endstep %}
 
-Before deploying, define:
+{% step %}
+### Deploy and sign
 
-* Who can **mark milestones** as done
-* Who must **approve work**
-* Who can **release funds**
-* Who can **resolve disputes**
+Click **Deploy** and sign the transaction in your wallet.
+{% endstep %}
 
-→ [Escrow Roles & Permissions](../technology-overview/roles-in-trustless-work.md)
+{% step %}
+### Fund with testnet USDC
 
-***
+Send testnet USDC to the escrow contract address shown in the UI.
+{% endstep %}
 
-### 📬 API Overview
+{% step %}
+### Run the flow
 
-Get your API key in our dApp: \
-[request-api-key.md](../developer-resources/request-api-key.md "mention")
+Mark milestones, approve, then release funds from the UI.
+{% endstep %}
+{% endstepper %}
 
-The Trustless Work API is your gateway to deploy and manage decentralized smart escrows on the Stellar blockchain using Soroban smart contracts. All interactions return unsigned XDRs, which must be signed client-side using the wallet associated with the correct role.
+### Design your escrow lifecycle
 
-**📘 Base URL:** `https://api.trustlesswork.com`
+Define roles first. Everything else becomes simpler.
 
-***
+* Who marks milestones as done
+* Who approves work
+* Who releases funds
+* Who resolves disputes
 
-#### 🔨 Deployment
+Read: [Roles in Trustless Work](../technology-overview/roles-in-trustless-work.md)
 
-| Method | Endpoint                   | Description                     |
-| ------ | -------------------------- | ------------------------------- |
-| POST   | `/deployer/single-release` | Deploys a single-release escrow |
-| POST   | `/deployer/multi-release`  | Deploys a multi-release escrow  |
+### API overview
 
-***
+Get the basics here: [Introduction](introduction.md).
 
-#### 💸 Funding
+Get a key here: [Request API Key](../developer-resources/request-api-key.md).
 
-| Method | Endpoint                     | Description                   |
-| ------ | ---------------------------- | ----------------------------- |
-| POST   | `/escrow/{type}/fund-escrow` | Returns XDR to fund an escrow |
+{% hint style="warning" %}
+Every write action must be signed by the wallet that holds the corresponding escrow role.
+{% endhint %}
 
-***
+<details>
 
-#### ✅ Milestone Handling
+<summary>Endpoints (grouped)</summary>
 
-| Method | Endpoint                                 | Description                             |
-| ------ | ---------------------------------------- | --------------------------------------- |
-| POST   | `/escrow/{type}/approve-milestone`       | Approve a milestone                     |
-| POST   | `/escrow/{type}/change-milestone-status` | Mark a milestone as complete/incomplete |
+#### Deployment
 
-***
+* `POST /deployer/single-release` — Deploy a single-release escrow
+* `POST /deployer/multi-release` — Deploy a multi-release escrow
 
-#### 🏁 Finalization
+#### Funding
 
-| Method | Endpoint                                 | Description                   |
-| ------ | ---------------------------------------- | ----------------------------- |
-| POST   | `/escrow/{type}/release-funds`           | Release all funds (single)    |
-| POST   | `/escrow/{type}/release-milestone-funds` | Release one milestone (multi) |
+* `POST /escrow/{type}/fund-escrow` — Returns XDR to fund an escrow
 
-***
+#### Milestones
 
-#### ⚠️ Disputes
+* `POST /escrow/{type}/approve-milestone` — Approve a milestone
+* `POST /escrow/{type}/change-milestone-status` — Mark milestone complete/incomplete
 
-| Method | Endpoint                                   | Description                             |
-| ------ | ------------------------------------------ | --------------------------------------- |
-| POST   | `/escrow/{type}/dispute-escrow`            | Raise a dispute on a single escrow      |
-| POST   | `/escrow/{type}/resolve-dispute`           | Resolve a single-release escrow dispute |
-| POST   | `/escrow/{type}/dispute-milestone`         | Raise dispute on a milestone            |
-| POST   | `/escrow/{type}/resolve-milestone-dispute` | Resolve milestone dispute (multi)       |
+#### Finalization
 
-***
+* `POST /escrow/{type}/release-funds` — Release all funds (single-release)
+* `POST /escrow/{type}/release-milestone-funds` — Release one milestone (multi-release)
 
-#### 🔄 Escrow Updates
+#### Disputes
 
-| Method | Endpoint                       | Description                   |
-| ------ | ------------------------------ | ----------------------------- |
-| POST   | `/escrow/{type}/update-escrow` | Update escrow metadata/config |
+* `POST /escrow/{type}/dispute-escrow` — Raise a dispute on a single escrow
+* `POST /escrow/{type}/resolve-dispute` — Resolve a single-release escrow dispute
+* `POST /escrow/{type}/dispute-milestone` — Raise a dispute on a milestone
+* `POST /escrow/{type}/resolve-milestone-dispute` — Resolve milestone dispute (multi-release)
 
-***
+#### Escrow updates
 
-#### 📊 Query & Tracking
+* `POST /escrow/{type}/update-escrow` — Update escrow metadata/config
 
-| Method | Endpoint                              | Description                            |
-| ------ | ------------------------------------- | -------------------------------------- |
-| GET    | `/escrow/get-multiple-escrow-balance` | Batch balances for many escrows        |
-| GET    | `/helper/get-escrows-by-signer`       | Query escrows associated with a signer |
-| GET    | `/helper/get-escrows-by-role`         | Query escrows by role assignment       |
+#### Query & tracking
 
-***
+* `GET /escrow/get-multiple-escrow-balance` — Batch balances for many escrows
+* `GET /helper/get-escrows-by-signer` — Query escrows associated with a signer
+* `GET /helper/get-escrows-by-role` — Query escrows by role assignment
 
-#### 🧰 Helper Utilities
+#### Helpers
 
-| Method | Endpoint                   | Description                            |
-| ------ | -------------------------- | -------------------------------------- |
-| POST   | `/helper/set-trustline`    | Enable escrow wallet to accept a token |
-| POST   | `/helper/send-transaction` | Submit signed XDR to Stellar           |
+* `POST /helper/set-trustline` — Enable escrow wallet to accept a token
+* `POST /helper/send-transaction` — Submit signed XDR to Stellar
 
-***
+</details>
 
-> 📌 For full Swagger documentation, visit: [https://dev.api.trustlesswork.com/docs](https://dev.api.trustlesswork.com/docs)
->
-> All write actions must be signed by the wallet that holds the corresponding escrow role (marker, approver, releaser, resolver).
+### SDK (React / TypeScript)
 
-### 🧠 React SDK Integration
+Package: [`@trustless-work/escrow`](https://www.npmjs.com/package/@trustless-work/escrow)
 
-NPM: [`@trustless-work/escrow`](https://www.npmjs.com/package/@trustless-work/escrow)
-
+{% code title="Install" %}
 ```bash
-npm i @trustless-work/escrow
-
+npm install "@trustless-work/escrow"
 ```
+{% endcode %}
 
-#### Provider Setup
+{% hint style="info" %}
+Use `development` for testnet and `mainNet` for mainnet.
+{% endhint %}
 
+{% code title="TrustlessWorkProvider.tsx" %}
 ```tsx
 import {
   TrustlessWorkConfig,
@@ -168,31 +165,24 @@ export function TrustlessWorkProvider({ children }) {
     </TrustlessWorkConfig>
   );
 }
-
 ```
+{% endcode %}
 
-#### Wrap your app:
-
+{% code title="app/layout.tsx" %}
 ```tsx
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <TrustlessWorkProvider>
-          {children}
-        </TrustlessWorkProvider>
+        <TrustlessWorkProvider>{children}</TrustlessWorkProvider>
       </body>
     </html>
   );
 }
-
 ```
+{% endcode %}
 
-> Once wrapped, you can use the SDK's escrow hooks and mutation functions across your app.
-
-***
-
-### 🔑 Wallets & Passkeys
+### Wallets (roles)
 
 Every role (marker, approver, releaser, etc.) needs a Stellar-Soroban compatible wallet.
 
@@ -201,9 +191,7 @@ Supported wallets:
 * [Freighter](https://www.freighter.app/)
 * [Passkey Wallets](https://docs.trustlesswork.com/tools-and-utilities/passkey-wallets) _(biometric, contract-based)_
 
-***
-
-### 🔁 Escrow Lifecycle Explained
+### Escrow lifecycle (mental model)
 
 1. **Initiation** – Define roles, asset, and milestones
 2. **Funding** – Deposit stablecoins (USDC) into the contract
@@ -212,11 +200,11 @@ Supported wallets:
 5. **Release** – Funds are released
 6. **Dispute** – Optional: Resolver steps in
 
-> Each action requires a signature from the assigned wallet address.
+{% hint style="info" %}
+Each action requires a signature from the assigned wallet address.
+{% endhint %}
 
-***
-
-### 🧩 Roles & Permissions
+### Roles & permissions
 
 | Role             | Description                                  |
 | ---------------- | -------------------------------------------- |
@@ -227,55 +215,58 @@ Supported wallets:
 | Receiver         | Gets the released funds                      |
 | Platform Address | Receives a fee (optional, % of each release) |
 
-***
+### Escrow schema reference (compact)
 
-### 📐 Escrow Schema Reference (for agents & devs)
+<details>
 
-#### Shared Fields
+<summary>Shared fields</summary>
 
-| Key            | Type   | Description                               |
-| -------------- | ------ | ----------------------------------------- |
-| `engagementId` | string | Unique identifier for the escrow          |
-| `title`        | string | Name of the escrow                        |
-| `description`  | string | Description of the escrow's function      |
-| `roles`        | object | Role assignments: marker, approver, etc.  |
-| `platformFee`  | number | % fee for the platform                    |
-| `trustline`    | object | Token type (e.g., USDC, XLM) and decimals |
+| Key            | Type   | Description                                                      |
+| -------------- | ------ | ---------------------------------------------------------------- |
+| `engagementId` | string | Unique identifier for the escrow                                 |
+| `title`        | string | Escrow name                                                      |
+| `description`  | string | Escrow purpose                                                   |
+| `roles`        | object | Role assignments: marker, approver, releaser, resolver, receiver |
+| `platformFee`  | number | Platform fee percentage                                          |
+| `trustline`    | object | Asset metadata (e.g., USDC) and decimals                         |
 
-#### Milestone Object (for multi-release only)
+</details>
 
-| Field         | Type   | Description                           |
-| ------------- | ------ | ------------------------------------- |
-| `description` | string | What the milestone represents         |
-| `status`      | string | Status: approved, in\_dispute, etc.   |
-| `amount`      | number | Amount released upon approval         |
-| `evidence`    | string | (Optional) Supporting proof           |
-| `flags`       | object | Includes disputed, resolved, approved |
+<details>
 
-#### Trustline Object
+<summary>Milestone object (multi-release only)</summary>
 
-| Field     | Type   | Description             |
-| --------- | ------ | ----------------------- |
-| `address` | string | Token issuer or address |
+| Field         | Type   | Description                          |
+| ------------- | ------ | ------------------------------------ |
+| `description` | string | What the milestone represents        |
+| `status`      | string | Status (e.g., approved, in\_dispute) |
+| `amount`      | number | Amount released upon approval        |
+| `evidence`    | string | Optional supporting proof            |
+| `flags`       | object | Includes disputed/resolved/approved  |
 
-***
+</details>
 
-### 🛠 Developer Tools & Links
+<details>
 
-* 🔗 [API Docs](https://api.trustlesswork.com/docs)
-* 🧪 [Demo dApp](https://demo.trustlesswork.com/)
-* Github [https://github.com/Trustless-Work](https://github.com/Trustless-Work)
-* 📦 [React SDK (NPM)](https://www.npmjs.com/package/@trustless-work/escrow)
-* 📖 [Wallet Setup Guide](https://docs.trustlesswork.com/tools-and-utilities/stellar-wallets)
+<summary>Trustline object</summary>
 
-***
+| Field     | Type   | Description                      |
+| --------- | ------ | -------------------------------- |
+| `address` | string | Token issuer or contract address |
 
-### 🤝 Join the Ecosystem
+</details>
+
+### More resources
+
+* [API docs (Swagger)](https://api.trustlesswork.com/docs)
+* [Demo dApp](https://demo.trustlesswork.com/)
+* [React SDK (NPM)](https://www.npmjs.com/package/@trustless-work/escrow)
+* [Stellar wallets](../stellar-and-soroban-the-backbone-of-trustless-work/stellar-wallets/)
+
+### Join the ecosystem
 
 * 🧵 Twitter/X: [@trustlesswork](https://x.com/trustlesswork)
 * 🌐 Docs Hub: [docs.trustlesswork.com](https://docs.trustlesswork.com/)
-
-***
 
 > Built for the stablecoin economy. Open-source. Developer-first.
 

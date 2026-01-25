@@ -5,27 +5,44 @@ icon: play
 
 # Introduction
 
-## <mark style="color:orange;">Base URL</mark>
+### Base URLs
 
-Mainnet API
+{% tabs %}
+{% tab title="Mainnet" %}
+{% code title="Base URL (Mainnet)" %}
+```
+https://api.trustlesswork.com
+```
+{% endcode %}
+{% endtab %}
 
-> https://api.trustlesswork.com
+{% tab title="Testnet" %}
+{% code title="Base URL (Testnet)" %}
+```
+https://dev.api.trustlesswork.com
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
-Testnet API
+### Rate limits
 
-> https://dev.api.trustlesswork.com
+{% hint style="warning" %}
+Limit: **50 requests per 60 seconds** per client.
+{% endhint %}
 
-## <mark style="color:orange;">Warning!</mark>
+### API docs (Swagger)
 
-> You'll have <mark style="color:red;">**50**</mark> as a request rate limit per client in the API every 60 seconds.
+{% tabs %}
+{% tab title="Mainnet" %}
+{% embed url="https://api.trustlesswork.com/docs" %}
+{% endtab %}
 
-## GitHub Repository
+{% tab title="Testnet" %}
+{% embed url="https://dev.api.trustlesswork.com/docs" %}
+{% endtab %}
+{% endtabs %}
+
+### GitHub repository
 
 {% embed url="https://github.com/Trustless-Work" %}
-
-## API Swagger
-
-{% embed url="https://api.trustlesswork.com/docs" %}
-
-{% embed url="https://dev.api.trustlesswork.com/docs" %}
-
