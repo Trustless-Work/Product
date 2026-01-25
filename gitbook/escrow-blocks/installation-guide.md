@@ -18,9 +18,11 @@ layout:
 
 # Getting Started - Blocks
 
-## Overview
+### Overview
 
-Trustless Work React library is a collection of React hooks and entities. It combines the following packages:
+Trustless Work Blocks is a set of React UI blocks, hooks, and providers.
+
+It bundles (or expects) these core libraries:
 
 * [**react-hook-form**](https://react-hook-form.com/) — Performant, flexible library for managing forms in React.
 * [**zod**](https://zod.dev/) — TypeScript-first schema validation library.
@@ -36,11 +38,11 @@ Trustless Work React library is a collection of React hooks and entities. It com
 
 ***
 
-## Links
+### Links
 
 {% embed url="https://www.npmjs.com/package/@trustless-work/blocks" %}
 
-## Setup
+### Setup
 
 {% stepper %}
 {% step %}
@@ -66,7 +68,7 @@ yarn add @trustless-work/blocks
 {% step %}
 ### Initialize Configuration
 
-Setup your project with blocks
+Initialize your project with the CLI.
 
 {% tabs %}
 {% tab title="npm" %}
@@ -82,10 +84,10 @@ npx trustless-work init
 
 The next step is to configure the Trustless Work provider. You need to configure the following:
 
-* `baseURL`: Trustless Work URL, this should be the main or development environment. We provide `mainNet`and `development`constants. So you only need to import one of them and pass it to the baseURL prop.
+* `baseURL`: Trustless Work API URL. Use `mainNet` or `development`.
 * `apiKey`: Authorization provided by our dApp to use the API.
 
-Trustless Work React provides the `TrustlessWorkConfig` to provides all the custom hooks and entities to the whole project. To achieve this you'll need to create a Provider.
+Create a provider that wraps your app with `TrustlessWorkConfig`.
 
 {% code title="src/trustless-work-provider.tsx" overflow="wrap" fullWidth="true" %}
 ```typescript
@@ -122,12 +124,21 @@ export function TrustlessWorkProvider({
 
 ```
 {% endcode %}
+
+{% hint style="info" %}
+Read-only flows can work without an API key.\
+Write flows (deploy/fund/release/…) require a valid key.
+{% endhint %}
 {% endstep %}
 
 {% step %}
-### Wrap your App with Providers <a href="#wrap-app-with-providers" id="wrap-app-with-providers"></a>
+### Wrap your app with providers
 
-_**Absolutely must be used:**_ ReactQueryClientProvider | TrustlessWorkProvider | WalletProvider.
+You must wrap your app with these providers:
+
+* `ReactQueryClientProvider`
+* `TrustlessWorkProvider`
+* `WalletProvider`
 
 If you want to use some blocks, you should wrap your app with their providers. See more in: [Dependencies](https://blocks.trustlesswork.com/get-started/dependencies)
 {% endstep %}
@@ -137,7 +148,7 @@ If you want to use some blocks, you should wrap your app with their providers. S
 
 Add wallet connectivity to your app:
 
-```
+```sh
 npx trustless-work add wallet-kit
 ```
 

@@ -1,14 +1,18 @@
 # 👾 Vibe Coding - Blocks
 
+### VibeCoding guide (single-file AI context)
+
+Built for agent workflows.
+
+{% hint style="info" %}
+Export this page to PDF or Markdown.
+
+Then feed it to your copilot (Cursor, Claude, etc).
+{% endhint %}
+
 ***
 
-## ⚡ VibeCoding Guide — Escrow Blocks (Single-File AI Context)
-
-> This page is engineered for **bytecoders/agent workflows**. You can **export to PDF or Markdown** and feed it to your copilot, Cursor, or fine-tuning pipelines. Our docs are explicitly optimized to be exported as AI context and can be queried via the docs search bar in natural language.
-
-***
-
-### 0) What this file is
+### What this file is
 
 * **Purpose:** Give an AI (or a very fast human) all the context needed to install, wire, and use **Trustless Work Escrow Blocks** with Next.js.
 * **Scope:** Installation, required providers (order matters), commands to add blocks, example pages, dependency rules, actions, and troubleshooting.
@@ -16,7 +20,7 @@
 
 ***
 
-### 1) Quick mental model
+### Quick mental model
 
 * **Escrow Blocks** = prebuilt React components + hooks that talk to the Trustless Work API/SDK for escrow lifecycles.
 * **Providers** must wrap your app in a **specific order** (React Query → TW → Wallet → Escrow → Dialogs → Amount). Do not reorder.
@@ -24,7 +28,7 @@
 
 ***
 
-### 2) Project bootstrap (Next.js + Blocks)
+### Project bootstrap (Next.js + Blocks)
 
 #### 2.1 Create the app
 
@@ -55,7 +59,7 @@ What it does (summary):
 
 ***
 
-### 3) Environment
+### Environment
 
 Create `.env.local` (reads can work without a key; write flows need it):
 
@@ -68,7 +72,7 @@ NEXT_PUBLIC_API_KEY=your_api_key_here
 
 ***
 
-### 4) Provider stack (order is critical)
+### Provider stack (order is critical)
 
 > If you skipped CLI wiring, add these providers **in this exact order**.
 
@@ -109,7 +113,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 ***
 
-### 5) Add modules & blocks (CLI)
+### Add modules & blocks (CLI)
 
 Run these once per project:
 
@@ -136,7 +140,7 @@ npx trustless-work add escrows/escrows-by-role/cards
 
 ***
 
-### 6) Your first page (wallet + init + listings)
+### Your first page (wallet + init + listings)
 
 ```tsx
 // app/page.tsx
@@ -168,7 +172,7 @@ export default function Home() {
 
 ***
 
-### 7) Actions area: enabling the right buttons
+### Actions: enable the right buttons
 
 Inside listings’ **detail dialog**, some actions are **commented** so you can enable only what you need per escrow type:
 
@@ -178,7 +182,7 @@ return (
   <div className="flex items-start justify-start flex-col gap-2 w-full">
     {/* Render actions conditionally by flags + roles */}
     {hasConditionalButtons && (
-      <div className="flex flex-col gap-2 w/full">
+      <div className="flex flex-col gap-2 w-full">
         {/* Single-release only */}
         {/* {shouldShowEditButton && <UpdateEscrowDialog />} */}
         {/* {shouldShowDisputeButton && <DisputeEscrowButton />} */}
@@ -207,7 +211,7 @@ import { ReleaseEscrowButton } from "../../single-release/release-escrow/button/
 
 ***
 
-### 8) Dependency rules (practical)
+### Dependency rules (practical)
 
 **Listings (by role / by signer)** need:
 
@@ -221,7 +225,7 @@ import { ReleaseEscrowButton } from "../../single-release/release-escrow/button/
 
 ***
 
-### 9) Usage flow (testnet demo path)
+### Usage flow (testnet demo path)
 
 1. **Connect wallet** (Freighter).
 2. **Initialize escrow** (single or multi).
@@ -233,7 +237,7 @@ import { ReleaseEscrowButton } from "../../single-release/release-escrow/button/
 
 ***
 
-### 10) Troubleshooting (fast fixes)
+### Troubleshooting (fast fixes)
 
 * **Buttons do nothing / disabled:** Your account doesn’t have the required **role**, the **escrow state** doesn’t allow that action, or the escrow isn’t **funded/approved** yet.
 * **Hooks failing / context error:** Provider order is wrong. Compare with the canonical order here.
@@ -243,7 +247,7 @@ import { ReleaseEscrowButton } from "../../single-release/release-escrow/button/
 
 ***
 
-### 11) Minimal “Blocks Gallery” pattern (optional)
+### Minimal “Blocks Gallery” pattern (optional)
 
 A local gallery lets teammates see every block live:
 
@@ -259,9 +263,11 @@ A local gallery lets teammates see every block live:
 
 ***
 
-### 12) VibeCoding: prompt scaffolds (copy-paste)
+### Prompt scaffolds (copy-paste)
 
-**A) System prompt (one-time context)**
+<details>
+
+<summary><strong>A) System prompt (one-time context)</strong></summary>
 
 ```
 You are an expert Next.js + Trustless Work Escrow Blocks engineer.
@@ -272,7 +278,11 @@ Follow these rules:
 - When an escrow type is single vs multi, import the matching actions.
 ```
 
-**B) Task prompt (generate page + wiring)**
+</details>
+
+<details>
+
+<summary><strong>B) Task prompt (generate page + wiring)</strong></summary>
 
 ```
 Build a Next.js page that:
@@ -287,7 +297,11 @@ Use the provider order from app/layout.tsx and imports from:
 If a component uses hooks, ensure "use client" at top.
 ```
 
-**C) Debug prompt (when things break)**
+</details>
+
+<details>
+
+<summary><strong>C) Debug prompt (when things break)</strong></summary>
 
 ```
 Given provider order MUST be:
@@ -301,9 +315,11 @@ Identify why EscrowsByRoleCards actions are disabled. Check:
 Propose exact code edits.
 ```
 
+</details>
+
 ***
 
-### 13) Notes for AIs (indexing hints)
+### Notes for AIs (indexing hints)
 
 * **Important keywords:** Trustless Work, Escrow Blocks, single-release, multi-release, providers, WalletProvider, ReactQueryClientProvider, role-based actions, FundEscrowDialog, ApproveMilestoneDialog, ChangeMilestoneStatusDialog, ReleaseEscrowButton, ReleaseMilestoneButton, InitializeEscrowDialog.
 * **Do not reorder** providers. Quote this rule when suggesting edits.
@@ -311,7 +327,7 @@ Propose exact code edits.
 
 ***
 
-### 14) Appendix — canonical provider order (snippet)
+### Appendix: canonical provider order
 
 ```tsx
 <ReactQueryClientProvider>
@@ -329,11 +345,10 @@ Propose exact code edits.
 </ReactQueryClientProvider>
 ```
 
-Source reference for order requirement.
+This is the required provider order.
 
 ***
 
-#### License to remix
+### License to remix
 
 Use, copy, embed, and ship. If your agent needs more, point it at the full docs hub and API reference. The overall documentation explicitly supports AI export & semantic search.
-

@@ -17,23 +17,24 @@ layout:
 
 # 📓 Escrow Blocks
 
-A production-ready set of React blocks for integrating Trustless Work's escrow and dispute resolution flows.
+A production-ready set of React blocks for integrating Trustless Work’s escrow flows.
 
 {% hint style="info" %}
-Would you like to customize the blocks?\
-**You can do that by editing the blocks as you see fit.**
+Want to customize the blocks?
+
+Edit the generated components however you want.
 {% endhint %}
 
 ***
 
-### What you get <a href="#what-you-get" id="what-you-get"></a>
+### What you get
 
 * UI blocks (cards/tables/dialogs/forms) to list and manage escrows
 * Providers for API config, wallet context, dialogs and amounts
 * TanStack Query hooks for fetching and mutating escrows
 * Wallet-kit helpers and error handling utilities
 
-## Links
+### Links
 
 {% embed url="https://blocks.trustlesswork.com" %}
 
@@ -41,37 +42,39 @@ Would you like to customize the blocks?\
 
 {% embed url="https://www.npmjs.com/package/@trustless-work/blocks" %}
 
-### List all available blocks# <a href="#list-all-available-blocks" id="list-all-available-blocks"></a>
+### List all available blocks
 
-With the CLI you can list all available blocks:
+Use the CLI to print all available blocks:
 
-```
+{% code title="CLI" %}
+```sh
 npx trustless-work list
 ```
+{% endcode %}
 
-The init command will:
+This is the fastest way to discover folder paths for `npx trustless-work add ...`.
 
-* Show all available blocks.
-
-### Context API# <a href="#context-api" id="context-api"></a>
+### Context API
 
 The context API is a global storage of escrows. It is used to store the escrows that are fetched from the API. It is also used to store the selected escrow.
 
-Important
+{% hint style="info" %}
+You don’t have to use this context approach.
 
-If you don't want to use our approach for retrieving the escrow data, you are completely free to change it. You can use Redux, Zustand, or any other solution instead. However, it is important that you ensure the desired escrow is passed to the endpoint.
+You can use Redux, Zustand, or anything else.\
+Just make sure the target escrow data is available to each endpoint hook.
+{% endhint %}
 
-#### Understanding how the context works in escrows endpoints.# <a href="#understanding-context-escrows-endpoints" id="understanding-context-escrows-endpoints"></a>
+#### How the context is used by endpoint hooks
 
 When implementing the endpoints, we need to pass the data of a specific escrow to each endpoint. But how do we do that? Our library provides a context called `EscrowContext`, which includes some very important utilities. Among them are`selectedEscrow`and `setSelectedEscrow`, which allow us to do the following:
 
-#### Use of selectedEscrow# <a href="#use-of-selectedescrow" id="use-of-selectedescrow"></a>
+#### `selectedEscrow`
 
 Currently, `selectedEscrow` holds a specific escrow that we are pointing to. With this, all the endpoint hooks interact with that state in order to extract data from it, such as contractId, roles, etc. For example, in the change status select, the `milestoneIndex` values are loaded based on the currently selected escrow. Therefore, if`setSelectedEscrow` is undefined, they won't load.
 
-/useChangeMilestoneStatus.ts
-
-```
+{% code title="useChangeMilestoneStatus.ts" overflow="wrap" %}
+```ts
 const { selectedEscrow } = useEscrowContext();
 
 const handleSubmit = form.handleSubmit(async (payload) => {             
@@ -103,14 +106,17 @@ const handleSubmit = form.handleSubmit(async (payload) => {
   });
 }
 ```
+{% endcode %}
 
-#### Use of setSelectedEscrow# <a href="#use-of-setselectedescrow" id="use-of-setselectedescrow"></a>
+#### `setSelectedEscrow`
 
-The function `setSelectedEscrow` save the selected escrow in the context, so that all the endpoint hooks interact with that state in order to extract data from it, such as contractId, roles, etc. For example, in escrows cards by signer we save the selected escrow in the context, so that we can use it in details dialog.
+`setSelectedEscrow` stores the selected escrow in context.
 
-/EscrowsCards.tsx
+Other hooks and UI blocks can then read `selectedEscrow` to get `contractId`, roles, etc.\
+Example: cards view stores the selected escrow before opening the details dialog.
 
-```
+{% code title="EscrowsCards.tsx" overflow="wrap" %}
+```ts
 const { setSelectedEscrow } = useEscrowContext();
 
 const onCardClick = (escrow: Escrow) => {
@@ -118,14 +124,14 @@ const onCardClick = (escrow: Escrow) => {
   dialogStates.second.setIsOpen(true);
 };
 ```
+{% endcode %}
 
-#### Use of updateEscrow# <a href="#use-of-updateescrow" id="use-of-updateescrow"></a>
+#### `updateEscrow`
 
 Our `updateEscrow` function update the existing selectedEscrow in the context. It is useful to update a flag or others fields. For example, we use it to update the escrow status after a change milestone status mutation.
 
-/useChangeMilestoneStatus.ts
-
-```
+{% code title="useChangeMilestoneStatus.ts" overflow="wrap" %}
+```ts
 const { selectedEscrow, updateEscrow } = useEscrowContext();
 
 const handleSubmit = form.handleSubmit(async (payload) => { 
@@ -160,35 +166,32 @@ const handleSubmit = form.handleSubmit(async (payload) => {
   });
 }
 ```
+{% endcode %}
 
-### Installation based on folder path# <a href="#installation-based-on-folder-path" id="installation-based-on-folder-path"></a>
+### Install blocks by folder path
 
-If you need all the child blocks, you can install them by pointing to their parent directory, so you won't have to install them one by one.
+You can install whole folders (and all child blocks) with one command.
 
-```
-npx trustless-work escrows // or other parent's blocks directory
-```
+#### Install a parent directory
 
-
-
-#### Install Parent Directory
-
-```
+```sh
 npx trustless-work add escrows
 ```
 
-Installs ALL escrow blocks
+Installs all escrow blocks.
 
-**Install Specific Subfolder**
+#### Install a specific subfolder
 
-```
+```sh
 npx trustless-work add escrows/single-release
 ```
 
-Installs only single-release escrow blocks
+Installs only single-release escrow blocks.
 
-**💡 Pro Tip: Hierarchical Installation**
+{% hint style="success" %}
+The deeper the folder path, the more specific the install.
 
-The deeper you go in the folder structure, the more specific the blocks become. Start with parent directories for comprehensive functionality, then drill down to specific components as needed.
+Start broad (`escrows`), then narrow down as needed (`escrows/single-release/...`).
+{% endhint %}
 
 [Installation Guide](https://blocks.trustlesswork.com/get-started/installation)

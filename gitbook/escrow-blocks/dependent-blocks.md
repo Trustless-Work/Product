@@ -18,50 +18,65 @@ layout:
 
 # Dependent Blocks
 
-Some blocks require other blocks to work properly. Make sure to add their dependencies before using them.
+Some blocks depend on shared modules (providers, helpers, query, etc).
 
-Important
+Install the dependencies first.
 
-If you don't follow the instructions below, you may run into issues with the blocks not working properly.
+{% hint style="warning" %}
+If you skip dependencies, you’ll hit missing context errors at runtime.
+{% endhint %}
 
-### Diagram of Dependencies# <a href="#diagram-of-dependencies" id="diagram-of-dependencies"></a>
+### Dependency diagram
 
-Some blocks require other blocks to work properly. Make sure to add their dependencies before using them.
+Use the interactive dependency diagram to confirm what a block needs.
 
-Show DiagramClick to load the interactive dependencies diagram
+{% embed url="https://blocks.trustlesswork.com/get-started/dependencies" %}
 
-### Dependencies by Block Group# <a href="#dependencies-by-block-group" id="dependencies-by-block-group"></a>
+***
 
-#### Escrows by Signer ([Table](https://blocks.trustlesswork.com/blocks/escrows-escrows-by-signer-table),[Cards](https://blocks.trustlesswork.com/blocks/escrows-escrows-by-signer-cards)) & Escrows by Role ([Table](https://blocks.trustlesswork.com/blocks/escrows-escrows-by-role-table),[Cards](https://blocks.trustlesswork.com/blocks/escrows-escrows-by-role-cards))# <a href="#escrows-by-signer-and-role" id="escrows-by-signer-and-role"></a>
+### Dependencies by block group
 
-These listing/detail blocks depend on several shared modules and providers:
+#### Listings (Escrows by Signer / Escrows by Role)
+
+Applies to:
+
+* Escrows by Signer: [Table](https://blocks.trustlesswork.com/blocks/escrows-escrows-by-signer-table), [Cards](https://blocks.trustlesswork.com/blocks/escrows-escrows-by-signer-cards)
+* Escrows by Role: [Table](https://blocks.trustlesswork.com/blocks/escrows-escrows-by-role-table), [Cards](https://blocks.trustlesswork.com/blocks/escrows-escrows-by-role-cards)
+
+Required modules:
 
 * `wallet-kit`
 * `providers`
 * `handle-errors`
 * `helpers`
 * `tanstack`
-* `single-release`or`multi-release`or`single-multi-release`// Depending on your needs
+* `escrows/single-release` or `escrows/multi-release` or `escrows/single-multi-release` (depends on which actions you want enabled)
 
-Providers to includeEnsure you include **all the providers. These blocks need all of them**
+{% hint style="info" %}
+Include **all** providers for listings.
 
-```
-# Quick install examples
+Listings open details dialogs and need the dialog + amount contexts.
+{% endhint %}
+
+{% code title="CLI (examples)" %}
+```sh
+# Core
 npx trustless-work add wallet-kit
-npx trustless-work add escrows/single-release # If you need single-release escrows
-npx trustless-work add escrows/multi-release # If you need multi-release escrows
-npx trustless-work add escrows/single-multi-release # If you need fund, approve or change status
 npx trustless-work add tanstack
+npx trustless-work add providers
 
-# If you skipped the init command, add these providers
-npx trustless-work add providers # All of them are required to these blocks
+# Actions (pick what you need)
+npx trustless-work add escrows/single-release
+# npx trustless-work add escrows/multi-release
+# npx trustless-work add escrows/single-multi-release
 
 # Optional utility modules
 npx trustless-work add handle-errors
 npx trustless-work add helpers
 ```
+{% endcode %}
 
-#### Single Release & Multi Release components# <a href="#single-release-multi-release-components" id="single-release-multi-release-components"></a>
+#### Actions (single-release / multi-release)
 
 All single-release and multi-release actions ([Initialize Escrow](https://blocks.trustlesswork.com/blocks/escrows-initialize-escrow), [Fund Escrow](https://blocks.trustlesswork.com/blocks/escrows-fund-escrow), [Change Milestone Status](https://blocks.trustlesswork.com/blocks/escrows-change-milestone-status), [Approve Milestone](https://blocks.trustlesswork.com/blocks/escrows-approve-milestone), [Release](https://blocks.trustlesswork.com/blocks/escrows-release-escrow), [Dispute](https://blocks.trustlesswork.com/blocks/escrows-dispute-escrow), [Resolve](https://blocks.trustlesswork.com/blocks/escrows-resolve-dispute), [Update Escrow](https://blocks.trustlesswork.com/blocks/escrows-update-escrow)) require:
 
@@ -71,26 +86,33 @@ All single-release and multi-release actions ([Initialize Escrow](https://blocks
 * `tanstack`
 * `helpers`
 
-```
-# Add essentials for single-release flows
+{% code title="CLI (minimum for actions)" %}
+```sh
 npx trustless-work add wallet-kit
 npx trustless-work add tanstack
+npx trustless-work add providers
 
-# If you skipped the init command, add these providers
-npx trustless-work add providers # Only need Wallet, TrustlessWork, Escrow and ReactQueryClient
-
-# Optional utility modules
 npx trustless-work add handle-errors
 npx trustless-work add helpers
 ```
+{% endcode %}
 
-### Provider Wrapping (order matters)# <a href="#provider-wrapping" id="provider-wrapping"></a>
+***
 
-Wrap your app with the following providers, in this order. Include`EscrowDialogsProvider`and `EscrowAmountProvider`when a page uses dialogs or amount context.
+### Provider wrapping (order matters)
 
-app/layout.tsx
+Wrap your app with these providers, in this exact order.
 
-```
+Include `EscrowDialogsProvider` and `EscrowAmountProvider` when you use dialogs or amount context.
+
+{% hint style="danger" %}
+Do not reorder providers.
+
+Most “hooks not working” issues come from provider order.
+{% endhint %}
+
+{% code title="app/layout.tsx" overflow="wrap" %}
+```tsx
 import { ReactQueryClientProvider } from "@/components/tw-blocks/providers/ReactQueryClientProvider";
 import { TrustlessWorkProvider } from "@/components/tw-blocks/providers/TrustlessWork";
 import { WalletProvider } from "@/components/tw-blocks/wallet-kit/WalletProvider";
@@ -120,3 +142,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   );
 }
 ```
+{% endcode %}
