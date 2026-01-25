@@ -36,12 +36,12 @@ You deploy and manage escrow smart contracts on **Stellar (Soroban)**. You integ
 
 ### What’s inside these docs
 
-* [Developer Quickstart](api-reference/getting-started.md) for your first escrow flow.
-* [Trustless Work API](api-reference/) for endpoints, schemas, and helpers.
-* [Escrow Design](technology-overview/) for roles, lifecycle, and escrow types.
-* [Trustless Work SDK](trustless-work-sdk/) for React hooks and integration patterns.
-* [Stellar Network](stellar-and-soroban-the-backbone-of-trustless-work/) for trustlines, wallets, and token rails.
-* [Use Cases by Industry](use-cases-unlocking-the-potential-of-smart-escrows/) for real-world escrow products.
+* [Developer Quickstart](/broken/spaces/Dg2e2YCRmNlhCnxxmEb6/pages/bknsGrFeT0G5xw1ebl4u) for your first escrow flow.
+* [Trustless Work API](/broken/spaces/Dg2e2YCRmNlhCnxxmEb6/pages/ZzuxcJ2Y0YqqSIjhhxFP) for endpoints, schemas, and helpers.
+* [Escrow Design](introduction/technology-overview/) for roles, lifecycle, and escrow types.
+* [Trustless Work SDK](/broken/spaces/Dg2e2YCRmNlhCnxxmEb6/pages/JAPmazRMghvqRWwnUHBB) for React hooks and integration patterns.
+* [Stellar Network](introduction/stellar-and-soroban-the-backbone-of-trustless-work/) for trustlines, wallets, and token rails.
+* [Use Cases by Industry](/broken/spaces/Dg2e2YCRmNlhCnxxmEb6/pages/duJdirIwIDpc71qO8Df9) for real-world escrow products.
 
 ***
 
@@ -57,6 +57,6 @@ You deploy and manage escrow smart contracts on **Stellar (Soroban)**. You integ
 
 ### Try it in minutes
 
-* Get credentials: [Request API Key](developer-resources/request-api-key.md)
+* Get credentials: [Request API Key](introduction/developer-resources/request-api-key.md)
 * Explore the demo dApp: [demo.trustlesswork.com](https://demo.trustlesswork.com/)
 * Clone the starter repo: [github.com/Trustless-Work](https://github.com/Trustless-Work)
