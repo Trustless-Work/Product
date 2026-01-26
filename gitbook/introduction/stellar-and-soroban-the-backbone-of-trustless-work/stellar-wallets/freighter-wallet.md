@@ -1,7 +1,7 @@
 # Freighter Wallet
 
 ![Rabet Wallet Logo](../../../.gitbook/assets/freighter-logo.png)\
-&#xNAN;_&#x4F;fficial logo of the Freighter Wallet._
+\&#xNAN;_Official logo of the Freighter Wallet._
 
 Freighter is a browser extension wallet for Stellar. It is a non-custodial wallet extension for your browser.
 
@@ -40,6 +40,38 @@ Freighter is a browser extension wallet for Stellar. It is a non-custodial walle
    * Write it down and store it in a safe place. **Do not share it with anyone**.
 
 ![Freighter Setup](../../../.gitbook/assets/freighter-create-wallet.png) ![Freighter Setup](../../../.gitbook/assets/freighter-setup.png)
+
+### Fund your Testnet account
+
+You need a funded Testnet account to submit transactions and pay fees.
+
+1. Open the Freighter extension.
+2. Switch the network to **Testnet**.
+
+<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+
+3. Click **Fund with Friendbot**.
+
+<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+
+4. Wait for the balance to appear.
+5. Your account is now active on Stellar Testnet.
+
+{% hint style="info" %}
+Friendbot only works on **Testnet**. If you don’t see the button, verify the network first.
+{% endhint %}
+
+<details>
+
+<summary>Friendbot fallback (manual)</summary>
+
+If the in-wallet Friendbot flow fails, you can request funds directly:
+
+1. Copy your account address (your public key) from Freighter.
+2. Open: `https://friendbot.stellar.org/?addr=YOUR_PUBLIC_KEY`
+3. Replace `YOUR_PUBLIC_KEY` with your address and load the URL.
+
+</details>
 
 ### **Importing an Existing Wallet**
 
