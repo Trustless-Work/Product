@@ -1,9 +1,25 @@
+---
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+---
+
 # Freighter Wallet
 
-![Rabet Wallet Logo](../../../.gitbook/assets/freighter-logo.png)\
-\&#xNAN;_Official logo of the Freighter Wallet._
+![Rabet Wallet Logo](../../../.gitbook/assets/freighter-logo.png)
 
-Freighter is a browser extension wallet for Stellar. It is a non-custodial wallet extension for your browser.
+Freighter is a **browser extension wallet** for Stellar. It is a non-custodial wallet extension for your browser.
 
 ***
 
