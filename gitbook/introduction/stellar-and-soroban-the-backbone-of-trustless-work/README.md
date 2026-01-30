@@ -7,34 +7,40 @@ icon: table-cells-large
 
 # Stellar Network
 
-This section explains the **infrastructure behind Trustless Work** — the network, assets, and tools that make escrows fast, cheap, and globally accessible.
+Trustless Work contracts run on **Stellar**. Smart contract logic runs on **Soroban**.
 
-***
+Wallets sign the transactions. Trustlines define which assets accounts can hold.
 
-### 🌐 Why Stellar?
+{% hint style="info" %}
+**Why it matters:** Stellar gives fast finality and low fees. Soroban makes the escrow logic programmable.
+{% endhint %}
 
-* **Fast** → Transactions settle in 5 seconds
-* **Low cost** → Fractions of a cent per transaction
-* **Global** → Used by wallets, neobanks, fintechs, and on/off-ramp partners worldwide
-* **Stablecoin-native** → Home to USDC, and open to any issued asset
-* **Compliance-aware** → Trusted by Circle, MoneyGram, Franklin Templeton, and more
+### Why Stellar?
 
-***
+* **Fast finality.** Most transactions confirm in \~5 seconds.
+* **Low fees.** Transaction fees are typically fractions of a cent.
+* **Built for payments.** Wallets, exchanges, and on/off-ramps already support Stellar.
+* **Stablecoin-ready.** USDC is widely used on Stellar, plus any issued asset.
 
-### ⚡ Why Soroban?
+### Why Soroban?
 
-Soroban is Stellar’s smart contract engine.\
-It powers **programmable escrows** — letting us define roles, milestones, and release logic directly on-chain, without building from scratch.
+Soroban is Stellar’s smart contract engine.
 
-***
+It powers **programmable escrows**. You can encode roles, milestones, approvals, disputes, and release logic on-chain.
 
-### 📚 What You’ll Find in This Section
+### Start here
 
-* **Issued Assets on Stellar**\
-  Learn how USDC and other tokens work.
-* **Wallets**\
-  Explore supported Stellar wallets and how they sign escrow actions.
-* **Testnet Tokens**\
-  Get USDC/XLM on Stellar testnet to experiment with escrows before going live.
-* **Libraries & Tools**\
-  Discover SDKs, Wallet Kit, Soroban tools, and more for integrating escrows into your product.
+<table data-view="cards"><thead><tr><th>Topic</th><th data-card-target data-type="content-ref">Link</th></tr></thead><tbody><tr><td>Trustlines</td><td><a href="trustlines.md">trustlines.md</a></td></tr><tr><td>Testnet Tokens</td><td><a href="testnet-tokens.md">testnet-tokens.md</a></td></tr><tr><td>Stellar Wallets</td><td><a href="stellar-wallets/">stellar-wallets</a></td></tr></tbody></table>
+
+<details>
+
+<summary>Coming soon</summary>
+
+* Issued assets on Stellar (USDC and other tokens)
+* Libraries & tooling (Soroban + wallet integration helpers)
+
+</details>
+
+{% hint style="success" %}
+If you’re building locally, start with **Testnet Tokens** and **Trustlines** first.
+{% endhint %}

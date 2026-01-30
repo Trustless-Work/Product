@@ -56,16 +56,18 @@ Milestones define _what must be completed to unlock funds._
   * Funds are only released **once all milestones are approved**.
   * Each milestone tracks:
     * `description` → what’s being delivered
-    * `status` → pending, approved, in dispute, etc.
+    * `status` → any type of status
+    * `approve` → true or false
     * `evidence` (optional) → proof of delivery
-    * `approvedFlag` → true when the approver signs off
 * **Multi-Release Escrow**
   * Each milestone has the same properties as the single release, plus its own amount and flags.
   * When a milestone is approved, its funds can be released without waiting for others.
   * Milestones include:
     * `amount` → how much is unlocked upon approval
-    * `flags` → released, disputed, resolved
-    * `Receiver` → final destination of the funds
+    * `description` → what’s being delivered
+    * `status` → any type of status
+    * `flags` → released, disputed, resolved and approve
+    * `receiver` → final destination of the funds
 
 This structure allows a project to fund and release in **phases**, not all at once.
 

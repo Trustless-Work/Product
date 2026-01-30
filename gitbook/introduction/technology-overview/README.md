@@ -98,12 +98,4 @@ We constantly talk about the escrow lifecycle, which follows this path.&#x20;
 * Assign [Roles](roles-in-trustless-work.md)
 * Follow the [Lifecycle](escrow-lifecycle/)
 
-Then:\
-[ **Test it in our dApp** ](https://dapp.trustlesswork.com)\
-&#x20;[**Integrate Trustless Work into your platform** ](/broken/pages/bknsGrFeT0G5xw1ebl4u)\
-[**Try out our Vibe-Coding Guide**](../readme/ai-optimized-docs.md)\
-[**Use our escrow-blocks**](/broken/pages/SVsqMbxWQC9NNkQm4sRr)
-
-
-
 ***

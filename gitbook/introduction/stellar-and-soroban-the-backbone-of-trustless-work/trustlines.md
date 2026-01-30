@@ -7,56 +7,61 @@ icon: ring
 
 # Trustlines
 
-### What Are Trustlines in Stellar?
+Trustlines are how Stellar accounts opt in to **issued assets**.
 
-* A **trustline** is an explicit opt-in setup by a Stellar account that authorizes it to hold, receive, and transact with a non‑native asset (i.e. anything other than XLM), issued by a specific issuer&#x20;
-* Without a trustline, an account **cannot receive or keep** that asset on the Stellar network&#x20;
-* Each trustline requires **0.5 XLM** in base reserve, increasing the minimum balance and limiting abuse&#x20;
-* Trustlines also include a **trust limit**—the maximum amount the account is willing to hold—and record the current balance and liabilities (e.g., open offers)&#x20;
+If an account has no trustline, it cannot hold that asset.
 
-Without a trustline, an account **cannot receive or hold** a token like USDC.
+{% hint style="info" %}
+Each trustline increases the account’s minimum balance by **0.5 XLM** (base reserve).
+{% endhint %}
 
-***
+### What is a trustline?
 
-### 🔑 Why Trustlines Matter
+* A trustline links an account to an **asset issuer**.
+* It allows the account to **receive, hold, and send** that asset.
+* It includes a **limit** (max balance you accept).
+* It tracks balance and liabilities (like open offers).
 
-* **Authorization:** They give permission for an account to hold a specific asset (e.g., USDC from its issuer).
-* **Reserves:** Each trustline requires a small XLM reserve, so accounts can’t spam unlimited assets.
-* **Limits:** A trustline sets a maximum balance the account is willing to hold.
+### Why trustlines matter for escrows
 
-***
+Trustless Work escrows can use **any Stellar-issued asset**.
 
-### ⚡ Trustlines in Escrows
+Every participant must be able to hold that asset.
 
-* **Escrows depend on trustlines.**
+{% hint style="warning" %}
+If a signer can’t hold the escrow asset, their step may fail. Set trustlines before testing any escrow flow.
+{% endhint %}
 
-Our escrows can be configured for ANY trustline on Stellar. But all roles must have the Trustline with that asset.&#x20;
+### Issuer addresses (USDC / EURC)
 
-* **Practical impact:** All participants must have the proper trustline set up first.
+Use these issuer addresses when you configure the escrow trustline.
 
-### ✍🏼 USDC/EURC Trustline
+{% tabs %}
+{% tab title="USDC" %}
+**Testnet issuer**
 
-USDC/EURC is the most functional and widely used trustline for escrow. I am attaching the issuer addresses for these so that you can use them when initializing an escrow and defining your trustline:
+[`GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5`](https://stellar.expert/explorer/testnet/asset/USDC-GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5)
 
-#### USDC
+**Mainnet issuer**
 
-Testnet: [`GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5`](https://stellar.expert/explorer/testnet/asset/USDC-GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5)
+[`GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN`](https://stellar.expert/explorer/public/asset/USDC-GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN)
+{% endtab %}
 
-Mainnet: [`GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN`](https://stellar.expert/explorer/public/asset/USDC-GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN)
+{% tab title="EURC" %}
+**Testnet issuer**
 
-#### EURC
+[`GB3Q6QDZYTHWT7E5PVS3W7FUT5GVAFC5KSZFFLPU25GO7VTC3NM2ZTVO`](https://stellar.expert/explorer/testnet/asset/EURC-GB3Q6QDZYTHWT7E5PVS3W7FUT5GVAFC5KSZFFLPU25GO7VTC3NM2ZTVO?asset%5B%5D=EURC-GB3Q6QDZYTHWT7E5PVS3W7FUT5GVAFC5KSZFFLPU25GO7VTC3NM2ZTVO-1)
 
-Testnet: [`GB3Q6QDZYTHWT7E5PVS3W7FUT5GVAFC5KSZFFLPU25GO7VTC3NM2ZTVO`](https://stellar.expert/explorer/testnet/asset/EURC-GB3Q6QDZYTHWT7E5PVS3W7FUT5GVAFC5KSZFFLPU25GO7VTC3NM2ZTVO?asset%5B%5D=EURC-GB3Q6QDZYTHWT7E5PVS3W7FUT5GVAFC5KSZFFLPU25GO7VTC3NM2ZTVO-1)
+**Mainnet issuer**
 
-Mainnet: [`GDHU6WRG4IEQXM5NZ4BMPKOXHW76MZM4Y2IEMFDVXBSDP6SJY4ITNPP2`](https://stellar.expert/explorer/public/asset/EURC-GDHU6WRG4IEQXM5NZ4BMPKOXHW76MZM4Y2IEMFDVXBSDP6SJY4ITNPP2)
+[`GDHU6WRG4IEQXM5NZ4BMPKOXHW76MZM4Y2IEMFDVXBSDP6SJY4ITNPP2`](https://stellar.expert/explorer/public/asset/EURC-GDHU6WRG4IEQXM5NZ4BMPKOXHW76MZM4Y2IEMFDVXBSDP6SJY4ITNPP2)
+{% endtab %}
+{% endtabs %}
 
-\
-**References:**
+{% hint style="info" %}
+**References**
 
-{% embed url="https://developers.circle.com/stablecoins/usdc-contract-addresses" %}
-
-{% embed url="https://developers.circle.com/stablecoins/eurc-contract-addresses" %}
-
-{% embed url="https://stablecoin.stellarlight.xyz/" %}
-
-***
+* Circle: [USDC contract addresses](https://developers.circle.com/stablecoins/usdc-contract-addresses)
+* Circle: [EURC contract addresses](https://developers.circle.com/stablecoins/eurc-contract-addresses)
+* Community: [Stellar stablecoin explorer](https://stablecoin.stellarlight.xyz/)
+{% endhint %}
