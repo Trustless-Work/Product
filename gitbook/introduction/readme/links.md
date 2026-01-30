@@ -10,7 +10,7 @@ description: Quick links to core docs, tools, and external resources.
 
 ### 🛠️ Tools
 
-<table data-view="cards"><thead><tr><th>Title</th><th>Link</th></tr></thead><tbody><tr><td>Backoffice</td><td><a href="https://dapp.trustlesswork.com/">dapp.trustlesswork.com</a></td></tr><tr><td>Demo</td><td><a href="https://demo.trustlesswork.com/">demo.trustlesswork.com</a></td></tr><tr><td>Escrow Viewer</td><td><a href="https://viewer.trustlesswork.com/">viewer.trustlesswork.com</a></td></tr><tr><td>Swagger API Docs</td><td><a href="https://api.trustlesswork.com/swagger">api.trustlesswork.com/swagger</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th>Title</th><th>Link</th></tr></thead><tbody><tr><td>Backoffice</td><td><a href="https://dapp.trustlesswork.com/">dapp.trustlesswork.com</a></td></tr><tr><td>Demo</td><td><a href="https://demo.trustlesswork.com/">demo.trustlesswork.com</a></td></tr><tr><td>Escrow Viewer</td><td><a href="https://viewer.trustlesswork.com/">viewer.trustlesswork.com</a></td></tr><tr><td>Swagger API Docs</td><td><a href="https://dev.api.trustlesswork.com/docs">https://dev.api.trustlesswork.com/docs</a></td></tr></tbody></table>
 
 ### 🌐 External Links
 
