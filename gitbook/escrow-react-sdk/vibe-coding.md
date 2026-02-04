@@ -128,10 +128,10 @@ Implement the useInitializeEscrow function from the Trustless Work React library
 - Use mock data for the payload values, except for the fields explicitly provided below.
 - Add a button that initializes the escrow when clicked.
 - Use multi-release mode.
-- Use this USDC trustline address: CBIELTK6YBZJU5UP2WWQEUCYKLPU6AUNZ2BQ4WWFEIE3USCIHMXQDAMA
-- Use this decimals value: 10000000
+- Use this USDC trustline address: GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5
+- Use this symbol value: USDC
 - For all roles, use the wallet address of the currently connected user.
-- The payload type must be InitializePayload (as defined in the official payloads documentation: <https://docs.trustlesswork.com/trustless-work/developer-resources/types>).
+- The payload type must be InitializePayload (as defined in the official payloads documentation: <https://docs.trustlesswork.com/trustless-work/introduction/developer-resources/types/payloads/deploy>).
 - After sendTransaction returns, display the contractId on screen with a clickable link to view it in Stellar Viewer.
 - Set platformFee to 4.
 - Ensure TypeScript types are correct.
