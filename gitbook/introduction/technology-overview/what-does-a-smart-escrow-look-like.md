@@ -37,7 +37,7 @@ Below we break down the **core properties** of every escrow, and then highlight 
   * **Single-Release**: the total `amount` to be paid once conditions are met, plus an optional `platformFee` percentage sent to the platform.
   * **Multi-Release**: the total amount is distributed across milestones (each milestone defines its own `amount`). The platform fee still applies globally.
 * **Trustline**\
-  Defines the token being used (address and decimals). This is how Stellar escrows know which asset to accept. Typically USDC, but any Stellar-issued token is supported.
+  Defines the token being used. This is how Stellar escrows know which asset to accept. Typically USDC, but any Stellar-issued token is supported.
 * **Flags**\
   Internal state markers that describe what’s happening:
   * `disputed` → a party raised a dispute

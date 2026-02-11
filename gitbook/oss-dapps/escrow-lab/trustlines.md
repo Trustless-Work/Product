@@ -25,13 +25,11 @@ In order to interact with others no native tokens, you'll need to have some Trus
 export const trustlines = [
   {
     name: "USDC",
-    address: "CBIELTK6YBZJU5UP2WWQEUCYKLPU6AUNZ2BQ4WWFEIE3USCIHMXQDAMA",
-    decimals: 10000000,
+    address: "GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5"
   },
   {
     name: "EURC",
-    address: "GB3Q6QDZYTHWT7E5PVS3W7FUT5GVAFC5KSZFFLPU25GO7VTC3NM2ZTVO",
-    decimals: 10000000,
+    address: "GB3Q6QDZYTHWT7E5PVS3W7FUT5GVAFC5KSZFFLPU25GO7VTC3NM2ZTVO"
   },
 
   // you can add more trustlines here
