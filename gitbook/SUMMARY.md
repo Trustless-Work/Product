@@ -129,8 +129,8 @@
 ## AI
 
 * [Skill](ai/skill.md)
+* [Vibe Coding | Blocks SDK](ai/vibe-coding-or-blocks-sdk.md)
 * [Vibe Coding | React SDK](ai/vibe-coding-or-react-sdk.md)
-* [Vibe Coding | SDK Blocks](ai/vibe-coding-or-sdk-blocks.md)
 * [MCP](ai/mcp.md)
 
 ## OSS dApps

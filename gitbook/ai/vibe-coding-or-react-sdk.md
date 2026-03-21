@@ -4,355 +4,248 @@ icon: diamonds-4
 
 # Vibe Coding
 
-### VibeCoding guide (single-file AI context)
+In all of your chat prompts, you should provide the agent with specific document references, including the global content rules and the complete code project. _**GPT 5 gives the best result**_
 
-Built for agent workflows.
+### **Global Context**
+
+This document defines how the AI assistant should help with front-end development tasks. The global context below establishes the persona, expertise, and workflow patterns that should be followed in all interactions.
+
+```markdown
+---
+alwaysApply: true
+---
+You are a **Senior Front-End Developer** and **Expert** in:
+- ReactJS, NextJS, JavaScript, TypeScript
+- TailwindCSS, Shadcn, Radix UI
+- HTML, CSS, and modern UI/UX best practices
+
+You are methodical, precise, and a master at reasoning through complex requirements. You always provide correct, DRY, bug-free, production-ready code.
+
+## General Rules
+- Follow the user’s requirements **exactly** as stated.
+- Think step-by-step:  
+  1. **Analyze** the requirement.  
+  2. **Write detailed pseudocode** describing the implementation plan.  
+  3. **Confirm** the plan (if asked).  
+  4. **Write complete code** that matches the plan.  
+- Never guess. If something is unclear, ask for clarification.
+- If an external library is mentioned, always refer to its official documentation before implementation.
+- Always ensure the final code is fully functional, with no placeholders, `TODO`s, or missing parts.
+- Prefer readability over performance.
+- Use best practices for React & Next.js development.
+- Do not use cd in order to access to determinate root, neither use &&, | or something like that in shell actions.
+- Do not verify the build during the Trustless Work implementations.
+- In each npm i, the name of the dependency must be enclosed in double quotation marks (“”).
+- Do not ask for 2 o more ways to implement, just do it the best way possible.
+- Do not plan or ask for steps; just implement the code without asking questions.
+
+## Trustless Work Integration Context
+When working with Trustless Work:
+- Documentation (I'll provide you the docs in the cursor docs management):  
+  - React Library → <https://docs.trustlesswork.com/trustless-work/react-library>  
+  - Wallet Kit → <https://docs.trustlesswork.com/trustless-work/developer-resources/stellar-wallet-kit-quick-integration>  
+  - Types → <https://docs.trustlesswork.com/trustless-work/developer-resources/types>  
+- Ensure proper installation and configuration before usage.
+- Use provided Types from the documentation when applicable.
+- Follow the API and component usage exactly as described in the docs.
+- Do not use any, instead always you must search for the Trustless Work entities.
+
+## Code Implementation Guidelines
+- Use **TailwindCSS classes** for styling; avoid plain CSS.
+- For conditional classes, prefer `clsx` or similar helper functions over ternary operators in JSX.
+- Use **descriptive** variable, function, and component names.  
+  - Event handlers start with `handle` (e.g., `handleClick`, `handleSubmit`).
+- Prefer **const** arrow functions with explicit type annotations over `function` declarations.
+- Always include all necessary imports at the top.
+- Use early returns to improve code clarity.
+
+## Verification Before Delivery
+Before finalizing:
+1. Check that all required imports are present.
+2. Ensure the code compiles in a Next.js 14+ environment.
+3. Confirm that Tailwind and Shadcn styles render correctly.
+4. Verify that Trustless Work components or hooks are properly initialized.
+5. Ensure TypeScript types are correct and there are no type errors.
+
+```
+
+### PROMPTS
+
+Attach the Global Context and referenced documents to all prompts for clarity and consistency.
+
+#### 1 - Trustless Work - React Library Setup
+
+Below are the essential steps to get started with the installation and basic configuration. You should attach these links as docs reference: [React Library TW](https://docs.trustlesswork.com/trustless-work/react-library/getting-started)
 
 {% hint style="info" %}
-Export this page to PDF or Markdown.
-
-Then feed it to your copilot (Cursor, Claude, etc).
+Ensure to set the API Key in a `.env` file during this step.
 {% endhint %}
 
-***
+```markdown
+Configure the initial setup to use the Trustless Work React library in a Next.js app.
 
-### What this file is
-
-* **Purpose:** Give an AI (or a very fast human) all the context needed to install, wire, and use **Trustless Work Escrow Blocks** with Next.js.
-* **Scope:** Installation, required providers (order matters), commands to add blocks, example pages, dependency rules, actions, and troubleshooting.
-* **Audience:** Builders, PMs, and AIs doing codegen for **single-release** and **multi-release** escrow UIs.
-
-***
-
-### Quick mental model
-
-* **Escrow Blocks** = prebuilt React components + hooks that talk to the Trustless Work API/SDK for escrow lifecycles.
-* **Providers** must wrap your app in a **specific order** (React Query → TW → Wallet → Escrow → Dialogs → Amount). Do not reorder.
-* **Listings** (by role / by signer) show escrows and open detail dialogs with context-aware actions. Some actions ship **commented**; enable the version matching your escrow type (single or multi).
-
-***
-
-### Project bootstrap (Next.js + Blocks)
-
-#### 2.1 Create the app
-
-```bash
-npx create-next-app@latest tw-blocks-dapp --typescript --tailwind
-cd tw-blocks-dapp
+- Install the required dependency.
+- Set up the provider at the app root.
+- Ensure all imports are correct.
+- Use TypeScript if types are available in the documentation.
 ```
 
-#### 2.2 Install Escrow Blocks
+#### 2 - Stellar Wallet Kit
 
-```bash
-npm install @trustless-work/blocks
+This component builds on top of the base Trustless Work library to offer specialized wallet connectivity features. You should attach these links as docs reference: [Stellar Wallet Kit](https://docs.trustlesswork.com/trustless-work/developer-resources/stellar-wallet-kit-quick-integration)
+
+```markdown
+Configure the initial setup for the Stellar Wallet Kit in a Next.js app based on the documentation, please follow their indications.
+
+- Install the required dependency.
+- Ensure all imports are correct.
+- Use TypeScript if types are provided.
+- Make sure the wallet is ready to be used across the app.
+- Implement the wallet hooks by using buttons.
 ```
 
-#### 2.3 Run the CLI (recommended)
+#### 3 - Initialize Escrow
 
-```bash
-npx trustless-work init
+This prompt will guide you through implementing the initialize escrow feature in a Next.js application using the Trustless Work library. You should attach these links as docs reference: [React Library TW](https://docs.trustlesswork.com/trustless-work/react-library/getting-started) and [Types TW](https://docs.trustlesswork.com/trustless-work/developer-resources/types)
+
+```markdown
+Implement the useInitializeEscrow function from the Trustless Work React library in our Next.js app.
+
+- Use mock data for the payload values, except for the fields explicitly provided below.
+- Add a button that initializes the escrow when clicked.
+- Use multi-release mode.
+- Use this USDC trustline address: GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5
+- Use this symbol value: USDC
+- For all roles, use the wallet address of the currently connected user.
+- The payload type must be InitializePayload (as defined in the official payloads documentation: <https://docs.trustlesswork.com/trustless-work/introduction/developer-resources/types/payloads/deploy>).
+- After sendTransaction returns, display the contractId on screen with a clickable link to view it in Stellar Viewer.
+- Set platformFee to 4.
+- Ensure TypeScript types are correct.
+- Make sure in the submit function, do these 3 steps always: execute function from tw, sign transaction with wallet and sendTransaction.
 ```
 
-What it does (summary):
+#### 4 - Save Escrow in Global Store
 
-* Installs deps (`@tanstack/react-query`, forms/validation libs, shadcn/ui).
-* Generates `.twblocks.json`.
-* Offers to **wire providers** in `app/layout.tsx` for you.
+This prompt will help you implement a global state management solution to store and access escrow data across your application. You should attach these links as docs reference: [React Library TW](https://docs.trustlesswork.com/trustless-work/react-library/getting-started) and [Types TW](https://docs.trustlesswork.com/trustless-work/developer-resources/types)
 
-> You can also add modules incrementally with `npx trustless-work add <module>`.
+```markdown
+Update the useInitializeEscrow implementation to handle the full response from sendTransaction.
 
-***
-
-### Environment
-
-Create `.env.local` (reads can work without a key; write flows need it):
-
-```bash
-# Required for authenticated calls (when you start acting)
-NEXT_PUBLIC_API_KEY=your_api_key_here
+- After calling sendTransaction, store the returned escrow object and the contractId in a React Context.
+- Do not fetch the escrow from anywhere else; only use the one returned directly from sendTransaction.
+- Example: const response = await sendTransaction(...); // response contains: { status, message, contractId, escrow }
+- Create a section in the UI to visually display all the escrow properties, assuming the type is MultiReleaseEscrow.
+- Ensure TypeScript types are correct.
 ```
 
-> Get your API key in the dApp when ready to move beyond read-only dev flows. (Docs index + dApp flow referenced elsewhere.)
+#### 5 - Fund Escrow
 
-***
+This prompt will guide you through implementing the fund escrow feature using the Trustless Work library in your Next.js application. You should attach these links as docs reference: [React Library TW](https://docs.trustlesswork.com/trustless-work/react-library/getting-started) and [Types TW](https://docs.trustlesswork.com/trustless-work/developer-resources/types)
 
-### Provider stack (order is critical)
+```markdown
+Implement the useFundEscrow hook from the Trustless Work React library to fund an existing escrow contract.
 
-> If you skipped CLI wiring, add these providers **in this exact order**.
-
-```tsx
-// app/layout.tsx
-import "./globals.css";
-import { ReactQueryClientProvider } from "@/components/tw-blocks/providers/ReactQueryClientProvider";
-import { TrustlessWorkProvider } from "@/components/tw-blocks/providers/TrustlessWork";
-import { WalletProvider } from "@/components/tw-blocks/wallet-kit/WalletProvider";
-import { EscrowProvider } from "@/components/tw-blocks/providers/EscrowProvider";
-import { EscrowDialogsProvider } from "@/components/tw-blocks/providers/EscrowDialogsProvider";
-import { EscrowAmountProvider } from "@/components/tw-blocks/providers/EscrowAmountProvider";
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <body>
-        <ReactQueryClientProvider>
-          <TrustlessWorkProvider>
-            <WalletProvider>
-              <EscrowProvider>
-                <EscrowDialogsProvider>
-                  <EscrowAmountProvider>
-                    {children}
-                  </EscrowAmountProvider>
-                </EscrowDialogsProvider>
-              </EscrowProvider>
-            </WalletProvider>
-          </TrustlessWorkProvider>
-        </ReactQueryClientProvider>
-      </body>
-    </html>
-  );
-}
+- Use the contractId stored in the React Context from the previous step.
+- Use multi-release mode.
+- Add a button that funds the escrow when clicked.
+- The payload type must be FundEscrowPayload (as defined in the official payloads documentation).
+- Include proper error handling and loading states.
+- After successful funding, display a success message to the user.
+- Ensure TypeScript types are correct and all imports are present.
+- Display the transaction status and any relevant details returned from the hook.
+- Update the escrow store in context.
+- Do not add extra properties of FundEscrowPayload
+- The amount must be the same number of the escrow amount, which it means that if we have 2 milestone of 5, the amount for the fund will be 10
+- Make sure in the submit function, do these 3 steps always: execute function from tw, sign transaction with wallet and sendTransaction.
 ```
 
-**Why it matters:** The blocks depend on React Query + Trustless Work context + wallet + escrow state + dialogs/amount contexts. Reordering breaks hooks and UI flows.
+#### 6 - Change Milestone Status
 
-***
+This prompt will guide you through implementing the functionality to change milestone statuses in an escrow contract using the Trustless Work library. You should attach these links as docs reference: [React Library TW](https://docs.trustlesswork.com/trustless-work/react-library/getting-started) and [Types TW](https://docs.trustlesswork.com/trustless-work/developer-resources/types)
 
-### Add modules & blocks (CLI)
+```markdown
+Implement the useChangeMilestoneStatus hook from the Trustless Work React library to update milestone statuses in the multi-release escrow.
 
-Run these once per project:
-
-```bash
-# Core glue
-npx trustless-work add wallet-kit
-npx trustless-work add providers
-npx trustless-work add tanstack
-npx trustless-work add helpers
-npx trustless-work add handle-errors
-
-# Lifecycle blocks
-npx trustless-work add escrows/single-release
-npx trustless-work add escrows/multi-release
-npx trustless-work add escrows/single-multi-release
-
-# Listings
-npx trustless-work add escrows/escrows-by-role/cards
-# optional:
-# npx trustless-work add escrows/escrows-by-role/table
-# npx trustless-work add escrows/escrows-by-signer/cards
-# npx trustless-work add escrows/escrows-by-signer/table
+- Use the contractId and escrow data stored in the React Context.
+- Use multi-release mode.
+- Add UI components that allow selecting a milestone and changing its status.
+- The payload type must be ChangeMilestoneStatusPayload (as defined in the official documentation).
+- Implement separate buttons for each possible status transition (e.g., "Mark as Completed", "Reject", etc.).
+- Only show status change options that are valid for the current milestone state.
+- Include proper error handling and loading states.
+- After successful status change, update the escrow data in the context.
+- Ensure TypeScript types are correct and all imports are present.
+- Make sure in the submit function, do these 3 steps always: execute function from tw, sign transaction with wallet and sendTransaction.
 ```
 
-***
+#### 7 - Approve Milestone
 
-### Your first page (wallet + init + listings)
+This prompt will guide you through implementing the approve milestone feature in your escrow workflow using the Trustless Work library. You should attach these links as docs reference: [React Library TW](https://docs.trustlesswork.com/trustless-work/react-library/getting-started) and [Types TW](https://docs.trustlesswork.com/trustless-work/developer-resources/types)
 
-```tsx
-// app/page.tsx
-"use client";
+```markdown
+Implement the useApproveMilestone hook from the Trustless Work React library to approve milestones in the multi-release escrow.
 
-import { WalletButton } from "@/components/tw-blocks/wallet-kit/WalletButtons";
-import { InitializeEscrowDialog } from "@/components/tw-blocks/escrows/single-release/initialize-escrow/dialog/InitializeEscrow";
-import { EscrowsByRoleCards } from "@/components/tw-blocks/escrows/escrows-by-role/cards/EscrowsCards";
-
-export default function Home() {
-  return (
-    <div className="container mx-auto py-8">
-      <header className="flex justify-between items-center mb-8">
-        <h2 className="text-2xl font-bold">Trustless Work Demo</h2>
-        <WalletButton />
-      </header>
-
-      <div className="flex justify-end mb-4">
-        <InitializeEscrowDialog />
-      </div>
-
-      <EscrowsByRoleCards />
-    </div>
-  );
-}
+- Use the contractId and escrow data stored in the React Context.
+- Use multi-release mode.
+- Add UI components that allow selecting a milestone and approving it.
+- The payload type must be ApproveMilestonePayload (as defined in the official documentation).
+- Include proper error handling and loading states.
+- After successful approval, update the escrow data in the context.
+- Ensure TypeScript types are correct and all imports are present.
+- Display a confirmation message after successful approval.
+- Make sure in the submit function, do these 3 steps always: execute function from tw, sign transaction with wallet and sendTransaction.
 ```
 
-**What you’ll see:** wallet connect, “Initialize Escrow” (single-release), and a cards grid filtered by **role** (actions are role/state-aware).
+#### 8 - Release Funds
 
-***
+This prompt will guide you through implementing the release funds feature in your escrow workflow using the Trustless Work library. This function allows clients to release funds to freelancers after milestone approval. You should attach these links as docs reference: [React Library TW](https://docs.trustlesswork.com/trustless-work/react-library/getting-started) and [Types TW](https://docs.trustlesswork.com/trustless-work/developer-resources/types)
 
-### Actions: enable the right buttons
+```markdown
+Implement the useReleaseFunds hook from the Trustless Work React library to release funds for approved milestones in the multi-release escrow.
 
-Inside listings’ **detail dialog**, some actions are **commented** so you can enable only what you need per escrow type:
-
-```tsx
-// escrows/escrows-by-role/details/Actions.tsx (example)
-return (
-  <div className="flex items-start justify-start flex-col gap-2 w-full">
-    {/* Render actions conditionally by flags + roles */}
-    {hasConditionalButtons && (
-      <div className="flex flex-col gap-2 w-full">
-        {/* Single-release only */}
-        {/* {shouldShowEditButton && <UpdateEscrowDialog />} */}
-        {/* {shouldShowDisputeButton && <DisputeEscrowButton />} */}
-        {/* {shouldShowResolveButton && <ResolveDisputeDialog />} */}
-        {/* {shouldShowReleaseFundsButton && <ReleaseEscrowButton />} */}
-      </div>
-    )}
-    <FundEscrowDialog /> {/* shared single/multi */}
-  </div>
-);
+- Use the contractId and escrow data stored in the React Context.
+- Use multi-release mode.
+- Add UI components that allow selecting a milestone and releasing funds for it.
+- The payload type must be MultiReleaseReleaseFundsPayload (as defined in the official documentation).
+- Include proper error handling and loading states.
+- After successful fund release, update the escrow data in the context.
+- Ensure TypeScript types are correct and all imports are present.
+- Display a success message after funds are released successfully.
+- Make sure in the submit function, do these 3 steps always: execute function from tw, sign transaction with wallet and sendTransaction.
 ```
 
-When ready, import & enable:
+#### 9 - Start Dispute
 
-```tsx
-// escrows/escrows-by-role/details/Actions.tsx (imports)
-import { UpdateEscrowDialog } from "../../single-release/update-escrow/dialog/UpdateEscrow";
-/* import { UpdateEscrowDialog as UpdateEscrowDialogMultiRelease } from "../../multi-release/update-escrow/dialog/UpdateEscrow"; */
-import { FundEscrowDialog } from "../../single-multi-release/fund-escrow/dialog/FundEscrow";
-import { DisputeEscrowButton } from "../../single-release/dispute-escrow/button/DisputeEscrow";
-import { ResolveDisputeDialog } from "../../single-release/resolve-dispute/dialog/ResolveDispute";
-import { ReleaseEscrowButton } from "../../single-release/release-escrow/button/ReleaseEscrow";
+This prompt will guide you through implementing the start dispute feature in your escrow workflow using the Trustless Work library. This functionality allows parties to initiate a dispute process when disagreements arise. You should attach these links as docs reference: [React Library TW](https://docs.trustlesswork.com/trustless-work/react-library/getting-started) and [Types TW](https://docs.trustlesswork.com/trustless-work/developer-resources/types)
+
+```markdown
+Implement the useStartDispute hook from the Trustless Work React library to initiate disputes in the multi-release escrow.
+
+- Use the contractId and escrow data stored in the React Context.
+- Use multi-release mode.
+- Add UI components that allow selecting a milestone and starting a dispute.
+- The payload type must be MultiReleaseStartDisputePayload (as defined in the official documentation).
+- Include proper error handling and loading states.
+- After successfully starting a dispute, update the escrow data in the context.
+- Ensure TypeScript types are correct and all imports are present.
+- Display a confirmation after the dispute has been successfully initiated.
+- Make sure in the submit function, do these 3 steps always: execute function from tw, sign transaction with wallet and sendTransaction.
 ```
 
-> **Rule of thumb:** Use **single-release** actions for single escrows; use **multi-** components for multi escrows. Listings are shared, funding/approve/status are shared via `single-multi-release`.
+#### 10 - Resolve Dispute
 
-***
+This prompt will guide you through implementing the resolve dispute feature in your escrow workflow using the Trustless Work library. This advanced functionality allows the arbiter to make a final decision on disputes, allocating funds accordingly. You should attach these links as docs reference: [React Library TW](https://docs.trustlesswork.com/trustless-work/react-library/getting-started) and [Types TW](https://docs.trustlesswork.com/trustless-work/developer-resources/types)
 
-### Dependency rules (practical)
+```markdown
+Implement the useResolveDispute hook from the Trustless Work React library to resolve disputes in the multi-release escrow.
 
-**Listings (by role / by signer)** need:
-
-* `wallet-kit`, `providers`, `tanstack`, `helpers`, `handle-errors`, **plus** lifecycle blocks for the actions you’ll expose.
-
-**Single-release or Multi-release actions** need:
-
-* `wallet-kit`, `providers`, `tanstack`, `helpers` (+ `handle-errors`), **and** the corresponding block set(s).
-
-**Provider order** must match section 4.
-
-***
-
-### Usage flow (testnet demo path)
-
-1. **Connect wallet** (Freighter).
-2. **Initialize escrow** (single or multi).
-3. **Fund** the escrow (shared dialogs/buttons).
-4. **Change milestone status**, **approve**, and then **release** (release-all for single; **release milestone** for multi).
-5. Optional: **Dispute/Resolve** flows (type-specific components).
-
-> Tip: Listings filter by **role**; the visible actions depend on your **role** + **escrow state**. Add the **USDC trustline** in Freighter to interact smoothly.
-
-***
-
-### Troubleshooting (fast fixes)
-
-* **Buttons do nothing / disabled:** Your account doesn’t have the required **role**, the **escrow state** doesn’t allow that action, or the escrow isn’t **funded/approved** yet.
-* **Hooks failing / context error:** Provider order is wrong. Compare with the canonical order here.
-* **Client vs server error:** Add `"use client"` to pages/components that consume hooks.
-* **Asset errors:** Ensure the **USDC trustline** is added in Freighter for the correct network.
-* **Read-only works; writes fail:** Missing or invalid `NEXT_PUBLIC_API_KEY`, wrong role, or wallet not on the right network.
-
-***
-
-### Minimal “Blocks Gallery” pattern (optional)
-
-A local gallery lets teammates see every block live:
-
-* Dev server: `pnpm dev` → open `/blocks`
-* Wire the global providers (as above)
-* Add pages:
-  * `/blocks/wallet-button`
-  * `/blocks/escrows-by-role/cards|table`
-  * `/blocks/escrows-by-signer/cards|table`
-  * `/blocks/single-release/*` (init/update/dispute/resolve/release)
-  * `/blocks/multi-release/*` (init/update/dispute/resolve/release-milestone)
-  * `/blocks/single-multi-release/*` (fund/approve/change-status)
-
-***
-
-### Prompt scaffolds (copy-paste)
-
-<details>
-
-<summary><strong>A) System prompt (one-time context)</strong></summary>
-
+- Use the contractId and escrow data stored in the React Context.
+- Use multi-release mode.
+- Add UI components that allow selecting a milestone and resolving a dispute.
+- The payload type must be MultiReleaseResolveDisputePayload (as defined in the official documentation).
+- Include proper error handling and loading states.
+- After successfully resolving a dispute, update the escrow data in the context.
+- Ensure TypeScript types are correct and all imports are present.
+- Display a confirmation message after the dispute has been successfully resolved.
+- Make sure in the submit function, do these 3 steps always: execute function from tw, sign transaction with wallet and sendTransaction.
 ```
-You are an expert Next.js + Trustless Work Escrow Blocks engineer.
-Follow these rules:
-- Use files and paths exactly as provided here.
-- Keep provider order identical to the guide.
-- Prefer code that compiles with no TODOs.
-- When an escrow type is single vs multi, import the matching actions.
-```
-
-</details>
-
-<details>
-
-<summary><strong>B) Task prompt (generate page + wiring)</strong></summary>
-
-```
-Build a Next.js page that:
-1) shows a WalletButton in the header,
-2) renders InitializeEscrowDialog (single-release),
-3) lists EscrowsByRoleCards with working details,
-4) enables FundEscrowDialog and ReleaseEscrowButton for single-release.
-
-Use the provider order from app/layout.tsx and imports from:
-/components/tw-blocks/...
-
-If a component uses hooks, ensure "use client" at top.
-```
-
-</details>
-
-<details>
-
-<summary><strong>C) Debug prompt (when things break)</strong></summary>
-
-```
-Given provider order MUST be:
-ReactQueryClientProvider > TrustlessWorkProvider > WalletProvider > EscrowProvider > EscrowDialogsProvider > EscrowAmountProvider.
-
-Identify why EscrowsByRoleCards actions are disabled. Check:
-- wallet role vs escrow role,
-- escrow funded/approved flags,
-- correct single vs multi action imports,
-- USDC trustline present in Freighter (Testnet).
-Propose exact code edits.
-```
-
-</details>
-
-***
-
-### Notes for AIs (indexing hints)
-
-* **Important keywords:** Trustless Work, Escrow Blocks, single-release, multi-release, providers, WalletProvider, ReactQueryClientProvider, role-based actions, FundEscrowDialog, ApproveMilestoneDialog, ChangeMilestoneStatusDialog, ReleaseEscrowButton, ReleaseMilestoneButton, InitializeEscrowDialog.
-* **Do not reorder** providers. Quote this rule when suggesting edits.
-* Docs are **AI-exportable**; searching the docs in natural language is supported.
-
-***
-
-### Appendix: canonical provider order
-
-```tsx
-<ReactQueryClientProvider>
-  <TrustlessWorkProvider>
-    <WalletProvider>
-      <EscrowProvider>
-        <EscrowDialogsProvider>
-          <EscrowAmountProvider>
-            {children}
-          </EscrowAmountProvider>
-        </EscrowDialogsProvider>
-      </EscrowProvider>
-    </WalletProvider>
-  </TrustlessWorkProvider>
-</ReactQueryClientProvider>
-```
-
-This is the required provider order.
-
-***
-
-### License to remix
-
-Use, copy, embed, and ship. If your agent needs more, point it at the full docs hub and API reference. The overall documentation explicitly supports AI export & semantic search.
