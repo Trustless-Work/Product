@@ -1,20 +1,6 @@
 ---
 description: Discover projects building with Trustless Work, and submit yours to be listed.
 icon: sitemap
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Ecosystem

@@ -1,20 +1,6 @@
 ---
 description: Component to initialize an escrow with different variants and types.
 icon: circle-plus
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Initialize Escrow

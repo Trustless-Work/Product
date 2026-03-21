@@ -1,20 +1,6 @@
 ---
 description: Component to update escrow configuration with form and dialog variants.
 icon: pencil
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Update Escrow

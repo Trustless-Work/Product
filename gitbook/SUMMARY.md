@@ -87,7 +87,6 @@
 
 * [Introduction](escrow-blocks-sdk/introduction.md)
 * [Getting Started](escrow-blocks-sdk/getting-started.md)
-* [Vibe Coding](escrow-blocks-sdk/vibe-coding.md)
 * [Single Release Lifecycle](escrow-blocks-sdk/single-release-lifecycle.md)
 * [Dependent Blocks](escrow-blocks-sdk/dependent-blocks.md)
 * [Wallet Kit](escrow-blocks-sdk/wallet-kit.md)
@@ -111,7 +110,6 @@
 * [Introduction](escrow-react-sdk/introduction.md)
 * [Getting Started](escrow-react-sdk/getting-started.md)
 * [Vibe Coding](escrow-react-sdk/vibe-coding.md)
-* [MCP](escrow-react-sdk/mcp.md)
 * [useSendTransaction](escrow-react-sdk/usesendtransaction.md)
 * [Escrows](escrow-react-sdk/escrows/README.md)
   * [useInitializeEscrow](escrow-react-sdk/escrows/useinitializeescrow.md)
@@ -128,6 +126,12 @@
   * [useGetEscrowFromIndexerByContractIds](escrow-react-sdk/indexer/usegetescrowfromindexerbycontractids.md)
   * [useGetEscrowsFromIndexerBySigner](escrow-react-sdk/indexer/usegetescrowsfromindexerbysigner.md)
   * [useGetEscrowsFromIndexerByRole](escrow-react-sdk/indexer/usegetescrowsfromindexerbyrole.md)
+
+## AI
+
+* [Skill](ai/skill.md)
+* [Vibe Coding](ai/vibe-coding.md)
+* [MCP](ai/mcp.md)
 
 ## OSS dApps
 

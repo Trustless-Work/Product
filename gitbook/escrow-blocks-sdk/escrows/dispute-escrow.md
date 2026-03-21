@@ -1,20 +1,6 @@
 ---
 description: Action to raise a dispute in the escrow or milestone.
 icon: face-angry
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Dispute Escrow

@@ -1,20 +1,6 @@
 ---
 description: Component to show the balance progress of the escrow based on the target.
 icon: right-left
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Indicators

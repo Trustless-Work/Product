@@ -3,20 +3,6 @@ description: >-
   Wallet provider, validators and a connect button powered by Stellar Wallets
   Kit.
 icon: wallet
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Wallet Kit

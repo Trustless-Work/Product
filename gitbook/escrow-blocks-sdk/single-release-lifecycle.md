@@ -1,22 +1,8 @@
 ---
 icon: monitor-waveform
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
-# Escrow's Single Release Lifecycle
+# Single Release Lifecycle
 
 Step by Step Guide to implement Escrow's Single Release Lifecycle
 

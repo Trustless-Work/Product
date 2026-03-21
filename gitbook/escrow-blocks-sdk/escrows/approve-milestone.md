@@ -1,20 +1,6 @@
 ---
 description: Component to approve a milestone with form, button and dialog variants.
 icon: thumbs-up
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Approve Milestone

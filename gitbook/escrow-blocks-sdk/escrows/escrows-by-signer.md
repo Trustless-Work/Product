@@ -4,20 +4,6 @@ description: >-
   filtering. This component contains a detailed view of the escrow, including
   the signer, status, and actions.
 icon: bars-staggered
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Escrows by Signer

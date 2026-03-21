@@ -1,20 +1,6 @@
 ---
 description: Component to resolve disputes with form, button and dialog variants.
 icon: handshake-simple
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
-  metadata:
-    visible: true
 ---
 
 # Resolve Dispute
