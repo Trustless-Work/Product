@@ -109,7 +109,6 @@
 
 * [Introduction](escrow-react-sdk/introduction.md)
 * [Getting Started](escrow-react-sdk/getting-started.md)
-* [Vibe Coding](escrow-react-sdk/vibe-coding.md)
 * [useSendTransaction](escrow-react-sdk/usesendtransaction.md)
 * [Escrows](escrow-react-sdk/escrows/README.md)
   * [useInitializeEscrow](escrow-react-sdk/escrows/useinitializeescrow.md)
@@ -130,7 +129,8 @@
 ## AI
 
 * [Skill](ai/skill.md)
-* [Vibe Coding](ai/vibe-coding.md)
+* [Vibe Coding | React SDK](ai/vibe-coding-or-react-sdk.md)
+* [Vibe Coding | SDK Blocks](ai/vibe-coding-or-sdk-blocks.md)
 * [MCP](ai/mcp.md)
 
 ## OSS dApps
