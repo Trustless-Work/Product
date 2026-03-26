@@ -133,6 +133,13 @@
 * [Vibe Coding | React SDK](ai/vibe-coding-or-react-sdk.md)
 * [MCP](ai/mcp.md)
 
+## GO TO MAINNET
+
+* [Introduction](go-to-mainnet/introduction.md)
+* [API REST](go-to-mainnet/api-rest.md)
+* [React SDK](go-to-mainnet/react-sdk.md)
+* [Blocks SDK](go-to-mainnet/blocks-sdk.md)
+
 ## OSS dApps
 
 * [Introduction](oss-dapps/introduction.md)
