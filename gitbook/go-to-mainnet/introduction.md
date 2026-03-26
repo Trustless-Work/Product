@@ -31,3 +31,13 @@ For most integrations, the move starts with three changes:
 1. Use the correct **mainnet asset issuer**.
 2. Switch your API requests to the **mainnet base URL**.
 3. Generate and use a **mainnet API key**.
+
+Start here:
+
+* [API REST](api-rest.md)
+
+Useful references:
+
+* [Trustlines](../introduction/stellar-and-soroban-the-backbone-of-trustless-work/trustlines.md)
+* [API REST Introduction](../api-rest/introduction.md)
+* [Request API Key](../introduction/developer-resources/request-api-key.md)
