@@ -6,7 +6,7 @@ Escrow is a neutral way to hold funds until conditions are met. It’s the simpl
 
 Most people first think of real estate. That’s correct. Escrow is common in high-value transactions.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Simple representation of a Real Estate Escrow.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Simple representation of a Real Estate Escrow.</p></figcaption></figure>
 
 Escrow also shows up in marketplaces (Upwork, eBay, etc.).
 

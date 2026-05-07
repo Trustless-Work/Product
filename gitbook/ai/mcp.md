@@ -1,170 +1,169 @@
 ---
 icon: screwdriver-wrench
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
 ---
 
 # MCP
 
-## **Configure the Trustless Work SDK MCP on Cursor**
+## Connect Cursor to Trustless Work with MCP
 
 {% embed url="https://youtu.be/0a4QE2d9zHg" %}
 
-_Give your AI agent full power to build, update, and execute escrow actions automatically._
+Use MCP to let Cursor read Trustless Work docs and trigger escrow workflows from chat.
 
-The **Model Context Protocol (MCP)** allows Cursor’s AI agent to call external tools and APIs autonomously. By adding the **Trustless Work MCP Server**, developers can interact with the Trustless Work SDK through Cursor—making escrow creation, milestone updates, approvals, releases, and analysis executable directly from the editor.
+### What to install
 
-This guide walks you through the exact steps required to connect Cursor to the **Trustless Work MCP Server**:
+Use both servers together:
 
-```json
-"trustlesswork": {
-  "type": "streamable-http",
-  "url": "https://mcp.trustlesswork.com/mcp",
-  "headers": {}
-}
-```
+* `trustlesswork-docs` gives Cursor direct access to the docs.
+* `trustlesswork` gives Cursor access to Trustless Work tools and actions.
 
-***
+{% hint style="info" %}
+Use the docs server for answers and code generation.
 
-## **1. Open Cursor Settings**
+Use the product server for escrow actions and live operations.
+{% endhint %}
 
-You can access MCP settings in two ways:
-
-#### **Method A: From the UI**
-
-1. Open Cursor
-2. Click the **⚙️ Settings** icon (top-right corner)
-
-#### **Method B: From the menu**
-
-* `File → Preferences → Cursor Settings`
-
-***
-
-## **2. Navigate to the MCP Configuration Section**
-
-In the left-side settings sidebar, look for:
-
-**MCP → Tools/MCP**&#x20;
-
-This section lists all local and hosted MCP servers currently available to Cursor.
-
-***
-
-## **3. Add the Trustless Work MCP Server**
-
-Click:
-
-#### **➕ Add New MCP Server**
-
-Cursor will either:
-
-* Create an `mcp.json` file in your project, or
-* Open your existing one.
-
-Paste the following configuration:
-
+{% code title="mcp.json" %}
 ```json
 {
-  "trustlesswork": {
-    "type": "streamable-http",
-    "url": "https://mcp.trustlesswork.com/mcp",
-    "headers": {}
+  "mcpServers": {
+    "trustlesswork-docs": {
+      "type": "streamable-http",
+      "url": "https://docs.trustlesswork.com/trustless-work/~gitbook/mcp",
+      "headers": {}
+    },
+    "trustlesswork": {
+      "type": "streamable-http",
+      "url": "https://mcp.trustlesswork.com/mcp",
+      "headers": {}
+    }
   }
 }
 ```
+{% endcode %}
 
-#### **Save the file** (`Cmd+S` / `Ctrl+S`)
+### Setup in Cursor
 
-***
+{% stepper %}
+{% step %}
+### Open MCP settings
 
-## **4. Verify the MCP Server is Running**
+Open **Cursor**.
 
-Go back to:
+Go to **Settings**.
 
-**Settings → MCP → MCP Servers**
+You can also use **File → Preferences → Cursor Settings**.
+{% endstep %}
 
-Cursor will automatically:
+{% step %}
+### Open the MCP section
 
-1. Detect the new entry (this may take a while)
-2. Attempt to connect
-3. Install and start the MCP server
+In the sidebar, open **MCP → Tools/MCP**.
 
-A successful connection shows:
+This is where Cursor lists local and hosted MCP servers.
+{% endstep %}
 
-* **Green "Connected" indicator**
-* A list of **tools / methods** exposed by the Trustless Work MCP
+{% step %}
+### Add the Trustless Work servers
 
-<figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+Click **Add New MCP Server**.
 
-If the server does not start:
+Cursor creates or opens `mcp.json`.
 
-* Click **↻ Reload Servers**
-* Restart Cursor
-* Ensure you copied the URL exactly
+Paste the config above.
 
-***
+Save the file with `Cmd+S` or `Ctrl+S`.
+{% endstep %}
 
-## **5. Start Using Trustless Work Tools in Cursor**
+{% step %}
+### Confirm the connection
 
-Once the MCP is connected:
+Go to **Settings → MCP → MCP Servers**.
 
-* Open a new chat inside Cursor
-* Switch to **Agent Mode**
-* Start asking Cursor to perform Trustless Work operations (You may want to have trustlesswork-sdk and stellar-wallet-kit installed)
+Cursor will detect the new entries and try to connect.
 
-#### Example prompts:
+You should see:
 
-* _“Create a new multi-release escrow with the SDK.”_
-* _“Generate code to call the changeMilestoneStatus endpoint.”_
-* _“Show me how to sign a transaction for releaseFunds.”_
-* _“Use the MCP tool to call `/escrow/multi-release/change-milestone-status`.”_
+* a green **Connected** status
+* the available Trustless Work methods
+{% endstep %}
+{% endstepper %}
 
-Cursor will now:
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-* Query the MCP server
-* Fetch schemas and tools
-* Generate correct SDK code
-* Execute actions directly through the MCP
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-This effectively becomes your **fully autonomous Trustless Work coding agent**.
+### Start using it
 
-***
+Open a new Cursor chat.
 
-## **6. Troubleshooting**
+Switch to **Agent Mode**.
 
-#### **Server doesn’t appear in the list**
+Then ask Cursor to work with Trustless Work directly.
 
-Check that `mcp.json` is placed in your project root.
+Example prompts:
 
-#### **Connection error**
+* `Create a new multi-release escrow with the SDK.`
+* `Generate code to call the changeMilestoneStatus endpoint.`
+* `Show me how to sign a transaction for releaseFunds.`
 
-Verify:
+{% hint style="success" %}
+For SDK actions, install the Trustless Work SDK and wallet dependencies in your project first.
+{% endhint %}
 
-* URL has **no trailing slash**
-* `"type": "streamable-http"`
-* Your firewall/ISP doesn’t block outgoing requests
+### What this unlocks
 
-#### **Cursor doesn’t use the MCP tools in chat**
+* Ask Trustless Work questions in plain language
+* Generate SDK integrations faster
+* Walk through XDR signing flows
+* Trigger escrow operations from your editor
 
-Ensure:
+This gives you an AI-native workflow for Trustless Work development.
 
-* You have **Agent Mode** activated
-* The correct workspace is selected
-* No syntax errors in the JSON file
+### Troubleshooting
 
-***
+{% hint style="warning" %}
+If the server does not connect, reload Cursor before changing the config again.
+{% endhint %}
 
-### **What This Unlocks**
+#### Server does not appear
 
-✔ Autonomous escrow interactions\
-✔ Automatic code generation with TW SDK\
-✔ XDR signing workflows\
-✔ Transaction submission flows\
-✔ API wrapper generation\
-✔ Integration recipes\
-✔ Full Trustless Work lifecycle automation inside Cursor
+Make sure `mcp.json` is in your project root.
 
-You’ve effectively enabled **AI-native escrow development**.\
-Agents can now build, update, and maintain escrow logic—end to end.
+#### Connection fails
 
-***
+Check these values:
 
+* the URL has no trailing slash
+* `type` is `streamable-http`
+* your network allows outbound requests
+
+#### Cursor ignores MCP tools
+
+Check these basics:
+
+* **Agent Mode** is enabled
+* you are in the right workspace
+* the JSON file has no syntax errors
+
+### Related AI workflows
+
+* [Skill](skill.md)
+* [Vibe Coding | Blocks SDK](vibe-coding-or-blocks-sdk.md)
+* [Vibe Coding | React SDK](vibe-coding-or-react-sdk.md)
