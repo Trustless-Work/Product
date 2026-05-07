@@ -1,11 +1,15 @@
 ---
+description: >-
+  Model Context Protocol (MCP) enables AI tools and agents to seamlessly
+  integrate with Trustless Work’s escrow infrastructure through a unified and
+  context-aware interface.
 icon: screwdriver-wrench
 layout:
   width: default
   title:
     visible: true
   description:
-    visible: false
+    visible: true
   tableOfContents:
     visible: true
   outline:
