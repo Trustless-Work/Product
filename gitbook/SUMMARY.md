@@ -2,7 +2,7 @@
 
 ## INTRODUCTION
 
-* [👋 Welcome v2](README.md)
+* [👋 Welcome](README.md)
   * [AI optimized docs](introduction/readme/ai-optimized-docs.md)
   * [Why Escrows Matter](introduction/readme/why-escrows-matter.md)
   * [Who Should Use This](introduction/readme/who-should-use-this.md)
