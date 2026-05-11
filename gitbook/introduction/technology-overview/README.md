@@ -394,7 +394,13 @@ The escrow lifecycle describes how an escrow moves from configuration to complet
 Canonical lifecycle:
 
 ```
-Design  → Initiation    → Funding      → Milestone Updates        → Approval          → Release            → Closure
+Design
+  → Initiation
+    → Funding
+      → Milestone Updates
+        → Approval
+          → Release
+            → Closure
 ```
 
 #### 1. Design
