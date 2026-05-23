@@ -1,4 +1,7 @@
 ---
+description: >-
+  AI coding assistants full context about Trustless Work, including escrow
+  flows, XDR signing, SDK patterns, and integration best practices.
 icon: robot
 ---
 
@@ -6,240 +9,152 @@ icon: robot
 
 ## @trustless-work/skill
 
-> Install AI skills and verify Trustless Work integrations directly from your terminal.
+[![skills.sh](https://skills.sh/b/trustless-work/trustless-work-dev-skill)](https://skills.sh/trustless-work/trustless-work-dev-skill)
 
-[![npm version](https://img.shields.io/npm/v/@trustless-work/skill)](https://www.npmjs.com/package/@trustless-work/skill) [![npm downloads](https://img.shields.io/npm/dm/@trustless-work/skill)](https://www.npmjs.com/package/@trustless-work/skill)
-
-***
-
-### What are AI Skills?
-
-Modern AI coding assistants like **Claude Code** or **Gemini CLI** are general-purpose tools — they know a lot about programming, but they don't inherently understand your specific product, your API conventions, or the nuances of your integration patterns.
-
-**Skills** solve this problem. A skill is a curated set of markdown files injected into the AI agent's context directory, so the assistant can read them as reference material when helping you write, debug, or review code. Think of it as giving the AI a focused manual for a specific integration — without any fine-tuning or model changes.
-
-A skill typically contains:
-
-* Core concepts and mental models for the product
-* API and SDK reference documentation
-* Lifecycle guides and role definitions
-* Working code examples and common patterns
-* Pre-production checklists
-
-When the AI agent starts a session, it can access these files and apply their knowledge to every suggestion it makes. The result is an assistant that understands your stack deeply — and that you don't have to re-explain every time.
+Install AI skills and verify Trustless Work integrations directly from your terminal using Skills.sh.
 
 ***
 
-### Why are Skills Useful?
+## Installation
 
-#### Without a skill
+No global installation required.
 
-You spend time explaining the same context on every conversation:
+Install the skill directly using:
 
-> "Trustless Work is an escrow protocol on Stellar... the deploy endpoint returns an unsigned XDR transaction... you need to sign it with the funder's wallet... the trustline is set with the issuer address, not the contract address..."
+```
+npx skills add trustless-work/trustless-work-dev-skill
+```
 
-#### With a skill
+This automatically installs the Trustless Work skill into your supported AI agent.
 
-The AI already knows all of that. You can go straight to:
+***
+
+## Skills.sh
+
+The Trustless Work skill is distributed through Skills.sh:
+
+* Skills Registry: [https://www.skills.sh/trustless-work](https://www.skills.sh/trustless-work)
+
+Skills.sh provides a standardized ecosystem for installing reusable AI agent skills across different coding assistants.
+
+***
+
+## Why are Skills Useful?
+
+### Without a skill
+
+You repeatedly explain the same integration details in every conversation:
+
+> "Trustless Work is an escrow protocol on Stellar..."
+
+> "The deploy endpoint returns an unsigned XDR transaction..."
+
+> "The user must sign it with their wallet..."
+
+> "The trustline uses the issuer address, not the contract address..."
+
+This wastes time and often leads to integration mistakes.
+
+***
+
+### With a skill
+
+The AI already understands all of this context.
+
+You can immediately ask things like:
 
 > "Generate the escrow deployment flow for my freelance marketplace."
 
-And it will produce correct, idiomatic code on the first try.
+And the assistant can produce accurate, idiomatic, production-ready code from the start.
 
-Skills are especially valuable for:
+Skills are especially useful for:
 
-* **Onboarding new developers** — the AI can guide them with accurate context
-* **Reducing integration errors** — the AI flags wrong patterns before they ship
-* **Staying up to date** — run `update` when the skill releases a new version and your AI is immediately current
-
-***
-
-### The Trustless Work Skill
-
-The `@trustless-work/skill` package installs a curated knowledge base about **Trustless Work Escrow-as-a-Service** into your preferred AI coding assistant. It covers everything your AI needs to help you build correct, production-ready escrow integrations on Stellar.
-
-#### What the skill teaches the AI
-
-| Topic             | Content                                                                                                                      |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| **Core concepts** | What Trustless Work is, escrow types, the XDR signing pattern                                                                |
-| **Roles**         | All 9 roles (Service Provider, Approver, Release Signer, Receiver, Platform Address, Dispute Resolver) and their permissions |
-| **Lifecycle**     | The 6 phases from Initiation to Release and Dispute Resolution                                                               |
-| **REST API**      | Endpoints, authentication, base URLs, deployment payloads, rate limits                                                       |
-| **SDK**           | React/Next.js hooks, `TrustlessWorkConfig` provider setup, TypeScript types                                                  |
-| **Blocks**        | Pre-built UI components, provider nesting order, peer dependencies                                                           |
-| **Examples**      | Full working integration scenarios for API and SDK                                                                           |
-| **Checklist**     | Pre-production verification items before going live                                                                          |
-
-#### Critical details the skill encodes
-
-These are the most common integration mistakes — the skill teaches the AI to catch them:
-
-* Every write operation returns an **unsigned XDR transaction** that must be signed by the correct role before submission
-* The `trustline` field in the deploy payload requires the Stellar **issuer address** (`G…`) — not the contract address (`C…`)
-* Trustlines must be added from the **user's own wallet** — there is no API call for this
-* Provider nesting order matters: `QueryClientProvider → TrustlessWorkConfig → WalletProvider`
-* Milestone approvals are **irreversible on-chain**
-* API rate limit is **50 requests per 60 seconds**
+* Faster onboarding for new developers
+* Reducing integration mistakes
+* Maintaining consistency across projects
+* Keeping AI assistants updated with the latest SDK/API changes
 
 ***
 
-### Supported AI Agents
+## The Trustless Work Skill
 
-| Agent           | Status         | Skill path                       |
-| --------------- | -------------- | -------------------------------- |
-| **Claude Code** | ✅ Supported    | `.claude/skills/trustless-work/` |
-| **Gemini CLI**  | ✅ Supported    | `.gemini/skills/trustless-work/` |
-| **OpenCode**    | 🔜 Coming soon | —                                |
+The Trustless Work Skill installs a curated knowledge base for building escrow integrations on Stellar using Trustless Work.
 
-***
+It teaches your AI assistant how to correctly integrate:
 
-### Installation
+* Trustless Work REST API
+* `@trustless-work/escrow`
+* `@trustless-work/blocks`
 
-No global install required. Run directly with `npx`:
-
-```bash
-npx @trustless-work/skill
-```
-
-An interactive prompt will guide you through three steps:
-
-**Step 1 — Select your AI agent**
-
-```
-? Which AI agent are you using?
-  ❯ Claude Code
-    Gemini CLI
-```
-
-**Step 2 — Select an action**
-
-```
-? What would you like to do?
-  ❯ Install skill
-    Verify integration
-```
-
-**Step 3 — Choose a product preset** _(install only)_
-
-```
-? Which Trustless Work products are you using?
-  ❯ REST API only
-    SDK only
-    Blocks only
-    REST API + SDK
-    Full stack (API + SDK + Blocks)
-```
-
-The selected skill files are copied to your agent's context directory. From that moment, your AI assistant has full knowledge of the Trustless Work integration surface.
+The skill includes architecture guidance, API references, integration patterns, lifecycle flows, and production best practices.
 
 ***
 
-### Keeping the Skill Updated
+## What the Skill Teaches the AI
 
-As the Trustless Work API and SDK evolve, so does the skill. To update all installed skills to the latest version:
+The skill helps the AI understand critical implementation details such as:
 
-```bash
-npx @trustless-work/skill update
-```
-
-This automatically detects which agents have the skill installed and refreshes all template files.
-
-***
-
-### Verifying Your Integration
-
-Beyond installing context for the AI, the CLI includes an **integration verifier** that statically analyzes your codebase and reports issues before you deploy to production.
-
-```bash
-npx @trustless-work/skill
-# Select: Verify integration
-```
-
-The verifier detects your project type (Next.js, React SPA, Node.js backend) and runs targeted checks based on which Trustless Work products you're using.
-
-#### What gets verified
-
-**REST API usage**
-
-* API key is loaded from an environment variable (not hardcoded)
-* Requests include the `x-api-key` header
-* Base URLs are correct for testnet and mainnet
-* XDR signing pattern is implemented correctly
-* Rate limit handling is present
-
-**SDK usage (`@trustless-work/escrow`)**
-
-* Package is installed
-* `TrustlessWorkConfig` provider wraps the application
-* `"use client"` directive is present where required
-* `QueryClientProvider` is placed before `TrustlessWorkConfig`
-* `engagementId` is passed when creating escrows
-* Stellar Wallets Kit is integrated for XDR signing
-
-**Blocks usage (`@trustless-work/blocks`)**
-
-* Package and all peer dependencies are installed
-* Provider nesting order is correct
-* `"use client"` is set on layout files
-* `WalletNetwork` is configured
-* `setSelectedEscrow` pattern is used correctly
-* Approval confirmation dialogs are implemented
-* Trustline guidance is present in the UI
-
-#### Verification report
-
-Each check returns one of three statuses:
-
-| Status  | Meaning                           |
-| ------- | --------------------------------- |
-| ✅ OK    | Correctly implemented             |
-| ⚠️ WARN | Works but not production-ready    |
-| ❌ FAIL  | Critical issue that must be fixed |
-
-Every finding includes a description, what was detected, and a "how to fix" guide with a link to the relevant documentation.
-
-The report is printed to the console and also saved as a markdown file at:
-
-* `.claude/skills/trustless-work/report.md` _(Claude Code)_
-* `.gemini/skills/trustless-work/report.md` _(Gemini CLI)_
-
-This file can be committed to your repository or shared with reviewers.
+* Every write operation returns an unsigned XDR transaction that must be signed by the correct wallet
+* Trustline fields require the Stellar issuer address (`G...`) — not the contract address (`C...`)
+* Trustlines must be added directly from the user's wallet
+* Correct provider nesting order: \<QueryClientProvider> \<TrustlessWorkConfig> \<WalletProvider>
+* Milestone approvals are irreversible on-chain
+* API rate limits and retry patterns
+* Correct XDR signing workflows
+* Recommended frontend architecture patterns
+* Production integration checklists
 
 ***
 
-### Skill File Structure
+## Supported AI Agents
 
-After installation, the following files are available in your agent's skill directory:
+Currently supported:
 
-```
-.claude/skills/trustless-work/        (or .gemini/...)
-├── SKILL.md                          # Core concepts, roles, lifecycle, XDR pattern
-├── references/
-│   ├── api.md                        # REST API reference
-│   ├── sdk.md                        # React/Next.js SDK reference
-│   ├── blocks.md                     # Pre-built UI components
-│   ├── examples.md                   # Full integration examples
-│   └── checklist.md                  # Pre-production checklist
-└── meta.json                         # Install metadata (agent, preset, version, date)
-```
-
-You can read any of these files directly in your editor. They are plain markdown — no special tooling required.
+* Claude Code
+* Gemini CLI
 
 ***
 
-### Requirements
+## Keeping the Skill Updated
 
-* **Node.js** >= 18.0.0
-* One of the supported AI agents installed on your machine
+To update installed skills to the latest version:
+
+```
+npx skills update
+```
+
+This refreshes all installed skill files and ensures your AI assistant stays aligned with the latest Trustless Work APIs and SDKs.
 
 ***
 
-### Quick Reference
+## Verifying Your Integration
 
-| Command                            | Description                   |
-| ---------------------------------- | ----------------------------- |
-| `npx @trustless-work/skill`        | Interactive install or verify |
-| `npx @trustless-work/skill update` | Update all installed skills   |
+The Trustless Work skill also includes integration verification capabilities.
 
-**npm:** [npmjs.com/package/@trustless-work/skill](https://www.npmjs.com/package/@trustless-work/skill)
+The verifier statically analyzes your codebase and detects common integration mistakes before deployment.
+
+It can validate:
+
+### REST API integrations
+
+* API key usage
+* Environment variable configuration
+* Correct XDR signing flows
+* Proper base URLs
+* Rate limit handling
+
+### SDK integrations (`@trustless-work/escrow`)
+
+* Provider setup
+* Wallet integration
+* QueryClient configuration
+* Engagement handling
+* Client component requirements
+
+### Blocks integrations (`@trustless-work/blocks`)
+
+* Dependency installation
+* Provider nesting order
+* Wallet configuration
+* Approval UX patterns
+* Trustline guidance flows
