@@ -1,6 +1,7 @@
 use soroban_sdk::{contracttype, Address, Env, Vec};
 
 #[contracttype]
+#[derive(Clone, PartialEq, Eq)]
 pub struct Recipient {
     pub address: Address,
     pub bps: u32,

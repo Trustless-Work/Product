@@ -7,7 +7,7 @@ mod test;
 
 use errors::Error;
 use events::{emit_distributed, emit_initialized, emit_recipient_paid};
-use soroban_sdk::{contract, contractimpl, Address, Env, Vec};
+use soroban_sdk::{contract, contractimpl, token, Address, Env, Vec};
 pub use storage::Recipient;
 use storage::{
     get_admin, get_recipients, get_token, is_initialized, set_admin, set_initialized,
@@ -64,29 +64,25 @@ impl Contract {
         Ok(())
     }
 
-    pub fn distribute(env: Env) -> Result<(), Error> {
+    pub fn distribute(env: Env, caller: Address) -> Result<(), Error> {
+        caller.require_auth();
+
         if !is_initialized(&env) {
             return Err(Error::NotInitialized);
         }
 
         let recipients = get_recipients(&env);
         let token_addr = get_token(&env);
-        let caller = env.current_contract_address();
 
-        let mut is_recipient = false;
-        for i in 0..recipients.len() {
-            if recipients.get(i).unwrap().address == caller {
-                is_recipient = true;
-                break;
-            }
-        }
+        let is_recipient = recipients.iter().any(|r| r.address == caller);
 
         if !is_recipient {
             return Err(Error::Unauthorized);
         }
 
-        let token_client = soroban_sdk::token::Client::new(&env, &token_addr);
-        let balance = token_client.balance(&caller);
+        let token_client = token::Client::new(&env, &token_addr);
+        let contract_address = env.current_contract_address();
+        let balance = token_client.balance(&contract_address);
 
         if balance == 0 {
             return Err(Error::ZeroBalance);
@@ -94,18 +90,26 @@ impl Contract {
 
         let mut distributed: i128 = 0;
         for i in 0..recipients.len() {
-            let recipient = recipients.get(i).unwrap();
-            let mut amount = (balance * recipient.bps as i128) / BPS_TOTAL as i128;
+            let recipient = match recipients.get(i) {
+                Some(x) => x,
+                None => return Err(Error::RecipientNotFound),
+            };
 
-            if i == 0 {
-                amount += balance - distributed;
-            }
+            let amount = (balance * recipient.bps as i128) / BPS_TOTAL as i128;
 
             if amount > 0 {
-                token_client.transfer(&caller, &recipient.address, &amount);
+                token_client.transfer(&contract_address, &recipient.address, &amount);
                 distributed += amount;
                 emit_recipient_paid(&env, &recipient.address, amount, recipient.bps);
             }
+        }
+
+        // Add remainder to first recipient
+        if distributed < balance {
+            let remainder = balance - distributed;
+            let first_recipient = recipients.get(0).unwrap();
+            token_client.transfer(&contract_address, &first_recipient.address, &remainder);
+            distributed += remainder;
         }
 
         emit_distributed(&env, &caller, distributed);

@@ -10,4 +10,5 @@ pub enum Error {
     DuplicateRecipient = 6,
     Unauthorized = 7,
     ZeroBalance = 8,
+    RecipientNotFound = 9,
 }
