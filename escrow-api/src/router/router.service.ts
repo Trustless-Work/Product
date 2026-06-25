@@ -217,13 +217,48 @@ export class RouterService {
     maxAttempts = 20,
     pollIntervalMs = 1500,
   ): Promise<StellarRpc.Api.GetTransactionStatus> {
+    const rpcUrl =
+      this.config.get<string>("SOROBAN_RPC_URL") ??
+      "https://soroban-testnet.stellar.org";
+
     for (let i = 0; i < maxAttempts; i++) {
       await new Promise((resolve) => setTimeout(resolve, pollIntervalMs));
-      const result = await this.server.getTransaction(txHash);
-      if (result.status !== StellarRpc.Api.GetTransactionStatus.NOT_FOUND) {
-        return result.status;
+
+      let status: StellarRpc.Api.GetTransactionStatus;
+      try {
+        const result = await this.server.getTransaction(txHash);
+        status = result.status;
+      } catch {
+        // SDK XDR parse errors (e.g. "Bad union switch") — fall back to raw RPC
+        status = await this.getRawTransactionStatus(rpcUrl, txHash);
+      }
+
+      if (status !== StellarRpc.Api.GetTransactionStatus.NOT_FOUND) {
+        return status;
       }
     }
+    return StellarRpc.Api.GetTransactionStatus.NOT_FOUND;
+  }
+
+  private async getRawTransactionStatus(
+    rpcUrl: string,
+    txHash: string,
+  ): Promise<StellarRpc.Api.GetTransactionStatus> {
+    const response = await fetch(rpcUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        jsonrpc: "2.0",
+        id: 1,
+        method: "getTransaction",
+        params: { hash: txHash },
+      }),
+    });
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    const json: { result?: { status?: string } } = await response.json();
+    const raw = json.result?.status?.toUpperCase();
+    if (raw === "SUCCESS") return StellarRpc.Api.GetTransactionStatus.SUCCESS;
+    if (raw === "FAILED") return StellarRpc.Api.GetTransactionStatus.FAILED;
     return StellarRpc.Api.GetTransactionStatus.NOT_FOUND;
   }
 
