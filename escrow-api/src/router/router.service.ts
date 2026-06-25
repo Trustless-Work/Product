@@ -108,7 +108,7 @@ export class RouterService {
       fee: BASE_FEE,
       networkPassphrase,
     })
-      .addOperation(contract.call("distribute"))
+      .addOperation(contract.call("distribute", new Address(publicKey).toScVal()))
       .setTimeout(30)
       .build();
 
