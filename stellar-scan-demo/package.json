@@ -1,0 +1,12 @@
+{
+  "name": "stellar-scan-demo",
+  "version": "1.0.0",
+  "description": "Tutorial on Stellar Lab <> Escrow interaction",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["stellar", "escrow", "tutorial"],
+  "author": "",
+  "license": "MIT"
+}
