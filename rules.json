@@ -1,0 +1,19 @@
+{
+  "defaultThreshold": 1000,
+  "rules": [
+    {
+      "id": "approve-if-accepted",
+      "condition": "description_contains",
+      "value": "accepted",
+      "action": "approve",
+      "enabled": true
+    },
+    {
+      "id": "approve-if-below-threshold",
+      "condition": "amount_below",
+      "threshold": 1000,
+      "action": "approve",
+      "enabled": true
+    }
+  ]
+}
