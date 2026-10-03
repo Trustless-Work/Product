@@ -1,0 +1,24 @@
+{
+  "name": "trustlesswork-spikes",
+  "version": "1.0.0",
+  "description": "Proof-of-concept spikes for a trustless freelance marketplace",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.ts",
+    "node": "hardhat node"
+  },
+  "keywords": ["blockchain", "smart-contracts", "freelance", "marketplace", "trustless"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@types/node": "^20.0.0",
+    "hardhat": "^2.19.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0"
+  }
+}
