@@ -1,0 +1,2 @@
+This issue is currently blocked and cannot be implemented until the "receiver to the milestone level" task is completed.
+No code changes can be made at this time as the feature depends on prerequisite work.
