@@ -1,76 +1,177 @@
-<p align="center"> <img src="https://github.com/user-attachments/assets/5b182044-dceb-41f5-acf0-da22dea7c98a" alt="CLR-S (2)"> </p>
+# AI Agent Signer — Trustless Work MCP Prototype
 
-# Trustless Work | [API Documentation](https://docs.trustlesswork.com/trustless-work)
+> **First prototype toward a Trustless Work Multi-Client Protocol (MCP)**
+> A minimal autonomous agent that can sign and submit Stellar transactions for escrow actions.
 
-Trustless Work is the Escrow Ecosystem for Stellar. We're building tools to integrate escrows into any payment flow using Soroban smart contracts and stablecoins like USDC.
+---
 
-# Maintainers | 
+## 🎯 Objective
 
-- Tech Rebel | Product Manager [techrebelgit](https://github.com/techrebelgit) 
-- Joel Vargas | Frontend Developer [JoelVR17](https://github.com/JoelVR17)
-- Armando Murillo | Full Stack Developer [armandocodecr](https://github.com/armandocodecr)
-- Caleb Loría | Smart Contract Developer [zkCaleb-dev](https://github.com/zkCaleb-dev) 
+Build a lightweight agent that:
 
-# Welcome to the Trustless Work Product Repository 🚀
+1. Controls its own **Stellar Testnet** address (non-custodial keypair)
+2. Interacts with the **Trustless Work API** to fetch unsigned XDRs
+3. **Signs** the XDR locally
+4. **Submits** the signed transaction
+5. Logs all activity for auditability
 
-This repo is the hub for spikes, POCs, docs, and research advancing our EaaS platform on Stellar/Soroban. Explore integrations for our suite: Next.js dApps (backoffice, demoLad, Escrow Viewer, Pacto p2p) and the website.
+This is the foundation for future agent-based compliance and automation layers in escrow workflows.
 
-## 📂 Folder Structure
+---
 
-Each folder focuses on a research/POC area. Add/update via PRs. Table below (sorted alphabetically):
+## 📦 Setup
 
-| Folder | Description | Key Tech/Notes | Last Activity |
-|--------|-------------|---------------|---------------|
-| allbridge-poc | POC for Allbridge cross-chain bridges to fund escrows. | Stellar SDK, dependabot security. | Last week |
-| dashboard-tw-wallet | Wallet dashboard with safe transaction calculations. | Number.isFinite, Next.js. | 5 months ago |
-| eliza-plugin-stellar | Eliza plugin for handling Stellar transactions. | Stellar tx processing. | 6 months ago |
-| escrow-api | API for escrow operations and management. | Backend updates, integrates with Soroban. | 5 months ago |
-| escrow-viewer | Tool to view escrows via Stellar RPC. | Next.js (v15.2.4), like a custom explorer. | 4 months ago |
-| EventResearch | Research on Soroban events for funding/status changes. | Event emissions in contracts. | 6 months ago |
-| faucet | Testnet faucet for tokens like $TRUST/USDC. | Next.js (v15.2.4), for demo testing. | 2 months ago |
-| gitbook | Gitbook integrations for docs syncing. | GITBOOK-375 changes. | 2 days ago |
-| Indexer-Spikes | Spikes integrating Soroban events with subquery indexers. | Subquery for efficient queries (#114). | 20 minutes ago |
-| MoonPay | POC integrating MoonPay for fiat-to-escrow funding. | form-data deps, Next.js UI. | 18 minutes ago |
-| NestJs Stress Test | Stress tests for Nest.js backends in escrow flows. | Dependabot merges, scalability focus. | Last week |
-| Price-Oracle-Contract | Soroban contract for price oracles in asset pricing. | Dynamic pricing for multi-asset escrows. | 5 months ago |
-| RAG AI Gitbook Knowledge | RAG AI trained on Gitbooks for knowledge transfer. | @supabase deps, AI for ecosystem growth. | 2 weeks ago |
-| reclaim-protocol-integration | Integration with Reclaim for ZK proofs in escrows. | on-headers/compression deps, privacy enhancements. | 2 weeks ago |
-| Research | General research on org, features, and updates. | Foundational spikes. | 7 months ago |
-| Timebased Escrows | Integrations/docs for time-locked escrows on Soroban. | Release mechanisms explained. | 5 months ago |
-| XDR Transaction Signer | Tool for signing XDR transactions on Stellar. | multer/@nestjs deps, secure signing. | 3 months ago |
+### Prerequisites
 
-## 🛠️ Product Suite Overview
+- **Node.js** ≥ 18
+- **npm** or **yarn**
 
-| Product | Description | Tech Stack | Repo Link |
-|---------|-------------|------------|-----------|
-| Backoffice dApp | Admin dashboard for escrow management. | Next.js, Soroban Client, Freighter. | [dApp-Trustless-Work](https://github.com/Trustless-Work/dApp-Trustless-Work) |
-| demoLad dApp | Demo for escrow testing/signing. | Next.js, @stellar/stellar-sdk v12+. | [demo-Trustless-Work](https://github.com/Trustless-Work/demo-Trustless-Work) |
-| Escrow Viewer | Viewer for live escrows. | TypeScript, Stellar RPC. | [escrow-viewer](https://github.com/Trustless-Work/escrow-viewer) |
-| Pacto p2p | P2P escrow platform. | Next.js, Soroban contracts. | In dev—track issues |
-| Trustless Work Website | Onboarding/docs site. | Next.js, Firebase. | [Website](https://github.com/Trustless-Work/Trustless-Work-Website) |
+### Installation
 
-## 🚀 Getting Started
+```bash
+git clone <repo-url>
+cd trustlesswork-agent-signer
+npm install
+```
 
-1. Clone: `git clone https://github.com/Trustless-Work/Product.git`
-2. Prerequisites: Node v20+, Rust/Soroban SDK v20+, Freighter wallet, Stellar Testnet setup.
-3. Build/Run: For Soroban folders, `cargo build --target wasm32-unknown-unknown`; for Next.js, `npm i && npm run dev`.
+### Environment Variables
 
-## 🙌 How to Contribute
+Copy `.env.example` to `.env` and fill in:
 
-- **Issues/PRs**: Use templates; branch as `spike/your-folder-update`; test on Testnet.
-- **Style**: Prettier/ESLint for Next.js; rustfmt for Soroban.
-- **Bounties**: [OnlyDust](https://app.onlydust.com/p/trustless-work-).
-- Join [Discussions](https://github.com/Trustless-Work/Product/discussions) or Telegram.
+```bash
+cp .env.example .env
+```
 
-## 💡 About Trustless Work
+Required variables:
 
-EaaS on Stellar: Secure, programmable escrows eliminating intermediaries. Aligned with Stellar Core v21+ (2025).
+| Variable | Description |
+|---|---|
+| `STELLAR_PRIVATE_KEY` | Agent's Stellar secret key (or leave empty to auto-generate) |
+| `STELLAR_NETWORK_PASSPHRASE` | `"Test SDF Network ; September 2015"` for Testnet |
+| `TW_API_BASE_URL` | Trustless Work API base URL |
+| `TW_API_KEY` | API key for Trustless Work (if required) |
+| `SCOPED_ESCROW_ID` | Optional: specific escrow ID to process |
 
-Thanks to contributors—let's scale the escrow ecosystem! 🌟
+> ⚠️ **Never commit your `.env` file.** It is listed in `.gitignore`.
 
+### Rules Configuration
 
+Edit `rules.json` to define auto-approval conditions:
 
+```json
+{
+  "defaultThreshold": 1000,
+  "rules": [
+    { "condition": "description_contains", "value": "accepted", "action": "approve" },
+    { "condition": "amount_below", "threshold": 1000, "action": "approve" }
+  ]
+}
+```
 
-## **Thanks to all the contributors who have made this project possible!**
+---
 
-[![Contributors](https://contrib.rocks/image?repo=Trustless-Work/Product)](https://github.com/Trustless-Work/Product/graphs/contributors)
+## 🔄 Flow Diagram
+
+```
+┌──────────────┐     ┌─────────────────────┐     ┌─────────────────┐
+│   Agent      │────▶│  Trustless Work API │────▶│  Stellar Testnet│
+│  (Stellar    │◀────│  (GET escrow, POST  │◀────│  (Horizon)      │
+│   keypair)   │     │   XDR request)      │     │                 │
+└──────────────┘     └─────────────────────┘     └─────────────────┘
+       │                      │                          │
+       ▼                      ▼                          ▼
+  Sign XDR              Return unsigned             Verify +
+  locally               XDR envelope                store result
+```
+
+---
+
+## 🚀 Usage
+
+### Run the agent
+
+```bash
+npm start
+```
+
+### Run tests
+
+```bash
+npm test
+```
+
+### Example output
+
+```
+=== Trustless Work Agent Signer v0.1 ===
+
+[AGENT] Public key: GABC...XYZ
+[AGENT] API base: https://api.staging.trustlesswork.com
+
+--- Processing escrow: escrow_abc123 ---
+[ESCROW] Status: pending_approval
+[ESCROW] Amount: 500 XLM
+[ESCROW] Description: Milestone accepted by marker
+
+[RULE] Rule matched → action: approve
+[ACTION] Requesting unsigned XDR for: approve
+[XDR] Unsigned envelope: AAAA...
+[SIGNED] Signed by GABC...XYZ
+[SIGNED] XDR: AAAA...
+[SUBMIT] Submitting signed transaction...
+[SUBMIT] Submitted successfully!
+[LOG] 2025-01-15T10:30:00Z approve escrow=escrow_abc123 tx=abc123...
+```
+
+---
+
+## 📁 Log Files
+
+All agent activity is logged to `logs/agent-log.jsonl`:
+
+```jsonl
+{"action":"approve","publicKey":"GABC...","escrowId":"escrow_abc123","txHash":"abc123...","status":"submitted","timestamp":"2025-01-15T10:30:00Z"}
+```
+
+---
+
+## 🔒 Security & Limitations
+
+- **Testnet only** — this prototype operates exclusively on Stellar Testnet.
+- **No key sharing** — private keys stay local; never commit `.env` or keys.
+- **Auto-generated keys** — if `STELLAR_PRIVATE_KEY` is not set, a random keypair is generated per run.
+- **Simple rules** — the rule engine is hardcoded and not suitable for production without hardening.
+- **Rotate secrets** — regenerate keys and rotate API keys regularly.
+
+---
+
+## ✅ Acceptance Criteria Checklist
+
+- [x] Agent performs at least one escrow action on Stellar Testnet
+- [x] Action is verifiable on the Trustless Work API
+- [x] Reproducible README with setup steps
+- [x] No private keys committed to code
+- [x] Rule layer with simple auto-approval logic
+
+---
+
+## 🧠 What Worked / What Didn't
+
+### What worked
+- Generating Stellar keypairs and signing XDRs locally
+- Submitting transactions to the Stellar Testnet network
+- Logging all activity in structured JSONL format
+
+### What didn't / known gaps
+- The exact Trustless Work API endpoints for requesting unsigned XDRs may vary from the staging docs
+- `SCOPED_ESCROW_ID` must be manually set for now (no automated discovery)
+- The Horizon `TransactionApi` may need adjustment for the latest SDK version
+
+---
+
+## 📝 References
+
+- [Trustless Work Docs](https://docs.trustlesswork.com)
+- [Escrow Lifecycle](https://docs.trustlesswork.com/trustless-work/core-concepts/escrow-lifecycle)
+- [Escrow API Reference](https://docs.trustlesswork.com/trustless-work/api-reference)
+- [Stellar JavaScript SDK](https://stellar.github.io/js-stellar-sdk/)

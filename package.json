@@ -1,0 +1,19 @@
+{
+  "name": "trustlesswork-agent-signer",
+  "version": "0.1.0",
+  "description": "AI Agent Signer — First Prototype Toward a Trustless Work MCP",
+  "main": "src/agent.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/agent.js",
+    "test": "node test/run.js"
+  },
+  "dependencies": {
+    "@stellar/stellar-sdk": "^12.2.0",
+    "dotenv": "^16.4.5",
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {},
+  "keywords": ["stellar", "trustless-work", "escrow", "mcp", "agent"],
+  "license": "MIT"
+}
