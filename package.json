@@ -1,0 +1,17 @@
+{
+  "name": "trustlesswork-spikes",
+  "version": "1.0.0",
+  "description": "Spikes and experiments for Trustless Work",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src/**"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
